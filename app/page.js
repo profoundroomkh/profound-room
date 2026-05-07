@@ -8,11 +8,11 @@ export default function Home() {
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
     },
     {
-      name: "Leo",
+      name: "Luke",
       specialty: "肌肉按摩 / 沉浸療癒",
       intro: "偏力量感按摩，適合壓力與疲勞釋放。",
       image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+        "https://ibb.co/rKJ3ZLDs",
     },
   ]
 
