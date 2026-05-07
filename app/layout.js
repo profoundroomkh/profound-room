@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Profound Room",
-  description: "Private Relaxation for Men",
+  description: "title: "深寓 Profound Room｜高雄預約制男仕放鬆空間",
 };
 
 export default function RootLayout({ children }) {
