@@ -1,11 +1,11 @@
 export default function Home() {
   const masters = [
     {
-      name: "Ryan",
+      name: "Luke",
       specialty: "深層舒壓 / 精油放鬆",
       intro: "溫柔細膩的放鬆節奏，適合初次體驗。",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+        "https://i.ibb.co/rKJ3ZLDs/72279-B09-5-CD5-4-ACC-AE7-C-40-C5-E0-C2-D6-E7.png",
     },
     {
       name: "Luke",
@@ -13,7 +13,7 @@ export default function Home() {
       intro: "偏力量感按摩，適合壓力與疲勞釋放。",
       image:
         "image:
-  "https://i.ibb.co/bjnFrycJ/72279-B09-5-CD5-4-ACC-AE7-C-40-C5-E0-C2-D6-E7.png",
+  "https://i.ibb.co/rKJ3ZLDs/72279-B09-5-CD5-4-ACC-AE7-C-40-C5-E0-C2-D6-E7.png",
     },
   ]
 
