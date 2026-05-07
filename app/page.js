@@ -338,7 +338,117 @@ export default function Home() {
           ))}
         </div>
       </section>
+{/* PRICING */}
+<section
+  style={{
+    padding: "0 24px 120px",
+    maxWidth: "900px",
+    margin: "0 auto",
+    textAlign: "center",
+  }}
+>
+  <p
+    style={{
+      color: "#b9977d",
+      letterSpacing: "4px",
+      marginBottom: "12px",
+    }}
+  >
+    PRICING
+  </p>
 
+  <h2
+    style={{
+      fontSize: "42px",
+      fontWeight: 300,
+      marginBottom: "50px",
+    }}
+  >
+    課程方案
+  </h2>
+
+  <div
+    style={{
+      background: "#111",
+      borderRadius: "32px",
+      padding: "60px 30px",
+      border: "1px solid rgba(255,255,255,0.06)",
+      lineHeight: "2.2",
+      color: "#e8d7c5",
+    }}
+  >
+    <p
+      style={{
+        color: "#b9977d",
+        letterSpacing: "3px",
+        marginBottom: "16px",
+      }}
+    >
+      COURSE ｜ 課程方案
+    </p>
+
+    <h3
+      style={{
+        fontSize: "34px",
+        fontWeight: 300,
+        marginBottom: "36px",
+      }}
+    >
+      90 MIN ｜ NT$1800
+    </h3>
+
+    <p
+      style={{
+        color: "#b9977d",
+        letterSpacing: "3px",
+        marginBottom: "12px",
+      }}
+    >
+      EXTENSION ｜ 延長放鬆時間
+    </p>
+
+    <p
+      style={{
+        fontSize: "22px",
+        marginBottom: "40px",
+      }}
+    >
+      30 MIN ｜ +NT$500
+    </p>
+
+    <p
+      style={{
+        opacity: 0.82,
+        marginBottom: "30px",
+      }}
+    >
+      以上價格適用於工作室空間預約，
+      <br />
+      外出安排將依地點酌收交通費用。
+    </p>
+
+    <p
+      style={{
+        color: "#b9977d",
+        letterSpacing: "3px",
+        marginBottom: "12px",
+      }}
+    >
+      NIGHT SESSION ｜ 夜間時段
+    </p>
+
+    <p
+      style={{
+        fontSize: "20px",
+        opacity: 0.9,
+      }}
+    >
+      22:00 — 08:00
+      <br />
+      加收 NT$500 夜間服務費
+    </p>
+  </div>
+</section>
  <section
   style={{
     borderTop: "1px solid rgba(255,255,255,0.08)",
