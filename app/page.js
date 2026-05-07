@@ -250,7 +250,7 @@ export default function Home() {
                 </p>
 
                 <a
-                  href="https://line.me/"
+                  href="https://line.me/R/ti/p/@637fbbyh"
                   target="_blank"
                   style={{
                     display: 'inline-block',
