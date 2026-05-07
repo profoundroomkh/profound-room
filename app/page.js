@@ -247,7 +247,6 @@ export default function Home() {
   為保留安靜與隱私感，
   <br />
   採預約完成後提供詳細位置。       
-          </div>
         </div>
       </section>
 
