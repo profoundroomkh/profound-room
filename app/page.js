@@ -12,7 +12,6 @@ export default function Home() {
       specialty: "肌肉按摩 / 沉浸療癒",
       intro: "偏力量感按摩，適合壓力與疲勞釋放。",
       image:
-        "image:
   "https://i.ibb.co/rKJ3ZLDs/72279-B09-5-CD5-4-ACC-AE7-C-40-C5-E0-C2-D6-E7.png",
     },
   ]
