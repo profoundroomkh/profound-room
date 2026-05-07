@@ -347,59 +347,38 @@ export default function Home() {
     paddingBottom: "40px",
     textAlign: "center",
     color: "#cbb79d",
-    lineHeight: "2",
   }}
 >
   <div
     style={{
-      maxWidth: "700px",
-      margin: "0 auto",
-      padding: "0 24px",
-      fontSize: "14px",
+      display: "flex",
+      flexDirection: "column",
+      gap: "18px",
+      alignItems: "center",
+      color: "#f2e1d0",
+      fontSize: "15px",
       letterSpacing: "1px",
     }}
   >
-    <p style={{ marginBottom: "24px", color: "#e7d8c2" }}>
-      深寓 PROFOUND ROOM 為預約制放鬆空間，
-      <br />
-      未滿十八歲請勿瀏覽與預約。
-    </p>
-
-    <p style={{ opacity: 0.85 }}>
-      我們專注於身心舒壓與專業按摩體驗，
-      <br />
-      提供安靜、放鬆且具界線感的服務環境。
-    </p>
-
-    <p style={{ opacity: 0.75, marginTop: "24px" }}>
-      本館不提供任何非法或逾越專業界線之服務，
-      <br />
-      亦不接受相關要求與暗示。
-      <br />
-      若有違反情形，本館將立即終止服務，
-      <br />
-      並保留相關法律權利。
-    </p>
-
-    <div
+    <a
+      href="tel:+886980945321"
       style={{
-        marginTop: "40px",
-        display: "flex",
-        flexDirection: "column",
-        gap: "12px",
-        alignItems: "center",
         color: "#f2e1d0",
-        fontSize: "15px",
+        textDecoration: "none",
       }}
     >
-      <div>
-        ☎︎　+886 980945321
-      </div>
+      ☎︎　+886 980945321
+    </a>
 
-      <div>
-        ✉︎　profoundroom.kh@gmail.com
-      </div>
-    </div>
+    <a
+      href="mailto:profoundroom.kh@gmail.com"
+      style={{
+        color: "#f2e1d0",
+        textDecoration: "none",
+      }}
+    >
+      ✉︎　profoundroom.kh@gmail.com
+    </a>
   </div>
 </section>
 </main>
