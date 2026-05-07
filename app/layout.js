@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Profound Room",
-  description: "title: "深寓 Profound Room｜高雄預約制男仕放鬆空間",
+  title: "深寓 Profound Room",
+  description: "高雄預約制放鬆空間｜深層舒壓・精油按摩・預約體驗",
 };
 
 export default function RootLayout({ children }) {
