@@ -230,6 +230,23 @@ export default function Home() {
               我們重視隱私、氛圍與情緒沉澱，
               希望每一次到訪，都像進入一段與外界隔絕的深夜旅程。
             </p>
+         <div
+  style={{
+    marginTop: "32px",
+    color: "#cbb79d",
+    lineHeight: "2",
+    fontSize: "15px",
+    letterSpacing: "1px",
+    opacity: 0.88,
+  }}
+>
+  空間鄰近高雄車站，
+  <br />
+  步行約五分鐘即可抵達。
+  <br />
+  為保留安靜與隱私感，
+  <br />
+  採預約完成後提供詳細位置。       
           </div>
         </div>
       </section>
