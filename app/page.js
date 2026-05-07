@@ -17,7 +17,78 @@ export default function Home() {
   ]
 
   return (
-    <main style={{
+  <>
+    <div
+  style={{
+    minHeight: "100vh",
+    backgroundColor: "#050505",
+    color: "#f2e1d0",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    padding: "40px 24px",
+  }}
+>
+  <h1
+    style={{
+      fontSize: "42px",
+      letterSpacing: "8px",
+      marginBottom: "32px",
+      fontWeight: "300",
+    }}
+  >
+    深寓
+  </h1>
+
+  <div
+    style={{
+      maxWidth: "700px",
+      lineHeight: "2.2",
+      color: "#cbb79d",
+      fontSize: "15px",
+    }}
+  >
+    <p style={{ marginBottom: "24px", color: "#f2e1d0" }}>
+      深寓 PROFOUND ROOM 為預約制放鬆空間，
+      <br />
+      未滿十八歲請勿瀏覽與預約。
+    </p>
+
+    <p>
+      我們專注於身心舒壓與專業按摩體驗，
+      <br />
+      提供安靜、放鬆且具界線感的服務環境。
+    </p>
+
+    <p style={{ marginTop: "24px", opacity: 0.75 }}>
+      本館不提供任何非法或逾越專業界線之服務，
+      <br />
+      亦不接受相關要求與暗示。
+      <br />
+      若有違反情形，本館將立即終止服務，
+      <br />
+      並保留相關法律權利。
+    </p>
+  </div>
+
+  <a
+    href="#main"
+    style={{
+      marginTop: "48px",
+      border: "1px solid #cbb79d",
+      padding: "16px 40px",
+      borderRadius: "999px",
+      color: "#f2e1d0",
+      textDecoration: "none",
+      letterSpacing: "2px",
+    }}
+  >
+    我已滿十八歲
+  </a>
+</div>
+    <main id="main" style={{
       backgroundColor: '#050505',
       color: '#f2e1d0',
       minHeight: '100vh',
@@ -331,6 +402,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-    </main>
-  );
+</main>
+  </>
+)
 }
