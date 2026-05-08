@@ -626,6 +626,30 @@ export default function Home() {
     </a>
   </div>
 </section>
+{/* FLOATING LINE BUTTON */}
+<a
+  href="https://line.me/R/ti/p/@637fbbyh"
+  target="_blank"
+  style={{
+    position: "fixed",
+    right: "24px",
+    bottom: "24px",
+    zIndex: 999,
+    background: "#1c1c1c",
+    color: "#f2e1d0",
+    padding: "14px 22px",
+    borderRadius: "999px",
+    textDecoration: "none",
+    border: "1px solid rgba(255,255,255,0.12)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
+    letterSpacing: "2px",
+    fontSize: "14px",
+    transition: "0.3s",
+  }}
+>
+  LINE 預約
+</a>        
 </main>
   </>
 )
