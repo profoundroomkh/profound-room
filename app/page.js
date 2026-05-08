@@ -234,25 +234,25 @@ export default function Home() {
       </p>
 
       <div
-        style={{
-          marginTop: '32px',
-          color: '#cbb79d',
-          lineHeight: '2',
-          fontSize: '15px',
-          letterSpacing: '1px',
-          opacity: 0.88,
-        }}
-      >
-        <p>
-          空間鄰近高雄車站，
-          <br />
-          步行約五分鐘即可抵達。
-          <br />
-          為保留安靜與隱私感，
-          <br />
-          採預約完成後提供詳細位置。
-        </p>
-      </div>
+  style={{
+    marginTop: '32px',
+    color: '#cbb79d',
+    lineHeight: '2',
+    fontSize: '15px',
+    letterSpacing: '1px',
+    opacity: 0.88,
+  }}
+>
+  <p>
+    空間鄰近高雄車站，
+    <br />
+    步行約五分鐘即可抵達。
+    <br />
+    為保留安靜與隱私感，
+    <br />
+    採預約完成後提供詳細位置。
+  </p>
+</div>
     </div>
   </div>
 </section>
