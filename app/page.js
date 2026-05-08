@@ -250,6 +250,7 @@ export default function Home() {
     採預約完成後提供詳細位置。
   </p>
 </div>
+  
   </div>
       </section>
 
