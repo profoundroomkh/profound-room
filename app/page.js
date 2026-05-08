@@ -472,6 +472,118 @@ export default function Home() {
     </p>
   </div>
 </section>
+ {/* VISIT GUIDE */}
+<section
+  style={{
+    padding: '0 24px 120px',
+    maxWidth: '900px',
+    margin: '0 auto',
+    textAlign: 'center',
+  }}
+>
+  <p
+    style={{
+      color: '#b9977d',
+      letterSpacing: '4px',
+      marginBottom: '12px',
+    }}
+  >
+    VISIT GUIDE
+  </p>
+
+  <h2
+    style={{
+      fontSize: '42px',
+      fontWeight: 300,
+      marginBottom: '50px',
+    }}
+  >
+    來訪須知
+  </h2>
+
+  <div
+    style={{
+      background: '#111',
+      borderRadius: '32px',
+      padding: '60px 30px',
+      border: '1px solid rgba(255,255,255,0.06)',
+      lineHeight: '2.3',
+      color: '#e8d7c5',
+    }}
+  >
+    <div style={{ marginBottom: '42px' }}>
+      <p
+        style={{
+          color: '#b9977d',
+          letterSpacing: '3px',
+          marginBottom: '12px',
+        }}
+      >
+        RESERVATION
+      </p>
+
+      <p>
+        加入官方 LINE 後，
+        <br />
+        提供希望預約時段即可安排。
+      </p>
+    </div>
+
+    <div style={{ marginBottom: '42px' }}>
+      <p
+        style={{
+          color: '#b9977d',
+          letterSpacing: '3px',
+          marginBottom: '12px',
+        }}
+      >
+        APPOINTMENT ONLY
+      </p>
+
+      <p>
+        為維護空間品質，
+        <br />
+        恕不接受現場臨時來訪。
+      </p>
+    </div>
+
+    <div style={{ marginBottom: '42px' }}>
+      <p
+        style={{
+          color: '#b9977d',
+          letterSpacing: '3px',
+          marginBottom: '12px',
+        }}
+      >
+        LOCATION
+      </p>
+
+      <p>
+        完成預約後，
+        <br />
+        將提供詳細位置資訊。
+      </p>
+    </div>
+
+    <div>
+      <p
+        style={{
+          color: '#b9977d',
+          letterSpacing: '3px',
+          marginBottom: '12px',
+        }}
+      >
+        CHANGE & CANCELLATION
+      </p>
+
+      <p>
+        若需更改或取消預約，
+        <br />
+        請提前告知。
+      </p>
+    </div>
+  </div>
+</section>       
  <section
   style={{
     borderTop: "1px solid rgba(255,255,255,0.08)",
