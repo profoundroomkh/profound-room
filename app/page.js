@@ -173,87 +173,89 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section
-        style={{
-          padding: '100px 24px',
-          maxWidth: '1100px',
-          margin: '0 auto',
-        }}
-      >
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
-            gap: '50px',
-            alignItems: 'center',
-          }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop"
-            style={{
-              width: '100%',
-              borderRadius: '24px',
-              objectFit: 'cover',
-              minHeight: '420px',
-            }}
-          />
-
-          <div>
-            <p
-              style={{
-                color: '#b9977d',
-                letterSpacing: '4px',
-                marginBottom: '12px',
-              }}
-            >
-              ABOUT
-            </p>
-
-            <h2
-              style={{
-                fontSize: '42px',
-                marginBottom: '24px',
-                fontWeight: 300,
-              }}
-            >
-              沉浸式的私密放鬆體驗
-            </h2>
-
-            <p
-              style={{
-                color: '#c9b8aa',
-                lineHeight: '1.9',
-                fontSize: '17px',
-              }}
-            >
-              深寓是一間採完全預約制的放鬆空間。
-              我們重視隱私、氛圍與情緒沉澱，
-              希望每一次到訪，都像進入一段與外界隔絕的深夜旅程。
-            </p>
-         <div
+<section
   style={{
-    marginTop: "32px",
-    color: "#cbb79d",
-    lineHeight: "2",
-    fontSize: "15px",
-    letterSpacing: "1px",
-    opacity: 0.88,
+    padding: '100px 24px',
+    maxWidth: '1100px',
+    margin: '0 auto',
   }}
 >
-  <p>
-    空間鄰近高雄車站，
-    <br />
-    步行約五分鐘即可抵達。
-    <br />
-    為保留安靜與隱私感，
-    <br />
-    採預約完成後提供詳細位置。
-  </p>
-</div>
-  
+  <div
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
+      gap: '50px',
+      alignItems: 'center',
+    }}
+  >
+    <img
+      src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop"
+      style={{
+        width: '100%',
+        borderRadius: '24px',
+        objectFit: 'cover',
+        minHeight: '420px',
+      }}
+    />
+
+    <div>
+      <p
+        style={{
+          color: '#b9977d',
+          letterSpacing: '4px',
+          marginBottom: '12px',
+        }}
+      >
+        ABOUT
+      </p>
+
+      <h2
+        style={{
+          fontSize: '42px',
+          marginBottom: '24px',
+          fontWeight: 300,
+        }}
+      >
+        沉浸式的私密放鬆體驗
+      </h2>
+
+      <p
+        style={{
+          color: '#c9b8aa',
+          lineHeight: '1.9',
+          fontSize: '17px',
+        }}
+      >
+        深寓是一間採完全預約制的放鬆空間。
+        <br />
+        我們重視隱私、氛圍與情緒沉澱，
+        <br />
+        希望每一次到訪，都像進入一段與外界隔絕的深夜旅程。
+      </p>
+
+      <div
+        style={{
+          marginTop: '32px',
+          color: '#cbb79d',
+          lineHeight: '2',
+          fontSize: '15px',
+          letterSpacing: '1px',
+          opacity: 0.88,
+        }}
+      >
+        <p>
+          空間鄰近高雄車站，
+          <br />
+          步行約五分鐘即可抵達。
+          <br />
+          為保留安靜與隱私感，
+          <br />
+          採預約完成後提供詳細位置。
+        </p>
+      </div>
+    </div>
   </div>
-  </div>
-      </section>
+</section>
 
       {/* MASTERS */}
       <section
