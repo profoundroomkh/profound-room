@@ -472,7 +472,7 @@ export default function Home() {
     </p>
   </div>
 </section>
- {/* VISIT GUIDE */}
+{/* VISIT GUIDE */}
 <section
   style={{
     padding: '0 24px 120px',
@@ -583,7 +583,7 @@ export default function Home() {
       </p>
     </div>
   </div>
-</section>       
+</section>
  <section
   style={{
     borderTop: "1px solid rgba(255,255,255,0.08)",
