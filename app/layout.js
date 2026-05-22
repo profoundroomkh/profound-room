@@ -1,3 +1,4 @@
+import FloatingButton from '../components/FloatingButton'
 import './globals.css'
 import Script from 'next/script'
 export const metadata = {
@@ -55,6 +56,8 @@ export default function RootLayout({
   return (
     <html lang="zh-Hant">
       <body>
+  <FloatingButton />
+
   {children}
 
   <Script
