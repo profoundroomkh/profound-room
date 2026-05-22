@@ -21,7 +21,7 @@ import Gallery from '../components/Gallery'
     },
   ]
 
-  return (
+  return (  
   <>
     <Header />
 
@@ -113,10 +113,11 @@ import Gallery from '../components/Gallery'
           alignItems: 'center',
           textAlign: 'center',
           padding: '40px 24px',
-          background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.95)), url(https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+         background:
+  'linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.92)), url(/images/hero.jpg)',
+backgroundSize: 'cover',
+backgroundPosition: 'center',
+backgroundRepeat: 'no-repeat',
         }}
       >
         <div
