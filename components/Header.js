@@ -15,50 +15,62 @@ export default function Header() {
           left: 0,
           width: '100%',
           zIndex: 999,
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '18px 18px',
-          background: 'rgba(0,0,0,0.45)',
-          backdropFilter: 'blur(10px)',
-          borderBottom: '1px solid rgba(255,255,255,0.08)',
+          background: 'rgba(5,5,5,0.92)',
+          backdropFilter: 'blur(12px)',
+          borderBottom:
+            '1px solid rgba(255,255,255,0.06)',
         }}
       >
-        <button
-          onClick={() => setOpen(true)}
-          style={{
-            background: 'transparent',
-            border: 'none',
-            color: '#f2e1d0',
-            fontSize: '12px',
-            letterSpacing: '3px',
-            cursor: 'pointer',
-          }}
-        >
-          ☰ MENU
-        </button>
-
         <div
           style={{
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '18px 18px',
             color: '#f2e1d0',
-            letterSpacing: '3px',
-            fontSize: '12px',
           }}
         >
-          PROFOUND ROOM
-        </div>
+          <button
+            onClick={() => setOpen(true)}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: '#f2e1d0',
+              letterSpacing: '3px',
+              fontSize: '12px',
+              cursor: 'pointer',
+            }}
+          >
+            ☰ MENU
+          </button>
 
-        <a
-          href='https://line.me'
-          style={{
-            color: '#cbb79d',
-            textDecoration: 'none',
-            fontSize: '12px',
-            letterSpacing: '1px',
-          }}
-        >
-          LINE
-        </a>
+          <div
+            style={{
+              position: 'absolute',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              letterSpacing: '4px',
+              fontSize: '12px',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            PROFOUND ROOM
+          </div>
+
+          <a
+            href='https://line.me/R/ti/p/@637fbbyh'
+            target='_blank'
+            style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
+              letterSpacing: '2px',
+              fontSize: '12px',
+            }}
+          >
+            LINE
+          </a>
+        </div>
       </header>
 
       <HamburgerMenu
