@@ -18,7 +18,7 @@ export default function Header() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: '20px 28px',
+          padding: '18px 18px',
           background: 'rgba(0,0,0,0.45)',
           backdropFilter: 'blur(10px)',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
@@ -30,7 +30,7 @@ export default function Header() {
             background: 'transparent',
             border: 'none',
             color: '#f2e1d0',
-            fontSize: '14px',
+            fontSize: '12px',
             letterSpacing: '3px',
             cursor: 'pointer',
           }}
@@ -41,8 +41,8 @@ export default function Header() {
         <div
           style={{
             color: '#f2e1d0',
-            letterSpacing: '6px',
-            fontSize: '14px',
+            letterSpacing: '3px',
+            fontSize: '12px',
           }}
         >
           PROFOUND ROOM
@@ -53,11 +53,11 @@ export default function Header() {
           style={{
             color: '#cbb79d',
             textDecoration: 'none',
-            fontSize: '14px',
-            letterSpacing: '2px',
+            fontSize: '12px',
+            letterSpacing: '1px',
           }}
         >
-          RESERVE
+          LINE
         </a>
       </header>
 
