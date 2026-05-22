@@ -14,7 +14,7 @@ export default function HamburgerMenu({
         background: '#050505',
         zIndex: 9999,
         color: '#f2e1d0',
-        padding: '40px 28px',
+        padding: '40px 28px 80px',
         overflowY: 'auto',
       }}
     >
@@ -23,13 +23,14 @@ export default function HamburgerMenu({
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginBottom: '80px',
+          marginBottom: '90px',
         }}
       >
         <div
           style={{
-            letterSpacing: '3px',
-            fontSize: '13px',
+            letterSpacing: '4px',
+            fontSize: '12px',
+            color: '#cbb79d',
           }}
         >
           PROFOUND ROOM
@@ -41,7 +42,7 @@ export default function HamburgerMenu({
             background: 'transparent',
             border: 'none',
             color: '#f2e1d0',
-            fontSize: '28px',
+            fontSize: '30px',
             cursor: 'pointer',
           }}
         >
@@ -49,13 +50,13 @@ export default function HamburgerMenu({
         </button>
       </div>
 
-      <div style={{ marginBottom: '80px' }}>
+      <div style={{ marginBottom: '90px' }}>
         <p
           style={{
-            color: '#cbb79d',
-            letterSpacing: '4px',
-            marginBottom: '24px',
-            fontSize: '13px',
+            color: '#8d7964',
+            letterSpacing: '5px',
+            marginBottom: '26px',
+            fontSize: '12px',
           }}
         >
           SPACE
@@ -65,9 +66,7 @@ export default function HamburgerMenu({
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '22px',
-            fontSize: '26px',
-            fontWeight: '300',
+            gap: '24px',
           }}
         >
           <a
@@ -75,6 +74,8 @@ export default function HamburgerMenu({
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
+              fontSize: '28px',
+              fontWeight: '300',
             }}
           >
             首頁
@@ -85,26 +86,52 @@ export default function HamburgerMenu({
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
+              fontSize: '28px',
+              fontWeight: '300',
             }}
           >
             空間氛圍
           </a>
 
-          <div>沐浴空間</div>
+          <div
+            style={{
+              fontSize: '28px',
+              fontWeight: '300',
+              opacity: 0.35,
+            }}
+          >
+            沐浴空間
+          </div>
 
-          <div>私人房間</div>
+          <div
+            style={{
+              fontSize: '28px',
+              fontWeight: '300',
+              opacity: 0.35,
+            }}
+          >
+            私人房間
+          </div>
 
-          <div>空間細節</div>
+          <div
+            style={{
+              fontSize: '28px',
+              fontWeight: '300',
+              opacity: 0.35,
+            }}
+          >
+            空間細節
+          </div>
         </div>
       </div>
 
-      <div style={{ marginBottom: '80px' }}>
+      <div style={{ marginBottom: '90px' }}>
         <p
           style={{
-            color: '#cbb79d',
-            letterSpacing: '4px',
-            marginBottom: '24px',
-            fontSize: '13px',
+            color: '#8d7964',
+            letterSpacing: '5px',
+            marginBottom: '26px',
+            fontSize: '12px',
           }}
         >
           EXPERIENCE
@@ -114,43 +141,75 @@ export default function HamburgerMenu({
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '22px',
-            fontSize: '26px',
-            fontWeight: '300',
+            gap: '24px',
           }}
         >
           <a
-  href='/reservation'
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-  }}
->
-  預約方式
-</a>
+            href='/reservation'
+            style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
+              fontSize: '28px',
+              fontWeight: '300',
+            }}
+          >
+            預約方式
+          </a>
 
-          <div>FAQ 常見問題</div>
+          <div
+            style={{
+              fontSize: '28px',
+              fontWeight: '300',
+              opacity: 0.35,
+            }}
+          >
+            FAQ 常見問題
+          </div>
 
-          <div>環境照片</div>
+          <div
+            style={{
+              fontSize: '28px',
+              fontWeight: '300',
+              opacity: 0.35,
+            }}
+          >
+            環境照片
+          </div>
 
-          <div>深夜日誌</div>
+          <div
+            style={{
+              fontSize: '28px',
+              fontWeight: '300',
+              opacity: 0.35,
+            }}
+          >
+            深夜日誌
+          </div>
         </div>
       </div>
 
-      <p
+      <div
         style={{
-          color: 'rgba(255,255,255,0.45)',
-          lineHeight: '2.2',
-          maxWidth: '680px',
-          fontSize: '14px',
+          borderTop:
+            '1px solid rgba(255,255,255,0.08)',
+          paddingTop: '40px',
         }}
       >
-        PROFOUND ROOM is a private Gay SPA
-        and men’s relaxation space in
-        Kaohsiung, designed for deep rest,
-        quiet moments, and immersive
-        atmosphere.
-      </p>
+        <p
+          style={{
+            color: 'rgba(255,255,255,0.42)',
+            lineHeight: '2.2',
+            maxWidth: '620px',
+            fontSize: '14px',
+          }}
+        >
+          PROFOUND ROOM is a private Gay SPA
+          and men’s relaxation space in
+          Kaohsiung, designed for deep rest,
+          quiet moments, and immersive
+          atmosphere.
+        </p>
+      </div>
     </div>
   )
 }
