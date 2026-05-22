@@ -35,7 +35,7 @@ export default function FloatingButton() {
 
       <div
         style={{
-          fontSize: '15px',
+          fontSize: '18px',
           fontWeight: '400',
         }}
       >
