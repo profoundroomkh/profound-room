@@ -197,7 +197,7 @@ import Gallery from '../components/Gallery'
     }}
   >
     <img
-      src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop"
+      src="/images/hero.jpg"
       style={{
         width: '100%',
         borderRadius: '24px',
