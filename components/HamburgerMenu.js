@@ -93,35 +93,41 @@ export default function HamburgerMenu({
             空間氛圍
           </a>
 
-          <div
+          <a
+            href='/space'
             style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
               fontSize: '28px',
               fontWeight: '300',
-              opacity: 0.35,
             }}
           >
             沐浴空間
-          </div>
+          </a>
 
-          <div
+          <a
+            href='/space'
             style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
               fontSize: '28px',
               fontWeight: '300',
-              opacity: 0.35,
             }}
           >
             私人房間
-          </div>
+          </a>
 
-          <div
+          <a
+            href='/space'
             style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
               fontSize: '28px',
               fontWeight: '300',
-              opacity: 0.35,
             }}
           >
             空間細節
-          </div>
+          </a>
         </div>
       </div>
 
@@ -156,37 +162,41 @@ export default function HamburgerMenu({
             預約方式
           </a>
 
-          <div
+          <a
+            href='/faq'
             style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
               fontSize: '28px',
               fontWeight: '300',
-              opacity: 0.35,
             }}
           >
             FAQ 常見問題
-          </div>
+          </a>
 
-          <div
+          <a
+            href='/space'
             style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
               fontSize: '28px',
               fontWeight: '300',
-              opacity: 0.35,
             }}
           >
             環境照片
-          </div>
+          </a>
 
           <a
-  href='/journal'
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-    fontSize: '28px',
-    fontWeight: '300',
-  }}
->
-  深夜日誌
-</a>
+            href='/journal'
+            style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
+              fontSize: '28px',
+              fontWeight: '300',
+            }}
+          >
+            深夜日誌
+          </a>
         </div>
       </div>
 
