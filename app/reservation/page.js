@@ -193,21 +193,7 @@ export default function ReservationPage() {
             </p>
           </div>
 
-          <a
-            href='https://line.me/R/ti/p/@637fbbyh'
-            target='_blank'
-            style={{
-              display: 'inline-block',
-              padding: '18px 40px',
-              borderRadius: '999px',
-              border: '1px solid #cbb79d',
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              letterSpacing: '3px',
-            }}
-          >
-            LINE 預約
-          </a>
+          
         </div>
       </main>
     </>
