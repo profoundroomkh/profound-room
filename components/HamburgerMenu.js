@@ -176,15 +176,17 @@ export default function HamburgerMenu({
             環境照片
           </div>
 
-          <div
-            style={{
-              fontSize: '28px',
-              fontWeight: '300',
-              opacity: 0.35,
-            }}
-          >
-            深夜日誌
-          </div>
+          <a
+  href='/journal'
+  style={{
+    color: '#f2e1d0',
+    textDecoration: 'none',
+    fontSize: '28px',
+    fontWeight: '300',
+  }}
+>
+  深夜日誌
+</a>
         </div>
       </div>
 
