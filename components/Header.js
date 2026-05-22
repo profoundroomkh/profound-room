@@ -68,7 +68,7 @@ export default function Header() {
               fontSize: '12px',
             }}
           >
-            LINE
+            Reservation
           </a>
         </div>
       </header>
