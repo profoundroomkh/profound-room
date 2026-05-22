@@ -1,6 +1,11 @@
 import './globals.css'
 
 export const metadata = {
+  verification: {
+  google:
+    'lLXC421Mze9xeGmQsBV33sdP3ipp6apLvDdqnB7rwFU',
+},
+  
   title:
     'PROFOUND ROOM 深寓｜高雄預約制 Gay SPA 與男士放鬆空間',
 
