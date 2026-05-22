@@ -1,8 +1,8 @@
 'use client'
 
-import Header from '@/components/Header'
-import FAQ from '@/components/FAQ'
-import Gallery from '@/components/Gallery'
+import Header from '../components/Header'
+import FAQ from '../components/FAQ'
+import Gallery from '../components/Gallery'
   export default function Home() {
   const masters = [
     {
