@@ -14,7 +14,8 @@ export default function FloatingButton() {
         border:
           '1px solid rgba(255,255,255,0.08)',
         borderRadius: '999px',
-        padding: '16px 24px',
+        padding: '20px 34px',
+        minWidth: '220px',
         textDecoration: 'none',
         color: '#f2e1d0',
         boxShadow:
