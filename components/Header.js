@@ -9,53 +9,62 @@ export default function Header() {
   return (
     <>
       <header
-        className="
-          fixed top-0 left-0 w-full z-50
-          flex items-center justify-between
-          px-6 md:px-10 py-5
-          bg-black/40 backdrop-blur-md
-          border-b border-white/10
-        "
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          zIndex: 999,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '20px 28px',
+          background: 'rgba(0,0,0,0.45)',
+          backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(255,255,255,0.08)',
+        }}
       >
         <button
           onClick={() => setOpen(true)}
-          className="
-            text-white
-            tracking-[0.25em]
-            text-sm
-            hover:opacity-70
-            duration-300
-          "
+          style={{
+            background: 'transparent',
+            border: 'none',
+            color: '#f2e1d0',
+            fontSize: '14px',
+            letterSpacing: '3px',
+            cursor: 'pointer',
+          }}
         >
           ☰ MENU
         </button>
 
-        <h1
-          className="
-            text-white
-            text-sm
-            tracking-[0.4em]
-          "
+        <div
+          style={{
+            color: '#f2e1d0',
+            letterSpacing: '6px',
+            fontSize: '14px',
+          }}
         >
           PROFOUND ROOM
-        </h1>
+        </div>
 
         <a
-          href="https://line.me"
-          target="_blank"
-          className="
-            text-[#c6a36a]
-            text-sm
-            tracking-[0.2em]
-            hover:opacity-70
-            duration-300
-          "
+          href='https://line.me'
+          style={{
+            color: '#cbb79d',
+            textDecoration: 'none',
+            fontSize: '14px',
+            letterSpacing: '2px',
+          }}
         >
           RESERVE
         </a>
       </header>
 
-      <HamburgerMenu open={open} setOpen={setOpen} />
+      <HamburgerMenu
+        open={open}
+        setOpen={setOpen}
+      />
     </>
   )
 }
