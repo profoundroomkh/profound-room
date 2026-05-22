@@ -1,113 +1,138 @@
 'use client'
 
-export default function HamburgerMenu({ open, setOpen }) {
+export default function HamburgerMenu({
+  open,
+  setOpen,
+}) {
+  if (!open) return null
+
   return (
     <div
-      className={`
-        fixed inset-0 z-[999]
-        bg-black
-        transition-all duration-500
-        ${
-          open
-            ? 'opacity-100 visible'
-            : 'opacity-0 invisible'
-        }
-      `}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        background: '#050505',
+        zIndex: 9999,
+        color: '#f2e1d0',
+        padding: '40px 28px',
+        overflowY: 'auto',
+      }}
     >
-      <div className="p-8 md:p-16 h-full overflow-y-auto">
-        <div className="flex items-center justify-between mb-20">
-          <h2
-            className="
-              text-white
-              text-sm
-              tracking-[0.4em]
-            "
-          >
-            PROFOUND ROOM
-          </h2>
-
-          <button
-            onClick={() => setOpen(false)}
-            className="
-              text-white
-              text-3xl
-              hover:opacity-70
-              duration-300
-            "
-          >
-            ✕
-          </button>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          marginBottom: '60px',
+        }}
+      >
+        <div
+          style={{
+            letterSpacing: '6px',
+            fontSize: '14px',
+          }}
+        >
+          PROFOUND ROOM
         </div>
 
-        <div className="grid md:grid-cols-2 gap-20 text-white">
-          <div>
-            <p
-              className="
-                text-[#c6a36a]
-                text-sm
-                tracking-[0.3em]
-                mb-8
-              "
-            >
-              SPACE
-            </p>
+        <button
+          onClick={() => setOpen(false)}
+          style={{
+            background: 'transparent',
+            border: 'none',
+            color: '#f2e1d0',
+            fontSize: '28px',
+            cursor: 'pointer',
+          }}
+        >
+          ✕
+        </button>
+      </div>
 
-            <ul className="space-y-5 text-4xl font-light">
-              <li>
-                <a href="/">Home</a>
-              </li>
+      <div style={{ marginBottom: '60px' }}>
+        <p
+          style={{
+            color: '#cbb79d',
+            letterSpacing: '3px',
+            marginBottom: '20px',
+          }}
+        >
+          SPACE
+        </p>
 
-              <li>Atmosphere</li>
-
-              <li>Shower Area</li>
-
-              <li>Private Room</li>
-
-              <li>Details</li>
-            </ul>
-          </div>
-
-          <div>
-            <p
-              className="
-                text-[#c6a36a]
-                text-sm
-                tracking-[0.3em]
-                mb-8
-              "
-            >
-              EXPERIENCE
-            </p>
-
-            <ul className="space-y-5 text-4xl font-light">
-              <li>Reservation</li>
-
-              <li>FAQ</li>
-
-              <li>Gallery</li>
-
-              <li>
-                <a href="/blog">Journal</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-24 border-t border-white/10 pt-10">
-          <p
-            className="
-              text-white/50
-              leading-8
-              max-w-2xl
-            "
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '18px',
+            fontSize: '42px',
+            fontWeight: '300',
+          }}
+        >
+          <a
+            href='/'
+            style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
+            }}
           >
-            PROFOUND ROOM is a private Gay SPA and
-            men’s relaxation space in Kaohsiung,
-            designed for deep rest, quiet moments,
-            and immersive atmosphere.
-          </p>
+            Home
+          </a>
+
+          <div>Atmosphere</div>
+          <div>Shower Area</div>
+          <div>Private Room</div>
+          <div>Details</div>
         </div>
       </div>
+
+      <div style={{ marginBottom: '60px' }}>
+        <p
+          style={{
+            color: '#cbb79d',
+            letterSpacing: '3px',
+            marginBottom: '20px',
+          }}
+        >
+          EXPERIENCE
+        </p>
+
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '18px',
+            fontSize: '42px',
+            fontWeight: '300',
+          }}
+        >
+          <div>Reservation</div>
+          <div>FAQ</div>
+          <div>Gallery</div>
+          <a
+            href='/blog'
+            style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
+            }}
+          >
+            Journal
+          </a>
+        </div>
+      </div>
+
+      <p
+        style={{
+          color: 'rgba(255,255,255,0.5)',
+          lineHeight: '2',
+          maxWidth: '700px',
+        }}
+      >
+        PROFOUND ROOM is a private Gay SPA
+        and men’s relaxation space in
+        Kaohsiung, designed for deep rest,
+        quiet moments, and immersive
+        atmosphere.
+      </p>
     </div>
   )
 }
