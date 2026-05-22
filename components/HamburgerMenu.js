@@ -119,7 +119,15 @@ export default function HamburgerMenu({
             fontWeight: '300',
           }}
         >
-          <div>預約方式</div>
+          <a
+  href='/reservation'
+  style={{
+    color: '#f2e1d0',
+    textDecoration: 'none',
+  }}
+>
+  預約方式
+</a>
 
           <div>FAQ 常見問題</div>
 
