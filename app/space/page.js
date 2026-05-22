@@ -1,107 +1,113 @@
+import Header from '../../components/Header'
+
 export default function SpacePage() {
   return (
-    <main
-      style={{
-        background: '#050505',
-        color: '#f2e1d0',
-        minHeight: '100vh',
-        padding: '140px 24px',
-      }}
-    >
-      <div
+    <>
+      <Header />
+
+      <main
         style={{
-          maxWidth: '1400px',
-          margin: '0 auto',
+          background: '#050505',
+          color: '#f2e1d0',
+          minHeight: '100vh',
+          padding: '140px 24px',
         }}
       >
-        <p
-          style={{
-            color: '#cbb79d',
-            letterSpacing: '4px',
-            fontSize: '13px',
-            marginBottom: '20px',
-          }}
-        >
-          SPACE
-        </p>
-
-        <h1
-          style={{
-            fontSize: '72px',
-            fontWeight: '300',
-            lineHeight: '1.2',
-            marginBottom: '40px',
-          }}
-        >
-          A Quiet Space
-          <br />
-          For Deep Rest
-        </h1>
-
-        <p
-          style={{
-            color: 'rgba(255,255,255,0.65)',
-            lineHeight: '2',
-            maxWidth: '700px',
-            marginBottom: '100px',
-            fontSize: '18px',
-          }}
-        >
-          PROFOUND ROOM 為高雄預約制男士
-          Gay SPA 空間，
-          <br />
-          以安靜、沉浸與深夜放鬆為核心。
-        </p>
-
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns:
-              'repeat(auto-fit,minmax(320px,1fr))',
-            gap: '24px',
+            maxWidth: '1400px',
+            margin: '0 auto',
           }}
         >
-          <img
-            src='/images/gallery-1.jpg'
+          <p
             style={{
-              width: '100%',
-              borderRadius: '24px',
-              minHeight: '520px',
-              objectFit: 'cover',
+              color: '#cbb79d',
+              letterSpacing: '4px',
+              fontSize: '13px',
+              marginBottom: '20px',
             }}
-          />
+          >
+            SPACE
+          </p>
 
-          <img
-            src='/images/gallery-2.jpg'
+          <h1
             style={{
-              width: '100%',
-              borderRadius: '24px',
-              minHeight: '520px',
-              objectFit: 'cover',
+              fontSize: '72px',
+              fontWeight: '300',
+              lineHeight: '1.2',
+              marginBottom: '40px',
             }}
-          />
+          >
+            A Quiet Space
+            <br />
+            For Deep Rest
+          </h1>
 
-          <img
-            src='/images/gallery-3.jpg'
+          <p
             style={{
-              width: '100%',
-              borderRadius: '24px',
-              minHeight: '520px',
-              objectFit: 'cover',
+              color: 'rgba(255,255,255,0.65)',
+              lineHeight: '2',
+              maxWidth: '700px',
+              marginBottom: '100px',
+              fontSize: '18px',
             }}
-          />
+          >
+            PROFOUND ROOM 深寓為高雄預約制男士
+            Gay SPA 空間，
+            <br />
+            以安靜、沉浸與深夜放鬆為核心。
+          </p>
 
-          <img
-            src='/images/gallery-4.jpg'
+          <div
             style={{
-              width: '100%',
-              borderRadius: '24px',
-              minHeight: '520px',
-              objectFit: 'cover',
+              display: 'grid',
+              gridTemplateColumns:
+                'repeat(auto-fit,minmax(320px,1fr))',
+              gap: '24px',
             }}
-          />
+          >
+            <img
+              src='/images/hero.jpg'
+              style={{
+                width: '100%',
+                borderRadius: '24px',
+                minHeight: '520px',
+                objectFit: 'cover',
+              }}
+            />
+
+            <img
+              src='/images/hero.jpg'
+              style={{
+                width: '100%',
+                borderRadius: '24px',
+                minHeight: '520px',
+                objectFit: 'cover',
+              }}
+            />
+
+            <img
+              src='/images/hero.jpg'
+              style={{
+                width: '100%',
+                borderRadius: '24px',
+                minHeight: '520px',
+                objectFit: 'cover',
+              }}
+            />
+
+            <img
+              src='/images/hero.jpg'
+              style={{
+                width: '100%',
+                borderRadius: '24px',
+                minHeight: '520px',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
