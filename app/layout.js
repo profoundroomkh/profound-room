@@ -1,5 +1,5 @@
 import './globals.css'
-
+import Script from 'next/script'
 export const metadata = {
   verification: {
   google:
@@ -54,7 +54,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-Hant">
-      <body>{children}</body>
+      <body>
+  {children}
+
+  <Script
+    src='https://www.googletagmanager.com/gtag/js?id=G-4E0CTT77GH'
+    strategy='afterInteractive'
+  />
+
+  <Script id='google-analytics' strategy='afterInteractive'>
+    {`
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag(){
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-4E0CTT77GH');
+    `}
+  </Script>
+</body>
     </html>
   )
 }
