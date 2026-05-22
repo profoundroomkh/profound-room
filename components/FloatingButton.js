@@ -15,8 +15,9 @@ export default function FloatingButton() {
           '1px solid rgba(255,255,255,0.08)',
         borderRadius: '999px',
         padding: '20px 34px',
-        minWidth: '220px',
+        minWidth: '240px',
         textDecoration: 'none',
+        whiteSpace: 'nowrap',
         color: '#f2e1d0',
         boxShadow:
           '0 10px 40px rgba(0,0,0,0.35)',
@@ -25,7 +26,7 @@ export default function FloatingButton() {
       <div
         style={{
           fontSize: '11px',
-          letterSpacing: '3px',
+          letterSpacing: '4px',
           color: '#cbb79d',
           marginBottom: '6px',
         }}
