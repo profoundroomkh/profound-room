@@ -1,10 +1,11 @@
 import './globals.css'
 
 export const metadata = {
-  title: '高雄 Gay SPA｜PROFOUND ROOM 男士預約制放鬆空間',
+  title:
+    'PROFOUND ROOM 深寓｜高雄預約制 Gay SPA 與男士放鬆空間',
 
   description:
-    'PROFOUND ROOM 為高雄預約制 Gay SPA 與男士放鬆空間，提供私密、沉浸式的深層舒壓體驗。位於高雄亞洲新灣區附近，採完全預約制。',
+    'PROFOUND ROOM 深寓為高雄預約制男士 Gay SPA 空間，提供沉浸式按摩放鬆、深夜舒壓、私人放鬆體驗與安靜療癒空間。',
 
   keywords: [
     '高雄 Gay SPA',
@@ -14,13 +15,19 @@ export const metadata = {
     '高雄按摩',
     '高雄放鬆空間',
     '男士按摩',
+    '高雄男按摩',
     '預約制SPA',
+    '高雄舒壓',
+    '高雄深夜按摩',
+    '高雄同志按摩',
     'gay massage kaohsiung',
-    'private spa for men'
+    'private spa for men',
+    'mens spa kaohsiung',
   ],
 
   openGraph: {
-    title: 'PROFOUND ROOM｜高雄預約制男士 SPA',
+    title:
+      'PROFOUND ROOM 深寓｜高雄預約制 Gay SPA',
 
     description:
       'A private relaxation space for men in Kaohsiung.',
@@ -29,13 +36,17 @@ export const metadata = {
 
     siteName: 'PROFOUND ROOM',
 
+    images: ['/images/hero.jpg'],
+
     locale: 'zh_TW',
 
     type: 'website',
   },
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}) {
   return (
     <html lang="zh-Hant">
       <body>{children}</body>
