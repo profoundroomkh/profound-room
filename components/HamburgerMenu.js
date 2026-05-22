@@ -78,7 +78,15 @@ export default function HamburgerMenu({
             首頁
           </a>
 
-          <div>空間氛圍</div>
+          <a
+  href='/space'
+  style={{
+    color: '#f2e1d0',
+    textDecoration: 'none',
+  }}
+>
+  空間氛圍
+</a>
           <div>沐浴空間</div>
           <div>私人房間</div>
           <div>空間細節</div>
