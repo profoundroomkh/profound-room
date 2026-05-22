@@ -23,6 +23,8 @@ import Gallery from '@/components/Gallery'
 
   return (
   <>
+    <Header />
+
     <div
   style={{
     minHeight: "100vh",
@@ -656,6 +658,9 @@ import Gallery from '@/components/Gallery'
   LINE 預約
 </a>        
 </main>
-  </>
+ <Gallery />
+<FAQ />
+    
+    </>
 )
 }
