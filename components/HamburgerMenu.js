@@ -27,7 +27,7 @@ export default function HamburgerMenu({
       >
         <div
           style={{
-            letterSpacing: '6px',
+            letterSpacing: '2px',
             fontSize: '14px',
           }}
         >
@@ -56,7 +56,7 @@ export default function HamburgerMenu({
             marginBottom: '20px',
           }}
         >
-          SPACE
+         空間
         </p>
 
         <div
@@ -64,7 +64,7 @@ export default function HamburgerMenu({
             display: 'flex',
             flexDirection: 'column',
             gap: '18px',
-            fontSize: '42px',
+            fontSize: '24px',
             fontWeight: '300',
           }}
         >
@@ -75,13 +75,13 @@ export default function HamburgerMenu({
               textDecoration: 'none',
             }}
           >
-            Home
+            首頁
           </a>
 
-          <div>Atmosphere</div>
-          <div>Shower Area</div>
-          <div>Private Room</div>
-          <div>Details</div>
+          <div>空間氛圍</div>
+          <div>沐浴空間</div>
+          <div>私人房間</div>
+          <div>空間細節</div>
         </div>
       </div>
 
@@ -93,7 +93,7 @@ export default function HamburgerMenu({
             marginBottom: '20px',
           }}
         >
-          EXPERIENCE
+          體驗
         </p>
 
         <div
@@ -105,9 +105,9 @@ export default function HamburgerMenu({
             fontWeight: '300',
           }}
         >
-          <div>Reservation</div>
-          <div>FAQ</div>
-          <div>Gallery</div>
+          <div>預約方式</div>
+          <div>FAQ常見問題</div>
+          <div>環境照片</div>
           <a
             href='/blog'
             style={{
@@ -115,7 +115,7 @@ export default function HamburgerMenu({
               textDecoration: 'none',
             }}
           >
-            Journal
+            深夜日誌
           </a>
         </div>
       </div>
