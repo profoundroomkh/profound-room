@@ -162,22 +162,7 @@ backgroundRepeat: 'no-repeat',
             預約制放鬆空間
           </p>
 
-          <a
-            href="https://line.me/R/ti/p/@637fbbyh"
-            target="_blank"
-            style={{
-              display: 'inline-block',
-              padding: '14px 36px',
-              border: '1px solid #c7b19d',
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              borderRadius: '999px',
-              letterSpacing: '3px',
-              transition: '0.3s',
-            }}
-          >
-            LINE 預約
-          </a>
+        
         </div>
       </section>
 
