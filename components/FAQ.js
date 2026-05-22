@@ -12,19 +12,19 @@ const faqs = [
   {
     question: '第一次預約會尷尬嗎？',
     answer:
-      '許多第一次接觸男士 SPA 的來訪者，也會在預約前感到緊張，但真正進入空間後，通常很快就能放鬆下來。',
+      '許多第一次接觸男士 SPA 的來訪者，也會在預約前感到緊張，但實際進入空間後通常很快就能放鬆。',
   },
 
   {
     question: '工作室在哪裡？',
     answer:
-      '位於高雄車站附近，完成預約後將提供完整地址資訊。',
+      '位於高雄亞洲新灣區附近，完成預約後將提供完整地址資訊。',
   },
 
   {
     question: '需要提前多久預約？',
     answer:
-      '建議提前 1–3 天預約，深夜與熱門時段通常較快額滿。',
+      '建議提前 1–3 天預約，熱門時段通常較快額滿。',
   },
 ]
 
@@ -32,32 +32,53 @@ export default function FAQ() {
   const [active, setActive] = useState(null)
 
   return (
-    <section className="bg-black text-white px-6 md:px-20 py-28">
-      <p
-        className="
-          text-[#c6a36a]
-          text-sm
-          tracking-[0.3em]
-          mb-6
-        "
+    <section
+      style={{
+        background: '#050505',
+        color: '#f2e1d0',
+        padding: '140px 24px',
+      }}
+    >
+      <div
+        style={{
+          maxWidth: '1000px',
+          margin: '0 auto',
+        }}
       >
-        RESERVATION GUIDE
-      </p>
+        <p
+          style={{
+            color: '#cbb79d',
+            letterSpacing: '4px',
+            fontSize: '13px',
+            marginBottom: '20px',
+            textAlign: 'center',
+          }}
+        >
+          RESERVATION GUIDE
+        </p>
 
-      <h2 className="text-4xl md:text-6xl font-light mb-16">
-        Things You May
-        <br />
-        Want To Know
-      </h2>
+        <h2
+          style={{
+            fontSize: '54px',
+            fontWeight: '300',
+            textAlign: 'center',
+            marginBottom: '80px',
+            lineHeight: '1.3',
+          }}
+        >
+          Things You May
+          <br />
+          Want To Know
+        </h2>
 
-      <div className="border-t border-white/10">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="
-              border-b border-white/10
-              py-8
-            "
+            style={{
+              borderTop:
+                '1px solid rgba(255,255,255,0.08)',
+              padding: '36px 0',
+            }}
           >
             <button
               onClick={() =>
@@ -65,29 +86,40 @@ export default function FAQ() {
                   active === index ? null : index
                 )
               }
-              className="
-                w-full
-                flex items-center justify-between
-                text-left
-              "
+              style={{
+                width: '100%',
+                background: 'transparent',
+                border: 'none',
+                color: '#f2e1d0',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                cursor: 'pointer',
+                fontSize: '24px',
+                fontWeight: '300',
+                textAlign: 'left',
+              }}
             >
-              <span className="text-xl md:text-2xl font-light">
-                {faq.question}
-              </span>
+              {faq.question}
 
-              <span className="text-[#c6a36a] text-3xl">
+              <span
+                style={{
+                  color: '#cbb79d',
+                  fontSize: '32px',
+                }}
+              >
                 {active === index ? '−' : '+'}
               </span>
             </button>
 
             {active === index && (
               <p
-                className="
-                  mt-6
-                  text-white/60
-                  leading-8
-                  max-w-3xl
-                "
+                style={{
+                  marginTop: '24px',
+                  color: 'rgba(255,255,255,0.65)',
+                  lineHeight: '2',
+                  fontSize: '16px',
+                }}
               >
                 {faq.answer}
               </p>
@@ -97,4 +129,5 @@ export default function FAQ() {
       </div>
     </section>
   )
+}
 }
