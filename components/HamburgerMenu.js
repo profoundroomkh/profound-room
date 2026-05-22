@@ -22,13 +22,14 @@ export default function HamburgerMenu({
         style={{
           display: 'flex',
           justifyContent: 'space-between',
-          marginBottom: '60px',
+          alignItems: 'center',
+          marginBottom: '80px',
         }}
       >
         <div
           style={{
-            letterSpacing: '2px',
-            fontSize: '14px',
+            letterSpacing: '3px',
+            fontSize: '13px',
           }}
         >
           PROFOUND ROOM
@@ -48,23 +49,24 @@ export default function HamburgerMenu({
         </button>
       </div>
 
-      <div style={{ marginBottom: '60px' }}>
+      <div style={{ marginBottom: '80px' }}>
         <p
           style={{
             color: '#cbb79d',
-            letterSpacing: '3px',
-            marginBottom: '20px',
+            letterSpacing: '4px',
+            marginBottom: '24px',
+            fontSize: '13px',
           }}
         >
-         空間
+          SPACE
         </p>
 
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '18px',
-            fontSize: '24px',
+            gap: '22px',
+            fontSize: '26px',
             fontWeight: '300',
           }}
         >
@@ -79,60 +81,60 @@ export default function HamburgerMenu({
           </a>
 
           <a
-  href='/space'
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-  }}
->
-  空間氛圍
-</a>
+            href='/space'
+            style={{
+              color: '#f2e1d0',
+              textDecoration: 'none',
+            }}
+          >
+            空間氛圍
+          </a>
+
           <div>沐浴空間</div>
+
           <div>私人房間</div>
+
           <div>空間細節</div>
         </div>
       </div>
 
-      <div style={{ marginBottom: '60px' }}>
+      <div style={{ marginBottom: '80px' }}>
         <p
           style={{
             color: '#cbb79d',
-            letterSpacing: '3px',
-            marginBottom: '20px',
+            letterSpacing: '4px',
+            marginBottom: '24px',
+            fontSize: '13px',
           }}
         >
-          體驗
+          EXPERIENCE
         </p>
 
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '18px',
-            fontSize: '42px',
+            gap: '22px',
+            fontSize: '26px',
             fontWeight: '300',
           }}
         >
           <div>預約方式</div>
-          <div>FAQ常見問題</div>
+
+          <div>FAQ 常見問題</div>
+
           <div>環境照片</div>
-          <a
-            href='/blog'
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-            }}
-          >
-            深夜日誌
-          </a>
+
+          <div>深夜日誌</div>
         </div>
       </div>
 
       <p
         style={{
-          color: 'rgba(255,255,255,0.5)',
-          lineHeight: '2',
-          maxWidth: '700px',
+          color: 'rgba(255,255,255,0.45)',
+          lineHeight: '2.2',
+          maxWidth: '680px',
+          fontSize: '14px',
         }}
       >
         PROFOUND ROOM is a private Gay SPA
