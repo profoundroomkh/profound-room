@@ -36,6 +36,7 @@ import Gallery from '../components/Gallery'
     alignItems: "center",
     textAlign: "center",
     padding: "40px 24px",
+    paddingTop: "120px",
   }}
 >
   <h1
