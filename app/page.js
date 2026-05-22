@@ -114,7 +114,7 @@ import Gallery from '../components/Gallery'
           textAlign: 'center',
           padding: '40px 24px',
          background:
-  'linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.92)), url(/images/hero.jpg)',
+  'linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.92)), url(/public/images/hero.jpg)',
 backgroundSize: 'cover',
 backgroundPosition: 'center',
 backgroundRepeat: 'no-repeat',
