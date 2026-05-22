@@ -7,45 +7,69 @@ export default function Gallery() {
   ]
 
   return (
-    <section className="bg-[#0a0a0a] text-white px-6 md:px-20 py-28">
+    <section
+      style={{
+        background: '#050505',
+        color: '#f2e1d0',
+        padding: '140px 24px',
+        textAlign: 'center',
+      }}
+    >
       <p
-        className="
-          text-[#c6a36a]
-          text-sm
-          tracking-[0.3em]
-          mb-6
-        "
+        style={{
+          color: '#cbb79d',
+          letterSpacing: '4px',
+          fontSize: '13px',
+          marginBottom: '20px',
+        }}
       >
         GALLERY
       </p>
 
-      <h2 className="text-4xl md:text-6xl font-light mb-16">
+      <h2
+        style={{
+          fontSize: '54px',
+          fontWeight: '300',
+          marginBottom: '80px',
+          lineHeight: '1.3',
+        }}
+      >
         Space Atmosphere
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns:
+            'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '24px',
+          maxWidth: '1400px',
+          margin: '0 auto',
+        }}
+      >
         {images.map((image, index) => (
           <div
             key={index}
-            className="
-              aspect-[4/5]
-              overflow-hidden
-              rounded-[24px]
-            "
+            style={{
+              borderRadius: '24px',
+              overflow: 'hidden',
+              background: '#111',
+              aspectRatio: '4/5',
+            }}
           >
             <img
               src={image}
-              alt="Kaohsiung Gay Spa"
-              className="
-                w-full h-full
-                object-cover
-                hover:scale-105
-                duration-700
-              "
+              alt='Kaohsiung Gay Spa'
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
             />
           </div>
         ))}
       </div>
     </section>
   )
+}
 }
