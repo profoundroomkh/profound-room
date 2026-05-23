@@ -385,86 +385,187 @@ backgroundRepeat: 'no-repeat',
   </h2>
 
   <div
+  style={{
+    background: '#111',
+    borderRadius: '32px',
+    padding: '60px 36px',
+    border:
+      '1px solid rgba(255,255,255,0.06)',
+  }}
+>
+  <p
     style={{
-      background: "#111",
-      borderRadius: "32px",
-      padding: "60px 30px",
-      border: "1px solid rgba(255,255,255,0.06)",
-      lineHeight: "2.2",
-      color: "#e8d7c5",
+      color: '#cbb79d',
+      letterSpacing: '3px',
+      marginBottom: '24px',
+      fontSize: '13px',
     }}
   >
-    <p
-      style={{
-        color: "#b9977d",
-        letterSpacing: "3px",
-        marginBottom: "16px",
-      }}
-    >
-      COURSE ｜ 課程方案
-    </p>
+    SERVICE MENU
+  </p>
 
+  <div style={{ marginBottom: '42px' }}>
     <h3
       style={{
-        fontSize: "34px",
-        fontWeight: 300,
-        marginBottom: "36px",
+        fontSize: '30px',
+        fontWeight: '300',
+        marginBottom: '14px',
       }}
     >
-      90 MIN ｜ NT$1800
+      深層放鬆｜120 MIN｜2400
     </h3>
 
     <p
       style={{
-        color: "#b9977d",
-        letterSpacing: "3px",
-        marginBottom: "12px",
+        color: 'rgba(255,255,255,0.6)',
+        lineHeight: '2',
       }}
     >
-      EXTENSION ｜ 延長放鬆時間
-    </p>
-
-    <p
-      style={{
-        fontSize: "22px",
-        marginBottom: "40px",
-      }}
-    >
-      30 MIN ｜ +NT$500
-    </p>
-
-    <p
-      style={{
-        opacity: 0.82,
-        marginBottom: "30px",
-      }}
-    >
-      以上價格適用於工作室空間預約，
+      Session Includes
       <br />
-      外出安排將依地點酌收交通費用。
-    </p>
-
-    <p
-      style={{
-        color: "#b9977d",
-        letterSpacing: "3px",
-        marginBottom: "12px",
-      }}
-    >
-      NIGHT SESSION ｜ 夜間時段
-    </p>
-
-    <p
-      style={{
-        fontSize: "20px",
-        opacity: 0.9,
-      }}
-    >
-      22:00 — 08:00
-      <br />
-      加收 NT$500 夜間服務費
+      指壓｜油壓｜體推｜機能保養｜沐浴
     </p>
   </div>
+
+  <div style={{ marginBottom: '42px' }}>
+    <h3
+      style={{
+        fontSize: '30px',
+        fontWeight: '300',
+        marginBottom: '14px',
+      }}
+    >
+      沉浸舒壓｜90 MIN｜2000
+    </h3>
+
+    <p
+      style={{
+        color: 'rgba(255,255,255,0.6)',
+        lineHeight: '2',
+      }}
+    >
+      Session Includes
+      <br />
+      指壓｜油壓｜體推｜機能保養
+    </p>
+  </div>
+
+  <div style={{ marginBottom: '42px' }}>
+    <h3
+      style={{
+        fontSize: '30px',
+        fontWeight: '300',
+        marginBottom: '14px',
+      }}
+    >
+      輕放鬆體驗｜60 MIN｜1600
+    </h3>
+
+    <p
+      style={{
+        color: 'rgba(255,255,255,0.6)',
+        lineHeight: '2',
+      }}
+    >
+      Session Includes
+      <br />
+      指壓｜油壓
+    </p>
+  </div>
+
+  <div style={{ marginBottom: '42px' }}>
+    <h3
+      style={{
+        fontSize: '30px',
+        fontWeight: '300',
+        marginBottom: '14px',
+      }}
+    >
+      四手同步｜120 MIN｜4600
+    </h3>
+
+    <p
+      style={{
+        color: 'rgba(255,255,255,0.6)',
+        lineHeight: '2',
+      }}
+    >
+      Session Includes
+      <br />
+      指壓｜油壓｜體推｜機能保養｜沐浴
+    </p>
+  </div>
+
+  <div style={{ marginBottom: '42px' }}>
+    <p
+      style={{
+        color: '#cbb79d',
+        letterSpacing: '3px',
+        marginBottom: '14px',
+        fontSize: '13px',
+      }}
+    >
+      ADVANCE RESERVATION
+    </p>
+
+    <p
+      style={{
+        color: 'rgba(255,255,255,0.68)',
+        lineHeight: '2',
+      }}
+    >
+      提前一天完成預約，
+      <br />
+      可享 100 元預約折抵。
+    </p>
+  </div>
+
+  <div style={{ marginBottom: '42px' }}>
+    <p
+      style={{
+        color: '#cbb79d',
+        letterSpacing: '3px',
+        marginBottom: '14px',
+        fontSize: '13px',
+      }}
+    >
+      NIGHT SERVICE
+    </p>
+
+    <p
+      style={{
+        color: 'rgba(255,255,255,0.68)',
+        lineHeight: '2',
+      }}
+    >
+      22:00 後｜+500 / 位
+    </p>
+  </div>
+
+  <div>
+    <p
+      style={{
+        color: '#cbb79d',
+        letterSpacing: '3px',
+        marginBottom: '14px',
+        fontSize: '13px',
+      }}
+    >
+      INFORMATION
+    </p>
+
+    <p
+      style={{
+        color: 'rgba(255,255,255,0.68)',
+        lineHeight: '2',
+      }}
+    >
+      外出服務依距離酌收費用。
+      <br />
+      Adults Only｜18+
+    </p>
+  </div>
+</div>
 </section>
 {/* VISIT GUIDE */}
 <section
