@@ -5,30 +5,31 @@ export default function FloatingButton() {
       target='_blank'
       style={{
         position: 'fixed',
-        right: '24px',
-        bottom: '24px',
+        right: '20px',
+        bottom: '20px',
         zIndex: 9999,
         background:
-          'rgba(15,15,15,0.88)',
-        backdropFilter: 'blur(14px)',
+          'rgba(15,15,15,0.82)',
+        backdropFilter: 'blur(18px)',
         border:
           '1px solid rgba(255,255,255,0.08)',
         borderRadius: '999px',
-        padding: '20px 34px',
-        minWidth: '240px',
+        padding: '14px 22px',
+        minWidth: '170px',
         textDecoration: 'none',
         whiteSpace: 'nowrap',
         color: '#f2e1d0',
         boxShadow:
-          '0 10px 40px rgba(0,0,0,0.35)',
+          '0 10px 40px rgba(0,0,0,0.28)',
+        transition: '0.3s ease',
       }}
     >
       <div
         style={{
-          fontSize: '11px',
-          letterSpacing: '4px',
+          fontSize: '9px',
+          letterSpacing: '3px',
           color: '#cbb79d',
-          marginBottom: '6px',
+          marginBottom: '4px',
         }}
       >
         RESERVE NOW
@@ -36,12 +37,14 @@ export default function FloatingButton() {
 
       <div
         style={{
-          fontSize: '18px',
+          fontSize: '15px',
           fontWeight: '400',
         }}
       >
         LINE 預約
       </div>
     </a>
+  )
+}
   )
 }
