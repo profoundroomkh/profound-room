@@ -54,6 +54,16 @@ export default function JournalPage() {
   link:
     '/journal/first-men-spa-experience',
 },
+    {
+  title:
+    '高雄有哪些適合放鬆的深夜空間？',
+
+  description:
+    '在高雄，越來越多人開始尋找能真正慢下來的深夜放鬆空間。從氛圍、安靜感到預約制體驗，都成為新的放鬆方式。',
+
+  link:
+    '/journal/kaohsiung-night-relax-space',
+},
   ]
 
   return (
