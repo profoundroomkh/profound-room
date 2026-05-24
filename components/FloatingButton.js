@@ -22,6 +22,11 @@ export default function FloatingButton() {
         boxShadow:
           '0 10px 40px rgba(0,0,0,0.28)',
         transition: '0.3s ease',
+       
+        display: 'flex',
+flexDirection: 'column',
+alignItems: 'center',
+justifyContent: 'center',
       }}
     >
       <div
