@@ -64,6 +64,16 @@ export default function JournalPage() {
   link:
     '/journal/kaohsiung-night-relax-space',
 },
+    {
+  title:
+    '高雄男士 SPA 推薦前，你該注意什麼？',
+
+  description:
+    '第一次尋找男士 SPA 時，真正重要的往往不只是價格，而是空間氛圍、隱私感與整體放鬆節奏。',
+
+  link:
+    '/journal/mens-spa-guide-kaohsiung',
+},
   ]
 
   return (
