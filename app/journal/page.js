@@ -84,6 +84,16 @@ export default function JournalPage() {
   link:
     '/journal/private-spa-safety',
 },
+    {
+  title:
+    '沉浸式放鬆體驗，到底是什麼？',
+
+  description:
+    '真正的沉浸式放鬆，往往不只是按摩本身，而是整體空間、燈光、氣味與安靜感共同形成的體驗。',
+
+  link:
+    '/journal/immersive-relaxation-experience',
+},
   ]
 
   return (
