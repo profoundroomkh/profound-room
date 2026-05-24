@@ -104,6 +104,16 @@ export default function JournalPage() {
   link:
     '/journal/why-people-need-relaxation-at-night',
 },
+    {
+  title:
+    '高雄男士按摩，為什麼越來越多人需要？',
+
+  description:
+    '現在越來越多人開始重視身體與情緒放鬆。男士按摩與預約制空間，也逐漸成為新的深夜放鬆方式。',
+
+  link:
+    '/journal/kaohsiung-mens-massage',
+},
   ]
 
   return (
