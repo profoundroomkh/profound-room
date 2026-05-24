@@ -94,6 +94,16 @@ export default function JournalPage() {
   link:
     '/journal/immersive-relaxation-experience',
 },
+    {
+  title:
+    '為什麼越晚，人反而越需要放鬆？',
+
+  description:
+    '很多人真正感到疲憊的時候，其實是在深夜安靜下來之後。',
+
+  link:
+    '/journal/why-people-need-relaxation-at-night',
+},
   ]
 
   return (
