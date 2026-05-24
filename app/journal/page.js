@@ -74,6 +74,16 @@ export default function JournalPage() {
   link:
     '/journal/mens-spa-guide-kaohsiung',
 },
+    {
+  title:
+    '預約制男士 SPA，真的比較安全嗎？',
+
+  description:
+    '比起大量來客的商業空間，越來越多人開始重視安靜感、隱私與舒適節奏。',
+
+  link:
+    '/journal/private-spa-safety',
+},
   ]
 
   return (
