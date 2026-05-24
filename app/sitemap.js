@@ -6,23 +6,22 @@ export default function sitemap() {
     },
 
     {
-      url:
-        'https://profound-room.vercel.app/space',
-
+      url: 'https://profound-room.vercel.app/space',
       lastModified: new Date(),
     },
 
     {
-      url:
-        'https://profound-room.vercel.app/reservation',
-
+      url: 'https://profound-room.vercel.app/reservation',
       lastModified: new Date(),
     },
 
     {
-      url:
-        'https://profound-room.vercel.app/journal',
+      url: 'https://profound-room.vercel.app/journal',
+      lastModified: new Date(),
+    },
 
+    {
+      url: 'https://profound-room.vercel.app/faq',
       lastModified: new Date(),
     },
   ]
