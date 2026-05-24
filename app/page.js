@@ -747,6 +747,161 @@ backgroundRepeat: 'no-repeat',
 </a>        
 <Gallery />
 <FAQ />
+    <section
+  style={{
+    background: '#050505',
+    padding: '120px 24px',
+  }}
+>
+  <div
+    style={{
+      maxWidth: '1200px',
+      margin: '0 auto',
+    }}
+  >
+    <p
+      style={{
+        color: '#cbb79d',
+        letterSpacing: '4px',
+        fontSize: '13px',
+        marginBottom: '20px',
+      }}
+    >
+      JOURNAL
+    </p>
+
+    <h2
+      style={{
+        color: '#f2e1d0',
+        fontSize: '56px',
+        fontWeight: '300',
+        lineHeight: '1.3',
+        marginBottom: '70px',
+      }}
+    >
+      Deep Night
+      <br />
+      Journal
+    </h2>
+
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns:
+          'repeat(auto-fit,minmax(320px,1fr))',
+        gap: '28px',
+      }}
+    >
+      <a
+        href='/journal/first-men-spa-experience'
+        style={{
+          background: '#111',
+          borderRadius: '28px',
+          padding: '40px 32px',
+          textDecoration: 'none',
+          border:
+            '1px solid rgba(255,255,255,0.06)',
+        }}
+      >
+        <h3
+          style={{
+            color: '#f2e1d0',
+            fontSize: '28px',
+            fontWeight: '300',
+            lineHeight: '1.5',
+            marginBottom: '18px',
+          }}
+        >
+          第一次男士 SPA，
+          會很尷尬嗎？
+        </h3>
+
+        <p
+          style={{
+            color: 'rgba(255,255,255,0.65)',
+            lineHeight: '2',
+          }}
+        >
+          很多人第一次接觸男士 SPA 時，
+          真正擔心的其實不是按摩本身，
+          而是空間是否讓人安心。
+        </p>
+      </a>
+
+      <a
+        href='/journal/mens-spa-vs-normal-massage'
+        style={{
+          background: '#111',
+          borderRadius: '28px',
+          padding: '40px 32px',
+          textDecoration: 'none',
+          border:
+            '1px solid rgba(255,255,255,0.06)',
+        }}
+      >
+        <h3
+          style={{
+            color: '#f2e1d0',
+            fontSize: '28px',
+            fontWeight: '300',
+            lineHeight: '1.5',
+            marginBottom: '18px',
+          }}
+        >
+          男士 SPA 與一般按摩，
+          最大差別是什麼？
+        </h3>
+
+        <p
+          style={{
+            color: 'rgba(255,255,255,0.65)',
+            lineHeight: '2',
+          }}
+        >
+          真正影響體驗的，
+          往往不是按摩本身，
+          而是空間、節奏與沉浸感。
+        </p>
+      </a>
+
+      <a
+        href='/journal/kaohsiung-night-relax-space'
+        style={{
+          background: '#111',
+          borderRadius: '28px',
+          padding: '40px 32px',
+          textDecoration: 'none',
+          border:
+            '1px solid rgba(255,255,255,0.06)',
+        }}
+      >
+        <h3
+          style={{
+            color: '#f2e1d0',
+            fontSize: '28px',
+            fontWeight: '300',
+            lineHeight: '1.5',
+            marginBottom: '18px',
+          }}
+        >
+          高雄有哪些適合放鬆的
+          深夜空間？
+        </h3>
+
+        <p
+          style={{
+            color: 'rgba(255,255,255,0.65)',
+            lineHeight: '2',
+          }}
+        >
+          越來越多人開始尋找
+          能真正慢下來、
+          安靜休息的地方。
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
 </main>
     
     </>
