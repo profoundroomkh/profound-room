@@ -34,6 +34,16 @@ export default function JournalPage() {
       link:
         '/journal/private-spa-for-men',
     },
+    {
+  title:
+    '男士 SPA 與一般按摩最大的差別是什麼？',
+
+  description:
+    '從空間氛圍、預約制、沉浸感到情緒放鬆，男士 SPA 與一般按摩其實有很大的不同。',
+
+  link:
+    '/journal/mens-spa-vs-normal-massage',
+},
   ]
 
   return (
