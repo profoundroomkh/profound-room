@@ -44,6 +44,16 @@ export default function JournalPage() {
   link:
     '/journal/mens-spa-vs-normal-massage',
 },
+    {
+  title:
+    '第一次男士 SPA，會很尷尬嗎？',
+
+  description:
+    '第一次接觸男士 SPA 時，多數人其實都會緊張。真正重要的，往往不是按摩本身，而是空間是否讓人安心。',
+
+  link:
+    '/journal/first-men-spa-experience',
+},
   ]
 
   return (
