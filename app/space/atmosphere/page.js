@@ -15,8 +15,8 @@ export default function AtmospherePage() {
       <main
         style={{
           background: '#050505',
-          padding: '140px 24px',
           minHeight: '100vh',
+          padding: '140px 24px',
         }}
       >
         <div
@@ -28,7 +28,7 @@ export default function AtmospherePage() {
           <h1
             style={{
               color: '#f2e1d0',
-              fontSize: '64px',
+              fontSize: '72px',
               fontWeight: '300',
               marginBottom: '60px',
             }}
@@ -48,6 +48,7 @@ export default function AtmospherePage() {
               <img
                 key={index}
                 src={image}
+                alt='PROFOUND ROOM 空間氛圍'
                 style={{
                   width: '100%',
                   borderRadius: '24px',
