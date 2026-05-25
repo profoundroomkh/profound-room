@@ -37,7 +37,7 @@ useEffect(() => {
     specialty: "none",
     intro: "none。",
     images: [
-      "/images/therapist-none",
+      "/images/therapist-none.jpg",
     ],
   },
 ]
