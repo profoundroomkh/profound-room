@@ -97,7 +97,7 @@ export default function SpacePage() {
             />
 
             <img
-              src='/images/hero.jpg'
+              src='/images/gallery-1.jpg'
               style={{
                 width: '100%',
                 borderRadius: '24px',
