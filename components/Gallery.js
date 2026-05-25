@@ -59,7 +59,7 @@ export default function Gallery() {
           >
             <img
               src={image}
-              alt='Kaohsiung Gay Spa'
+              alt='高雄 Gay SPA 空間氛圍'
               style={{
                 width: '100%',
                 height: '100%',
