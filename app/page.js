@@ -4,24 +4,25 @@ import Header from '../components/Header'
 import FAQ from '../components/FAQ'
 import Gallery from '../components/Gallery'
   export default function Home() {
-  const masters = [
-    {
-      name: "Luke",
-      specialty: "深層舒壓 / 精油放鬆",
-      intro: "溫柔細膩的放鬆節奏，適合初次體驗。",
-      image:
-        "/images/therapist-luke.jpg",
+ const masters = [
+  {
+    name: "Luke",
+    specialty: "深層舒壓 / 精油放鬆",
+    intro: "溫柔細膩的放鬆節奏，適合初次體驗。",
+    images: [
+      "/images/therapist-luke.jpg",
       "/images/therapist-luke-2.jpg",
-    },
-    {
-      name: "Luke",
-      specialty: "肌肉按摩 / 沉浸療癒",
-      intro: "偏力量感按摩，適合壓力與疲勞釋放。",
-      image:
-  "https://i.ibb.co/rKJ3ZLDs/72279-B09-5-CD5-4-ACC-AE7-C-40-C5-E0-C2-D6-E7.png",
-    },
-  ]
-
+    ],
+  },
+  {
+    name: "Luke",
+    specialty: "肌肉按摩 / 沉浸療癒",
+    intro: "偏力量感按摩，適合壓力與疲勞釋放。",
+    images: [
+      "https://i.ibb.co/rKJ3ZLDs/72279-B09-5-CD5-4-ACC-AE7-C-40-C5-E0-C2-D6-E7.png",
+    ],
+  },
+]
   return (  
   <>
     <Header />
