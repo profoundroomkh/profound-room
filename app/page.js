@@ -4,7 +4,23 @@ import Header from '../components/Header'
 import FAQ from '../components/FAQ'
 import Gallery from '../components/Gallery'
   export default function Home() {
- const masters = [
+const [currentIndexes, setCurrentIndexes] =
+  useState([0, 0])
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndexes((prev) =>
+      prev.map((current, i) => {
+        return (
+          (current + 1) %
+          masters[i].images.length
+        )
+      })
+    )
+  }, 2500)
+
+  return () => clearInterval(interval)
+}, [])
+    const masters = [
   {
     name: "Luke",
     specialty: "深層舒壓 / 精油放鬆",
@@ -15,7 +31,7 @@ import Gallery from '../components/Gallery'
     ],
   },
   {
-    name: "Luke",
+    name: "None",
     specialty: "肌肉按摩 / 沉浸療癒",
     intro: "偏力量感按摩，適合壓力與疲勞釋放。",
     images: [
