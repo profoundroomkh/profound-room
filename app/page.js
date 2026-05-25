@@ -10,7 +10,7 @@ import Gallery from '../components/Gallery'
       specialty: "深層舒壓 / 精油放鬆",
       intro: "溫柔細膩的放鬆節奏，適合初次體驗。",
       image:
-        "https://i.ibb.co/rKJ3ZLDs/72279-B09-5-CD5-4-ACC-AE7-C-40-C5-E0-C2-D6-E7.png",
+        "/public/images/therapist-luke.jpg",
     },
     {
       name: "Luke",
