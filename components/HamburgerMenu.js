@@ -195,28 +195,7 @@ export default function HamburgerMenu({
               fontWeight: '300',
             }}
           >
-<a
-  href='/journal'
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-    fontSize: '28px',
-    fontWeight: '300',
-  }}
->
-  深夜日誌
-</a>
 
-<a
-  href='/recruit'
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-    fontSize: '28px',
-    fontWeight: '300',
-  }}
->
-  招募師傅
 </a>
   深夜日誌
 </a>
