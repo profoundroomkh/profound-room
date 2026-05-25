@@ -187,7 +187,7 @@ backgroundRepeat: 'no-repeat',
       style={{
         width: '100%',
         borderRadius: '24px',
-        objectFit: 'cover',
+        objectFit: 'contain',
         minHeight: '420px',
       }}
     />
@@ -302,7 +302,7 @@ backgroundRepeat: 'no-repeat',
                 style={{
                   width: '100%',
                   height: '360px',
-                  objectFit: 'cover',
+                  objectFit: 'contain',
                 }}
               />
 
