@@ -11,7 +11,7 @@ import Gallery from '../components/Gallery'
       intro: "溫柔細膩的放鬆節奏，適合初次體驗。",
       image:
         "/images/therapist-luke.jpg",
-      '/images/therapist-luke-2.jpg',
+      "/images/therapist-luke-2.jpg",
     },
     {
       name: "Luke",
