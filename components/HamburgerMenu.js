@@ -187,16 +187,14 @@ export default function HamburgerMenu({
           </a>
 
           <a
-            href='/journal'
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
-          >
-
-</a>
+  href='/journal'
+  style={{
+    color: '#f2e1d0',
+    textDecoration: 'none',
+    fontSize: '28px',
+    fontWeight: '300',
+  }}
+>
   深夜日誌
 </a>
 
