@@ -26,7 +26,7 @@ useEffect(() => {
   {
     name: "Luke",
     specialty: "深層舒壓 / 精油放鬆",
-    intro: "溫柔細膩的放鬆節奏，適合初次體驗。",
+    intro: "2年gay spa經驗，個性健談，手法溫柔。",
     images: [
       "/images/therapist-luke.jpg",
       "/images/therapist-luke-2.jpg",
