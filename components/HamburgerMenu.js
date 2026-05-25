@@ -186,7 +186,7 @@ export default function HamburgerMenu({
             環境照片
           </a>
 
-          <a
+         <a
   href='/journal'
   style={{
     color: '#f2e1d0',
@@ -209,6 +209,30 @@ export default function HamburgerMenu({
 >
   招募師傅
 </a>
+        </div>
+      </div>
+
+      <div
+        style={{
+          borderTop:
+            '1px solid rgba(255,255,255,0.08)',
+          paddingTop: '40px',
+        }}
+      >
+        <p
+          style={{
+            color: 'rgba(255,255,255,0.42)',
+            lineHeight: '2.2',
+            maxWidth: '620px',
+            fontSize: '14px',
+          }}
+        >
+          PROFOUND ROOM is a private Gay SPA
+          and men’s relaxation space in
+          Kaohsiung, designed for deep rest,
+          quiet moments, and immersive
+          atmosphere.
+        </p>
       </div>
     </div>
   )
