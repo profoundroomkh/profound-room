@@ -30,6 +30,7 @@ useEffect(() => {
     images: [
       "/images/therapist-luke.jpg",
       "/images/therapist-luke-2.jpg",
+      "/images/therapist-luke-3.jpg",
     ],
   },
   {
