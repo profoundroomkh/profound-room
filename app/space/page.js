@@ -1,30 +1,30 @@
+import Link from 'next/link'
 import Header from '../../components/Header'
 
 export default function SpacePage() {
-  const sections = [
+  const spaces = [
     {
       title: '空間氛圍',
-      images: [
-        '/images/gallery-1.jpg',
-        '/images/gallery-2.jpg',
-        '/images/gallery-3.jpg',
-        '/images/gallery-4.jpg',
-      ],
+      image: '/images/gallery-1.jpg',
+      href: '/space/atmosphere',
     },
 
     {
       title: '沐浴空間',
-      images: ['/images/hero.jpg'],
+      image: '/images/gallery-2.jpg',
+      href: '/space/bath',
     },
 
     {
       title: '私人房間',
-      images: ['/images/hero.jpg'],
+      image: '/images/gallery-3.jpg',
+      href: '/space/private-room',
     },
 
     {
       title: '空間細節',
-      images: ['/images/hero.jpg'],
+      image: '/images/gallery-4.jpg',
+      href: '/space/detail',
     },
   ]
 
@@ -70,64 +70,46 @@ export default function SpacePage() {
             For Deep Rest
           </h1>
 
-          <p
-            style={{
-              color: 'rgba(255,255,255,0.65)',
-              lineHeight: '2',
-              maxWidth: '700px',
-              marginBottom: '100px',
-              fontSize: '18px',
-            }}
-          >
-            PROFOUND ROOM 深寓為高雄預約制男士
-            Gay SPA 空間，
-            <br />
-            以安靜、沉浸與深夜放鬆為核心。
-          </p>
-
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '120px',
+              display: 'grid',
+              gridTemplateColumns:
+                'repeat(auto-fit,minmax(320px,1fr))',
+              gap: '24px',
             }}
           >
-            {sections.map((section, index) => (
-              <section key={index}>
-                <h2
-                  style={{
-                    fontSize: '42px',
-                    fontWeight: '300',
-                    marginBottom: '40px',
-                    color: '#f2e1d0',
-                  }}
-                >
-                  {section.title}
-                </h2>
+            {spaces.map((space, index) => (
+              <Link
+                key={index}
+                href={space.href}
+                style={{
+                  textDecoration: 'none',
+                }}
+              >
+                <div>
+                  <img
+                    src={space.image}
+                    alt={space.title}
+                    style={{
+                      width: '100%',
+                      borderRadius: '24px',
+                      minHeight: '520px',
+                      objectFit: 'cover',
+                      marginBottom: '16px',
+                    }}
+                  />
 
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns:
-                      'repeat(auto-fit,minmax(320px,1fr))',
-                    gap: '24px',
-                  }}
-                >
-                  {section.images.map((image, imageIndex) => (
-                    <img
-                      key={imageIndex}
-                      src={image}
-                      alt={section.title}
-                      style={{
-                        width: '100%',
-                        borderRadius: '24px',
-                        minHeight: '520px',
-                        objectFit: 'cover',
-                      }}
-                    />
-                  ))}
+                  <h3
+                    style={{
+                      fontSize: '24px',
+                      fontWeight: '300',
+                      color: '#f2e1d0',
+                    }}
+                  >
+                    {space.title}
+                  </h3>
                 </div>
-              </section>
+              </Link>
             ))}
           </div>
         </div>
