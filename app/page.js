@@ -1,5 +1,7 @@
 'use client'
 
+import { useState, useEffect } from 'react'
+
 import Header from '../components/Header'
 import FAQ from '../components/FAQ'
 import Gallery from '../components/Gallery'
