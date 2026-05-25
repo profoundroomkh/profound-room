@@ -300,14 +300,16 @@ backgroundRepeat: 'no-repeat',
               }}
             >
               <img
-                src={master.images[0]}
-                style={{
-                  width: '100%',
-                  height: '360px',
-                  objectFit: 'contain',
-                }}
-              />
-
+  src={master.images[0]}
+  alt={master.name}
+  style={{
+    width: '100%',
+    height: '420px',
+    objectFit: 'cover',
+    objectPosition: 'top',
+    display: 'block',
+  }}
+/>
               <div style={{ padding: '28px' }}>
                 <h3
                   style={{
