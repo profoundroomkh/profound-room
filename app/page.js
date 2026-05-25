@@ -300,7 +300,7 @@ backgroundRepeat: 'no-repeat',
               }}
             >
               <img
-                src={master.image}
+                src={master.images[0]}
                 style={{
                   width: '100%',
                   height: '360px',
