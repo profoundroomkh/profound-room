@@ -32,23 +32,25 @@ useEffect(() => {
 喜歡讓人慢慢放鬆下來的節奏。
 
 手法以穩定舒壓與沉浸放鬆為主，
-希望每一次療程都能帶來舒服且安心的休息感受。`,
+希望每一次療程，
+都能帶來舒服且安心的放鬆感受。`,
     images: [
       "/images/therapist-luke.jpg",
       "/images/therapist-luke-2.jpg",
       "/images/therapist-luke-3.jpg",
     ],
   },
-];
-    name: "None",
-    specialty: "none",
+  {
+    name: "Coming Soon",
+    specialty: "即將上線",
     intro: "none。",
     images: [
       "/images/therapist-none.jpg",
     ],
   },
-]
-  return (  
+];
+
+return (
   <>
     <Header />
 
