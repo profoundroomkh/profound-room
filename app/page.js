@@ -40,15 +40,16 @@ useEffect(() => {
       "/images/therapist-luke-3.jpg",
     ],
   },
+
   {
     name: "Coming Soon",
     specialty: "即將上線",
-    intro: "none。",
+    intro: "敬請期待。",
     images: [
       "/images/therapist-none.jpg",
     ],
   },
-];
+]
 
 return (
   <>
