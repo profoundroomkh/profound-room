@@ -341,8 +341,8 @@ backgroundRepeat: 'no-repeat',
   style={{
     width: '100%',
     height: '420px',
-    objectFit: 'cover',
-    objectPosition: 'top',
+    objectFit: 'contain',
+    background: '#000',
     display: 'block',
   }}
 />
