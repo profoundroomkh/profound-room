@@ -46,11 +46,11 @@ useEffect(() => {
     specialty: "即將上線",
     intro: "170 / 68 / 32 / 不分",
     images: [
-      "/:images:therapist-Odin-.JPG",
-       "/:images:therapist-Odin-1.JPG",
-      "/:images/therapist-Odin-2.JPG",
-      "/:images/therapist-Odin-3.JPG",
-      "/:images/therapist-Odin-4.JPG",
+      "/images:therapist-Odin-.JPG",
+       "/images:therapist-Odin-1.JPG",
+      "/images/therapist-Odin-2.JPG",
+      "/images/therapist-Odin-3.JPG",
+      "/images/therapist-Odin-4.JPG",
     ],
   },
 ]
