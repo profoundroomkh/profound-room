@@ -26,7 +26,7 @@ useEffect(() => {
   {
     name: "Luke",
     specialty: "深層舒壓 / 精油放鬆",
-    intro: `165 / 58 / 30
+    intro: `165 / 58 / 30 / 不分
 
 重視互動與陪伴感，
 喜歡讓人慢慢放鬆下來的節奏。
@@ -42,11 +42,15 @@ useEffect(() => {
   },
 
   {
-    name: "Coming Soon",
+    name: "Odin",
     specialty: "即將上線",
-    intro: "敬請期待。",
+    intro: "170 / 68 / 32 / 不分",
     images: [
-      "/images/therapist-none.jpg",
+      "/images/therapist-Odin-.JPG",
+       "/images/therapist-Odin-1.JPG",
+      "/images/therapist-Odin-2.JPG",
+      "/images/therapist-Odin-3.JPG",
+      "/images/therapist-Odin-4.JPG",
     ],
   },
 ]
