@@ -8,10 +8,10 @@ export const metadata = {
 },
   
   title:
-    'PROFOUND ROOM 深寓｜高雄預約制 Gay SPA 與男士放鬆空間',
+    '高雄 Gay SPA｜PROFOUND ROOM 深寓｜男士按摩與放鬆空間',
 
   description:
-    'PROFOUND ROOM 深寓為高雄預約制男士 Gay SPA 空間，提供沉浸式按摩放鬆、深夜舒壓、私人放鬆體驗與安靜療癒空間。',
+    'PROFOUND ROOM 深寓為高雄預約制 Gay SPA 與男士放鬆空間，提供專業按摩、精油舒壓、私人空間與沉浸式療癒體驗。'
 
   keywords: [
     '高雄 Gay SPA',
