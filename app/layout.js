@@ -6,12 +6,18 @@ export const metadata = {
   google:
     'lLXC421Mze9xeGmQsBV33sdP3ipp6apLvDdqnB7rwFU',
 },
-  
+  export const metadata = {
+  verification: {
+    google:
+      'lLXC421Mze9xeGmQsBV33sdP3ipp6apLvDdqnB7rwFU',
+  },
+
   title:
     '高雄 Gay SPA｜PROFOUND ROOM 深寓｜男士按摩與放鬆空間',
 
   description:
     'PROFOUND ROOM 深寓為高雄預約制 Gay SPA 與男士放鬆空間，提供專業按摩、精油舒壓、私人空間與沉浸式療癒體驗。'
+}
 
   keywords: [
     '高雄 Gay SPA',
