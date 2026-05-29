@@ -1,5 +1,11 @@
 import Header from '../../../components/Header'
 
+const images = [
+  '/images/private-room-1.jpg',
+  '/images/private-room-2.jpg',
+  '/images/private-room-3.jpg',
+]
+
 export default function PrivateRoomPage() {
   return (
     <>
@@ -13,7 +19,69 @@ export default function PrivateRoomPage() {
           padding: '140px 24px',
         }}
       >
-        <h1>Private Room</h1>
+        <div
+          style={{
+            maxWidth: '1400px',
+            margin: '0 auto',
+          }}
+        >
+          <p
+            style={{
+              color: '#cbb79d',
+              letterSpacing: '4px',
+              fontSize: '13px',
+              marginBottom: '20px',
+            }}
+          >
+            PRIVATE ROOM
+          </p>
+
+          <h1
+            style={{
+              fontSize: '72px',
+              fontWeight: '300',
+              marginBottom: '40px',
+            }}
+          >
+            私人房間
+          </h1>
+
+          <p
+            style={{
+              color: 'rgba(255,255,255,0.65)',
+              lineHeight: '2',
+              maxWidth: '700px',
+              marginBottom: '80px',
+            }}
+          >
+            獨立且安靜的私人空間，
+            保留充足距離與隱私感，
+            讓每一次放鬆都能更加專注與沉浸。
+          </p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns:
+                'repeat(auto-fit,minmax(320px,1fr))',
+              gap: '24px',
+            }}
+          >
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`高雄 Gay SPA 私人房間 ${index + 1}`}
+                style={{
+                  width: '100%',
+                  borderRadius: '24px',
+                  minHeight: '520px',
+                  objectFit: 'cover',
+                }}
+              />
+            ))}
+          </div>
+        </div>
       </main>
     </>
   )
