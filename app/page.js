@@ -60,6 +60,25 @@ useEffect(() => {
       "/images/therapist-Odin-4.JPG",
     ],
   },
+     {
+  name: "Zac",
+  specialty: "舒壓放鬆 / 沉浸陪伴",
+  intro: `170 / 66 / 30 / 不分
+
+Zac 師傅，重視放鬆過程中的舒適感與節奏感。
+透過穩定手法與自然互動，
+陪你慢慢卸下生活累積的疲憊。
+
+喜歡在安靜的空間裡，
+讓身體與情緒都能獲得適當放鬆。
+希望每一次療程，
+都能帶來專屬於自己的沉澱與休息時光。`,
+  images: [
+    "/images/therapist-Zack-1.JPG",
+    "/images/therapist-Zack-2.JPG",
+    "/images/therapist-Zack-3.JPG",
+  ],
+},
 ]
 
 return (
