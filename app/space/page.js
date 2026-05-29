@@ -11,7 +11,7 @@ export default function SpacePage() {
 
     {
       title: '沐浴空間',
-      image: '/images/bath-2.jpg',
+      image: '/images/bath-1.jpg',
       href: '/space/bath',
     },
 
