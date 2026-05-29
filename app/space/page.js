@@ -11,13 +11,13 @@ export default function SpacePage() {
 
     {
       title: '沐浴空間',
-      image: '/images/gallery-2.jpg',
+      image: '/images/bath-2.jpg',
       href: '/space/bath',
     },
 
     {
       title: '私人房間',
-      image: '/images/gallery-3.jpg',
+      image: '/images/private-room-2',
       href: '/space/private-room',
     },
 
