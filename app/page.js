@@ -59,7 +59,7 @@ useEffect(() => {
       "/images/therapist-Odin-3.JPG",
       "/images/therapist-Odin-4.JPG",
     ],
-  },
+ },
      {
   name: "Zac",
   specialty: "舒壓放鬆 / 沉浸陪伴",
