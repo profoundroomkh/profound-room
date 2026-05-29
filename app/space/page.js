@@ -17,7 +17,7 @@ export default function SpacePage() {
 
     {
       title: '私人房間',
-      image: '/images/private-room-2',
+      image: '/images/private-room-2.jpg',
       href: '/space/private-room',
     },
 
