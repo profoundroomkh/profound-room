@@ -37,7 +37,7 @@ export const metadata = {
     siteName: 'PROFOUND ROOM 深寓',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
       },
