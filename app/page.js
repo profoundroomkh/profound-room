@@ -932,40 +932,38 @@ backgroundRepeat: 'no-repeat',
       </a>
 
       <a
-        href='/journal/kaohsiung-night-relax-space'
-        style={{
-          background: '#111',
-          borderRadius: '28px',
-          padding: '40px 32px',
-          textDecoration: 'none',
-          border:
-            '1px solid rgba(255,255,255,0.06)',
-        }}
-      >
-        <h3
-          style={{
-            color: '#f2e1d0',
-            fontSize: '28px',
-            fontWeight: '300',
-            lineHeight: '1.5',
-            marginBottom: '18px',
-          }}
-        >
-          高雄有哪些適合放鬆的
-          深夜空間？
-        </h3>
+  href='/journal/kaohsiung-gay-spa'
+  style={{
+    background: '#111',
+    borderRadius: '28px',
+    padding: '40px 32px',
+    textDecoration: 'none',
+    border:
+      '1px solid rgba(255,255,255,0.06)',
+  }}
+>
+  <h3
+    style={{
+      color: '#f2e1d0',
+      fontSize: '28px',
+      fontWeight: '300',
+      lineHeight: '1.5',
+      marginBottom: '18px',
+    }}
+  >
+    高雄 Gay SPA 如何選擇？
+  </h3>
 
-        <p
-          style={{
-            color: 'rgba(255,255,255,0.65)',
-            lineHeight: '2',
-          }}
-        >
-          越來越多人開始尋找
-          能真正慢下來、
-          安靜休息的地方。
-        </p>
-      </a>
+  <p
+    style={{
+      color: 'rgba(255,255,255,0.65)',
+      lineHeight: '2',
+    }}
+  >
+    第一次接觸男士 SPA 時，
+    該如何選擇適合自己的放鬆空間？
+  </p>
+</a>
     </div>
   </div>
 </section>
