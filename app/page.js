@@ -74,9 +74,10 @@ Zac 師傅，重視放鬆過程中的舒適感與節奏感。
 希望每一次療程，
 都能帶來專屬於自己的沉澱與休息時光。`,
   images: [
-    "/images/therapist-Zack-1.JPG",
-    "/images/therapist-Zack-2.JPG",
-    "/images/therapist-Zack-3.JPG",
+    "/images/therapist-Zac-1.JPG",
+    "/images/therapist-Zac-2.JPG",
+    "/images/therapist-Zac-3.JPG",
+    "/images/therapist-Zac-4.JPG",
   ],
 },
 ]
