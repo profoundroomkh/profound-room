@@ -43,8 +43,15 @@ useEffect(() => {
 
   {
     name: "Odin",
-    specialty: "即將上線",
-    intro: "170 / 68 / 32 / 不分",
+    specialty: "深度放鬆 / 手法細膩",
+    intro: "170 / 68 / 32 / 不分
+      
+    奧丁師傅，重視每次放鬆的深度與感受。
+    以細膩節奏與沉穩手感，陪你慢慢卸下疲憊。
+    在安靜私密的空間裡，
+    找回身心最舒服的狀態。
+    讓每次相遇，都成為與疲憊短暫告別的片刻。
+    讓每次到訪，都像進入一段專屬自己的放鬆時光。",
     images: [
       "/images/therapist-Odin.JPG",
        "/images/therapist-Odin-1.JPG",
