@@ -470,7 +470,7 @@ backgroundRepeat: 'no-repeat',
     >
       Session Includes
       <br />
-      指壓｜油壓｜體推｜機能保養｜沐浴
+      指壓｜油壓｜體推｜機能保養
     </p>
   </div>
 
@@ -539,7 +539,7 @@ backgroundRepeat: 'no-repeat',
     >
       Session Includes
       <br />
-      指壓｜油壓｜體推｜機能保養｜沐浴
+      指壓｜油壓｜體推｜機能保養
     </p>
   </div>
 
