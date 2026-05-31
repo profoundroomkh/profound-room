@@ -7,7 +7,7 @@ import FAQ from '../components/FAQ'
 import Gallery from '../components/Gallery'
   export default function Home() {
 const [currentIndexes, setCurrentIndexes] =
-  useState([0, 0, 0])
+  useState([0, 0, 0, 0])
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndexes((prev) =>
@@ -78,6 +78,24 @@ Zac 師傅，重視放鬆過程中的舒適感與節奏感。
     "/images/therapist-Zac-2.JPG",
     "/images/therapist-Zac-3.JPG",
     "/images/therapist-Zac-4.JPG",
+  ],
+},
+     {
+  name: "Hu",
+  specialty: "舒壓放鬆 / 輕柔陪伴",
+  intro: `164 / 50 / 26 / 不分
+
+Hu 師傅，重視療程中的舒適感與陪伴感。
+透過細膩節奏與溫和互動，
+陪你慢慢卸下日常累積的疲憊。
+
+喜歡在安靜放鬆的氛圍裡，
+讓身體與思緒都能獲得適當休息。
+希望每一次療程，
+都能成為專屬於自己的放鬆時光。`,
+  images: [
+    "/images/therapist-Hu-1.JPG",
+    "/images/therapist-Hu-2.JPG",
   ],
 },
 ]
