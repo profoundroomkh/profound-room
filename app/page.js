@@ -41,25 +41,7 @@ useEffect(() => {
     ],
   },
 
-  {
-    name: "Odin",
-    specialty: "深度放鬆 / 手法細膩",
-    intro: `170 / 68 / 32 / 不分
-      
-奧丁師傅，重視每次放鬆的深度與感受。
-以細膩節奏與沉穩手感，陪你慢慢卸下疲憊。
-在安靜私密的空間裡，
-找回身心最舒服的狀態。
-讓每次相遇，都成為與疲憊短暫告別的片刻。
-讓每次到訪，都像進入一段專屬自己的放鬆時光。`,
-    images: [
-      "/images/therapist-Odin.JPG",
-       "/images/therapist-Odin-1.JPG",
-      "/images/therapist-Odin-2.JPG",
-      "/images/therapist-Odin-3.JPG",
-      "/images/therapist-Odin-4.JPG",
-    ],
- },
+  
      {
   name: "Zac",
   specialty: "舒壓放鬆 / 沉浸陪伴",
@@ -80,6 +62,25 @@ Zac 師傅，重視放鬆過程中的舒適感與節奏感。
     "/images/therapist-Zac-4.JPG",
   ],
 },
+     {
+    name: "Odin",
+    specialty: "深度放鬆 / 手法細膩",
+    intro: `170 / 68 / 32 / 不分
+      
+奧丁師傅，重視每次放鬆的深度與感受。
+以細膩節奏與沉穩手感，陪你慢慢卸下疲憊。
+在安靜私密的空間裡，
+找回身心最舒服的狀態。
+讓每次相遇，都成為與疲憊短暫告別的片刻。
+讓每次到訪，都像進入一段專屬自己的放鬆時光。`,
+    images: [
+      "/images/therapist-Odin.JPG",
+       "/images/therapist-Odin-1.JPG",
+      "/images/therapist-Odin-2.JPG",
+      "/images/therapist-Odin-3.JPG",
+      "/images/therapist-Odin-4.JPG",
+    ],
+ },
      {
   name: "Hu",
   specialty: "舒壓放鬆 / 輕柔陪伴",
