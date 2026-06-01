@@ -65,9 +65,11 @@ export default function SpacePage() {
               marginBottom: '40px',
             }}
           >
-            A Quiet Space
+          
+   高雄男士放鬆空間
+
             <br />
-            For Deep Rest
+            放鬆空間
           </h1>
 
           <div
@@ -111,7 +113,45 @@ export default function SpacePage() {
                 </div>
               </Link>
             ))}
-          </div>
+                    </div>
+
+          <section
+            style={{
+              maxWidth: '900px',
+              margin: '100px auto 0',
+              color: '#c9b8aa',
+              lineHeight: '2',
+              fontSize: '16px',
+            }}
+          >
+            <h2
+              style={{
+                color: '#f2e1d0',
+                fontSize: '32px',
+                fontWeight: '300',
+                marginBottom: '24px',
+              }}
+            >
+              高雄 Gay SPA 與男士放鬆空間
+            </h2>
+
+            <p>
+              PROFOUND ROOM 深寓位於高雄，
+              為預約制男士放鬆空間與 Gay SPA。
+              <br /><br />
+
+              空間規劃包含私人房間、
+              沐浴空間與獨立療程區域，
+              重視隱私、舒適與沉浸式體驗。
+              <br /><br />
+
+              無論是初次體驗男士按摩，
+              或正在尋找高雄 Gay SPA、
+              高雄男士按摩與私人放鬆空間，
+              都能在深寓享受安靜且自在的休息時光。
+            </p>
+          </section>
+
         </div>
       </main>
     </>
