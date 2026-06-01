@@ -25,7 +25,7 @@ useEffect(() => {
    const masters = [
   {
     name: "Luke",
-    specialty: "深層舒壓 / 精油放鬆",
+    specialty: "濃眉多毛 男友式陪伴",
     intro: `165 / 58 / 30 / 不分
 
 重視互動與陪伴感，
@@ -44,7 +44,7 @@ useEffect(() => {
   
      {
   name: "Zac",
-  specialty: "舒壓放鬆 / 沉浸陪伴",
+  specialty: "刺青台客 健談好處",
   intro: `170 / 66 / 30 / 不分
 
 Zac 師傅，重視放鬆過程中的舒適感與節奏感。
@@ -64,7 +64,7 @@ Zac 師傅，重視放鬆過程中的舒適感與節奏感。
 },
      {
     name: "Odin",
-    specialty: "深度放鬆 / 手法細膩",
+    specialty: "深度放鬆 手感細膩",
     intro: `170 / 68 / 32 / 不分
       
 奧丁師傅，重視每次放鬆的深度與感受。
@@ -83,7 +83,7 @@ Zac 師傅，重視放鬆過程中的舒適感與節奏感。
  },
      {
   name: "Hu",
-  specialty: "舒壓放鬆 / 輕柔陪伴",
+  specialty: "少年感 纖瘦身形",
   intro: `164 / 50 / 26 / 不分
 
 Hu 師傅，重視療程中的舒適感與陪伴感。
@@ -101,8 +101,13 @@ Hu 師傅，重視療程中的舒適感與陪伴感。
 },
      {
   name: "Raven",
-  specialty: "待上線",
-  intro: `166/47/0`,
+  specialty: "少年感 纖瘦身形",
+  intro: `166/47/0  Raven師傅  纖細的身形與胸前刺青形成強烈反差，
+第一眼給人的印象總是神秘且難以靠近。
+
+沒有過多刻意的包裝，
+自然的互動與舒服的陪伴，
+反而成為最吸引人的地方。`,
   images: [
     "/images/therapist-Raven-1.JPG",
     "/images/therapist-Raven-2.JPG",
