@@ -66,12 +66,12 @@ export default function SpacePage() {
             }}
           >
           
-   高雄男士放鬆空間
-
-            <br />
-            放鬆空間
-          </h1>
-
+   
+  高雄男士放鬆空間
+</h1>
+<p>
+  Private Gay SPA Space In Kaohsiung
+</p>
           <div
             style={{
               display: 'grid',
