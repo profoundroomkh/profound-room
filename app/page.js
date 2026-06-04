@@ -701,8 +701,18 @@ backgroundRepeat: 'no-repeat',
         fontSize: '13px',
       }}
     >
-      ADVANCE RESERVATION
-    <p
+     <p
+  style={{
+    color: '#cbb79d',
+    letterSpacing: '3px',
+    marginBottom: '14px',
+    fontSize: '13px',
+  }}
+>
+  ADVANCE RESERVATION
+</p>
+
+<p
   style={{
     color: '#b9977d',
     fontSize: '14px',
@@ -711,14 +721,14 @@ backgroundRepeat: 'no-repeat',
     marginBottom: '18px',
   }}
 >
-<p> 
-優 惠 須 知
+  優 惠 須 知
 </p>
 
 <p
   style={{
     color: 'rgba(255,255,255,0.68)',
     lineHeight: '2',
+    marginBottom: '42px',
   }}
 >
   ※ 各項優惠恕不併用，每次消費僅限擇一優惠方案適用。
@@ -735,11 +745,12 @@ backgroundRepeat: 'no-repeat',
   <br />
   <br />
 
-  🎟️ 官方 LINE 將不定期發放專屬優惠券與限定活動優惠。
+  🎟️ 加入官方 LINE，可不定期獲得專屬優惠券與限定活動優惠。
   <br />
   優惠券使用方式與適用期間依活動公告為準。
 </p>
-  <div style={{ marginBottom: '42px' }}>
+
+<div style={{ marginBottom: '42px' }}>
     <p
       style={{
         color: '#cbb79d',
