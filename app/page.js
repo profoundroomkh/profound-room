@@ -700,14 +700,6 @@ backgroundRepeat: 'no-repeat',
         marginBottom: '14px',
         fontSize: '13px',
       }}
-    >
-     <p
-  style={{
-    color: '#cbb79d',
-    letterSpacing: '3px',
-    marginBottom: '14px',
-    fontSize: '13px',
-  }}
 >
   ADVANCE RESERVATION
 </p>
