@@ -719,7 +719,7 @@ backgroundRepeat: 'no-repeat',
         lineHeight: '2',
       }}
     >
-      外出服務依距離酌收費用。
+      到府服務依距離酌收費用。
       <br />
         距離高雄車站5公里內+300
 <br />
