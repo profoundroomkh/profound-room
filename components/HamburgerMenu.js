@@ -80,7 +80,29 @@ export default function HamburgerMenu({
           >
             首頁
           </a>
+<a
+  href='/#therapists'
+  style={{
+    color: '#f2e1d0',
+    textDecoration: 'none',
+    fontSize: '28px',
+    fontWeight: '300',
+  }}
+>
+  師傅團隊
+</a>
 
+<a
+  href='/#pricing'
+  style={{
+    color: '#f2e1d0',
+    textDecoration: 'none',
+    fontSize: '28px',
+    fontWeight: '300',
+  }}
+>
+  價目方案
+</a>
           <a
             href='/space'
             style={{
