@@ -537,6 +537,7 @@ id="therapists"
       </section>
 {/* PRICING */}
 <section
+id="pricing"
   style={{
     padding: "0 24px 120px",
     maxWidth: "900px",
