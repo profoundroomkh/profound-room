@@ -23,6 +23,27 @@ useEffect(() => {
   return () => clearInterval(interval)
 }, [])
    const masters = [
+{
+  name: "Noah",
+  specialty: "舒壓放鬆 / 自然陪伴",
+  intro: `175 / 75 / 30 / 不分
+
+Noah 師傅重視放鬆過程中的舒適感與互動感。
+
+透過自然節奏與穩定手法，
+陪伴來訪者慢慢卸下生活累積的疲憊。
+
+喜歡營造輕鬆自在的氛圍，
+讓身體與情緒都能獲得適當放鬆。
+
+希望每一次療程，
+都能帶來專屬於自己的休息時光。`,
+  images: [
+    "/images/therapist-Noah.JPG",
+    "/images/therapist-Noah-1.JPG",
+    "/images/therapist-Noah-2.JPG",
+  ],
+},
   {
     name: "Luke",
     specialty: "濃眉多毛 男友式陪伴",
@@ -399,6 +420,37 @@ backgroundRepeat: 'no-repeat',
     高雄預約制 SPA 或私人放鬆空間，
     深寓希望能成為你的選擇之一。
   </p>
+</section>
+<section
+  style={{
+    padding: '0 24px 80px',
+    maxWidth: '1200px',
+    margin: '0 auto',
+  }}
+>
+  <p
+    style={{
+      color: '#b9977d',
+      letterSpacing: '4px',
+      marginBottom: '12px',
+      textAlign: 'center',
+    }}
+  >
+    NEW THERAPIST
+  </p>
+
+  <h2
+    style={{
+      fontSize: '42px',
+      fontWeight: 300,
+      textAlign: 'center',
+      marginBottom: '60px',
+    }}
+  >
+    新師傅推薦
+  </h2>
+
+  {/* Noah卡片 */}
 </section>
       {/* MASTERS */}
       <section
