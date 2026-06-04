@@ -749,16 +749,55 @@ backgroundRepeat: 'no-repeat',
   <br />
   優惠券使用方式與適用期間依活動公告為準。
 </p>
-
 <div style={{ marginBottom: '42px' }}>
-    <p
-      style={{
-        color: '#cbb79d',
-        letterSpacing: '3px',
-        marginBottom: '14px',
-        fontSize: '13px',
-      }}
-    >
+  <p
+    style={{
+      color: '#cbb79d',
+      letterSpacing: '3px',
+      marginBottom: '14px',
+      fontSize: '13px',
+    }}
+  >
+    ADVANCE RESERVATION
+  </p>
+
+  <p
+    style={{
+      color: '#b9977d',
+      fontSize: '14px',
+      fontWeight: '600',
+      letterSpacing: '1px',
+      marginBottom: '18px',
+    }}
+  >
+    優 惠 須 知
+  </p>
+
+  <p
+    style={{
+      color: 'rgba(255,255,255,0.68)',
+      lineHeight: '2',
+    }}
+  >
+    ※ 各項優惠恕不併用，每次消費僅限擇一優惠方案適用。
+    <br />
+    <br />
+
+    提前一天完成預約，可享 NT$100 預約折抵。
+    <br />
+    <br />
+
+    🎂 當月壽星首次消費，提前預約可享 NT$200 優惠折抵。
+    <br />
+    優惠需於預約時主動告知，並於到訪時出示有效證件驗證後方可適用。
+    <br />
+    <br />
+
+    🎟️ 加入官方 LINE，可不定期獲得專屬優惠券與限定活動優惠。
+    <br />
+    優惠券使用方式與適用期間依活動公告為準。
+  </p>
+</div>
       NIGHT SERVICE
     </p>
 
