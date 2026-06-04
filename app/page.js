@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-
 import Header from '../components/Header'
 import FAQ from '../components/FAQ'
 import Gallery from '../components/Gallery'
@@ -23,6 +22,27 @@ useEffect(() => {
   return () => clearInterval(interval)
 }, [])
    const masters = [
+{
+    name: "Noah",
+    specialty: "⭐ 新師傅推薦｜舒壓放鬆 / 自然陪伴",
+    intro: `175 / 75 / 30 / 不分
+
+Noah 師傅重視放鬆過程中的舒適感與互動感。
+
+透過自然節奏與穩定手法，
+陪伴來訪者慢慢卸下生活累積的疲憊。
+
+喜歡營造輕鬆自在的氛圍，
+讓身體與情緒都能獲得適當放鬆。
+
+希望每一次療程，
+都能帶來專屬於自己的休息時光。`,
+    images: [
+      "/images/therapist-Noah.JPG",
+      "/images/therapist-Noah-1.JPG",
+      "/images/therapist-Noah-2.JPG",
+    ],
+  },
 
   {
     name: "Luke",
@@ -421,14 +441,15 @@ backgroundRepeat: 'no-repeat',
             THERAPISTS
           </p>
 
-          <h2
-            style={{
-              fontSize: '42px',
-              fontWeight: 300,
-            }}
-          >
-            師傅介紹
-          </h2>
+          <p
+  style={{
+    color: '#b9977d',
+    letterSpacing: '4px',
+    marginBottom: '12px',
+  }}
+>
+  THERAPISTS & NEW ARRIVAL
+</p>
               
         </div>
 
