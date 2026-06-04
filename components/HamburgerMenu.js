@@ -82,6 +82,7 @@ export default function HamburgerMenu({
           </a>
 <a
   href='/#therapists'
+  onClick={() => setOpen(false)}
   style={{
     color: '#f2e1d0',
     textDecoration: 'none',
@@ -94,6 +95,7 @@ export default function HamburgerMenu({
 
 <a
   href='/#pricing'
+  onClick={() => setOpen(false)}
   style={{
     color: '#f2e1d0',
     textDecoration: 'none',
