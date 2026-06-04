@@ -696,6 +696,7 @@ backgroundRepeat: 'no-repeat',
       }}
     >
       預約時間 22:00 後｜+300 / 位
+        <br />
       預約時間 00:00 後｜+500 / 位
     </p>
   </div>
