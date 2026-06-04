@@ -711,7 +711,8 @@ backgroundRepeat: 'no-repeat',
     marginBottom: '18px',
   }}
 >
-  優 惠 須 知
+<p> 
+優 惠 須 知
 </p>
 
 <p
