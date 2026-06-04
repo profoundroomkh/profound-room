@@ -45,7 +45,7 @@ Noah 師傅重視放鬆過程中的舒適感與互動感。
   },
 
   {
-    name: "Luke",
+    name: "Ansel",
     specialty: "濃眉多毛 男友式陪伴",
     intro: `165 / 58 / 30 / 不分
 
