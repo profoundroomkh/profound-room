@@ -424,6 +424,7 @@ backgroundRepeat: 'no-repeat',
 
       {/* MASTERS */}
       <section
+id="therapists"
         style={{
           padding: '0 24px 120px',
           maxWidth: '1200px',
