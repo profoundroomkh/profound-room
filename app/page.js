@@ -743,7 +743,16 @@ backgroundRepeat: 'no-repeat',
 
   </p>
 </div>
-      NIGHT SERVICE
+      <div style={{ marginBottom: '42px' }}>
+  <p
+    style={{
+      color: '#cbb79d',
+      letterSpacing: '3px',
+      marginBottom: '14px',
+      fontSize: '13px',
+    }}
+  >
+NIGHT SERVICE
     </p>
 
     <p
