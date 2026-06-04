@@ -725,7 +725,7 @@ backgroundRepeat: 'no-repeat',
 <br />
         距離高雄車站5-10公里+500
 <br />
-        距離高雄車站10公里以上+800
+        距離高雄車站10公里以上+800（客服報價）
 <br />
       Adults Only｜18+
     </p>
