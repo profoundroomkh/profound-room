@@ -629,7 +629,6 @@ backgroundRepeat: 'no-repeat',
     </p>
   </div>
 
-  </div>
 
   <div style={{ marginBottom: '42px' }}>
     <h3
