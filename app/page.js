@@ -652,7 +652,46 @@ backgroundRepeat: 'no-repeat',
       指壓｜油壓｜體推｜機能保養
     </p>
   </div>
+<div
+  style={{
+    marginTop: '40px',
+    padding: '28px',
+    border: '1px solid rgba(255,255,255,0.08)',
+    borderRadius: '24px',
+  }}
+>
+  <h3
+    style={{
+      fontSize: '24px',
+      fontWeight: 300,
+      marginBottom: '16px',
+    }}
+  >
+    不指定師傅方案
+  </h3>
 
+  <p
+    style={{
+      color: '#c9b8aa',
+      lineHeight: '2',
+    }}
+  >
+    90 分鐘｜NT$1,800
+    <br />
+    120 分鐘｜NT$2,200
+  </p>
+
+  <p
+    style={{
+      color: '#b9977d',
+      fontSize: '14px',
+      marginTop: '16px',
+      lineHeight: '1.8',
+    }}
+  >
+    ※ 不指定師傅方案為獨立優惠價格，恕不與其他優惠活動併用。
+  </p>
+</div>
   <div style={{ marginBottom: '42px' }}>
     <p
       style={{
