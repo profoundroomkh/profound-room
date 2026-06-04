@@ -629,27 +629,6 @@ backgroundRepeat: 'no-repeat',
     </p>
   </div>
 
-  <div style={{ marginBottom: '42px' }}>
-    <h3
-      style={{
-        fontSize: '30px',
-        fontWeight: '300',
-        marginBottom: '14px',
-      }}
-    >
-      輕放鬆體驗｜60 MIN｜1600
-    </h3>
-
-    <p
-      style={{
-        color: 'rgba(255,255,255,0.6)',
-        lineHeight: '2',
-      }}
-    >
-      Session Includes
-      <br />
-      指壓｜油壓
-    </p>
   </div>
 
   <div style={{ marginBottom: '42px' }}>
@@ -717,7 +696,8 @@ backgroundRepeat: 'no-repeat',
         lineHeight: '2',
       }}
     >
-      22:00 後｜+500 / 位
+      預約時間 22:00 後｜+300 / 位
+      預約時間 00:00 後｜+500 / 位
     </p>
   </div>
 
