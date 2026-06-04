@@ -748,7 +748,6 @@ backgroundRepeat: 'no-repeat',
   🎟️ 加入官方 LINE，可不定期獲得專屬優惠券與限定活動優惠。
   <br />
   優惠券使用方式與適用期間依活動公告為準。
-</p>
 
   </p>
 </div>
