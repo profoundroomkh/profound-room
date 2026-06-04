@@ -107,6 +107,7 @@ export default function HamburgerMenu({
 </a>
           <a
             href='/space'
+onClick={() => setOpen(false)}
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
@@ -119,6 +120,7 @@ export default function HamburgerMenu({
 
           <a
             href='/space'
+onClick={() => setOpen(false)}
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
@@ -131,6 +133,7 @@ export default function HamburgerMenu({
 
           <a
             href='/space'
+onClick={() => setOpen(false)}
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
@@ -143,6 +146,7 @@ export default function HamburgerMenu({
 
           <a
             href='/space'
+onClick={() => setOpen(false)}
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
@@ -176,6 +180,7 @@ export default function HamburgerMenu({
         >
           <a
             href='/reservation'
+onClick={() => setOpen(false)}
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
@@ -188,6 +193,7 @@ export default function HamburgerMenu({
 
           <a
             href='/faq'
+onClick={() => setOpen(false)}
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
@@ -200,6 +206,7 @@ export default function HamburgerMenu({
 
           <a
             href='/space'
+onClick={() => setOpen(false)}
             style={{
               color: '#f2e1d0',
               textDecoration: 'none',
@@ -212,6 +219,7 @@ export default function HamburgerMenu({
 
          <a
   href='/journal'
+onClick={() => setOpen(false)}
   style={{
     color: '#f2e1d0',
     textDecoration: 'none',
@@ -224,6 +232,7 @@ export default function HamburgerMenu({
 
 <a
   href='/recruit'
+onClick={() => setOpen(false)}
   style={{
     color: '#f2e1d0',
     textDecoration: 'none',
