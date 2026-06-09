@@ -10,7 +10,7 @@ export const metadata = {
   metadataBase: new URL('https://profoundroom.com'),
 
   title:
-    '高雄 Gay SPA｜深寓 PROFOUND ROOM｜男士按摩與放鬆空間',
+    '深寓 PROFOUND ROOM｜高雄 Gay SPA｜男士按摩與放鬆空間',
 
   description:
     'PROFOUND ROOM 深寓為高雄預約制 Gay SPA 與男士放鬆空間，提供專業按摩、精油舒壓、私人空間與沉浸式療癒體驗。',
