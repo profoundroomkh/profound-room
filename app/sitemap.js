@@ -32,6 +32,10 @@ export default function sitemap() {
   lastModified: new Date(),
 },
     {
+  url: `${baseUrl}/journal/first-men-spa-experience`,
+  lastModified: new Date(),
+},
+    {
       url: `${baseUrl}`,
       lastModified: new Date(),
     },
