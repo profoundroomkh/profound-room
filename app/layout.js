@@ -26,6 +26,14 @@ export const metadata = {
     '高雄男按摩',
     '高雄舒壓',
     '高雄深夜按摩',
+    '高雄同志按摩',
+'Gay Massage Kaohsiung',
+'Kaohsiung Gay Massage',
+'高雄男士按摩推薦',
+'高雄同志SPA推薦',
+'高雄預約制按摩',
+'高雄私人按摩',
+'高雄舒壓按摩',
   ],
 
   openGraph: {
