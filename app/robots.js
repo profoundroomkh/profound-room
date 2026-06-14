@@ -4,8 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-
-    sitemap:
-      'https://profound-room.vercel.app/sitemap.xml',
+    sitemap: 'https://profoundroom.com/sitemap.xml',
   }
 }
