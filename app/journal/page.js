@@ -3,6 +3,71 @@ import Header from '../../components/Header'
 export default function JournalPage() {
   const posts = [
     {
+  title:
+    '高雄同志按摩推薦怎麼選？5個初次體驗前必看的重點',
+
+  description:
+    '第一次尋找高雄同志按摩服務時，如何挑選適合自己的放鬆空間？本文整理五個實用重點，幫助你找到更適合自己的體驗。',
+
+  link:
+    '/journal/how-to-choose-gay-massage-kaohsiung',
+},
+
+{
+  title:
+    '高雄男按摩推薦｜第一次預約前常見問題整理',
+
+  description:
+    '首次預約男按摩服務前，常見疑問一次整理，幫助你更安心安排自己的放鬆時光。',
+
+  link:
+    '/journal/kaohsiung-male-massage-guide',
+},
+
+{
+  title:
+    '為什麼越來越多人選擇預約制 Gay SPA？',
+
+  description:
+    '預約制 Gay SPA 近年受到許多人喜愛，本文分享其受歡迎的原因與特色。',
+
+  link:
+    '/journal/why-private-gay-spa-is-popular',
+},
+
+{
+  title:
+    '精油舒壓真的能放鬆嗎？從身體與心理角度解析',
+
+  description:
+    '透過精油與按摩手法的搭配，如何幫助身體放鬆與舒緩壓力？一起深入了解。',
+
+  link:
+    '/journal/benefits-of-oil-massage',
+},
+
+{
+  title:
+    '深夜按摩適合哪些人？下班後的放鬆選擇',
+
+  description:
+    '晚下班、生活步調繁忙的人，為什麼越來越傾向選擇深夜按摩作為放鬆方式？',
+
+  link:
+    '/journal/night-massage-benefits',
+},
+
+{
+  title:
+    '高雄同志按摩與一般按摩有什麼不同？',
+
+  description:
+    '同志按摩與一般按摩有什麼差異？從空間氛圍、服務方式與體驗角度進行說明。',
+
+  link:
+    '/journal/gay-massage-vs-normal-massage',
+},
+    {
       title:
         '第一次體驗 Gay SPA 前，可以先知道的事',
 
