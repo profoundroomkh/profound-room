@@ -3,6 +3,35 @@ export default function sitemap() {
 
   return [
     {
+  url: `${baseUrl}/journal/how-to-choose-gay-massage-kaohsiung`,
+  lastModified: new Date(),
+},
+
+{
+  url: `${baseUrl}/journal/kaohsiung-male-massage-guide`,
+  lastModified: new Date(),
+},
+
+{
+  url: `${baseUrl}/journal/why-private-gay-spa-is-popular`,
+  lastModified: new Date(),
+},
+
+{
+  url: `${baseUrl}/journal/benefits-of-oil-massage`,
+  lastModified: new Date(),
+},
+
+{
+  url: `${baseUrl}/journal/night-massage-benefits`,
+  lastModified: new Date(),
+},
+
+{
+  url: `${baseUrl}/journal/gay-massage-vs-normal-massage`,
+  lastModified: new Date(),
+},
+    {
       url: `${baseUrl}`,
       lastModified: new Date(),
     },
