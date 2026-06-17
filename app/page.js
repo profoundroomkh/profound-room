@@ -6,7 +6,7 @@ import FAQ from '../components/FAQ'
 import Gallery from '../components/Gallery'
   export default function Home() {
 const [currentIndexes, setCurrentIndexes] =
-  useState([0, 0, 0, 0, 0, 0])
+  useState([0, 0, 0, 0, 0, 0, 0])
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndexes((prev) =>
@@ -44,7 +44,30 @@ Noah 師傅重視放鬆過程中的舒適感與互動感。
     ],
   },
 
+{
+  name: "Vincent",
+  specialty: " ⭐ 新師傅推薦｜健談互動 / 輕鬆陪伴",
+  intro: `175 / 65 / 32/ 不分1
 
+Vincent 師傅個性自然健談，
+擅長在輕鬆自在的聊天節奏中，
+陪伴來訪者慢慢放鬆下來。
+
+不需要刻意找話題，
+舒服的互動往往能讓人更快卸下防備與疲憊。
+
+重視每一次療程中的感受與陪伴，
+希望讓來訪者在放鬆身體的同時，
+也能獲得片刻喘息與沉澱。
+
+希望每一次相遇，
+都能成為生活裡值得期待的放鬆時光。`,
+  images: [
+    "/images/therapist-Vincent-1.JPG",
+    "/images/therapist-Vincent-2.JPG",
+    "/images/therapist-Vincent-3.JPG",
+  ],
+},
   
      {
   name: "Zac",
