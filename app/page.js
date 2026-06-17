@@ -45,7 +45,7 @@ Noah 師傅重視放鬆過程中的舒適感與互動感。
   },
 
 {
-  name: "Vincent",
+  name: "Vincent（不提供臉照）",
   specialty: " ⭐ 新師傅推薦｜健談互動 / 輕鬆陪伴",
   intro: `175 / 65 / 32/ 不分1
 
