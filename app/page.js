@@ -523,21 +523,21 @@ id="therapists"
 >
   {master.name}
 
-  {master.name === 'Vincent', 'Noah' && (
-    <span
-      style={{
-        background: '#b9977d',
-        color: '#050505',
-        fontSize: '11px',
-        fontWeight: '600',
-        padding: '4px 10px',
-        borderRadius: '999px',
-        letterSpacing: '1px',
-      }}
-    >
-      NEW
-    </span>
-  )}
+  {{[ 'Vincent', 'Noah'].includes(master.name) && (
+  <span
+    style={{
+      background: '#b9977d',
+      color: '#050505',
+      fontSize: '11px',
+      fontWeight: '600',
+      padding: '4px 10px',
+      borderRadius: '999px',
+      letterSpacing: '1px',
+    }}
+  >
+    NEW
+  </span>
+)}
 </h3>
 
                 <p
