@@ -24,7 +24,7 @@ useEffect(() => {
    const masters = [
 {
     name: "Noah",
-    specialty: "⭐ 新師傅推薦｜舒壓放鬆 / 自然陪伴",
+    specialty: " 新師傅推薦｜舒壓放鬆 / 自然陪伴",
     intro: `175 / 75 / 30 / 不分
 
 Noah 師傅重視放鬆過程中的舒適感與互動感。
@@ -46,7 +46,7 @@ Noah 師傅重視放鬆過程中的舒適感與互動感。
 
 {
   name: "Vincent",
-  specialty: " ⭐ 新師傅推薦｜健談互動 / 輕鬆陪伴",
+  specialty: "  新師傅推薦｜健談互動 / 輕鬆陪伴",
   intro: `175 / 65 / 32/ 不分1（不提供臉照）
 
 Vincent 師傅個性自然健談，
@@ -523,7 +523,7 @@ id="therapists"
 >
   {master.name}
 
-  {master.name === 'Vincent' && (
+  {master.name === 'Vincent', 'Noah' && (
     <span
       style={{
         background: '#b9977d',
