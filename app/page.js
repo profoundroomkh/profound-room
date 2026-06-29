@@ -523,7 +523,7 @@ id="therapists"
 >
   {master.name}
 
-  {{[ 'Vincent', 'Noah'].includes(master.name) && (
+  {[ 'Vincent', 'Noah'].includes(master.name) && (
   <span
     style={{
       background: '#b9977d',
