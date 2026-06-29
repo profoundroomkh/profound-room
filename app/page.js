@@ -512,14 +512,33 @@ id="therapists"
 />
               <div style={{ padding: '28px' }}>
                 <h3
-                  style={{
-                    fontSize: '28px',
-                    marginBottom: '8px',
-                    fontWeight: 300,
-                  }}
-                >
-                  {master.name}
-                </h3>
+  style={{
+    fontSize: '28px',
+    marginBottom: '8px',
+    fontWeight: 300,
+    display: 'flex',
+    alignItems: 'center',
+    gap: '10px',
+  }}
+>
+  {master.name}
+
+  {master.name === 'Vincent' && (
+    <span
+      style={{
+        background: '#b9977d',
+        color: '#050505',
+        fontSize: '11px',
+        fontWeight: '600',
+        padding: '4px 10px',
+        borderRadius: '999px',
+        letterSpacing: '1px',
+      }}
+    >
+      NEW
+    </span>
+  )}
+</h3>
 
                 <p
                   style={{
