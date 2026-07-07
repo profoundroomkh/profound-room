@@ -55,12 +55,12 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="zh-Hant">
-      <body>
-        <FloatingButton />
-        {children}
-      </body>
+ return (
+  <html lang="zh-Hant">
+    <body>
+      <FloatingButton />
+
+      {children}
 
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-4E0CTT77GH"
@@ -82,6 +82,6 @@ export default function RootLayout({ children }) {
           gtag('config', 'G-4E0CTT77GH');
         `}
       </Script>
-    </html>
-  )
-}
+    </body>
+  </html>
+)
