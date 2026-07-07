@@ -560,17 +560,25 @@ id="therapists"
                 </p>
 
                 <a
-                  href="https://line.me/R/ti/p/@637fbbyh"
-                  target="_blank"
-                  style={{
-                    display: 'inline-block',
-                    padding: '12px 22px',
-                    borderRadius: '999px',
-                    border: '1px solid #b9977d',
-                    color: '#f2e1d0',
-                    textDecoration: 'none',
-                  }}
-                >
+  href="https://line.me/R/ti/p/@637fbbyh"
+  target="_blank"
+  onClick={() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'line_click', {
+        event_category: 'booking',
+        event_label: 'LINE',
+      })
+    }
+  }}
+  style={{
+    display: 'inline-block',
+    padding: '12px 22px',
+    borderRadius: '999px',
+    border: '1px solid #b9977d',
+    color: '#f2e1d0',
+    textDecoration: 'none',
+  }}
+>
                   預約此師傅
                 </a>
               </div>
