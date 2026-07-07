@@ -1,6 +1,7 @@
 import FloatingButton from '../components/FloatingButton'
 import './globals.css'
 import Script from 'next/script'
+
 export const metadata = {
   verification: {
     google:
@@ -27,20 +28,18 @@ export const metadata = {
     '高雄舒壓',
     '高雄深夜按摩',
     '高雄同志按摩',
-'Gay Massage Kaohsiung',
-'Kaohsiung Gay Massage',
-'高雄男士按摩推薦',
-'高雄同志SPA推薦',
-'高雄預約制按摩',
-'高雄私人按摩',
-'高雄舒壓按摩',
+    'Gay Massage Kaohsiung',
+    'Kaohsiung Gay Massage',
+    '高雄男士按摩推薦',
+    '高雄同志SPA推薦',
+    '高雄預約制按摩',
+    '高雄私人按摩',
+    '高雄舒壓按摩',
   ],
 
   openGraph: {
-    title:
-      '高雄 Gay SPA｜PROFOUND ROOM 深寓',
-    description:
-      '高雄預約制男士放鬆空間與專業按摩體驗',
+    title: '高雄 Gay SPA｜PROFOUND ROOM 深寓',
+    description: '高雄預約制男士放鬆空間與專業按摩體驗',
     url: 'https://profoundroom.com',
     siteName: 'PROFOUND ROOM 深寓',
     images: [
@@ -54,35 +53,35 @@ export const metadata = {
     type: 'website',
   },
 }
-export default function RootLayout({
-  children,
-}) {
+
+export default function RootLayout({ children }) {
   return (
     <html lang="zh-Hant">
       <body>
-  <FloatingButton />
+        <FloatingButton />
+        {children}
+      </body>
 
-  {children}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-4E0CTT77GH"
+        strategy="afterInteractive"
+      />
 
-  <Script
-    src='https://www.googletagmanager.com/gtag/js?id=G-4E0CTT77GH'
-    strategy='afterInteractive'
-  />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
 
-  <Script id='google-analytics' strategy='afterInteractive'>
-    {`
-      window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
 
-      function gtag(){
-        dataLayer.push(arguments);
-      }
+          window.gtag = gtag;
 
-      gtag('js', new Date());
+          gtag('js', new Date());
 
-      gtag('config', 'G-4E0CTT77GH');
-    `}
-  </Script>
-</body>
+          gtag('config', 'G-4E0CTT77GH');
+        `}
+      </Script>
     </html>
   )
 }
