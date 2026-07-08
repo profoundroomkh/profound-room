@@ -43,10 +43,10 @@ Kai 擁有結實健壯的體態，
 一起享受屬於自己的深夜放鬆時光。`,
 
   images: [
-    "/images/therapist-Leon-1.JPG",
-    "/images/therapist-Leon-2.JPG",
-    "/images/therapist-Leon-3.JPG",
-    "/images/therapist-Leon-4.JPG",
+    "/images/therapist-Kai-1.JPG",
+    "/images/therapist-Kai-2.JPG",
+    "/images/therapist-Kai-3.JPG",
+    "/images/therapist-Kai-4.JPG",
   ],
 },
     
