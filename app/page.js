@@ -6,7 +6,7 @@ import FAQ from '../components/FAQ'
 import Gallery from '../components/Gallery'
   export default function Home() {
 const [currentIndexes, setCurrentIndexes] =
-  useState([0, 0, 0, 0, 0, 0, 0])
+  useState([0, 0, 0, 0, 0, 0, 0, 0])
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndexes((prev) =>
@@ -23,27 +23,33 @@ useEffect(() => {
 }, [])
    const masters = [
 {
-    name: "Noah",
-    specialty: " 新師傅推薦｜舒壓放鬆 / 自然陪伴",
-    intro: `175 / 75 / 30 / 不分
+  name: "Kai",
+  specialty: "⭐ 新師上陣｜陽剛穩重 / 厚實手感",
+  intro: `175 / 70 / 30 / 1
 
-Noah 師傅重視放鬆過程中的舒適感與互動感。
+Kai 擁有結實健壯的體態，
+健康黝黑的膚色與沉穩自然的氣質，
+初次見面便能帶來十足的安心感。
 
-透過自然節奏與穩定手法，
-陪伴來訪者慢慢卸下生活累積的疲憊。
+重視療程中的互動與細節，
+透過穩定且扎實的手法，
+陪伴來訪者逐步釋放身體累積的疲勞與壓力。
 
-喜歡營造輕鬆自在的氛圍，
-讓身體與情緒都能獲得適當放鬆。
+充沛的體力與耐心，
+讓每一次療程都能維持舒適且穩定的節奏，
+希望帶給每位來訪者完整且放鬆的體驗。
 
-希望每一次療程，
-都能帶來專屬於自己的休息時光。`,
-    images: [
-      "/images/therapist-Noah.JPG",
-      "/images/therapist-Noah-1.JPG",
-      "/images/therapist-Noah-2.JPG",
-    ],
-  },
+期待與您相遇，
+一起享受屬於自己的深夜放鬆時光。`,
 
+  images: [
+    "/images/therapist-Leon-1.JPG",
+    "/images/therapist-Leon-2.JPG",
+    "/images/therapist-Leon-3.JPG",
+    "/images/therapist-Leon-4.JPG",
+  ],
+},
+    
 {
   name: "Vincent",
   specialty: "  新師傅推薦｜健談互動 / 輕鬆陪伴",
@@ -68,7 +74,29 @@ Vincent 師傅個性自然健談，
     "/images/therapist-Vincent-3.JPG",
   ],
 },
-  
+
+      {
+    name: "Noah",
+    specialty: " 新師傅推薦｜舒壓放鬆 / 自然陪伴",
+    intro: `175 / 75 / 30 / 不分
+
+Noah 師傅重視放鬆過程中的舒適感與互動感。
+
+透過自然節奏與穩定手法，
+陪伴來訪者慢慢卸下生活累積的疲憊。
+
+喜歡營造輕鬆自在的氛圍，
+讓身體與情緒都能獲得適當放鬆。
+
+希望每一次療程，
+都能帶來專屬於自己的休息時光。`,
+    images: [
+      "/images/therapist-Noah.JPG",
+      "/images/therapist-Noah-1.JPG",
+      "/images/therapist-Noah-2.JPG",
+    ],
+  },
+
      
      {
     name: "Odin",
@@ -523,7 +551,7 @@ id="therapists"
 >
   {master.name}
 
-  {[ 'Vincent', 'Noah'].includes(master.name) && (
+  {[ 'Vincent', 'Kai'].includes(master.name) && (
   <span
     style={{
       background: '#b9977d',
