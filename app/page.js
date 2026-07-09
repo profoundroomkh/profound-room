@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import FAQ from '../components/FAQ'
 import Gallery from '../components/Gallery'
-  export default function Home() {
 const [currentIndexes, setCurrentIndexes] =
   useState([0, 0, 0, 0, 0, 0, 0, 0])
 useEffect(() => {
