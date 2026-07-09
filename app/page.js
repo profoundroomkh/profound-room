@@ -292,7 +292,7 @@ return (
           textAlign: 'center',
           padding: '40px 24px',
          background:
-  'linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.92)), url()',
+  'linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.92)), url(/images/hero-1.jpg)',
 backgroundSize: 'cover',
 backgroundPosition: 'center',
 backgroundRepeat: 'no-repeat',
