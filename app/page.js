@@ -70,7 +70,7 @@ Kai 擁有結實健壯的體態，
       "/images/therapist-Odin-3.JPG",
       "/images/therapist-Odin-4.JPG",
     ],
- }    
+ } ,   
      
 {
   name: "Vincent",
