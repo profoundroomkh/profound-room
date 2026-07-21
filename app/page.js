@@ -51,7 +51,25 @@ Kai 擁有結實健壯的體態，
     "/images/therapist-Kai-4.JPG",
   ],
 },
-    
+{
+    name: "Odin",
+    specialty: "深度放鬆 手感細膩",
+    intro: `170 / 68 / 32 / 不分
+      
+奧丁師傅，重視每次放鬆的深度與感受。
+以細膩節奏與沉穩手感，陪你慢慢卸下疲憊。
+在安靜私密的空間裡，
+找回身心最舒服的狀態。
+讓每次相遇，都成為與疲憊短暫告別的片刻。
+讓每次到訪，都像進入一段專屬自己的放鬆時光。`,
+    images: [
+      "/images/therapist-Odin.JPG",
+       "/images/therapist-Odin-1.JPG",
+      "/images/therapist-Odin-2.JPG",
+      "/images/therapist-Odin-3.JPG",
+      "/images/therapist-Odin-4.JPG",
+    ],
+ }    
 {
   name: "Vincent",
   specialty: "  新師傅推薦｜健談互動 / 輕鬆陪伴",
@@ -100,25 +118,7 @@ Noah 師傅重視放鬆過程中的舒適感與互動感。
   },
 
      
-     {
-    name: "Odin",
-    specialty: "深度放鬆 手感細膩",
-    intro: `170 / 68 / 32 / 不分
-      
-奧丁師傅，重視每次放鬆的深度與感受。
-以細膩節奏與沉穩手感，陪你慢慢卸下疲憊。
-在安靜私密的空間裡，
-找回身心最舒服的狀態。
-讓每次相遇，都成為與疲憊短暫告別的片刻。
-讓每次到訪，都像進入一段專屬自己的放鬆時光。`,
-    images: [
-      "/images/therapist-Odin.JPG",
-       "/images/therapist-Odin-1.JPG",
-      "/images/therapist-Odin-2.JPG",
-      "/images/therapist-Odin-3.JPG",
-      "/images/therapist-Odin-4.JPG",
-    ],
- },
+    
      {
     name: "Ansel",
     specialty: "濃眉多毛 男友式陪伴",
