@@ -8,7 +8,7 @@ import Gallery from '../components/Gallery'
 export default function Home() {
 
 const [currentIndexes, setCurrentIndexes] =
-  useState([0, 0, 0, 0, 0, 0, 0, 0])
+  useState([0, 0, 0, 0, 0, 0, 0, 0, 0])
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndexes((prev) =>
@@ -25,6 +25,33 @@ useEffect(() => {
 }, [])
    const masters = [
 {
+  name: "Bu",
+  specialty: "⭐ 新師上陣｜薄肌 / 反差",
+  intro: `166/ 55 / 29 / 不分
+
+Bu 為深寓新加入的服務夥伴，
+完成完整培訓後正式加入團隊，
+以細心、耐心與真誠的服務態度，
+陪伴每位來訪者享受放鬆時光。
+
+療程中重視每一個細節，
+會依照來訪者的需求調整節奏與力道，
+希望營造自在、安心且舒適的放鬆氛圍。
+
+持續精進專業技巧，
+也期待透過每一次服務累積更多經驗，
+帶給每位來訪者穩定且愉悅的體驗。
+
+期待與您相遇，
+一起展開屬於您的深夜放鬆旅程。`,
+
+  images: [
+    "/images/therapist-Bu-1.JPG",
+    "/images/therapist-Bu-2.JPG",
+    "/images/therapist-Bu-3.JPG",
+  ],
+},
+  {
   name: "Kai",
   specialty: "⭐ 新師上陣｜陽剛穩重 / 厚實手感",
   intro: `175 / 70 / 30 / 1
@@ -557,7 +584,7 @@ id="therapists"
 >
   {master.name}
 
-  {[ 'Vincent', 'Kai'].includes(master.name) && (
+  {[ 'Bu', 'Kai'].includes(master.name) && (
   <span
     style={{
       background: '#b9977d',
