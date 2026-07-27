@@ -25,11 +25,11 @@ useEffect(() => {
 }, [])
    const masters = [
 {
-  name: "Bu",
+  name: "Owen",
   specialty: "⭐ 新師上陣｜薄肌 / 反差",
   intro: `166/ 55 / 29 / 不分
 
-Bu 為深寓新加入的服務夥伴，
+Owen 為深寓新加入的服務夥伴，
 完成完整培訓後正式加入團隊，
 以細心、耐心與真誠的服務態度，
 陪伴每位來訪者享受放鬆時光。
@@ -46,9 +46,9 @@ Bu 為深寓新加入的服務夥伴，
 一起展開屬於您的深夜放鬆旅程。`,
 
   images: [
-    "/images/therapist-Bu-1.JPG",
-    "/images/therapist-Bu-2.JPG",
-    "/images/therapist-Bu-3.JPG",
+    "/images/therapist-Owen-1.JPG",
+    "/images/therapist-Owen-2.JPG",
+    "/images/therapist-Owen-3.JPG",
   ],
 },
   {
@@ -584,7 +584,7 @@ id="therapists"
 >
   {master.name}
 
-  {[ 'Bu', 'Kai'].includes(master.name) && (
+  {[ 'Owen', 'Kai'].includes(master.name) && (
   <span
     style={{
       background: '#b9977d',
