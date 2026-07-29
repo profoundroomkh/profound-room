@@ -34,10 +34,6 @@ Milo 為深寓新加入的服務夥伴，
 希望透過細心的服務與真誠的互動，
 帶給每位來訪者自在且安心的放鬆體驗。
 
-療程中重視每位來訪者的感受，
-會依照不同需求調整節奏與力道，
-讓身體與情緒都能慢慢放鬆下來。
-
 持續精進專業技巧與服務品質，
 期待用耐心與真誠，
 陪伴您享受一段專屬於自己的療癒時光。
@@ -607,7 +603,7 @@ id="therapists"
 >
   {master.name}
 
-  {[ 'Owen', 'Kai'].includes(master.name) && (
+  {[ 'Milo','Owen', 'Kai'].includes(master.name) && (
   <span
     style={{
       background: '#b9977d',
