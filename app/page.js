@@ -169,30 +169,7 @@ Noah 師傅重視放鬆過程中的舒適感與互動感。
 
      
     
-     {
-    name: "Ansel",
-    specialty: "濃眉多毛 男友式陪伴",
-    intro: `165 / 58 / 30 / 不分
-
-濃眉與沉穩的氣質，總給人一種安心感。
-
-Ansel 不急著拉近距離，
-而是在每一次互動裡，
-用剛好的節奏陪你慢慢放鬆。
-
-重視感受，也重視陪伴。
-
-比起刻意的熱情，
-更多的是自然與真誠。
-
-希望每一次相遇，
-都能成為忙碌生活中的短暫喘息。`,
-    images: [
-      "/images/therapist-luke.jpg",
-      "/images/therapist-luke-2.jpg",
-      "/images/therapist-luke-3.jpg",
-    ],
-  },
+     
      {
   name: "Hu",
   specialty: "少年感 纖瘦身形",
@@ -250,6 +227,30 @@ Zac 喜歡安靜的交流，
     "/images/therapist-Zac-4.JPG",
   ],
 },
+     {
+    name: "Ansel",
+    specialty: "濃眉多毛 男友式陪伴",
+    intro: `165 / 58 / 30 / 不分
+
+濃眉與沉穩的氣質，總給人一種安心感。
+
+Ansel 不急著拉近距離，
+而是在每一次互動裡，
+用剛好的節奏陪你慢慢放鬆。
+
+重視感受，也重視陪伴。
+
+比起刻意的熱情，
+更多的是自然與真誠。
+
+希望每一次相遇，
+都能成為忙碌生活中的短暫喘息。`,
+    images: [
+      "/images/therapist-luke.jpg",
+      "/images/therapist-luke-2.jpg",
+      "/images/therapist-luke-3.jpg",
+    ],
+  },
 ]
 
 return (
