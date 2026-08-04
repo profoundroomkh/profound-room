@@ -78,29 +78,7 @@ Alan 擁有精壯結實的體態，
     "/images/therapist-Alan-2.JPG",
   ],
 },
-     {
-  name: "Milo",
-  specialty: "⭐ 新師上陣｜溫暖陪伴 / 奶狗",
-  intro: `174 / 63 / 29 / 1
-
-Milo 為深寓新加入的服務夥伴，
-完成完整培訓後正式加入團隊，
-希望透過細心的服務與真誠的互動，
-帶給每位來訪者自在且安心的放鬆體驗。
-
-持續精進專業技巧與服務品質，
-期待用耐心與真誠，
-陪伴您享受一段專屬於自己的療癒時光。
-
-期待與您相遇，
-一起感受深寓的沉浸式放鬆。`,
-
-  images: [
-    "/images/therapist-Milo-1.JPG",
-    "/images/therapist-Milo-2.JPG",
-    "/images/therapist-Milo-3.JPG",
-  ],
-},
+    
 {
   name: "Owen",
   specialty: "⭐ 新師上陣｜薄肌 / 反差",
@@ -122,6 +100,29 @@ Owen 為深寓新加入的服務夥伴，
     "/images/therapist-Owen-1.JPG",
     "/images/therapist-Owen-2.JPG",
     "/images/therapist-Owen-3.JPG",
+  ],
+},
+      {
+  name: "Milo",
+  specialty: "⭐ 新師上陣｜溫暖陪伴 / 奶狗",
+  intro: `174 / 63 / 29 / 1
+
+Milo 為深寓新加入的服務夥伴，
+完成完整培訓後正式加入團隊，
+希望透過細心的服務與真誠的互動，
+帶給每位來訪者自在且安心的放鬆體驗。
+
+持續精進專業技巧與服務品質，
+期待用耐心與真誠，
+陪伴您享受一段專屬於自己的療癒時光。
+
+期待與您相遇，
+一起感受深寓的沉浸式放鬆。`,
+
+  images: [
+    "/images/therapist-Milo-1.JPG",
+    "/images/therapist-Milo-2.JPG",
+    "/images/therapist-Milo-3.JPG",
   ],
 },
   {
