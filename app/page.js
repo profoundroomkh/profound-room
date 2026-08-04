@@ -685,9 +685,7 @@ id="therapists"
     gap: '10px',
   }}
 >
-  {master.name}
-
-  {[ 'Milo','Owen', 'Oni','Alan'].includes(master.name) && (
+  {master.isNew && (
   <span
     style={{
       background: '#b9977d',
