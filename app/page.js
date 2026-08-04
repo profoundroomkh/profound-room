@@ -363,14 +363,7 @@ return (
       "0 30px 80px rgba(0,0,0,.35)",
   }}
 >
-      width: "100%",
-      padding: "70px 50px",
-      borderRadius: "32px",
-      background: "rgba(0,0,0,.35)",
-      backdropFilter: "blur(12px)",
-      border: "1px solid rgba(255,255,255,.08)",
-    }}
-  >
+      
     <p
       style={{
         color: "#b9977d",
