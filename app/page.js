@@ -26,6 +26,7 @@ useEffect(() => {
    const masters = [
      {
   name: "Oni",
+       isNew: true,
   specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
   intro: `174 / 72 / 34 / 不分1
 
@@ -54,6 +55,9 @@ Oni 擁有精壯結實的體態，
 },
      {
   name: "Alan",
+       isNew: true,
+  specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
+  intro: `174 / 72 / 34 / 不分1
   specialty: "⭐ 新師上陣｜資深經驗 / 沉穩魅力",
   intro: `170 / 68 / 33 / 不分1
 
@@ -81,6 +85,9 @@ Alan 擁有精壯結實的體態，
     
 {
   name: "Owen",
+       isNew: true,
+  specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
+  intro: `174 / 72 / 34 / 不分1
   specialty: "⭐ 新師上陣｜薄肌 / 反差",
   intro: `166/ 55 / 29 / 不分
 
@@ -104,6 +111,7 @@ Owen 為深寓新加入的服務夥伴，
 },
       {
   name: "Milo",
+        isNew: true,
   specialty: "⭐ 新師上陣｜溫暖陪伴 / 奶狗",
   intro: `174 / 63 / 29 / 1
 
@@ -127,6 +135,7 @@ Milo 為深寓新加入的服務夥伴，
 },
   {
   name: "Kai",
+    isNew: false,
   specialty: "陽剛穩重 / 厚實手感",
   intro: `175 / 70 / 30 / 1
 
@@ -155,6 +164,7 @@ Kai 擁有結實健壯的體態，
      
 {
     name: "Odin",
+  isNew: false,
     specialty: "深度放鬆 手感細膩",
     intro: `170 / 68 / 32 / 不分
       
@@ -175,6 +185,7 @@ Kai 擁有結實健壯的體態，
 
  {
   name: "Zac",
+   isNew: false,
   specialty: "刺青台客 健談好處",
   intro: `170 / 66 / 30 / 不分
 
@@ -198,6 +209,7 @@ Zac 喜歡安靜的交流，
      
 {
   name: "Vincent",
+  isNew: false,
   specialty: "  新師傅推薦｜健談互動 / 輕鬆陪伴",
   intro: `175 / 65 / 32/ 不分1（不提供臉照）
 
@@ -223,6 +235,7 @@ Vincent 師傅個性自然健談，
 
       {
     name: "Noah",
+        isNew: false,
     specialty: " 新師傅推薦｜舒壓放鬆 / 自然陪伴",
     intro: `175 / 75 / 30 / 不分
 
@@ -248,6 +261,7 @@ Noah 師傅重視放鬆過程中的舒適感與互動感。
      
      {
   name: "Hu",
+       isNew: false,
   specialty: "少年感 纖瘦身形",
   intro: `164 / 50 / 26 / 不分
 
@@ -266,6 +280,7 @@ Hu 師傅，重視療程中的舒適感與陪伴感。
 },
      {
   name: "Raven",
+       isNew: false,
   specialty: "少年感 神秘反差",
   intro: `166/47/18/0  Raven師傅  纖細的身形與胸前刺青形成強烈反差，
 第一眼給人的印象總是神秘且難以靠近。
@@ -282,29 +297,8 @@ Hu 師傅，重視療程中的舒適感與陪伴感。
 },
 
      {
-  name: "Zac",
-  specialty: "刺青台客 健談好處",
-  intro: `170 / 66 / 30 / 不分
-
-刺青之下，是細膩而溫和的性格。
-
-Zac 喜歡安靜的交流，
-也懂得在適當的時候給予陪伴。
-
-不需要刻意迎合，
-自然的互動往往更讓人放鬆。
-
-透過穩定的節奏與專注的投入，
-陪你暫時放下疲憊與壓力。`,
-  images: [
-    "/images/therapist-Zac-1.JPG",
-    "/images/therapist-Zac-2.JPG",
-    "/images/therapist-Zac-3.JPG",
-    "/images/therapist-Zac-4.JPG",
-  ],
-},
-     {
     name: "Ansel（暫時休息）",
+       isNew: false,
     specialty: "濃眉多毛 男友式陪伴",
     intro: `165 / 58 / 30 / 不分
 
