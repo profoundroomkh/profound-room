@@ -8,7 +8,7 @@ import Gallery from '../components/Gallery'
 export default function Home() {
 
 const [currentIndexes, setCurrentIndexes] =
-  useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 00, 0,])
+  useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0,])
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndexes((prev) =>
