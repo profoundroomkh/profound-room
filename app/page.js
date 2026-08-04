@@ -793,7 +793,13 @@ id="therapists"
       }}
     >
       <img
-        src={master.images[0]}
+  src={
+    master.images[
+      currentIndexes[
+        masters.findIndex(m => m.name === master.name)
+      ]
+    ]
+  }
         alt={master.name}
         style={{
           width: '100%',
