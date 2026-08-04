@@ -625,14 +625,27 @@ id="therapists"
           </p>
 
           <p
+  <p
   style={{
-    color: '#b9977d',
-    letterSpacing: '4px',
+    color: '#cbb79d',
+    letterSpacing: '6px',
     marginBottom: '12px',
+    fontSize: '14px',
   }}
 >
-  THERAPISTS & NEW ARRIVAL
+  NEW ARRIVAL
 </p>
+
+<h2
+  style={{
+    color: '#f2e1d0',
+    fontSize: '42px',
+    fontWeight: '300',
+    marginBottom: '50px',
+  }}
+>
+  新 師 上 陣
+</h2>
               
         </div>
 
@@ -643,7 +656,7 @@ id="therapists"
             gap: '28px',
           }}
         >
-          {masters.map((master, index) => (
+          {newMasters.map((master) => (
             <div
               key={index}
               style={{
