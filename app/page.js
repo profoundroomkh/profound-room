@@ -705,14 +705,13 @@ id="therapists"
                 <p
   style={{
     color: "#f2e1d0",
-    fontSize: "15px",
+    fontSize: "20px",
     marginTop: "8px",
     marginBottom: "10px",
     letterSpacing: "1px",
   }}
 >
-  {master.height} / {master.weight} / {master.age}
-</p>
+{master.height}cm ｜ {master.weight}kg ｜ {master.age}歲</p>
 
 <p
   style={{
@@ -840,8 +839,7 @@ id="therapists"
     letterSpacing: "1px",
   }}
 >
-  {master.height} / {master.weight} / {master.age}
-</p>
+{master.height}cm ｜ {master.weight}kg ｜ {master.age}歲</p>
 
 <p
   style={{
