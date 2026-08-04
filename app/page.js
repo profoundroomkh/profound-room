@@ -748,6 +748,110 @@ id="therapists"
             </div>
           ))}
         </div>
+            <div
+  style={{
+    textAlign: 'center',
+    marginTop: '100px',
+    marginBottom: '60px',
+  }}
+>
+  <p
+    style={{
+      color: '#b9977d',
+      letterSpacing: '4px',
+      marginBottom: '12px',
+    }}
+  >
+    THERAPISTS
+  </p>
+
+  <h2
+    style={{
+      color: '#f2e1d0',
+      fontSize: '42px',
+      fontWeight: '300',
+    }}
+  >
+    全 部 師 傅
+  </h2>
+</div>
+      <div
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
+    gap: '28px',
+  }}
+>
+  {regularMasters.map((master, index) => (
+    <div
+      key={master.name}
+      style={{
+        background: '#111',
+        borderRadius: '28px',
+        overflow: 'hidden',
+        border: '1px solid rgba(255,255,255,0.06)',
+      }}
+    >
+      <img
+        src={master.images[0]}
+        alt={master.name}
+        style={{
+          width: '100%',
+          height: '420px',
+          objectFit: 'contain',
+          background: '#000',
+          display: 'block',
+        }}
+      />
+
+      <div style={{ padding: '28px' }}>
+        <h3
+          style={{
+            fontSize: '28px',
+            marginBottom: '8px',
+            fontWeight: 300,
+          }}
+        >
+          {master.name}
+        </h3>
+
+        <p
+          style={{
+            color: '#b9977d',
+            marginBottom: '16px',
+          }}
+        >
+          {master.specialty}
+        </p>
+
+        <p
+          style={{
+            color: '#c9b8aa',
+            lineHeight: '1.8',
+            marginBottom: '24px',
+          }}
+        >
+          {master.intro}
+        </p>
+
+        <a
+          href="https://line.me/R/ti/p/@637fbbyh"
+          target="_blank"
+          style={{
+            display: 'inline-block',
+            padding: '12px 22px',
+            borderRadius: '999px',
+            border: '1px solid #b9977d',
+            color: '#f2e1d0',
+            textDecoration: 'none',
+          }}
+        >
+          預約此師傅
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
       </section>
 {/* PRICING */}
 <section
