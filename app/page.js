@@ -84,8 +84,6 @@ Alan 擁有精壯結實的體態，
 {
   name: "Owen",
        isNew: true,
-  specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
-  intro: `174 / 72 / 34 / 不分1
   specialty: "⭐ 新師上陣｜薄肌 / 反差",
   intro: `166/ 55 / 29 / 不分
 
