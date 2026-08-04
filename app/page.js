@@ -655,7 +655,7 @@ id="therapists"
             gap: '28px',
           }}
         >
-          {newMasters.map((master) => (
+          {newMasters.map((master, index) => (
             <div
               key={index}
               style={{
