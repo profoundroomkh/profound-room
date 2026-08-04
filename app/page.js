@@ -352,35 +352,91 @@ return (
   </h1>
 
   <div
+  style={{
+    maxWidth: "760px",
+    lineHeight: "2.1",
+    color: "#cbb79d",
+    fontSize: "15px",
+  }}
+>
+  <p
     style={{
-      maxWidth: "700px",
-      lineHeight: "2.2",
-      color: "#cbb79d",
-      fontSize: "15px",
+      marginBottom: "18px",
+      color: "#f2e1d0",
+      fontSize: "18px",
+      letterSpacing: "2px",
     }}
   >
-    <p style={{ marginBottom: "24px", color: "#f2e1d0" }}>
-      深寓 PROFOUND ROOM 為預約制放鬆空間，
-      <br />
-      未滿十八歲請勿瀏覽與預約。
-    </p>
+    台中男性 SPA｜預約制放鬆空間
+  </p>
 
-    <p>
-      我們專注於身心舒壓與專業按摩體驗，
-      <br />
-      提供安靜、放鬆且具界線感的服務環境。
-    </p>
+  <p style={{ marginBottom: "24px" }}>
+    深寓 PROFOUND ROOM 致力於提供安靜、隱私且舒適的按摩放鬆體驗，
+    <br />
+    透過專業服務與細膩手法，陪伴每位來訪者釋放壓力、恢復身心平衡。
+  </p>
 
-    <p style={{ marginTop: "24px", opacity: 0.75 }}>
-      本館不提供任何非法或逾越專業界線之服務，
-      <br />
-      亦不接受相關要求與暗示。
-      <br />
-      若有違反情形，本館將立即終止服務，
-      <br />
-      並保留相關法律權利。
-    </p>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "14px",
+      flexWrap: "wrap",
+      marginBottom: "30px",
+      color: "#d9c3a5",
+      fontSize: "14px",
+    }}
+  >
+    <span>✓ 預約制</span>
+    <span>✓ 獨立包廂</span>
+    <span>✓ LINE 線上預約</span>
   </div>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "16px",
+      flexWrap: "wrap",
+      marginBottom: "36px",
+    }}
+  >
+    <a
+      href="https://line.me/R/ti/p/@637fbbyh"
+      target="_blank"
+      style={{
+        padding: "14px 34px",
+        borderRadius: "999px",
+        background: "#b9977d",
+        color: "#050505",
+        textDecoration: "none",
+        fontWeight: 600,
+      }}
+    >
+      立即預約
+    </a>
+
+    <a
+      href="#therapists"
+      style={{
+        padding: "14px 34px",
+        borderRadius: "999px",
+        border: "1px solid #b9977d",
+        color: "#f2e1d0",
+        textDecoration: "none",
+      }}
+    >
+      查看師傅
+    </a>
+  </div>
+
+  <p style={{ opacity: 0.65, fontSize: "13px", lineHeight: "2" }}>
+    未滿十八歲請勿瀏覽與預約。
+    <br />
+    本館不提供任何非法或逾越專業界線之服務，
+    若有違反情形，本館將立即終止服務並保留法律權利。
+  </p>
+</div>
 
   <a
     href="#main"
