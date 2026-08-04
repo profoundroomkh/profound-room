@@ -328,7 +328,7 @@ return (
 
 <div
   style={{
-    minHeight: "100vh",
+    minHeight: "100svh",
     background:
       "linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.88)), url('/images/hero-1.jpg')",
     backgroundSize: "cover",
@@ -341,7 +341,8 @@ return (
     alignItems: "center",
     textAlign: "center",
     padding: "40px 24px",
-    paddingTop: "120px",
+    paddingTop: "88px",
+paddingBottom: "40px",
   }}
 >
   <div
@@ -436,7 +437,7 @@ return (
     <div
       style={{
         display: "flex",
-        justifyContent: "center",
+justifyContent: "flex-start",
         gap: "16px",
         flexWrap: "wrap",
         marginBottom: "34px",
