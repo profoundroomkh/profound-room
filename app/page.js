@@ -341,7 +341,7 @@ return (
     alignItems: "center",
     textAlign: "center",
     padding: "40px 24px",
-    paddingTop: "88px",
+   paddingTop: "80px",
 paddingBottom: "40px",
   }}
 >
@@ -362,6 +362,7 @@ paddingBottom: "40px",
 
     boxShadow:
       "0 30px 80px rgba(0,0,0,.35)",
+    marginTop: "30px",
   }}
 >
       
@@ -475,7 +476,7 @@ justifyContent: "flex-start",
     <div
   style={{
     display: "flex",
-    justifyContent: "center",
+justifyContent: "center",
     alignItems: "center",
     gap: "16px",
     flexWrap: "wrap",
