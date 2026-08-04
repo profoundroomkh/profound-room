@@ -8,7 +8,7 @@ import Gallery from '../components/Gallery'
 export default function Home() {
 
 const [currentIndexes, setCurrentIndexes] =
-  useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+  useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 00, 0,])
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndexes((prev) =>
@@ -24,6 +24,60 @@ useEffect(() => {
   return () => clearInterval(interval)
 }, [])
    const masters = [
+     {
+  name: "Oni",
+  specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
+  intro: `174 / 72 / 34 / 不分1
+
+Oni 擁有精壯結實的體態，
+健康黝黑的膚色與成熟穩重的氣質，
+多年累積的服務經驗，
+讓每一次療程都能掌握恰到好處的節奏。
+
+重視來訪者的需求與感受，
+透過穩定扎實的手法與細膩的力道調整，
+幫助身體逐步釋放緊繃與疲勞，
+享受深層且舒適的放鬆體驗。
+
+無論是第一次來訪，
+或是習慣定期安排療程，
+都希望用專業、耐心與真誠，
+陪伴您度過一段安心自在的放鬆時光。
+
+期待與您相遇，
+一起感受深寓帶來的沉浸式療癒。`,
+
+  images: [
+    "/images/therapist-Oni-1.JPG",
+    "/images/therapist-Oni-2.JPG",
+  ],
+},
+     {
+  name: "Alan",
+  specialty: "⭐ 新師上陣｜資深經驗 / 沉穩魅力",
+  intro: `170 / 68 / 33 / 不分1
+
+Alan 擁有精壯結實的體態，
+成熟穩重的氣質與豐富的服務經驗，
+自然散發陽剛魅力與令人安心的親和力。
+
+整體比例勻稱、存在感十足，
+舉手投足間展現自信與從容，
+第一印象便令人留下深刻印象。
+
+療程中重視每位來訪者的感受，
+依照需求調整節奏與力道，
+以穩定細膩的手法，
+陪伴身體逐步釋放累積的疲勞與壓力。
+
+期待與您相遇，
+一起享受一段專屬於自己的放鬆時光。`,
+
+  images: [
+    "/images/therapist-Alan-1.JPG",
+    "/images/therapist-Alan-2.JPG",
+  ],
+},
      {
   name: "Milo",
   specialty: "⭐ 新師上陣｜溫暖陪伴 / 奶狗",
@@ -605,7 +659,7 @@ id="therapists"
 >
   {master.name}
 
-  {[ 'Milo','Owen', 'Kai'].includes(master.name) && (
+  {[ 'Milo','Owen', 'Oni','Alan'].includes(master.name) && (
   <span
     style={{
       background: '#b9977d',
