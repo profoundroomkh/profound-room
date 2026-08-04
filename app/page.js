@@ -715,9 +715,11 @@ id="therapists"
 
 <p
   style={{
-    color: "#b9977d",
-    fontSize: "14px",
-    marginBottom: "18px",
+    color: "#cbb79d",
+    fontSize: "18px",
+    fontWeight: 400,
+    marginBottom: "22px",
+    letterSpacing: "1px",
   }}
 >
   {master.role}
