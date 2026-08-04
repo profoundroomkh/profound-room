@@ -318,7 +318,9 @@ Ansel 不急著拉近距離，
     ],
   },
 ]
+const newMasters = masters.filter(master => master.isNew)
 
+const regularMasters = masters.filter(master => !master.isNew)
 return (
   <>
     <Header />
