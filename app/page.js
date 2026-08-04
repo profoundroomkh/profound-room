@@ -326,10 +326,14 @@ return (
   <>
     <Header />
 
-    <div
+<div
   style={{
     minHeight: "100vh",
-    backgroundColor: "#050505",
+    background:
+      "linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.88)), url('/images/hero-1.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
     color: "#f2e1d0",
     display: "flex",
     flexDirection: "column",
@@ -340,189 +344,180 @@ return (
     paddingTop: "120px",
   }}
 >
-  <h1
-    style={{
-      fontSize: "42px",
-      letterSpacing: "8px",
-      marginBottom: "32px",
-      fontWeight: "300",
-    }}
-  >
-    深寓
-  </h1>
-
-  <div
-  style={{
-    maxWidth: "760px",
-    lineHeight: "2.1",
-    color: "#cbb79d",
-    fontSize: "15px",
-  }}
->
-  <p
-    style={{
-      marginBottom: "18px",
-      color: "#f2e1d0",
-      fontSize: "18px",
-      letterSpacing: "2px",
-    }}
-  >
-    高雄男性 GAY SPA｜預約制放鬆空間
-  </p>
-
-  <p style={{ marginBottom: "24px" }}>
-    深寓 PROFOUND ROOM 致力於提供安靜、隱私且舒適的按摩放鬆體驗，
-    <br />
-    透過專業服務與細膩手法，陪伴每位來訪者釋放壓力、恢復身心平衡。
-  </p>
-
   <div
     style={{
-      display: "flex",
-      justifyContent: "center",
-      gap: "14px",
-      flexWrap: "wrap",
-      marginBottom: "30px",
-      color: "#d9c3a5",
-      fontSize: "14px",
+      maxWidth: "760px",
+      width: "100%",
+      padding: "70px 50px",
+      borderRadius: "32px",
+      background: "rgba(0,0,0,.35)",
+      backdropFilter: "blur(12px)",
+      border: "1px solid rgba(255,255,255,.08)",
     }}
   >
-    <span>✓ 預約制</span>
-    <span>✓ 獨立包廂</span>
-    <span>✓ LINE 線上預約</span>
-  </div>
-
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      gap: "16px",
-      flexWrap: "wrap",
-      marginBottom: "36px",
-    }}
-  >
-    <a
-      href="https://line.me/R/ti/p/@637fbbyh"
-      target="_blank"
+    <p
       style={{
-        padding: "14px 34px",
-        borderRadius: "999px",
-        background: "#b9977d",
-        color: "#050505",
-        textDecoration: "none",
-        fontWeight: 600,
+        color: "#b9977d",
+        letterSpacing: "6px",
+        fontSize: "13px",
+        marginBottom: "18px",
       }}
     >
-      立即預約
-    </a>
+      KAOHSIUNG • MEN'S SPA
+    </p>
 
-    <a
-      href="#therapists"
+    <h1
       style={{
-        padding: "14px 34px",
-        borderRadius: "999px",
-        border: "1px solid #b9977d",
+        fontSize: "72px",
+        letterSpacing: "12px",
+        marginBottom: "10px",
+        fontWeight: 300,
+      }}
+    >
+      深寓
+    </h1>
+
+    <h2
+      style={{
+        fontSize: "30px",
+        letterSpacing: "8px",
+        marginBottom: "18px",
+        fontWeight: 300,
+      }}
+    >
+      PROFOUND ROOM
+    </h2>
+
+    <p
+      style={{
+        color: "#d8c3ad",
+        fontStyle: "italic",
+        marginBottom: "18px",
+        fontSize: "16px",
+      }}
+    >
+      A space to slow down.
+    </p>
+
+    <p
+      style={{
         color: "#f2e1d0",
-        textDecoration: "none",
+        fontSize: "20px",
+        marginBottom: "18px",
       }}
     >
-      查看師傅
-    </a>
-  </div>
+      高雄男性 GAY SPA｜預約制放鬆空間
+    </p>
 
-  <p style={{ opacity: 0.65, fontSize: "13px", lineHeight: "2" }}>
-    未滿十八歲請勿瀏覽與預約。
-    <br />
-    本館不提供任何非法或逾越專業界線之服務，
-    若有違反情形，本館將立即終止服務並保留法律權利。
-  </p>
-</div>
+    <p
+      style={{
+        color: "#b9a18b",
+        lineHeight: "2",
+        maxWidth: "560px",
+        margin: "0 auto 40px",
+      }}
+    >
+      深寓 PROFOUND ROOM 致力於提供安靜、隱私且舒適的按摩放鬆體驗。
+      <br />
+      透過專業服務與細膩手法，
+      陪伴每位來訪者釋放壓力，恢復身心平衡。
+    </p>
 
-  <a
-    href="#main"
-    style={{
-      marginTop: "48px",
-      border: "1px solid #cbb79d",
-      padding: "16px 40px",
-      borderRadius: "999px",
-      color: "#f2e1d0",
-      textDecoration: "none",
-      letterSpacing: "2px",
-    }}
-  >
-    我已滿十八歲
-  </a>
-</div>
-    <main id="main" style={{
-      backgroundColor: '#050505',
-      color: '#f2e1d0',
-      minHeight: '100vh',
-      fontFamily: 'serif'
-    }}>
-
-      {/* HERO */}
-      <section
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "16px",
+        flexWrap: "wrap",
+        marginBottom: "34px",
+      }}
+    >
+      <a
+        href="https://line.me/R/ti/p/@637fbbyh"
+        target="_blank"
         style={{
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          padding: '40px 24px',
-         background:
-  'linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.92)), url(/images/hero-1.jpg)',
-backgroundSize: 'cover',
-backgroundPosition: 'center',
-backgroundRepeat: 'no-repeat',
+          background: "#b9977d",
+          color: "#050505",
+          padding: "15px 38px",
+          borderRadius: "999px",
+          textDecoration: "none",
+          fontWeight: 600,
         }}
       >
-        <div
-          style={{
-            border: '1px solid rgba(242,225,208,0.2)',
-            borderRadius: '999px',
-            padding: '80px 60px',
-            background: 'rgba(0,0,0,0.45)',
-            backdropFilter: 'blur(4px)',
-            maxWidth: '700px'
-          }}
-        >
-          <h1
-            style={{
-              fontSize: '72px',
-              letterSpacing: '12px',
-              marginBottom: '16px',
-              fontWeight: 300,
-            }}
-          >
-            深寓
-          </h1>
+        立即預約
+      </a>
 
-          <h2
-            style={{
-              fontSize: '28px',
-              letterSpacing: '8px',
-              marginBottom: '20px',
-              fontWeight: 300,
-            }}
-          >
-            PROFOUND ROOM
-          </h2>
+      <a
+        href="#therapists"
+        style={{
+          border: "1px solid rgba(255,255,255,.18)",
+          color: "#f2e1d0",
+          padding: "15px 38px",
+          borderRadius: "999px",
+          textDecoration: "none",
+        }}
+      >
+        查看師傅
+      </a>
+    </div>
 
-          <p
-            style={{
-              color: '#c7b19d',
-              marginBottom: '36px',
-              letterSpacing: '4px',
-            }}
-          >
-            預約制放鬆空間
-          </p>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "24px",
+        flexWrap: "wrap",
+        marginBottom: "34px",
+        color: "#c9b29b",
+        fontSize: "14px",
+      }}
+    >
+      <span>預約制</span>
+      <span>獨立包廂</span>
+      <span>LINE 線上預約</span>
+    </div>
 
-        
-        </div>
-      </section>
+    <p
+      style={{
+        opacity: 0.6,
+        fontSize: "13px",
+        lineHeight: "2",
+        marginBottom: "36px",
+      }}
+    >
+      未滿十八歲請勿瀏覽與預約。
+      <br />
+      本館不提供任何非法或逾越專業界線之服務，
+      若有違反情形將立即終止服務並保留法律權利。
+    </p>
 
+    <a
+      href="#main"
+      style={{
+        display: "inline-block",
+        background: "#b9977d",
+        color: "#050505",
+        padding: "16px 44px",
+        borderRadius: "999px",
+        textDecoration: "none",
+        fontWeight: 600,
+        letterSpacing: "2px",
+      }}
+    >
+      我已滿十八歲
+    </a>
+  </div>
+</div>
+
+<main
+  id="main"
+  style={{
+    backgroundColor: "#050505",
+    color: "#f2e1d0",
+    minHeight: "100vh",
+    fontFamily: "serif",
+  }}
+>
       {/* ABOUT */}
 <section
   style={{
