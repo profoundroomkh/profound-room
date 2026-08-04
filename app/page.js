@@ -347,9 +347,9 @@ paddingBottom: "40px",
 >
   <div
   style={{
-    maxWidth: "780px",
+    maxWidth: "980px",
     width: "100%",
-    padding: "72px 56px",
+    padding: "72px 90px",
     borderRadius: "24px",
 
     background:
@@ -408,7 +408,6 @@ paddingBottom: "40px",
     marginBottom: "10px",
   }}
 >
-  KAOHSIUNG • MEN'S SPA
 </p>
 
 <p
@@ -436,13 +435,14 @@ paddingBottom: "40px",
 </p>
 
     <div
-      style={{
-        display: "flex",
-justifyContent: "flex-start",
-        gap: "16px",
-        flexWrap: "wrap",
-        marginBottom: "34px",
-      }}
+     style={{
+  width: "190px",
+  height: "56px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: "999px",
+}}
     >
       <a
         href="https://line.me/R/ti/p/@637fbbyh"
@@ -462,12 +462,13 @@ justifyContent: "flex-start",
       <a
         href="#therapists"
         style={{
-          border: "1px solid rgba(255,255,255,.18)",
-          color: "#f2e1d0",
-          padding: "15px 38px",
-          borderRadius: "999px",
-          textDecoration: "none",
-        }}
+  width: "190px",
+  height: "56px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: "999px",
+}}
       >
         探索療癒師
       </a>
