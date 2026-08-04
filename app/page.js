@@ -483,6 +483,18 @@ paddingBottom: "40px",
     探索療癒師
   </a>
 </div>
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "16px",
+    flexWrap: "wrap",
+    marginBottom: "34px",
+    color: "#b9977d",
+    fontSize: "13px",
+    letterSpacing: "2px",
+  }}
 >
   <span>預約制</span>
 
@@ -496,13 +508,7 @@ paddingBottom: "40px",
   </span>
 
   <span>獨立包廂</span>
-
-  <span
-    style={{
-      opacity: 0.3,
-      color: "#6b5a47",
-    }}
-  >
+<span style={{ opacity: 0.3, color: "#6b5a47" }}>
     │
   </span>
 
