@@ -9,6 +9,7 @@ export default function Home() {
 
 const [currentIndexes, setCurrentIndexes] =
   useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0,])
+  const [showAllMasters, setShowAllMasters] = useState(false)
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndexes((prev) =>
@@ -647,7 +648,7 @@ id="therapists"
             gap: '28px',
           }}
         >
-         {newMasters.map((master, index) => (
+         {Masters.map((master, index) => (
             <div
               key={index}
               style={{
