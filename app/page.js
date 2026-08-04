@@ -31,8 +31,8 @@ useEffect(() => {
     height: 174,
     weight: 72,
     age: 34,
-    role: "不分",
-    size: "",
+    role: "不分1",
+    size: "未補充",
     specialty: "經驗豐富・穩定手感",
     images: [
       "/images/therapist-Oni-1.JPG",
@@ -46,8 +46,8 @@ useEffect(() => {
     height: 170,
     weight: 68,
     age: 33,
-    role: "不分",
-    size: "",
+    role: "不分1",
+    size: "16/5",
     specialty: "成熟穩重・經驗豐富",
     images: [
       "/images/therapist-Alan-1.JPG",
@@ -62,7 +62,7 @@ useEffect(() => {
     weight: 55,
     age: 29,
     role: "不分",
-    size: "",
+    size: "未補充",
     specialty: "薄肌・反差",
     images: [
       "/images/therapist-Owen-1.JPG",
@@ -78,7 +78,7 @@ useEffect(() => {
     weight: 63,
     age: 29,
     role: "1",
-    size: "",
+    size: "未補充",
     specialty: "溫暖陪伴・奶狗",
     images: [
       "/images/therapist-Milo-1.JPG",
@@ -94,7 +94,7 @@ useEffect(() => {
     weight: 70,
     age: 30,
     role: "1",
-    size: "",
+    size: "15/5",
     specialty: "陽剛穩重・厚實手感",
     images: [
       "/images/therapist-Kai-1.JPG",
@@ -111,7 +111,7 @@ useEffect(() => {
     weight: 68,
     age: 32,
     role: "不分",
-    size: "",
+    size: "15/5",
     specialty: "深度放鬆・手感細膩",
     images: [
       "/images/therapist-Odin.JPG",
@@ -129,7 +129,7 @@ useEffect(() => {
     weight: 66,
     age: 30,
     role: "不分",
-    size: "",
+    size: "未補充",
     specialty: "刺青台客・健談好聊",
     images: [
       "/images/therapist-Zac-1.JPG",
@@ -146,7 +146,7 @@ useEffect(() => {
     weight: 65,
     age: 32,
     role: "不分1",
-    size: "",
+    size: "未補充",
     specialty: "健談互動・輕鬆陪伴",
     images: [
       "/images/therapist-Vincent-1.JPG",
@@ -162,7 +162,7 @@ useEffect(() => {
     weight: 75,
     age: 30,
     role: "不分",
-    size: "",
+    size: "未補充",
     specialty: "舒壓放鬆・自然陪伴",
     images: [
       "/images/therapist-Noah.JPG",
@@ -178,7 +178,7 @@ useEffect(() => {
     weight: 50,
     age: 26,
     role: "不分",
-    size: "",
+    size: "未補充",
     specialty: "少年感・纖瘦身形",
     images: [
       "/images/therapist-Hu-1.JPG",
@@ -193,7 +193,7 @@ useEffect(() => {
     weight: 47,
     age: 18,
     role: "0",
-    size: "",
+    size: "未補充",
     specialty: "少年感・神秘反差",
     images: [
       "/images/therapist-Raven-1.JPG",
@@ -210,7 +210,7 @@ useEffect(() => {
     weight: 58,
     age: 30,
     role: "不分",
-    size: "",
+    size: "15/4.5",
     specialty: "濃眉多毛・男友陪伴",
     images: [
       "/images/therapist-luke.jpg",
