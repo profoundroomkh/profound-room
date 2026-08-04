@@ -27,62 +27,72 @@ export default function FloatingButton() {
   }
 
   return (
-    <a
-      href="https://line.me/R/ti/p/@637fbbyh"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={handleLineClick}
+  <a
+    href="https://line.me/R/ti/p/@637fbbyh"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={handleLineClick}
+    style={{
+      position: 'fixed',
+      right: '20px',
+      bottom: '20px',
+      zIndex: 9999,
+
+      width: visible ? '150px' : '58px',
+      height: '58px',
+
+      overflow: 'hidden',
+
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+
+      background: 'rgba(12,12,12,.78)',
+      backdropFilter: 'blur(20px)',
+
+      border: '1px solid rgba(255,255,255,.08)',
+      borderRadius: '999px',
+
+      color: '#f2e1d0',
+      textDecoration: 'none',
+
+      boxShadow: '0 12px 35px rgba(0,0,0,.25)',
+
+      opacity: visible ? 1 : 0,
+      transform: visible
+        ? 'translateY(0)'
+        : 'translateY(30px)',
+
+      pointerEvents: visible ? 'auto' : 'none',
+
+      transition: 'all .35s ease',
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.width = '150px'
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.width = '58px'
+    }}
+  >
+    <span
       style={{
-        position: 'fixed',
-        right: '20px',
-        bottom: '20px',
-        zIndex: 9999,
-
-        background: 'rgba(15,15,15,0.82)',
-        backdropFilter: 'blur(18px)',
-        border: '1px solid rgba(255,255,255,0.08)',
-        borderRadius: '999px',
-        padding: '14px 22px',
-        minWidth: '170px',
-
-        textDecoration: 'none',
-        whiteSpace: 'nowrap',
-        color: '#f2e1d0',
-
-        boxShadow: '0 10px 40px rgba(0,0,0,0.28)',
-
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-
-        opacity: visible ? 1 : 0,
-        transform: visible
-          ? 'translateY(0)'
-          : 'translateY(30px)',
-        pointerEvents: visible ? 'auto' : 'none',
-        transition: 'all .35s ease',
+        fontSize: '22px',
+        flexShrink: 0,
       }}
     >
-      <div
-        style={{
-          fontSize: '9px',
-          letterSpacing: '3px',
-          color: '#cbb79d',
-          marginBottom: '4px',
-        }}
-      >
-        RESERVE NOW
-      </div>
+      💬
+    </span>
 
-      <div
-        style={{
-          fontSize: '15px',
-          fontWeight: '400',
-        }}
-      >
-        LINE 預約
-      </div>
-    </a>
-  )
+    <span
+      style={{
+        marginLeft: '10px',
+        whiteSpace: 'nowrap',
+        fontSize: '14px',
+        color: '#d8c1a0',
+      }}
+    >
+      LINE 預約
+    </span>
+  </a>
+)
 }
