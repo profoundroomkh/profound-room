@@ -25,227 +25,145 @@ useEffect(() => {
   return () => clearInterval(interval)
 }, [])
    const masters = [
-     {
-  name: "Oni",
-  isNew: true,
-  specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
-  intro: `174 / 72 / 34 / 不分1
-
-Oni 擁有精壯結實的體態，
-健康黝黑的膚色與成熟穩重的氣質，
-多年累積的服務經驗，
-讓每一次療程都能掌握恰到好處的節奏。
-
-重視來訪者的需求與感受，
-透過穩定扎實的手法與細膩的力道調整，
-幫助身體逐步釋放緊繃與疲勞，
-享受深層且舒適的放鬆體驗。
-
-無論是第一次來訪，
-或是習慣定期安排療程，
-都希望用專業、耐心與真誠，
-陪伴您度過一段安心自在的放鬆時光。
-
-期待與您相遇，
-一起感受深寓帶來的沉浸式療癒。`,
-
-  images: [
-    "/images/therapist-Oni-1.JPG",
-    "/images/therapist-Oni-2.JPG",
-  ],
-},
-     {
-  name: "Alan",
-  isNew: true,
-  specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
-  intro: `170 / 68 / 33 / 不分1
-
-Alan 擁有精壯結實的體態，
-成熟穩重的氣質與豐富的服務經驗，
-自然散發陽剛魅力與令人安心的親和力。
-
-整體比例勻稱、存在感十足，
-舉手投足間展現自信與從容，
-第一印象便令人留下深刻印象。
-
-療程中重視每位來訪者的感受，
-依照需求調整節奏與力道，
-以穩定細膩的手法，
-陪伴身體逐步釋放累積的疲勞與壓力。
-
-期待與您相遇，
-一起享受一段專屬於自己的放鬆時光。`,
-
-  images: [
-    "/images/therapist-Alan-1.JPG",
-    "/images/therapist-Alan-2.JPG",
-  ],
-},
-    
-{
-  name: "Owen",
-       isNew: true,
-  specialty: "⭐ 新師上陣｜薄肌 / 反差",
-  intro: `166/ 55 / 29 / 不分
-
-Owen 為深寓新加入的服務夥伴，
-完成完整培訓後正式加入團隊，
-以細心、耐心與真誠的服務態度，
-陪伴每位來訪者享受放鬆時光。
-
-持續精進專業技巧，
-也期待透過每一次服務累積更多經驗，
-帶給每位來訪者穩定且愉悅的體驗。
-
-期待與您相遇，
-一起展開屬於您的深夜放鬆旅程。`,
-
-  images: [
-    "/images/therapist-Owen-1.JPG",
-    "/images/therapist-Owen-2.JPG",
-    "/images/therapist-Owen-3.JPG",
-  ],
-},
-      {
-  name: "Milo",
-        isNew: true,
-  specialty: "⭐ 新師上陣｜溫暖陪伴 / 奶狗",
-  intro: `174 / 63 / 29 / 1
-
-Milo 為深寓新加入的服務夥伴，
-完成完整培訓後正式加入團隊，
-希望透過細心的服務與真誠的互動，
-帶給每位來訪者自在且安心的放鬆體驗。
-
-持續精進專業技巧與服務品質，
-期待用耐心與真誠，
-陪伴您享受一段專屬於自己的療癒時光。
-
-期待與您相遇，
-一起感受深寓的沉浸式放鬆。`,
-
-  images: [
-    "/images/therapist-Milo-1.JPG",
-    "/images/therapist-Milo-2.JPG",
-    "/images/therapist-Milo-3.JPG",
-  ],
-},
   {
-  name: "Kai",
+    name: "Oni",
+    isNew: true,
+    height: 174,
+    weight: 72,
+    age: 34,
+    role: "不分",
+    size: "",
+    specialty: "經驗豐富・穩定手感",
+    images: [
+      "/images/therapist-Oni-1.JPG",
+      "/images/therapist-Oni-2.JPG",
+    ],
+  },
+
+  {
+    name: "Alan",
+    isNew: true,
+    height: 170,
+    weight: 68,
+    age: 33,
+    role: "不分",
+    size: "",
+    specialty: "成熟穩重・經驗豐富",
+    images: [
+      "/images/therapist-Alan-1.JPG",
+      "/images/therapist-Alan-2.JPG",
+    ],
+  },
+
+  {
+    name: "Owen",
+    isNew: true,
+    height: 166,
+    weight: 55,
+    age: 29,
+    role: "不分",
+    size: "",
+    specialty: "薄肌・反差",
+    images: [
+      "/images/therapist-Owen-1.JPG",
+      "/images/therapist-Owen-2.JPG",
+      "/images/therapist-Owen-3.JPG",
+    ],
+  },
+
+  {
+    name: "Milo",
+    isNew: true,
+    height: 174,
+    weight: 63,
+    age: 29,
+    role: "1",
+    size: "",
+    specialty: "溫暖陪伴・奶狗",
+    images: [
+      "/images/therapist-Milo-1.JPG",
+      "/images/therapist-Milo-2.JPG",
+      "/images/therapist-Milo-3.JPG",
+    ],
+  },
+
+  {
+    name: "Kai",
     isNew: false,
-  specialty: "陽剛穩重 / 厚實手感",
-  intro: `175 / 70 / 30 / 1
+    height: 175,
+    weight: 70,
+    age: 30,
+    role: "1",
+    size: "",
+    specialty: "陽剛穩重・厚實手感",
+    images: [
+      "/images/therapist-Kai-1.JPG",
+      "/images/therapist-Kai-2.JPG",
+      "/images/therapist-Kai-3.JPG",
+      "/images/therapist-Kai-4.JPG",
+    ],
+  },
 
-Kai 擁有結實健壯的體態，
-健康黝黑的膚色與沉穩自然的氣質，
-初次見面便能帶來十足的安心感。
-
-重視療程中的互動與細節，
-透過穩定且扎實的手法，
-陪伴來訪者逐步釋放身體累積的疲勞與壓力。
-
-充沛的體力與耐心，
-讓每一次療程都能維持舒適且穩定的節奏，
-希望帶給每位來訪者完整且放鬆的體驗。
-
-期待與您相遇，
-一起享受屬於自己的深夜放鬆時光。`,
-
-  images: [
-    "/images/therapist-Kai-1.JPG",
-    "/images/therapist-Kai-2.JPG",
-    "/images/therapist-Kai-3.JPG",
-    "/images/therapist-Kai-4.JPG",
-  ],
-},
-     
-{
+  {
     name: "Odin",
-  isNew: false,
-    specialty: "深度放鬆 手感細膩",
-    intro: `170 / 68 / 32 / 不分
-      
-奧丁師傅，重視每次放鬆的深度與感受。
-以細膩節奏與沉穩手感，陪你慢慢卸下疲憊。
-在安靜私密的空間裡，
-找回身心最舒服的狀態。
-讓每次相遇，都成為與疲憊短暫告別的片刻。
-讓每次到訪，都像進入一段專屬自己的放鬆時光。`,
+    isNew: false,
+    height: 170,
+    weight: 68,
+    age: 32,
+    role: "不分",
+    size: "",
+    specialty: "深度放鬆・手感細膩",
     images: [
       "/images/therapist-Odin.JPG",
-       "/images/therapist-Odin-1.JPG",
+      "/images/therapist-Odin-1.JPG",
       "/images/therapist-Odin-2.JPG",
       "/images/therapist-Odin-3.JPG",
       "/images/therapist-Odin-4.JPG",
     ],
- } ,   
+  },
 
- {
-  name: "Zac",
-   isNew: false,
-  specialty: "刺青台客 健談好處",
-  intro: `170 / 66 / 30 / 不分
+  {
+    name: "Zac",
+    isNew: false,
+    height: 170,
+    weight: 66,
+    age: 30,
+    role: "不分",
+    size: "",
+    specialty: "刺青台客・健談好聊",
+    images: [
+      "/images/therapist-Zac-1.JPG",
+      "/images/therapist-Zac-2.JPG",
+      "/images/therapist-Zac-3.JPG",
+      "/images/therapist-Zac-4.JPG",
+    ],
+  },
 
-刺青之下，是細膩而溫和的性格。
+  {
+    name: "Vincent",
+    isNew: false,
+    height: 175,
+    weight: 65,
+    age: 32,
+    role: "不分1",
+    size: "",
+    specialty: "健談互動・輕鬆陪伴",
+    images: [
+      "/images/therapist-Vincent-1.JPG",
+      "/images/therapist-Vincent-2.JPG",
+      "/images/therapist-Vincent-3.JPG",
+    ],
+  },
 
-Zac 喜歡安靜的交流，
-也懂得在適當的時候給予陪伴。
-
-不需要刻意迎合，
-自然的互動往往更讓人放鬆。
-
-透過穩定的節奏與專注的投入，
-陪你暫時放下疲憊與壓力。`,
-  images: [
-    "/images/therapist-Zac-1.JPG",
-    "/images/therapist-Zac-2.JPG",
-    "/images/therapist-Zac-3.JPG",
-    "/images/therapist-Zac-4.JPG",
-  ],
-},
-     
-{
-  name: "Vincent",
-  isNew: false,
-  specialty: "  新師傅推薦｜健談互動 / 輕鬆陪伴",
-  intro: `175 / 65 / 32/ 不分1（不提供臉照）
-
-Vincent 師傅個性自然健談，
-擅長在輕鬆自在的聊天節奏中，
-陪伴來訪者慢慢放鬆下來。
-
-不需要刻意找話題，
-舒服的互動往往能讓人更快卸下防備與疲憊。
-
-重視每一次療程中的感受與陪伴，
-希望讓來訪者在放鬆身體的同時，
-也能獲得片刻喘息與沉澱。
-
-希望每一次相遇，
-都能成為生活裡值得期待的放鬆時光。`,
-  images: [
-    "/images/therapist-Vincent-1.JPG",
-    "/images/therapist-Vincent-2.JPG",
-    "/images/therapist-Vincent-3.JPG",
-  ],
-},
-
-      {
+  {
     name: "Noah",
-        isNew: false,
-    specialty: " 新師傅推薦｜舒壓放鬆 / 自然陪伴",
-    intro: `175 / 75 / 30 / 不分
-
-Noah 師傅重視放鬆過程中的舒適感與互動感。
-
-透過自然節奏與穩定手法，
-陪伴來訪者慢慢卸下生活累積的疲憊。
-
-喜歡營造輕鬆自在的氛圍，
-讓身體與情緒都能獲得適當放鬆。
-
-希望每一次療程，
-都能帶來專屬於自己的休息時光。`,
+    isNew: false,
+    height: 175,
+    weight: 75,
+    age: 30,
+    role: "不分",
+    size: "",
+    specialty: "舒壓放鬆・自然陪伴",
     images: [
       "/images/therapist-Noah.JPG",
       "/images/therapist-Noah-1.JPG",
@@ -253,65 +171,47 @@ Noah 師傅重視放鬆過程中的舒適感與互動感。
     ],
   },
 
-     
-    
-     
-     {
-  name: "Hu",
-       isNew: false,
-  specialty: "少年感 纖瘦身形",
-  intro: `164 / 50 / 26 / 不分
+  {
+    name: "Hu",
+    isNew: false,
+    height: 164,
+    weight: 50,
+    age: 26,
+    role: "不分",
+    size: "",
+    specialty: "少年感・纖瘦身形",
+    images: [
+      "/images/therapist-Hu-1.JPG",
+      "/images/therapist-Hu-2.JPG",
+    ],
+  },
 
-Hu 師傅，重視療程中的舒適感與陪伴感。
-透過細膩節奏與溫和互動，
-陪你慢慢卸下日常累積的疲憊。
+  {
+    name: "Raven",
+    isNew: false,
+    height: 166,
+    weight: 47,
+    age: 18,
+    role: "0",
+    size: "",
+    specialty: "少年感・神秘反差",
+    images: [
+      "/images/therapist-Raven-1.JPG",
+      "/images/therapist-Raven-2.JPG",
+      "/images/therapist-Raven-3.JPG",
+      "/images/therapist-Raven-4.JPG",
+    ],
+  },
 
-喜歡在安靜放鬆的氛圍裡，
-讓身體與思緒都能獲得適當休息。
-希望每一次療程，
-都能成為專屬於自己的放鬆時光。`,
-  images: [
-    "/images/therapist-Hu-1.JPG",
-    "/images/therapist-Hu-2.JPG",
-  ],
-},
-     {
-  name: "Raven",
-       isNew: false,
-  specialty: "少年感 神秘反差",
-  intro: `166/47/18/0  Raven師傅  纖細的身形與胸前刺青形成強烈反差，
-第一眼給人的印象總是神秘且難以靠近。
-
-沒有過多刻意的包裝，
-自然的互動與舒服的陪伴，
-反而成為最吸引人的地方。`,
-  images: [
-    "/images/therapist-Raven-1.JPG",
-    "/images/therapist-Raven-2.JPG",
-    "/images/therapist-Raven-3.JPG",
-    "/images/therapist-Raven-4.JPG",
-  ],
-},
-
-     {
+  {
     name: "Ansel（暫時休息）",
-       isNew: false,
-    specialty: "濃眉多毛 男友式陪伴",
-    intro: `165 / 58 / 30 / 不分
-
-濃眉與沉穩的氣質，總給人一種安心感。
-
-Ansel 不急著拉近距離，
-而是在每一次互動裡，
-用剛好的節奏陪你慢慢放鬆。
-
-重視感受，也重視陪伴。
-
-比起刻意的熱情，
-更多的是自然與真誠。
-
-希望每一次相遇，
-都能成為忙碌生活中的短暫喘息。`,
+    isNew: false,
+    height: 165,
+    weight: 58,
+    age: 30,
+    role: "不分",
+    size: "",
+    specialty: "濃眉多毛・男友陪伴",
     images: [
       "/images/therapist-luke.jpg",
       "/images/therapist-luke-2.jpg",
@@ -802,15 +702,27 @@ id="therapists"
                 </p>
 
                 <p
-                  style={{
-                    color: '#c9b8aa',
-                    lineHeight: '1.8',
-                    marginBottom: '24px',
-                  }}
-                >
-                  {master.intro}
-                </p>
+  style={{
+    color: "#f2e1d0",
+    fontSize: "15px",
+    marginTop: "8px",
+    marginBottom: "10px",
+    letterSpacing: "1px",
+  }}
+>
+  {master.height} / {master.weight} / {master.age}
+</p>
 
+<p
+  style={{
+    color: "#b9977d",
+    fontSize: "14px",
+    marginBottom: "18px",
+  }}
+>
+  {master.role}
+  {master.size && ` ｜ ${master.size}`}
+</p>
                 <a
   href="https://line.me/R/ti/p/@637fbbyh"
   target="_blank"
