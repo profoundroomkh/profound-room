@@ -435,57 +435,54 @@ paddingBottom: "40px",
 </p>
 
     <div
-     style={{
-  width: "190px",
-  height: "56px",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  borderRadius: "999px",
-}}
-    >
-      <a
-        href="https://line.me/R/ti/p/@637fbbyh"
-        target="_blank"
-        style={{
-          background: "#b9977d",
-          color: "#050505",
-          padding: "15px 38px",
-          borderRadius: "999px",
-          textDecoration: "none",
-          fontWeight: 600,
-        }}
-      >
-        立即預約
-      </a>
-
-      <a
-        href="#therapists"
-        style={{
-  width: "190px",
-  height: "56px",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  borderRadius: "999px",
-}}
-      >
-        探索療癒師
-      </a>
-    </div>
-
-    <div
   style={{
     display: "flex",
-justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "center",
     gap: "16px",
     flexWrap: "wrap",
-    marginBottom: "34px",
-    color: "#b9977d",
-    fontSize: "13px",
-    letterSpacing: "2px",
+    marginBottom: "36px",
   }}
+>
+  <a
+    href="https://line.me/R/ti/p/@637fbbyh"
+    target="_blank"
+    style={{
+      minWidth: "180px",
+      height: "56px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+
+      background: "#b9977d",
+      color: "#050505",
+
+      borderRadius: "999px",
+      textDecoration: "none",
+      fontWeight: 600,
+    }}
+  >
+    立即預約
+  </a>
+
+  <a
+    href="#therapists"
+    style={{
+      minWidth: "180px",
+      height: "56px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+
+      border: "1px solid rgba(255,255,255,.18)",
+      color: "#f2e1d0",
+
+      borderRadius: "999px",
+      textDecoration: "none",
+    }}
+  >
+    探索療癒師
+  </a>
+</div>
 >
   <span>預約制</span>
 
