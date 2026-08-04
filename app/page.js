@@ -345,8 +345,24 @@ return (
   }}
 >
   <div
-    style={{
-      maxWidth: "760px",
+  style={{
+    maxWidth: "780px",
+    width: "100%",
+    padding: "72px 56px",
+    borderRadius: "24px",
+
+    background:
+      "linear-gradient(180deg, rgba(18,18,18,.42), rgba(8,8,8,.58))",
+
+    backdropFilter: "blur(18px)",
+    WebkitBackdropFilter: "blur(18px)",
+
+    border: "1px solid rgba(214,178,123,.12)",
+
+    boxShadow:
+      "0 30px 80px rgba(0,0,0,.35)",
+  }}
+>
       width: "100%",
       padding: "70px 50px",
       borderRadius: "32px",
@@ -366,62 +382,63 @@ return (
       KAOHSIUNG • MEN'S SPA
     </p>
 
-    <h1
-      style={{
-        fontSize: "72px",
-        letterSpacing: "12px",
-        marginBottom: "10px",
-        fontWeight: 300,
-      }}
-    >
-      深寓
-    </h1>
-
+   <h1
+  style={{
+    fontSize: "82px",
+    fontWeight: 300,
+    letterSpacing: "14px",
+    lineHeight: 1,
+    marginBottom: "14px",
+  }}
+>
+  深寓
+</h1>
     <h2
-      style={{
-        fontSize: "30px",
-        letterSpacing: "8px",
-        marginBottom: "18px",
-        fontWeight: 300,
-      }}
-    >
-      PROFOUND ROOM
-    </h2>
+  style={{
+    fontSize: "30px",
+    letterSpacing: "10px",
+    fontWeight: 300,
+    color: "#f5eadb",
+    marginBottom: "18px",
+  }}
+>
+  PROFOUND ROOM
+</h2>
 
     <p
-      style={{
-        color: "#d8c3ad",
-        fontStyle: "italic",
-        marginBottom: "18px",
-        fontSize: "16px",
-      }}
-    >
-      A space to slow down.
-    </p>
+  style={{
+    color: "#b9977d",
+    fontSize: "15px",
+    letterSpacing: "5px",
+    marginBottom: "10px",
+  }}
+>
+  KAOHSIUNG • MEN'S SPA
+</p>
 
-    <p
-      style={{
-        color: "#f2e1d0",
-        fontSize: "20px",
-        marginBottom: "18px",
-      }}
-    >
-      高雄男性 GAY SPA｜預約制放鬆空間
-    </p>
-
-    <p
-      style={{
-        color: "#b9a18b",
-        lineHeight: "2",
-        maxWidth: "560px",
-        margin: "0 auto 40px",
-      }}
-    >
-      深寓 PROFOUND ROOM 致力於提供安靜、隱私且舒適的按摩放鬆體驗。
-      <br />
-      透過專業服務與細膩手法，
-      陪伴每位來訪者釋放壓力，恢復身心平衡。
-    </p>
+<p
+  style={{
+    fontSize: "22px",
+    color: "#f2e1d0",
+    marginBottom: "20px",
+    fontWeight: 300,
+  }}
+>
+  預約制放鬆空間
+</p>
+   <p
+  style={{
+    color: "#c8b29a",
+    fontSize: "16px",
+    lineHeight: "2",
+    maxWidth: "560px",
+    margin: "0 auto 42px",
+  }}
+>
+  安靜、隱私、專業按摩。
+  <br />
+  每一次停留，都是一段專屬於自己的放鬆時光。
+</p>
 
     <div
       style={{
@@ -462,20 +479,42 @@ return (
     </div>
 
     <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: "24px",
-        flexWrap: "wrap",
-        marginBottom: "34px",
-        color: "#c9b29b",
-        fontSize: "14px",
-      }}
-    >
-      <span>預約制</span>
-      <span>獨立包廂</span>
-      <span>LINE 線上預約</span>
-    </div>
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "16px",
+    flexWrap: "wrap",
+    marginBottom: "34px",
+    color: "#b9977d",
+    fontSize: "13px",
+    letterSpacing: "2px",
+  }}
+>
+  <span>預約制</span>
+
+  <span
+    style={{
+      opacity: 0.3,
+      color: "#6b5a47",
+    }}
+  >
+    │
+  </span>
+
+  <span>獨立包廂</span>
+
+  <span
+    style={{
+      opacity: 0.3,
+      color: "#6b5a47",
+    }}
+  >
+    │
+  </span>
+
+  <span>LINE 預約</span>
+</div>
 
     <p
       style={{
