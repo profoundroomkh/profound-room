@@ -467,7 +467,7 @@ return (
           textDecoration: "none",
         }}
       >
-        查看師傅
+        探索療癒師
       </a>
     </div>
 
