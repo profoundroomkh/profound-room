@@ -26,7 +26,7 @@ useEffect(() => {
    const masters = [
      {
   name: "Oni",
-       isNew: true,
+  isNew: true,
   specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
   intro: `174 / 72 / 34 / 不分1
 
@@ -55,11 +55,9 @@ Oni 擁有精壯結實的體態，
 },
      {
   name: "Alan",
-       isNew: true,
+  isNew: true,
   specialty: "⭐ 新師上陣｜經驗豐富 / 穩定手感",
   intro: `174 / 72 / 34 / 不分1
-  specialty: "⭐ 新師上陣｜資深經驗 / 沉穩魅力",
-  intro: `170 / 68 / 33 / 不分1
 
 Alan 擁有精壯結實的體態，
 成熟穩重的氣質與豐富的服務經驗，
