@@ -624,7 +624,6 @@ id="therapists"
             THERAPISTS
           </p>
 
-          <p
   <p
   style={{
     color: '#cbb79d',
