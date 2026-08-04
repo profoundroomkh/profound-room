@@ -700,30 +700,7 @@ id="therapists"
                 >
                   {master.specialty}
                 </p>
-                  <p
-  style={{
-    color: "#f2e1d0",
-    fontSize: "18px",
-    fontWeight: 500,
-    marginBottom: "10px",
-    letterSpacing: "1px",
-  }}
->
-  {master.height} / {master.weight} / {master.age}
-</p>
-
-<p
-  style={{
-    color: "#cbb79d",
-    fontSize: "16px",
-    fontWeight: 400,
-    marginBottom: "22px",
-    letterSpacing: "1px",
-  }}
->
-  {master.role}
-  {master.size && ` ｜ ${master.size}`}
-</p>
+                  
 
                 <p
   style={{
