@@ -127,7 +127,7 @@ Milo 為深寓新加入的服務夥伴，
 },
   {
   name: "Kai",
-  specialty: "⭐ 新師上陣｜陽剛穩重 / 厚實手感",
+  specialty: "陽剛穩重 / 厚實手感",
   intro: `175 / 70 / 30 / 1
 
 Kai 擁有結實健壯的體態，
@@ -173,7 +173,28 @@ Kai 擁有結實健壯的體態，
     ],
  } ,   
 
- 
+ {
+  name: "Zac",
+  specialty: "刺青台客 健談好處",
+  intro: `170 / 66 / 30 / 不分
+
+刺青之下，是細膩而溫和的性格。
+
+Zac 喜歡安靜的交流，
+也懂得在適當的時候給予陪伴。
+
+不需要刻意迎合，
+自然的互動往往更讓人放鬆。
+
+透過穩定的節奏與專注的投入，
+陪你暫時放下疲憊與壓力。`,
+  images: [
+    "/images/therapist-Zac-1.JPG",
+    "/images/therapist-Zac-2.JPG",
+    "/images/therapist-Zac-3.JPG",
+    "/images/therapist-Zac-4.JPG",
+  ],
+},
      
 {
   name: "Vincent",
@@ -283,7 +304,7 @@ Zac 喜歡安靜的交流，
   ],
 },
      {
-    name: "Ansel",
+    name: "Ansel（暫時休息）",
     specialty: "濃眉多毛 男友式陪伴",
     intro: `165 / 58 / 30 / 不分
 
