@@ -700,6 +700,30 @@ id="therapists"
                 >
                   {master.specialty}
                 </p>
+                  <p
+  style={{
+    color: "#f2e1d0",
+    fontSize: "18px",
+    fontWeight: 500,
+    marginBottom: "10px",
+    letterSpacing: "1px",
+  }}
+>
+  {master.height} / {master.weight} / {master.age}
+</p>
+
+<p
+  style={{
+    color: "#cbb79d",
+    fontSize: "16px",
+    fontWeight: 400,
+    marginBottom: "22px",
+    letterSpacing: "1px",
+  }}
+>
+  {master.role}
+  {master.size && ` ｜ ${master.size}`}
+</p>
 
                 <p
   style={{
@@ -830,17 +854,30 @@ id="therapists"
         >
           {master.specialty}
         </p>
+<p
+  style={{
+    color: "#f2e1d0",
+    fontSize: "20px",
+    fontWeight: "500",
+    marginBottom: "10px",
+    letterSpacing: "1px",
+  }}
+>
+  {master.height} / {master.weight} / {master.age}
+</p>
 
-        <p
-          style={{
-            color: '#c9b8aa',
-            lineHeight: '1.8',
-            marginBottom: '24px',
-          }}
-        >
-          {master.intro}
-        </p>
-
+<p
+  style={{
+    color: "#cbb79d",
+    fontSize: "18px",
+    marginBottom: "24px",
+    letterSpacing: "1px",
+  }}
+>
+  {master.role}
+  {master.size && ` ｜ ${master.size}`}
+</p>
+      
         <a
           href="https://line.me/R/ti/p/@637fbbyh"
           target="_blank"
