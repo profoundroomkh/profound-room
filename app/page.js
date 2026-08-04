@@ -367,7 +367,7 @@ return (
       letterSpacing: "2px",
     }}
   >
-    台中男性 SPA｜預約制放鬆空間
+    高雄男性 GAY SPA｜預約制放鬆空間
   </p>
 
   <p style={{ marginBottom: "24px" }}>
