@@ -32,7 +32,7 @@ useEffect(() => {
     weight: 72,
     age: 34,
     role: "不分1",
-    size: "未補充",
+    size: "16/5",
     specialty: "經驗豐富・穩定手感",
     images: [
       "/images/therapist-Oni-1.JPG",
