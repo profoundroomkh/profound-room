@@ -52,7 +52,7 @@ robots: {
   },
 },
   openGraph: {
-    title: 'title:'高雄 Gay SPA｜高雄男士按摩｜深寓 PROFOUND ROOM',
+    title: '高雄 Gay SPA｜高雄男士按摩｜深寓 PROFOUND ROOM',
     description: '高雄預約制男士放鬆空間與專業按摩體驗',
     url: 'https://profoundroom.com',
     siteName: 'PROFOUND ROOM 深寓',
