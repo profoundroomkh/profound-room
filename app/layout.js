@@ -9,6 +9,10 @@ export const metadata = {
   },
 
   metadataBase: new URL('https://profoundroom.com'),
+  
+  alternates: {
+  canonical: "https://profoundroom.com",
+},
 
   title:
     '深寓 PROFOUND ROOM｜高雄 Gay SPA｜男士按摩與放鬆空間',
@@ -36,9 +40,19 @@ export const metadata = {
     '高雄私人按摩',
     '高雄舒壓按摩',
   ],
-
+robots: {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
+  },
+},
   openGraph: {
-    title: '高雄 Gay SPA｜PROFOUND ROOM 深寓',
+    title: 'title:'高雄 Gay SPA｜高雄男士按摩｜深寓 PROFOUND ROOM',
     description: '高雄預約制男士放鬆空間與專業按摩體驗',
     url: 'https://profoundroom.com',
     siteName: 'PROFOUND ROOM 深寓',
