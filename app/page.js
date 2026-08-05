@@ -62,7 +62,7 @@ useEffect(() => {
     weight: 55,
     age: 29,
     role: "不分",
-    size: "未補充",
+    size: "17/4.5",
     specialty: "薄肌・反差",
     images: [
       "/images/therapist-Owen-1.JPG",
