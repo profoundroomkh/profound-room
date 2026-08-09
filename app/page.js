@@ -8,7 +8,7 @@ import Gallery from '../components/Gallery'
 export default function Home() {
 
 const [currentIndexes, setCurrentIndexes] =
-  useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0,])
+  useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0,0,0, ])
   const [showAllMasters, setShowAllMasters] = useState(false)
 useEffect(() => {
   const interval = setInterval(() => {
@@ -25,6 +25,25 @@ useEffect(() => {
   return () => clearInterval(interval)
 }, [])
    const masters = [
+      {
+  name: "敬請期待",
+  isNew: true,
+
+  height: 175,
+  weight: 67,
+  age: 29,
+
+  role: "不分",
+  size: "16/4/5",
+
+  specialty: "敬請期待",
+
+  images: [
+    "/images/hero-1.jpg",
+    "/images/hero-1.jpg",
+    "/images/hero-1.jpg",
+  ],
+},
      {
   name: "Dylan",
   isNew: true,
