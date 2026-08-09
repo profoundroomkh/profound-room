@@ -39,8 +39,8 @@ useEffect(() => {
   specialty: "靦腆純粹，清新男孩",
 
   images: [
-    "/images/therapist-Leo-1",
-    "/images/therapist-Leo-2",
+    "/images/therapist-Leo-1.jpg",
+    "/images/therapist-Leo-2.jpg",
   ],
 },
      {
