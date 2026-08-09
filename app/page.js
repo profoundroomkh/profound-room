@@ -216,7 +216,7 @@ useEffect(() => {
     weight: 50,
     age: 26,
     role: "不分",
-    size: "未補充",
+    size: "16/5",
     specialty: "少年感・纖瘦身形",
     images: [
       "/images/therapist-Hu-1.JPG",
