@@ -34,7 +34,7 @@ useEffect(() => {
   age: 29,
 
   role: "不分",
-  size: "16/4/5",
+  size: "16/4.5",
 
   specialty: "敬請期待",
 
