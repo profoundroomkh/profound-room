@@ -26,7 +26,7 @@ useEffect(() => {
 }, [])
    const masters = [
       {
-  name: "敬請期待",
+  name: "Leo",
   isNew: true,
 
   height: 175,
@@ -36,12 +36,11 @@ useEffect(() => {
   role: "不分",
   size: "16/4.5",
 
-  specialty: "敬請期待",
+  specialty: "靦腆純粹，清新男孩",
 
   images: [
-    "/images/hero-1.jpg",
-    "/images/hero-1.jpg",
-    "/images/hero-1.jpg",
+    "/images/therapist-Leo-1",
+    "/images/therapist-Leo-2",
   ],
 },
      {
