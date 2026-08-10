@@ -247,7 +247,7 @@ useEffect(() => {
     weight: 58,
     age: 30,
     role: "不分",
-    size: "15/4.5",
+    size: "未提供",
     specialty: "濃眉多毛・男友陪伴",
     images: [
       "/images/therapist-luke.jpg",
