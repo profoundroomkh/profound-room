@@ -1,4 +1,6 @@
 import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
+
 
 export default function ImmersiveRelaxationExperience() {
   return (
@@ -42,7 +44,7 @@ export default function ImmersiveRelaxationExperience() {
             <br />
             到底是什麼？
           </h1>
-
+  <JournalCTA />
           <p
             style={{
               color: 'rgba(255,255,255,0.68)',
