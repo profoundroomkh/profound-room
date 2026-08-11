@@ -1,3 +1,5 @@
+import Header from '../../components/Header'
+import JournalCTA from '../../components/JournalCTA'
 export const metadata = {
 title:
 '為什麼越來越多人選擇預約制 Gay SPA？｜深寓 PROFOUND ROOM',
@@ -36,6 +38,7 @@ marginBottom: '32px',
 >
 為什麼越來越多人 <br />
 選擇預約制 Gay SPA？ </h1>
+    <JournalCTA />
 
 ```
   <p>
