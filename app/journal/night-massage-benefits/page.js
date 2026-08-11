@@ -1,3 +1,5 @@
+import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 export const metadata = {
   title:
     '深夜按摩適合哪些人？下班後的放鬆選擇｜深寓 PROFOUND ROOM',
@@ -38,7 +40,7 @@ export default function ArticlePage() {
         <br />
         下班後的放鬆選擇
       </h1>
-
+  <JournalCTA />
       <p>
         並非每個人都擁有規律的上下班時間。
       </p>
