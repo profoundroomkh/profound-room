@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Header from '../../components/Header'
+import JournalCTA from '../../components/JournalCTA'
 
 export default function SpacePage() {
   const spaces = [
@@ -153,6 +154,7 @@ export default function SpacePage() {
           </section>
 
         </div>
+                <JournalCTA />
       </main>
     </>
   )
