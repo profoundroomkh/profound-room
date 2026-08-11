@@ -1,4 +1,5 @@
 import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 
 export default function KaohsiungMensMassage() {
   return (
@@ -42,7 +43,7 @@ export default function KaohsiungMensMassage() {
             <br />
             為什麼越來越多人需要？
           </h1>
-
+  <JournalCTA />
           <p
             style={{
               color: 'rgba(255,255,255,0.68)',
