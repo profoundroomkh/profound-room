@@ -70,6 +70,7 @@ export default function SpacePage() {
    
   高雄男士放鬆空間
 </h1>
+      <JournalCTA />
 <p>
   Private Gay SPA Space In Kaohsiung
 </p>
@@ -154,7 +155,6 @@ export default function SpacePage() {
           </section>
 
         </div>
-                <JournalCTA />
       </main>
     </>
   )
