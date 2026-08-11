@@ -1,5 +1,6 @@
-import Header from '../../components/Header'
-import JournalCTA from '../../components/JournalCTA'
+import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
+
 export const metadata = {
 title:
 '為什麼越來越多人選擇預約制 Gay SPA？｜深寓 PROFOUND ROOM',
@@ -19,6 +20,9 @@ keywords: [
 
 export default function ArticlePage() {
 return (
+<>
+<Header />
+
 <main
 style={{
 maxWidth: '900px',
@@ -133,7 +137,6 @@ marginBottom: '32px',
     專注於自己的休息時光。
   </p>
 </main>
-
+</>
 )
 }
-
