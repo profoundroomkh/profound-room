@@ -20,7 +20,10 @@ export const metadata = {
 }
 
 export default function ArticlePage() {
-  return (
+ return (
+  <>
+    <Header />
+
     <main
       style={{
         maxWidth: '900px',
@@ -128,11 +131,14 @@ export default function ArticlePage() {
         並不只是因為按摩手法。
       </p>
 
-      <p>
-        更重要的是透過一段專屬自己的時間，
-        暫時離開忙碌生活，
-        重新找回放鬆與平衡。
-      </p>
-    </main>
+     <p>
+  更重要的是透過一段專屬自己的時間，
+  暫時離開忙碌生活，
+  重新找回放鬆與平衡。
+</p>
+
+<JournalCTA />
+
+</main>
   )
 }
