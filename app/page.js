@@ -547,15 +547,15 @@ paddingBottom: "40px",
           fontSize: '17px',
         }}
       >
-        高雄 Gay SPA 與男士按摩空間。
+        高雄 Gay Spa 與男士按摩空間。
 <br />
 <br />
 深寓提供預約制放鬆體驗、
 精油舒壓與私人空間服務。
 <br />
 <br />
-如果你正在尋找高雄 Gay SPA、
-高雄男士按摩或高雄預約制 SPA，
+如果你正在尋找高雄gayspa、
+高雄男士按摩或高雄預約制SPA，
 歡迎來深寓體驗放鬆時光。
       </p>
 
@@ -570,7 +570,7 @@ paddingBottom: "40px",
   }}
 >
   <p>
-    空間鄰近高雄車站，
+    空間鄰近高雄車站，Himan三溫暖旁，
     <br />
     步行約五分鐘即可抵達。
     <br />
@@ -597,7 +597,7 @@ paddingBottom: "40px",
       color: '#f2e1d0',
     }}
   >
-    高雄 Gay SPA 與男士放鬆空間
+    高雄 Gay Spa 與男士放鬆空間
   </h2>
 
   <p
@@ -607,7 +607,7 @@ paddingBottom: "40px",
       fontSize: '17px',
     }}
   >
-    PROFOUND ROOM 深寓為高雄預約制 Gay SPA，
+    PROFOUND ROOM 深寓為高雄預約制 Gayspa，
     提供男士按摩、精油舒壓、
     深層放鬆與私人空間體驗。
     <br /><br />
@@ -616,8 +616,8 @@ paddingBottom: "40px",
     更來自於安靜舒適的環境、
     專業服務與適當的距離感。
     <br /><br />
-    如果你正在尋找高雄 Gay SPA、
-    高雄男士按摩、
+    如果你正在尋找高雄gayspa、
+    高雄同志按摩、
     高雄預約制 SPA 或私人放鬆空間，
     深寓希望能成為你的選擇之一。
   </p>
