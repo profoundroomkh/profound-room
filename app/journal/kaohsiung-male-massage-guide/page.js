@@ -1,3 +1,5 @@
+import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 export const metadata = {
 title:
 '高雄男按摩推薦｜第一次預約前常見問題整理｜深寓 PROFOUND ROOM',
@@ -36,7 +38,7 @@ marginBottom: '32px',
 >
 高雄男按摩推薦 <br />
 第一次預約前常見問題整理 </h1>
-
+  <JournalCTA />
 ```
   <p>
     近年來，越來越多人開始接觸男士按摩與男士 SPA。
