@@ -1,3 +1,5 @@
+import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 export const metadata = {
 title:
 '高雄同志按摩推薦怎麼選？5個初次體驗前必看的重點｜深寓 PROFOUND ROOM',
@@ -36,7 +38,7 @@ marginBottom: '32px',
 >
 高雄同志按摩推薦怎麼選？ <br />
 5個初次體驗前必看的重點 </h1>
-
+  <JournalCTA />
 ```
   <p>
     第一次搜尋高雄同志按摩時，
