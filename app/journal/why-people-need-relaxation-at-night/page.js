@@ -1,4 +1,5 @@
 import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 
 export default function WhyPeopleNeedRelaxationAtNight() {
   return (
@@ -42,7 +43,7 @@ export default function WhyPeopleNeedRelaxationAtNight() {
             <br />
             人反而越需要放鬆？
           </h1>
-
+  <JournalCTA />
           <p
             style={{
               color: 'rgba(255,255,255,0.68)',
