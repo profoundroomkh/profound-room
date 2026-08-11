@@ -1,4 +1,6 @@
+
 import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 
 export default function ArticlePage() {
   return (
@@ -42,6 +44,7 @@ export default function ArticlePage() {
             <br />
             可以先知道的事
           </h1>
+              <JournalCTA />
 
           <p
             style={{
