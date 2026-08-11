@@ -1,3 +1,5 @@
+import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 export const metadata = {
   title:
     '高雄同志按摩與一般按摩有什麼不同？｜深寓 PROFOUND ROOM',
@@ -38,6 +40,7 @@ export default function ArticlePage() {
         <br />
         有什麼不同？
       </h1>
+            <JournalCTA />
 
       <p>
         許多人第一次搜尋高雄同志按摩時，
