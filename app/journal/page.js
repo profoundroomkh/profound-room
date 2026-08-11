@@ -1,4 +1,5 @@
-
+import Header from '../../components/Header'
+import JournalCTA from '../../components/JournalCTA'
 export default function JournalPage() {
   const posts = [
     {
