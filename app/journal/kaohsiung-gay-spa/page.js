@@ -1,4 +1,5 @@
 import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 
 export const metadata = {
   title:
@@ -36,6 +37,7 @@ export default function Page() {
           >
             高雄 Gay SPA 如何選擇？
           </h1>
+                <JournalCTA />
 
           <p style={{ lineHeight: '2' }}>
             對許多人來說，
