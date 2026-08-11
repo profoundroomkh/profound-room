@@ -1,5 +1,5 @@
-import Header from '../../components/Header'
-
+import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 export default function JournalPage() {
   const posts = [
     {
@@ -222,7 +222,7 @@ export default function JournalPage() {
             <br />
             Journal
           </h1>
-
+  <JournalCTA />
           <p
             style={{
               color: 'rgba(255,255,255,0.65)',
