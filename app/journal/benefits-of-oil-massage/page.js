@@ -1,3 +1,7 @@
+import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
+
+
 export const metadata = {
   title:
     '精油舒壓真的能放鬆嗎？從身體與心理角度解析｜深寓 PROFOUND ROOM',
