@@ -1,3 +1,5 @@
+import Header from '../../../components/Header'
+import JournalCTA from '../../../components/JournalCTA'
 export const metadata = {
   title:
     '第一次男士 SPA，會很尷尬嗎？｜深寓 PROFOUND ROOM',
@@ -14,6 +16,7 @@ export const metadata = {
     '高雄放鬆空間',
   ],
 }
+
 
 export default function ArticlePage() {
   return (
@@ -38,6 +41,7 @@ export default function ArticlePage() {
         <br />
         會很尷尬嗎？
       </h1>
+          <JournalCTA />
 
       <p>
         對許多人來說，
