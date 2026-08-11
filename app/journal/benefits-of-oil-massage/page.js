@@ -45,6 +45,7 @@ export default function ArticlePage() {
         <br />
         從身體與心理角度解析
       </h1>
+          <JournalCTA />
 
       <p>
         現代人的生活節奏越來越快，
