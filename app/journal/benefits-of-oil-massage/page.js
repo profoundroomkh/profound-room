@@ -139,6 +139,7 @@ export default function ArticlePage() {
 
 <JournalCTA />
 
-</main>
-  )
+    </main>
+  </>
+)
 }
