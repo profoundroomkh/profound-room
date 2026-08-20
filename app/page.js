@@ -36,7 +36,7 @@ useEffect(() => {
   role: "Side",
   size: "有驚喜",
 
-  specialty: "年輕薄肌，熟練手法",
+  specialty: "年輕薄肌・熟練手法",
 
   images: [
     "/images/therapist-Gugu-1.jpg",
@@ -54,7 +54,7 @@ useEffect(() => {
   role: "不分",
   size: "16/4.5",
 
-  specialty: "靦腆純粹，清新男孩",
+  specialty: "靦腆純粹・清新男孩",
 
   images: [
     "/images/therapist-Leo-1.jpg",
