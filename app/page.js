@@ -112,7 +112,7 @@ useEffect(() => {
 
   {
     name: "Owen",
-    isNew: true,
+    isNew: false,
     height: 166,
     weight: 55,
     age: 29,
