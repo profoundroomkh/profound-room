@@ -320,9 +320,27 @@
 
 .detailsLine {
   min-height: 24px;
-  margin: 11px 0 14px;
+  margin: 11px 0 8px;
   color: #aa9888;
   font-size: 15px;
+}
+
+.supportPeriod {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 20px;
+  margin: 0 0 14px;
+  color: #d5c2af;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.supportPeriod span {
+  color: #b9977d;
+  font-weight: 700;
 }
 
 .cardActions {
@@ -539,6 +557,10 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
 
+.profileDataWide {
+  grid-column: 1 / -1;
+}
+
 .profileData dt {
   margin-bottom: 6px;
   color: rgba(203, 183, 157, 0.58);
@@ -749,8 +771,14 @@
 
   .detailsLine {
     min-height: 20px;
-    margin: 9px 0 10px;
+    margin: 9px 0 4px;
     font-size: 12px;
+  }
+
+  .supportPeriod {
+    min-height: 20px;
+    margin-bottom: 10px;
+    font-size: 10px;
   }
 
   .cardActions {

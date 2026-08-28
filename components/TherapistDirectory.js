@@ -81,7 +81,7 @@ export default function TherapistDirectory() {
   const handleBooking = async (therapist) => {
     if (therapist.status !== 'available') return
 
-    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n希望日期：\n希望時段：\n課程：90 分鐘／120 分鐘`
+    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：90 分鐘／120 分鐘`
     trackBooking(therapist)
     window.open(LINE_URL, '_blank', 'noopener,noreferrer')
 
@@ -192,6 +192,12 @@ export default function TherapistDirectory() {
                 {therapist.role}
                 {therapist.size && <span>｜ {therapist.size}</span>}
               </p>
+              {therapist.supportPeriod && (
+                <p className={styles.supportPeriod}>
+                  <span>支援時間</span>
+                  {therapist.supportPeriod}
+                </p>
+              )}
 
               <div className={styles.cardActions}>
                 <button
@@ -319,6 +325,12 @@ export default function TherapistDirectory() {
                   <div>
                     <dt>資料</dt>
                     <dd>{selected.size}</dd>
+                  </div>
+                )}
+                {selected.supportPeriod && (
+                  <div className={styles.profileDataWide}>
+                    <dt>支援時間</dt>
+                    <dd>{selected.supportPeriod}</dd>
                   </div>
                 )}
               </dl>

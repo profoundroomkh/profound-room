@@ -3,6 +3,24 @@
 
 export const therapists = [
   {
+    id: 'lucas',
+    name: 'Lucas',
+    isNew: true,
+    status: 'available',
+    height: 176,
+    weight: 58,
+    age: 25,
+    role: '不分',
+    size: '16.5/6',
+    specialty: '期間支援・清爽薄肌',
+    supportPeriod: '8/31–9/4｜10:00–24:00',
+    images: [
+      '/images/therapist-Lucas-1.jpg',
+      '/images/therapist-Lucas-2.jpg',
+      '/images/therapist-Lucas-3.jpg',
+    ],
+  },
+  {
     id: 'gugu',
     name: 'Gugu',
     isNew: true,
