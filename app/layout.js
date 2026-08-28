@@ -9,6 +9,12 @@ export const metadata = {
   },
 
   metadataBase: new URL('https://profoundroom.com'),
+
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.png',
+  },
   
   alternates: {
   canonical: "https://profoundroom.com",
