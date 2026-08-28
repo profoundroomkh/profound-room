@@ -1,0 +1,823 @@
+/* Design reminder: "靜謐選師廊道" uses controlled motion, editorial spacing,
+   near-black surfaces and #B9977D only for focus, status and warm highlights. */
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px 120px;
+}
+
+.headingRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 64px;
+  align-items: end;
+  padding-bottom: 42px;
+  border-bottom: 1px solid rgba(185, 151, 125, 0.2);
+}
+
+.eyebrow,
+.modalEyebrow {
+  margin: 0 0 14px;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.34em;
+}
+
+.headingRow h2 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 300;
+  line-height: 1.22;
+  letter-spacing: 0.05em;
+}
+
+.intro {
+  max-width: 430px;
+  margin: 0 0 4px;
+  color: #aa9888;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.filterBar {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0 10px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filterBar::-webkit-scrollbar {
+  display: none;
+}
+
+.filter,
+.filterActive {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: transparent;
+  color: #aa9888;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition:
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    background 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.filter span,
+.filterActive span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  margin-left: 9px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 11px;
+}
+
+.filterActive {
+  border-color: #b9977d;
+  background: #b9977d;
+  color: #070707;
+}
+
+.filter:active,
+.filterActive:active,
+.card button:active,
+.modal button:active {
+  transform: scale(0.97);
+}
+
+.resultCount {
+  margin: 0 0 24px;
+  color: rgba(203, 183, 157, 0.62);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px 24px;
+}
+
+.card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #121110 0%, #0d0d0d 100%);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 220ms cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 220ms cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(185, 151, 125, 0.35);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.32);
+}
+
+.cardPaused {
+  opacity: 0.72;
+}
+
+.cardPaused .mainImage {
+  filter: saturate(0.58) contrast(0.98) brightness(0.72);
+}
+
+.mediaButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #080808;
+  color: inherit;
+}
+
+.mediaButton:focus-visible,
+.profileButton:focus-visible,
+.bookingButton:focus-visible,
+.filter:focus-visible,
+.filterActive:focus-visible,
+.modal button:focus-visible {
+  outline: 2px solid #d8b89f;
+  outline-offset: 3px;
+}
+
+.media {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: inset 0 0 0 1px rgba(185, 151, 125, 0.08);
+}
+
+.media::after {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: rgba(185, 151, 125, 0.28);
+  content: '';
+  pointer-events: none;
+}
+
+.backdropImage {
+  z-index: 0;
+  object-fit: cover;
+  transform: scale(1.12);
+  filter: blur(18px) brightness(0.45) saturate(0.72);
+}
+
+.mainImage {
+  z-index: 1;
+  object-fit: contain;
+  filter: saturate(0.86) contrast(1.02) brightness(0.9);
+  transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover .mainImage {
+  transform: scale(1.018);
+}
+
+.imageShade {
+  position: absolute;
+  z-index: 2;
+  inset: 45% 0 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+}
+
+.statusAvailable,
+.statusPaused,
+.newBadge,
+.photoCount {
+  position: absolute;
+  z-index: 3;
+  top: 15px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  border-radius: 999px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.statusAvailable,
+.statusPaused {
+  left: 15px;
+  padding: 5px 10px 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(7, 7, 7, 0.78);
+  color: #eee0d1;
+  backdrop-filter: blur(9px);
+}
+
+.statusAvailable::before,
+.statusPaused::before {
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #9bad82;
+  content: '';
+}
+
+.statusPaused::before {
+  background: #8b817a;
+}
+
+.newBadge {
+  right: 15px;
+  padding: 5px 9px;
+  background: #b9977d;
+  color: #080808;
+}
+
+.photoCount {
+  top: auto;
+  right: 15px;
+  bottom: 14px;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(7, 7, 7, 0.7);
+  color: #f2e1d0;
+  backdrop-filter: blur(9px);
+}
+
+.cardBody {
+  padding: 25px 24px 24px;
+}
+
+.nameRow {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.nameRow h3 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: 29px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.nameRow > span {
+  color: rgba(185, 151, 125, 0.58);
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+.specialty {
+  min-height: 24px;
+  margin: 11px 0 18px;
+  color: #b9977d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.metrics {
+  display: flex;
+  margin: 0;
+  padding: 12px 0;
+  border-top: 1px solid rgba(185, 151, 125, 0.14);
+  border-bottom: 1px solid rgba(185, 151, 125, 0.14);
+  color: #f2e1d0;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+.metrics span + span::before {
+  margin: 0 9px;
+  color: rgba(185, 151, 125, 0.45);
+  content: '｜';
+}
+
+.detailsLine {
+  min-height: 24px;
+  margin: 11px 0 14px;
+  color: #aa9888;
+  font-size: 15px;
+}
+
+.cardActions {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 9px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.profileButton,
+.bookingButton,
+.modalBookingButton {
+  min-height: 44px;
+  border-radius: 999px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    background 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.profileButton {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: transparent;
+  color: #cbb79d;
+}
+
+.bookingButton {
+  border: 1px solid #b9977d;
+  background: rgba(185, 151, 125, 0.08);
+  color: #d1ad91;
+}
+
+.modalBookingButton {
+  border: 1px solid #b9977d;
+  background: #b9977d;
+  color: #080808;
+}
+
+.profileButton:hover {
+  border-color: rgba(185, 151, 125, 0.55);
+  color: #f2e1d0;
+}
+
+.bookingButton:hover {
+  border-color: #d0ac91;
+  background: rgba(185, 151, 125, 0.17);
+  color: #efd9c5;
+}
+
+.modalBookingButton:hover {
+  border-color: #d0ac91;
+  background: #d0ac91;
+}
+
+.bookingButton:disabled,
+.modalBookingButton:disabled {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.065);
+  color: rgba(255, 255, 255, 0.38);
+  cursor: not-allowed;
+}
+
+.modalBackdrop {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.84);
+  backdrop-filter: blur(12px);
+}
+
+.modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.92fr);
+  width: min(1040px, 100%);
+  max-height: min(820px, calc(100svh - 48px));
+  overflow: hidden;
+  border: 1px solid rgba(185, 151, 125, 0.24);
+  border-radius: 24px;
+  background: #0d0d0d;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.7);
+  animation: modalIn 220ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.closeButton {
+  position: absolute;
+  z-index: 5;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  padding: 0 0 4px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(7, 7, 7, 0.72);
+  color: #f2e1d0;
+  font-size: 28px;
+  line-height: 1;
+  backdrop-filter: blur(8px);
+}
+
+.modalMedia {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  background: #050505;
+}
+
+.modalImage {
+  object-fit: contain;
+}
+
+.previousButton,
+.nextButton {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  display: grid;
+  width: 44px;
+  height: 54px;
+  place-items: center;
+  padding: 0 0 5px;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(5, 5, 5, 0.62);
+  color: #f2e1d0;
+  font-size: 36px;
+  line-height: 1;
+  backdrop-filter: blur(8px);
+}
+
+.previousButton:active,
+.nextButton:active {
+  transform: translateY(-50%) scale(0.97) !important;
+}
+
+.previousButton {
+  left: 15px;
+  border-radius: 999px;
+}
+
+.nextButton {
+  right: 15px;
+  border-radius: 999px;
+}
+
+.dots {
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  bottom: 18px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot,
+.dotActive {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition:
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    background 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.dotActive {
+  transform: scale(1.45);
+  background: #d0ac91;
+}
+
+.modalContent {
+  overflow-y: auto;
+  padding: 74px 44px 44px;
+}
+
+.modalContent h3 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: clamp(44px, 5vw, 64px);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.modalSpecialty {
+  margin: 18px 0 34px;
+  color: #b9977d;
+  font-size: 18px;
+}
+
+.profileData {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.profileData div {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.profileData dt {
+  margin-bottom: 6px;
+  color: rgba(203, 183, 157, 0.58);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.profileData dd {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: 17px;
+}
+
+.modalStatus {
+  display: flex;
+  align-items: center;
+  margin: 25px 0 20px;
+  color: #cbb79d;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.statusIndicatorAvailable,
+.statusIndicatorPaused {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #9bad82;
+  box-shadow: 0 0 0 5px rgba(155, 173, 130, 0.1);
+}
+
+.statusIndicatorPaused {
+  background: #8b817a;
+  box-shadow: 0 0 0 5px rgba(139, 129, 122, 0.1);
+}
+
+.modalBookingButton {
+  width: 100%;
+  min-height: 54px;
+}
+
+.bookingHint {
+  margin: 13px 0 0;
+  color: rgba(203, 183, 157, 0.55);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.notice,
+.noticeVisible {
+  position: fixed;
+  z-index: 1100;
+  right: 24px;
+  bottom: 24px;
+  max-width: min(390px, calc(100vw - 48px));
+  padding: 14px 18px;
+  transform: translateY(14px);
+  border: 1px solid rgba(185, 151, 125, 0.4);
+  border-radius: 14px;
+  background: rgba(19, 19, 19, 0.94);
+  color: #f2e1d0;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+  transition:
+    opacity 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.noticeVisible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes modalIn {
+  from {
+    transform: translateY(14px) scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .headingRow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .intro {
+    max-width: 620px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .modal {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.85fr);
+  }
+
+  .modalMedia {
+    min-height: 570px;
+  }
+
+  .modalContent {
+    padding: 72px 30px 34px;
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 8px 14px 88px;
+  }
+
+  .headingRow {
+    padding: 0 8px 28px;
+  }
+
+  .headingRow h2 {
+    font-size: 36px;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  .filterBar {
+    margin-top: 22px;
+    padding: 0 8px 4px;
+  }
+
+  .resultCount {
+    padding: 0 8px;
+  }
+
+  .grid {
+    gap: 14px 10px;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+
+  .statusAvailable,
+  .statusPaused {
+    top: 9px;
+    left: 9px;
+    min-height: 23px;
+    padding: 4px 8px 4px 7px;
+    font-size: 9px;
+  }
+
+  .newBadge {
+    top: 9px;
+    right: 9px;
+    min-height: 23px;
+    padding: 4px 7px;
+    font-size: 9px;
+  }
+
+  .photoCount {
+    right: 9px;
+    bottom: 9px;
+    min-height: 22px;
+    padding: 4px 7px;
+    font-size: 9px;
+  }
+
+  .cardBody {
+    padding: 16px 13px 14px;
+  }
+
+  .nameRow h3 {
+    font-size: 23px;
+  }
+
+  .nameRow > span {
+    display: none;
+  }
+
+  .specialty {
+    min-height: 40px;
+    margin: 8px 0 12px;
+    font-size: 12px;
+  }
+
+  .metrics {
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .metrics span + span::before {
+    margin: 0 4px;
+  }
+
+  .detailsLine {
+    min-height: 20px;
+    margin: 9px 0 10px;
+    font-size: 12px;
+  }
+
+  .cardActions {
+    grid-template-columns: 1fr;
+  }
+
+  .profileButton,
+  .bookingButton {
+    min-height: 40px;
+    font-size: 11px;
+  }
+
+  .profileButton {
+    display: none;
+  }
+
+  .modalBackdrop {
+    align-items: end;
+    padding: 0;
+  }
+
+  .modal {
+    display: block;
+    width: 100%;
+    max-height: 94svh;
+    overflow-y: auto;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .modalMedia {
+    min-height: 50svh;
+  }
+
+  .modalContent {
+    overflow: visible;
+    padding: 34px 24px 38px;
+  }
+
+  .modalContent h3 {
+    font-size: 48px;
+  }
+
+  .notice,
+  .noticeVisible {
+    right: 14px;
+    bottom: 14px;
+    max-width: calc(100vw - 28px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .mainImage,
+  .filter,
+  .filterActive,
+  .notice,
+  .noticeVisible,
+  .profileButton,
+  .bookingButton,
+  .modalBookingButton {
+    transition: none;
+  }
+
+  .modal {
+    animation: none;
+  }
+}
