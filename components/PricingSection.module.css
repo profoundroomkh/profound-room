@@ -1,0 +1,266 @@
+.pricingSection {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+  padding: 72px 0 96px;
+  color: #f2e1d0;
+}
+
+.sectionHeading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.eyebrow,
+.serviceLabel,
+.panelKicker {
+  display: block;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: clamp(34px, 8vw, 48px);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.sectionLead {
+  max-width: 34em;
+  margin: 14px auto 0;
+  color: rgba(242, 225, 208, 0.64);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.packageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.packageCard {
+  display: flex;
+  min-height: 144px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 16px;
+  border: 1px solid rgba(185, 151, 125, 0.28);
+  border-radius: 18px;
+  background: rgba(185, 151, 125, 0.07);
+  text-align: center;
+}
+
+.packageCard h3 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.duration,
+.flexiblePrice {
+  margin: 8px 0 0;
+  color: rgba(242, 225, 208, 0.72);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.price {
+  margin: 9px 0 0;
+  color: #d8b89f;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.flexibleCard {
+  background: #0f0d0c;
+}
+
+.flexibleCard h3 {
+  font-size: 17px;
+}
+
+.flexiblePrice {
+  margin-top: 5px;
+}
+
+.cardNote {
+  margin: 12px 0 0;
+  color: #c59f84;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.serviceNote {
+  display: grid;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 16px;
+  border: 1px solid rgba(185, 151, 125, 0.24);
+  border-radius: 16px;
+  background: rgba(185, 151, 125, 0.04);
+  text-align: center;
+}
+
+.serviceNote strong {
+  color: #e0c6b0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.infoStack {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.infoPanel {
+  border: 1px solid rgba(185, 151, 125, 0.24);
+  border-radius: 18px;
+  background: rgba(15, 13, 12, 0.92);
+}
+
+.infoPanel summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  color: #f2e1d0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.infoPanel summary::-webkit-details-marker {
+  display: none;
+}
+
+.panelKicker {
+  margin-bottom: 6px;
+  color: #8f7565;
+  font-size: 9px;
+}
+
+.panelTitle {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.chevron {
+  color: #cdb19a;
+  font-size: 23px;
+  line-height: 1;
+  transform: translateY(-3px);
+  transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.infoPanel[open] .chevron {
+  transform: rotate(180deg) translateY(2px);
+}
+
+.panelBody {
+  padding: 0 20px 19px;
+  color: rgba(242, 225, 208, 0.68);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.panelBody p {
+  margin: 0;
+}
+
+.panelBody p + p {
+  margin-top: 8px;
+}
+
+.panelBody .emphasis {
+  color: #d8b89f;
+}
+
+.policyRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: 24px;
+  color: rgba(242, 225, 208, 0.5);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+.bookingCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  margin-top: 26px;
+  border-radius: 999px;
+  background: #b9a18f;
+  color: #120f0d;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bookingCta:hover {
+  background: #d2b8a3;
+}
+
+.bookingCta:active {
+  transform: scale(0.98);
+}
+
+@media (min-width: 700px) {
+  .pricingSection {
+    padding: 112px 0 128px;
+  }
+
+  .packageGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .packageCard {
+    min-height: 180px;
+  }
+
+  .packageCard h3 {
+    font-size: 19px;
+  }
+
+  .infoStack {
+    grid-template-columns: 1.4fr 0.8fr 1fr;
+    align-items: start;
+  }
+
+  .infoPanel summary {
+    min-height: 92px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chevron,
+  .bookingCta {
+    transition: none;
+  }
+}
