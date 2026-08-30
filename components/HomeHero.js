@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { trackEvent, trackAgeConfirmation } from './analytics'
 import styles from './HomeHero.module.css'
 
 const AGE_GATE_KEY = 'profound-age-confirmed'
@@ -28,6 +29,7 @@ export default function HomeHero() {
 
   const confirmAge = () => {
     window.sessionStorage.setItem(AGE_GATE_KEY, 'true')
+    trackAgeConfirmation()
     setShowAgeGate(false)
   }
 
@@ -43,10 +45,20 @@ export default function HomeHero() {
             <p className={styles.positioning}>預約制 · 獨立包廂 · 高雄車站附近</p>
 
             <div className={styles.heroActions}>
-              <a className={styles.primaryAction} href={LINE_URL} target="_blank" rel="noreferrer">
+              <a
+                className={styles.primaryAction}
+                href={LINE_URL}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackEvent('reservation_intent', { source: 'hero' })}
+              >
                 LINE 立即預約
               </a>
-              <a className={styles.secondaryAction} href="#therapists">
+              <a
+                className={styles.secondaryAction}
+                href="#therapists"
+                onClick={() => trackEvent('therapist_explore_click', { source: 'hero' })}
+              >
                 探索師傅
               </a>
             </div>
@@ -71,7 +83,15 @@ export default function HomeHero() {
                 <h2>Lucas</h2>
                 <p>8/31–9/4</p>
                 <p>10:00–24:00</p>
-                <a href={LINE_URL} target="_blank" rel="noreferrer">
+                <a
+                  href={LINE_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackEvent('reservation_intent', {
+                    source: 'lucas_support_card',
+                    therapist: 'Lucas',
+                  })}
+                >
                   預約 Lucas
                 </a>
               </div>

@@ -1,5 +1,7 @@
 'use client'
 
+import { trackEvent } from './analytics'
+
 export default function JournalCTA() {
   return (
     <section
@@ -59,6 +61,7 @@ export default function JournalCTA() {
       >
         <a
           href="/#therapists"
+          onClick={() => trackEvent('therapist_explore_click', { source: 'journal_cta' })}
           style={{
             minWidth: "190px",
             height: "56px",
@@ -80,6 +83,7 @@ export default function JournalCTA() {
           href="https://line.me/R/ti/p/@637fbbyh"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackEvent('reservation_intent', { source: 'journal_cta' })}
           style={{
             minWidth: "190px",
             height: "56px",

@@ -118,7 +118,11 @@ export default function RootLayout({ children }) {
 
           gtag('js', new Date());
 
-          gtag('config', 'G-4E0CTT77GH');
+          gtag('config', 'G-4E0CTT77GH', {
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false,
+          });
         `}
       </Script>
     </body>

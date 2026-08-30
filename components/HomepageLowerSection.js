@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import TrackedLink from './TrackedLink'
 import styles from './HomepageLowerSection.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -78,9 +79,14 @@ export default function HomepageLowerSection() {
           </li>
         </ol>
 
-        <a className={styles.outlineCta} href="/reservation">
+        <TrackedLink
+          className={styles.outlineCta}
+          href="/reservation"
+          eventName="reservation_guide_click"
+          eventParameters={{ source: 'homepage_reservation_flow' }}
+        >
           查看完整預約說明
-        </a>
+        </TrackedLink>
       </section>
 
       <section className={styles.spaceSection} id="space-preview" aria-labelledby="space-preview-title">
@@ -89,7 +95,12 @@ export default function HomepageLowerSection() {
           <h2 id="space-preview-title">空間與位置</h2>
         </div>
 
-        <a className={styles.spaceCard} href="/space">
+        <TrackedLink
+          className={styles.spaceCard}
+          href="/space"
+          eventName="space_click"
+          eventParameters={{ source: 'homepage_space_card' }}
+        >
           <div className={styles.spaceImages}>
             {spaceImages.map((image, index) => (
               <div className={styles.spaceImage} key={image}>
@@ -111,7 +122,7 @@ export default function HomepageLowerSection() {
             </div>
             <span className={styles.arrow} aria-hidden="true">↗</span>
           </div>
-        </a>
+        </TrackedLink>
       </section>
 
       <section className={styles.locationSection} id="location" aria-labelledby="location-title">
@@ -140,9 +151,16 @@ export default function HomepageLowerSection() {
               <li>步行約 3 分鐘到達指定位置</li>
             </ol>
             <p className={styles.locationPrivacy}>完成預約後提供詳細位置。</p>
-            <a className={styles.locationCta} href={MAPS_URL} target="_blank" rel="noreferrer">
+            <TrackedLink
+              className={styles.locationCta}
+              href={MAPS_URL}
+              target="_blank"
+              rel="noreferrer"
+              eventName="location_map_click"
+              eventParameters={{ source: 'homepage_location_guide' }}
+            >
               開啟 Google Maps <span aria-hidden="true">↗</span>
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </section>
@@ -166,9 +184,14 @@ export default function HomepageLowerSection() {
           ))}
         </div>
 
-        <a className={styles.textLink} href="/faq">
+        <TrackedLink
+          className={styles.textLink}
+          href="/faq"
+          eventName="faq_click"
+          eventParameters={{ source: 'homepage_faq' }}
+        >
           查看完整 FAQ <span aria-hidden="true">→</span>
-        </a>
+        </TrackedLink>
       </section>
 
       <section className={styles.journalSection} id="journal" aria-labelledby="journal-title">
@@ -180,18 +203,29 @@ export default function HomepageLowerSection() {
 
         <div className={styles.journalGrid}>
           {journalItems.map((item, index) => (
-            <a className={styles.journalCard} href={item.href} key={item.href}>
+            <TrackedLink
+              className={styles.journalCard}
+              href={item.href}
+              key={item.href}
+              eventName="journal_article_click"
+              eventParameters={{ source: 'homepage_journal', article: item.href }}
+            >
               <span className={styles.journalIndex}>0{index + 1}</span>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               <span className={styles.arrow} aria-hidden="true">↗</span>
-            </a>
+            </TrackedLink>
           ))}
         </div>
 
-        <a className={styles.textLink} href="/journal">
+        <TrackedLink
+          className={styles.textLink}
+          href="/journal"
+          eventName="journal_index_click"
+          eventParameters={{ source: 'homepage_journal' }}
+        >
           前往 Journal／旅程 <span aria-hidden="true">→</span>
-        </a>
+        </TrackedLink>
       </section>
 
       <footer className={styles.footer}>
@@ -209,11 +243,47 @@ export default function HomepageLowerSection() {
         </div>
 
         <div className={styles.footerActions}>
-          <a href="https://www.instagram.com/profound_room/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://www.threads.com/@profound_room" target="_blank" rel="noreferrer">Threads</a>
-          <a href={LINE_URL} target="_blank" rel="noreferrer">LINE 立即預約</a>
-          <a href="mailto:profoundroom.kh@gmail.com">profoundroom.kh@gmail.com</a>
-          <a href="/reservation">預約說明</a>
+          <TrackedLink
+            href="https://www.instagram.com/profound_room/"
+            target="_blank"
+            rel="noreferrer"
+            eventName="social_click"
+            eventParameters={{ platform: 'instagram', source: 'homepage_footer' }}
+          >
+            Instagram
+          </TrackedLink>
+          <TrackedLink
+            href="https://www.threads.com/@profound_room"
+            target="_blank"
+            rel="noreferrer"
+            eventName="social_click"
+            eventParameters={{ platform: 'threads', source: 'homepage_footer' }}
+          >
+            Threads
+          </TrackedLink>
+          <TrackedLink
+            href={LINE_URL}
+            target="_blank"
+            rel="noreferrer"
+            eventName="reservation_intent"
+            eventParameters={{ source: 'homepage_footer' }}
+          >
+            LINE 立即預約
+          </TrackedLink>
+          <TrackedLink
+            href="mailto:profoundroom.kh@gmail.com"
+            eventName="contact_click"
+            eventParameters={{ platform: 'email', source: 'homepage_footer' }}
+          >
+            profoundroom.kh@gmail.com
+          </TrackedLink>
+          <TrackedLink
+            href="/reservation"
+            eventName="reservation_guide_click"
+            eventParameters={{ source: 'homepage_footer' }}
+          >
+            預約說明
+          </TrackedLink>
         </div>
 
         <p className={styles.footerNote}>Adults Only｜18+　·　預約制男士按摩與私人放鬆空間</p>

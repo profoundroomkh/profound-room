@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import HamburgerMenu from './HamburgerMenu'
+import { trackEvent, trackLanguageSwitch } from './analytics'
 import styles from './Header.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -18,7 +19,9 @@ function clearTranslationCookie() {
 export default function Header() {
   const [open, setOpen] = useState(false)
 
-  const switchLanguage = (language) => {
+  const switchLanguage = (language, source = 'header') => {
+    trackLanguageSwitch(language === 'en' ? 'en' : 'zh-TW', source)
+
     if (language === 'en') {
       document.cookie = `${TRANSLATION_COOKIE}=/zh-TW/en; path=/`
     } else {
@@ -67,17 +70,24 @@ export default function Header() {
               aria-label="語言切換"
               translate="no"
             >
-              <button type="button" onClick={() => switchLanguage('en')}>
+              <button
+                type="button"
+                onClick={() => switchLanguage('en', 'header')}
+              >
                 EN
               </button>
               <span aria-hidden="true">/</span>
-              <button type="button" onClick={() => switchLanguage('zh-TW')}>
+              <button
+                type="button"
+                onClick={() => switchLanguage('zh-TW', 'header')}
+              >
                 中
               </button>
             </div>
-            <a
-              className={styles.reservationLink}
-              href={LINE_URL}
+              <a
+                className={styles.reservationLink}
+                href={LINE_URL}
+                onClick={() => trackEvent('reservation_intent', { source: 'header' })}
               target="_blank"
               rel="noreferrer"
             >

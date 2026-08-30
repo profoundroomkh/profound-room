@@ -6,15 +6,16 @@
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { therapistFilters, therapists } from '../data/therapists'
+import { trackEvent } from './analytics'
 import styles from './TherapistDirectory.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 
-function trackBooking(therapist) {
+function trackBooking(therapist, source = 'therapist_card') {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'line_click', {
-      event_category: 'booking',
-      event_label: therapist.name,
+    window.gtag('event', 'reservation_intent', {
+      source,
+      therapist: therapist.name,
       therapist_id: therapist.id,
     })
   }
@@ -78,15 +79,20 @@ export default function TherapistDirectory() {
     setSelected(therapist)
   }
 
-  const handleBooking = async (therapist) => {
+  const handleBooking = async (therapist, source = 'therapist_card') => {
     if (therapist.status !== 'available') return
 
     const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：90 分鐘／120 分鐘`
-    trackBooking(therapist)
+    trackBooking(therapist, source)
     window.open(LINE_URL, '_blank', 'noopener,noreferrer')
 
     try {
       await navigator.clipboard.writeText(bookingText)
+      trackEvent('reservation_template_copy', {
+        source,
+        therapist: therapist.name,
+        therapist_id: therapist.id,
+      })
       setNotice(`已複製 ${therapist.name} 的預約文字，LINE 已開啟`)
     } catch {
       setNotice(`LINE 已開啟，請告知客服想預約 ${therapist.name}`)
@@ -352,7 +358,7 @@ export default function TherapistDirectory() {
                 type="button"
                 className={styles.modalBookingButton}
                 disabled={selected.status !== 'available'}
-                onClick={() => handleBooking(selected)}
+                  onClick={() => handleBooking(selected, 'therapist_modal')}
               >
                 {selected.status === 'available'
                   ? `複製預約文字並前往 LINE`

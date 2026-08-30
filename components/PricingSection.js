@@ -1,3 +1,4 @@
+import TrackedLink from './TrackedLink'
 import styles from './PricingSection.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -107,9 +108,16 @@ export default function PricingSection() {
         <span>優惠不得併用</span>
       </div>
 
-      <a className={styles.bookingCta} href={LINE_URL} target="_blank" rel="noreferrer">
+      <TrackedLink
+        className={styles.bookingCta}
+        href={LINE_URL}
+        target="_blank"
+        rel="noreferrer"
+        eventName="reservation_intent"
+        eventParameters={{ source: 'pricing_section' }}
+      >
         LINE 立即預約 <span aria-hidden="true">→</span>
-      </a>
+      </TrackedLink>
     </section>
   )
 }

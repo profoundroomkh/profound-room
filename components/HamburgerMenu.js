@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { trackEvent, trackMenuClick } from './analytics'
 import styles from './HamburgerMenu.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -94,7 +95,10 @@ export default function HamburgerMenu({
                     <a
                       key={item.href}
                       href={item.href}
-                      onClick={closeMenu}
+                      onClick={() => {
+                        trackMenuClick(item.label, item.href)
+                        closeMenu()
+                      }}
                       className={`${styles.menuLink} ${index > 0 && group.label === 'SPACE' ? styles.spaceLink : ''}`}
                     >
                       <span className={styles.linkLabel}>{item.label}</span>
@@ -114,15 +118,16 @@ export default function HamburgerMenu({
             href={LINE_URL}
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackEvent('reservation_intent', { source: 'menu' })}
           >
             <span>LINE 立即預約</span>
             <span aria-hidden="true">→</span>
           </a>
 
           <div className={`${styles.languageSwitch} notranslate`} translate="no" aria-label="語言切換">
-            <button type="button" onClick={() => onSwitchLanguage('en')}>EN</button>
+            <button type="button" onClick={() => onSwitchLanguage('en', 'menu')}>EN</button>
             <span aria-hidden="true">/</span>
-            <button type="button" onClick={() => onSwitchLanguage('zh-TW')}>中</button>
+            <button type="button" onClick={() => onSwitchLanguage('zh-TW', 'menu')}>中</button>
           </div>
 
           <p className={styles.menuNote}>Adults Only｜18+　·　預約制男士按摩與私人放鬆空間</p>

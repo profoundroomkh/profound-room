@@ -18,9 +18,8 @@ export default function FloatingButton() {
 
   const handleLineClick = () => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'line_click', {
-        event_category: 'booking',
-        event_label: 'FloatingButton',
+      window.gtag('event', 'reservation_intent', {
+        source: 'floating_button',
       })
     }
   }
