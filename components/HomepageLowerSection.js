@@ -1,0 +1,185 @@
+import Image from 'next/image'
+import styles from './HomepageLowerSection.module.css'
+
+const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
+
+const faqs = [
+  {
+    question: '是否採完全預約制？',
+    answer: '是的，PROFOUND ROOM 為高雄完全預約制 Gay SPA 與男士放鬆空間。',
+  },
+  {
+    question: '第一次預約會尷尬嗎？',
+    answer: '許多第一次接觸男士 SPA 的來訪者，也會在預約前感到緊張，但實際進入空間後通常很快就能放鬆。',
+  },
+  {
+    question: '工作室在哪裡？',
+    answer: '位於高雄車站步行約五分鐘，完成預約後將提供完整地址資訊。',
+  },
+  {
+    question: '需要提前多久預約？',
+    answer: '建議提前 1–3 天預約，熱門時段通常較快額滿；提前預約可享有相關折扣。',
+  },
+]
+
+const journalItems = [
+  {
+    title: '第一次男士 SPA，會很尷尬嗎？',
+    description: '第一次接觸男士 SPA 時，真正擔心的往往是空間是否讓人安心。',
+    href: '/journal/first-men-spa-experience',
+  },
+  {
+    title: '男士 SPA 與一般按摩，最大差別是什麼？',
+    description: '真正影響體驗的，往往不是按摩本身，而是空間、節奏與沉浸感。',
+    href: '/journal/mens-spa-vs-normal-massage',
+  },
+  {
+    title: '高雄 Gay SPA 如何選擇？',
+    description: '從預約方式、環境與服務內容，找到適合自己的放鬆空間。',
+    href: '/journal/kaohsiung-gay-spa',
+  },
+]
+
+const spaceImages = [
+  '/images/gallery-1.jpg',
+  '/images/gallery-2.jpg',
+  '/images/gallery-3.jpg',
+]
+
+export default function HomepageLowerSection() {
+  return (
+    <div className={styles.lowerSection}>
+      <section className={styles.reservationSection} id="reservation-flow" aria-labelledby="reservation-flow-title">
+        <div className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>RESERVATION FLOW</p>
+          <h2 id="reservation-flow-title">預約流程</h2>
+          <p className={styles.sectionLead}>四個步驟，讓第一次來訪也能輕鬆開始。</p>
+        </div>
+
+        <ol className={styles.steps}>
+          <li>
+            <span className={styles.stepNumber}>01</span>
+            <strong>加入官方 LINE</strong>
+          </li>
+          <li>
+            <span className={styles.stepNumber}>02</span>
+            <strong>提供日期與時段</strong>
+          </li>
+          <li>
+            <span className={styles.stepNumber}>03</span>
+            <strong>客服確認時段</strong>
+          </li>
+          <li>
+            <span className={styles.stepNumber}>04</span>
+            <strong>取得詳細位置</strong>
+          </li>
+        </ol>
+
+        <a className={styles.outlineCta} href="/reservation">
+          查看完整預約說明
+        </a>
+      </section>
+
+      <section className={styles.spaceSection} id="space-preview" aria-labelledby="space-preview-title">
+        <div className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>SPACE & LOCATION</p>
+          <h2 id="space-preview-title">空間與位置</h2>
+        </div>
+
+        <a className={styles.spaceCard} href="/space">
+          <div className={styles.spaceImages}>
+            {spaceImages.map((image, index) => (
+              <div className={styles.spaceImage} key={image}>
+                <Image
+                  src={image}
+                  alt={`高雄 Gay SPA 空間氛圍 ${index + 1}`}
+                  fill
+                  sizes="(max-width: 700px) 100vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
+          <div className={styles.spaceCopy}>
+            <div>
+              <p className={styles.cardKicker}>PROFOUND ROOM</p>
+              <h3>安靜、隱私、專業的男士放鬆空間</h3>
+              <p>高雄車站附近｜步行約五分鐘</p>
+              <p>完成預約後提供詳細位置。</p>
+            </div>
+            <span className={styles.arrow} aria-hidden="true">↗</span>
+          </div>
+        </a>
+      </section>
+
+      <section className={styles.faqSection} id="faq" aria-labelledby="faq-title">
+        <div className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>RESERVATION GUIDE</p>
+          <h2 id="faq-title">常見問題</h2>
+          <p className={styles.sectionLead}>預約前想先了解的事，都整理在這裡。</p>
+        </div>
+
+        <div className={styles.faqList}>
+          {faqs.map((faq) => (
+            <details className={styles.faqItem} key={faq.question}>
+              <summary>
+                <span>{faq.question}</span>
+                <span className={styles.faqIcon} aria-hidden="true">+</span>
+              </summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+
+        <a className={styles.textLink} href="/faq">
+          查看完整 FAQ <span aria-hidden="true">→</span>
+        </a>
+      </section>
+
+      <section className={styles.journalSection} id="journal" aria-labelledby="journal-title">
+        <div className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>JOURNAL</p>
+          <h2 id="journal-title">Deep Night Journal</h2>
+          <p className={styles.sectionLead}>在進入深寓之前，先讀一點關於放鬆的文字。</p>
+        </div>
+
+        <div className={styles.journalGrid}>
+          {journalItems.map((item, index) => (
+            <a className={styles.journalCard} href={item.href} key={item.href}>
+              <span className={styles.journalIndex}>0{index + 1}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <span className={styles.arrow} aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+
+        <a className={styles.textLink} href="/journal">
+          前往 Journal／旅程 <span aria-hidden="true">→</span>
+        </a>
+      </section>
+
+      <footer className={styles.footer}>
+        <div className={styles.footerBrand}>
+          <Image
+            src="/images/profound-logo-symbol.png"
+            alt="深寓 PROFOUND ROOM"
+            width={64}
+            height={68}
+          />
+          <div>
+            <strong>深寓</strong>
+            <span>Profound Room</span>
+          </div>
+        </div>
+
+        <div className={styles.footerActions}>
+          <a href={LINE_URL} target="_blank" rel="noreferrer">LINE 立即預約</a>
+          <a href="mailto:profoundroom.kh@gmail.com">profoundroom.kh@gmail.com</a>
+          <a href="/reservation">預約說明</a>
+        </div>
+
+        <p className={styles.footerNote}>Adults Only｜18+　·　預約制男士按摩與私人放鬆空間</p>
+      </footer>
+    </div>
+  )
+}
