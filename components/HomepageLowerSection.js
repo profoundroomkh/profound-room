@@ -47,7 +47,7 @@ const journalItems = [
 ]
 
 const MAPS_URL = 'https://maps.app.goo.gl/nHKfNSoZax1qx7V36?g_st=ic'
-const LOCATION_MAP = '/images/location-guide-map.png'
+const LOCATION_MAP = '/images/location-guide-map.jpg'
 
 export default function HomepageLowerSection() {
   return (
