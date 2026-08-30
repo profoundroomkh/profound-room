@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: '工作室在哪裡？',
-    answer: '位於高雄車站步行約五分鐘，完成預約後將提供完整地址資訊。',
+    answer: '從高雄車站 1 號出口往左走建國路，步行約 3 分鐘；完成預約後將提供完整地址資訊。',
   },
   {
     question: '需要提前多久預約？',
@@ -40,11 +40,14 @@ const journalItems = [
   },
 ]
 
-const spaceImages = [
+  const spaceImages = [
   '/images/gallery-1.jpg',
   '/images/gallery-2.jpg',
   '/images/gallery-3.jpg',
 ]
+
+const MAPS_URL = 'https://maps.app.goo.gl/nHKfNSoZax1qx7V36?g_st=ic'
+const LOCATION_MAP = '/images/location-guide-map.png'
 
 export default function HomepageLowerSection() {
   return (
@@ -103,12 +106,45 @@ export default function HomepageLowerSection() {
             <div>
               <p className={styles.cardKicker}>PROFOUND ROOM</p>
               <h3>安靜、隱私、專業的男士放鬆空間</h3>
-              <p>高雄車站附近｜步行約五分鐘</p>
+              <p>高雄車站 1 號出口往左｜步行約 3 分鐘</p>
               <p>完成預約後提供詳細位置。</p>
             </div>
             <span className={styles.arrow} aria-hidden="true">↗</span>
           </div>
         </a>
+      </section>
+
+      <section className={styles.locationSection} id="location" aria-labelledby="location-title">
+        <div className={styles.sectionHeading}>
+          <p className={styles.eyebrow}>LOCATION GUIDE</p>
+          <h2 id="location-title">位置引導</h2>
+          <p className={styles.sectionLead}>完成預約後提供詳細位置，從高雄車站前往約 3 分鐘。</p>
+        </div>
+
+        <div className={styles.locationCard}>
+          <div className={styles.locationMap}>
+            <Image
+              src={LOCATION_MAP}
+              alt="高雄車站 1 號出口往建國路與中山路方向的步行指引地圖"
+              fill
+              sizes="(max-width: 700px) 100vw, 680px"
+            />
+          </div>
+
+          <div className={styles.locationDetails}>
+            <h3>高雄車站往建國路、中山路方向出口</h3>
+            <p className={styles.locationRoute}>往左走約 3 分鐘即可到達</p>
+            <ol className={styles.locationSteps}>
+              <li>從 1 號出口出來</li>
+              <li>往左走建國路</li>
+              <li>步行約 3 分鐘到達指定位置</li>
+            </ol>
+            <p className={styles.locationPrivacy}>完成預約後提供詳細位置。</p>
+            <a className={styles.locationCta} href={MAPS_URL} target="_blank" rel="noreferrer">
+              開啟 Google Maps <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
       </section>
 
       <section className={styles.faqSection} id="faq" aria-labelledby="faq-title">
