@@ -7,4 +7,24 @@ body {
   color: white;
   margin: 0;
   font-family: Arial, sans-serif;
+  top: 0 !important;
+}
+
+/* Keep the translation engine available without exposing its default selector. */
+.googleTranslateElement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: transparent !important;
+  box-shadow: none !important;
 }

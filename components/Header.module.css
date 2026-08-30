@@ -99,14 +99,14 @@
 }
 
 .menuButton:active,
-.languageButton:active,
+.languageSwitch button:active,
 .reservationLink:active {
   transform: scale(0.97);
 }
 
 .menuButton:focus-visible,
 .logoLink:focus-visible,
-.languageButton:focus-visible,
+.languageSwitch button:focus-visible,
 .reservationLink:focus-visible {
   outline: 2px solid #d8b89f;
   outline-offset: 3px;
@@ -131,28 +131,36 @@
   gap: 7px;
 }
 
-.languageButton {
+.languageSwitch {
   display: inline-flex;
-  min-width: 34px;
-  min-height: 34px;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
+  color: #8f7a6b;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+}
+
+.languageSwitch button {
+  min-width: 24px;
+  min-height: 30px;
   padding: 0;
-  border: 1px solid rgba(185, 151, 125, 0.38);
-  border-radius: 50%;
+  border: 0;
   background: transparent;
   color: #cdb8a5;
   cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: 9px;
+  font: inherit;
   letter-spacing: 0.05em;
   transition:
-    transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
-    background 180ms cubic-bezier(0.23, 1, 0.32, 1);
+    color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.languageButton:hover {
-  background: rgba(185, 151, 125, 0.14);
+.languageSwitch button:hover {
+  color: #f2e1d0;
+}
+
+.languageSwitch span {
+  color: rgba(185, 151, 125, 0.42);
 }
 
 .reservationLink {
@@ -245,9 +253,14 @@
     gap: 4px;
   }
 
-  .languageButton {
-    min-width: 30px;
-    min-height: 30px;
+  .languageSwitch {
+    gap: 2px;
+  }
+
+  .languageSwitch button {
+    min-width: 20px;
+    min-height: 28px;
+    font-size: 8px;
   }
 
   .reservationLink {
@@ -267,7 +280,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .menuButton,
-  .languageButton,
+  .languageSwitch button,
   .reservationLink {
     transition: none;
   }

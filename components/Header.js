@@ -6,13 +6,26 @@ import HamburgerMenu from './HamburgerMenu'
 import styles from './Header.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
+const TRANSLATION_COOKIE = 'googtrans'
+
+function clearTranslationCookie() {
+  document.cookie = `${TRANSLATION_COOKIE}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`
+  if (window.location.hostname) {
+    document.cookie = `${TRANSLATION_COOKIE}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${window.location.hostname}`
+  }
+}
 
 export default function Header() {
   const [open, setOpen] = useState(false)
 
-  const openEnglishVersion = () => {
-    const translatedUrl = `https://translate.google.com/translate?sl=zh-TW&tl=en&u=${encodeURIComponent(window.location.href)}`
-    window.location.href = translatedUrl
+  const switchLanguage = (language) => {
+    if (language === 'en') {
+      document.cookie = `${TRANSLATION_COOKIE}=/zh-TW/en; path=/`
+    } else {
+      clearTranslationCookie()
+    }
+
+    window.location.reload()
   }
 
   return (
@@ -49,14 +62,19 @@ export default function Header() {
           </button>
 
           <div className={styles.headerActions}>
-            <button
-              className={styles.languageButton}
-              type="button"
-              onClick={openEnglishVersion}
-              aria-label="切換英文版"
+            <div
+              className={`${styles.languageSwitch} notranslate`}
+              aria-label="語言切換"
+              translate="no"
             >
-              EN
-            </button>
+              <button type="button" onClick={() => switchLanguage('en')}>
+                EN
+              </button>
+              <span aria-hidden="true">/</span>
+              <button type="button" onClick={() => switchLanguage('zh-TW')}>
+                中
+              </button>
+            </div>
             <a
               className={styles.reservationLink}
               href={LINE_URL}

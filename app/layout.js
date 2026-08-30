@@ -77,11 +77,30 @@ robots: {
 export default function RootLayout({ children }) {
  return (
   <html lang="zh-Hant">
-    <body>
+        <body>
       <FloatingButton />
-
+      <div id="google_translate_element" className="googleTranslateElement" aria-hidden="true" />
       {children}
-
+      <Script id="google-translate-init" strategy="afterInteractive">
+        {`
+          window.googleTranslateElementInit = function () {
+            if (window.google && window.google.translate) {
+              new window.google.translate.TranslateElement(
+                {
+                  pageLanguage: 'zh-TW',
+                  includedLanguages: 'en',
+                  autoDisplay: false,
+                },
+                'google_translate_element'
+              );
+            }
+          };
+        `}
+      </Script>
+      <Script
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        strategy="afterInteractive"
+      />
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-4E0CTT77GH"
         strategy="afterInteractive"
