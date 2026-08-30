@@ -1,82 +1,57 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 import HamburgerMenu from './HamburgerMenu'
+import styles from './Header.module.css'
+
+const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
     <>
-      <header
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          zIndex: 999,
-          background: 'rgba(5,5,5,0.92)',
-          backdropFilter: 'blur(12px)',
-          borderBottom:
-            '1px solid rgba(255,255,255,0.06)',
-        }}
-      >
-        <div
-          style={{
-            position: 'relative',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '18px 18px',
-            color: '#f2e1d0',
-          }}
-        >
+      <header className={styles.header}>
+        <div className={styles.headerInner}>
+          <a className={styles.logoLink} href="/" aria-label="回到深寓首頁">
+            <Image
+              src="/images/profound-logo-lockup.png"
+              alt="深寓 PROFOUND ROOM GAY SPA"
+              width={180}
+              height={43}
+              priority
+            />
+          </a>
+
           <button
+            className={styles.menuButton}
+            type="button"
             onClick={() => setOpen(true)}
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: '#f2e1d0',
-              letterSpacing: '3px',
-              fontSize: '12px',
-              cursor: 'pointer',
-            }}
+            aria-label="開啟網站選單"
+            aria-expanded={open}
           >
-            ☰ MENU
+            <span className={styles.menuIcon} aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </span>
+            <span>MENU</span>
           </button>
 
-          <div
-            style={{
-              position: 'absolute',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              letterSpacing: '4px',
-              fontSize: '12px',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            PROFOUND ROOM
-          </div>
-
           <a
-            href='https://line.me/R/ti/p/@637fbbyh'
-            target='_blank'
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              letterSpacing: '2px',
-              fontSize: '12px',
-            }}
+            className={styles.reservationLink}
+            href={LINE_URL}
+            target="_blank"
+            rel="noreferrer"
           >
-            LINE 立即預約
+            <span className={styles.reservationLong}>LINE 立即預約</span>
+            <span className={styles.reservationShort}>LINE</span>
           </a>
         </div>
       </header>
 
-      <HamburgerMenu
-        open={open}
-        setOpen={setOpen}
-      />
+      <HamburgerMenu open={open} setOpen={setOpen} />
     </>
   )
 }
