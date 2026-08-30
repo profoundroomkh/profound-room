@@ -1,0 +1,342 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #050505;
+  color: #f2e1d0;
+}
+
+.heroBackdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(5, 5, 5, 0.82) 0%, rgba(5, 5, 5, 0.72) 42%, rgba(5, 5, 5, 0.97) 100%),
+    url('/images/hero-1.jpg') center / cover no-repeat;
+  filter: saturate(0.72) contrast(0.96);
+  transform: scale(1.04);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  max-width: 620px;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 116px 20px 56px;
+  align-content: center;
+  gap: 24px;
+}
+
+.heroCopy {
+  text-align: center;
+}
+
+.eyebrow,
+.introLabel {
+  margin: 0 0 16px;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+}
+
+.heroCopy h1 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: clamp(46px, 13vw, 82px);
+  font-weight: 300;
+  line-height: 1.02;
+  letter-spacing: 0.04em;
+}
+
+.heroCopy h2 {
+  margin: 12px 0 16px;
+  color: #e3cfbd;
+  font-size: clamp(24px, 7vw, 38px);
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.positioning {
+  margin: 0;
+  color: #b8a594;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.heroActions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.primaryAction,
+.secondaryAction,
+.supportDetails a {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition:
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    background 180ms cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.primaryAction {
+  background: #b9977d;
+  color: #080808;
+}
+
+.secondaryAction {
+  border: 1px solid rgba(185, 151, 125, 0.48);
+  color: #e5d4c3;
+}
+
+.primaryAction:active,
+.secondaryAction:active,
+.supportDetails a:active,
+.ageConfirm:active,
+.ageLeave:active {
+  transform: scale(0.97);
+}
+
+.supportCard,
+.introCard {
+  border: 1px solid rgba(185, 151, 125, 0.25);
+  border-radius: 22px;
+  background: rgba(15, 14, 13, 0.76);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(16px);
+}
+
+.supportCard {
+  padding: 20px;
+}
+
+.supportHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.supportHeading p {
+  margin: 0;
+  color: #9f8978;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+.supportHeading span {
+  color: #d3b9a2;
+  font-size: 14px;
+}
+
+.supportMain {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.supportPhoto {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid rgba(185, 151, 125, 0.36);
+  border-radius: 50%;
+  background: #090909;
+}
+
+.supportPhoto img {
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.82) contrast(0.98) brightness(0.9);
+}
+
+.supportDetails h2 {
+  margin: 0 0 5px;
+  color: #f2e1d0;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.supportDetails p {
+  margin: 2px 0;
+  color: #cdb8a6;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+.supportDetails a {
+  min-height: 36px;
+  margin-top: 12px;
+  padding: 0 16px;
+  background: rgba(185, 151, 125, 0.12);
+  border: 1px solid rgba(185, 151, 125, 0.5);
+  color: #e3cbb8;
+  font-size: 11px;
+}
+
+.introCard {
+  padding: 24px;
+}
+
+.introLabel {
+  margin-bottom: 12px;
+}
+
+.introCard h2 {
+  margin: 0 0 12px;
+  color: #f2e1d0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.introCard p:last-child {
+  margin: 0;
+  color: #c9b8aa;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.ageGateBackdrop {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.ageGate {
+  width: min(100%, 430px);
+  padding: 34px 24px 26px;
+  border: 1px solid rgba(185, 151, 125, 0.5);
+  border-radius: 22px;
+  background: #151311;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.ageGateMark {
+  margin: 0;
+  color: #d8b89f;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.ageGateBrand {
+  margin: 5px 0 28px;
+  color: #a68d7a;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+}
+
+.ageGate h2 {
+  margin: 0 0 18px;
+  color: #f2e1d0;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.ageGateCopy {
+  margin: 0 0 28px;
+  color: #cdbbae;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.ageConfirm,
+.ageLeave {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition:
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    background 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.ageConfirm {
+  border: 1px solid #b9977d;
+  background: #b9977d;
+  color: #080808;
+  cursor: pointer;
+}
+
+.ageLeave {
+  min-height: 42px;
+  margin-top: 10px;
+  border: 1px solid rgba(185, 151, 125, 0.5);
+  color: #d8c2af;
+}
+
+@media (min-width: 680px) {
+  .heroInner {
+    max-width: 940px;
+    padding: 132px 32px 72px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(310px, 0.9fr);
+    align-items: center;
+    gap: 26px 56px;
+  }
+
+  .heroCopy {
+    text-align: left;
+  }
+
+  .heroActions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .supportCard,
+  .introCard {
+    grid-column: 2;
+  }
+
+  .supportCard {
+    grid-row: 1;
+  }
+
+  .introCard {
+    grid-row: 2;
+  }
+
+  .heroCopy {
+    grid-row: 1 / span 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryAction,
+  .secondaryAction,
+  .supportDetails a,
+  .ageConfirm,
+  .ageLeave {
+    transition: none;
+  }
+}
