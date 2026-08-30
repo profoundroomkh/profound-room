@@ -173,6 +173,8 @@ export default function HomepageLowerSection() {
         </div>
 
         <div className={styles.footerActions}>
+          <a href="https://www.instagram.com/profound_room/" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.threads.com/@profound_room" target="_blank" rel="noreferrer">Threads</a>
           <a href={LINE_URL} target="_blank" rel="noreferrer">LINE 立即預約</a>
           <a href="mailto:profoundroom.kh@gmail.com">profoundroom.kh@gmail.com</a>
           <a href="/reservation">預約說明</a>
