@@ -16,12 +16,13 @@ export default function Header() {
         <div className={styles.headerInner}>
           <a className={styles.logoLink} href="/" aria-label="回到深寓首頁">
             <Image
-              src="/images/profound-logo-lockup.png"
-              alt="深寓 PROFOUND ROOM GAY SPA"
-              width={180}
-              height={43}
+              src="/images/profound-logo-mark.png"
+              alt="深寓"
+              width={72}
+              height={92}
               priority
             />
+            <span>Profound Room</span>
           </a>
 
           <button
