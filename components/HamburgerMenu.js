@@ -1,272 +1,133 @@
 'use client'
 
+import Image from 'next/image'
+import styles from './HamburgerMenu.module.css'
+
+const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
+
+const menuGroups = [
+  {
+    label: 'EXPLORE',
+    items: [
+      { label: '首頁', english: 'Home', href: '/' },
+      { label: '師傅團隊', english: 'Therapists', href: '/#therapists' },
+      { label: '價目方案', english: 'Courses & Plans', href: '/#pricing' },
+    ],
+  },
+  {
+    label: 'SPACE',
+    items: [
+      { label: '空間介紹', english: 'Space', href: '/space' },
+      { label: '空間氛圍', english: 'Atmosphere', href: '/space/atmosphere' },
+      { label: '沐浴空間', english: 'Bath', href: '/space/bath' },
+      { label: '私人房間', english: 'Private Room', href: '/space/private-room' },
+      { label: '空間細節', english: 'Details', href: '/space/detail' },
+    ],
+  },
+  {
+    label: 'EXPERIENCE',
+    items: [
+      { label: '預約方式', english: 'Reservation Guide', href: '/reservation' },
+      { label: 'FAQ 常見問題', english: 'FAQ', href: '/faq' },
+      { label: 'Journal／旅程', english: 'Journal / Journey', href: '/journal' },
+      { label: '招募師傅', english: 'Recruitment', href: '/recruit' },
+    ],
+  },
+]
+
 export default function HamburgerMenu({
   open,
   setOpen,
+  onSwitchLanguage,
 }) {
   if (!open) return null
 
+  const closeMenu = () => setOpen(false)
+
   return (
-    <div
-      style={{
-        position: 'fixed',
-        inset: 0,
-        background: '#050505',
-        zIndex: 9999,
-        color: '#f2e1d0',
-        padding: '40px 28px 80px',
-        overflowY: 'auto',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginBottom: '90px',
-        }}
-      >
-        <div
-          style={{
-            letterSpacing: '4px',
-            fontSize: '12px',
-            color: '#cbb79d',
-          }}
-        >
-          PROFOUND ROOM
+    <div className={styles.menuOverlay} role="dialog" aria-modal="true" aria-label="網站選單">
+      <button
+        type="button"
+        className={styles.backdrop}
+        onClick={closeMenu}
+        aria-label="關閉網站選單"
+      />
+
+      <aside className={styles.menuPanel}>
+        <div className={styles.menuHeader}>
+          <a className={styles.menuBrand} href="/" onClick={closeMenu} aria-label="回到深寓首頁">
+            <Image
+              src="/images/profound-logo-symbol.png"
+              alt=""
+              width={48}
+              height={48}
+              priority
+            />
+            <span className={styles.brandCopy}>
+              <strong>深寓</strong>
+              <em>Profound Room</em>
+            </span>
+          </a>
+
+          <button
+            type="button"
+            className={styles.closeButton}
+            onClick={closeMenu}
+            aria-label="關閉網站選單"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
         </div>
 
-        <button
-          onClick={() => setOpen(false)}
-          style={{
-            background: 'transparent',
-            border: 'none',
-            color: '#f2e1d0',
-            fontSize: '30px',
-            cursor: 'pointer',
-          }}
-        >
-          ✕
-        </button>
-      </div>
+        <div className={styles.menuScrollArea}>
+          <div className={styles.menuIntro}>
+            <span className={styles.menuKicker}>MENU</span>
+            <span className={styles.menuRule} aria-hidden="true" />
+          </div>
 
-      <div style={{ marginBottom: '90px' }}>
-        <p
-          style={{
-            color: '#8d7964',
-            letterSpacing: '5px',
-            marginBottom: '26px',
-            fontSize: '12px',
-          }}
-        >
-          SPACE
-        </p>
-
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '24px',
-          }}
-        >
-          <a
-            href='/'
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
-          >
-            首頁
-          </a>
-<a
-  href='/#therapists'
-  onClick={() => setOpen(false)}
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-    fontSize: '28px',
-    fontWeight: '300',
-  }}
->
-  師傅團隊
-</a>
-
-<a
-  href='/#pricing'
-  onClick={() => setOpen(false)}
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-    fontSize: '28px',
-    fontWeight: '300',
-  }}
->
-  價目方案
-</a>
-          <a
-            href='/space'
-onClick={() => setOpen(false)}
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
-          >
-            空間氛圍
-          </a>
-
-          <a
-            href='/space'
-onClick={() => setOpen(false)}
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
-          >
-            沐浴空間
-          </a>
-
-          <a
-            href='/space'
-onClick={() => setOpen(false)}
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
-          >
-            私人房間
-          </a>
-
-          <a
-            href='/space'
-onClick={() => setOpen(false)}
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
-          >
-            空間細節
-          </a>
+          <nav aria-label="主要網站導覽" className={styles.menuNav}>
+            {menuGroups.map((group) => (
+              <section key={group.label} className={styles.menuGroup}>
+                <p className={styles.groupLabel}>{group.label}</p>
+                <div className={styles.groupLinks}>
+                  {group.items.map((item, index) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className={`${styles.menuLink} ${index > 0 && group.label === 'SPACE' ? styles.spaceLink : ''}`}
+                    >
+                      <span className={styles.linkLabel}>{item.label}</span>
+                      <span className={styles.linkEnglish}>{item.english}</span>
+                      <span className={styles.linkArrow} aria-hidden="true">↗</span>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </nav>
         </div>
-      </div>
 
-      <div style={{ marginBottom: '90px' }}>
-        <p
-          style={{
-            color: '#8d7964',
-            letterSpacing: '5px',
-            marginBottom: '26px',
-            fontSize: '12px',
-          }}
-        >
-          EXPERIENCE
-        </p>
-
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '24px',
-          }}
-        >
+        <div className={styles.menuFooter}>
           <a
-            href='/reservation'
-onClick={() => setOpen(false)}
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
+            className={styles.menuCta}
+            href={LINE_URL}
+            target="_blank"
+            rel="noreferrer"
           >
-            預約方式
+            <span>LINE 立即預約</span>
+            <span aria-hidden="true">→</span>
           </a>
 
-          <a
-            href='/faq'
-onClick={() => setOpen(false)}
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
-          >
-            FAQ 常見問題
-          </a>
+          <div className={`${styles.languageSwitch} notranslate`} translate="no" aria-label="語言切換">
+            <button type="button" onClick={() => onSwitchLanguage('en')}>EN</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" onClick={() => onSwitchLanguage('zh-TW')}>中</button>
+          </div>
 
-          <a
-            href='/space'
-onClick={() => setOpen(false)}
-            style={{
-              color: '#f2e1d0',
-              textDecoration: 'none',
-              fontSize: '28px',
-              fontWeight: '300',
-            }}
-          >
-            環境照片
-          </a>
-
-         <a
-  href='/journal'
-onClick={() => setOpen(false)}
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-    fontSize: '28px',
-    fontWeight: '300',
-  }}
->
-  深夜日誌
-</a>
-
-<a
-  href='/recruit'
-onClick={() => setOpen(false)}
-  style={{
-    color: '#f2e1d0',
-    textDecoration: 'none',
-    fontSize: '28px',
-    fontWeight: '300',
-  }}
->
-  招募師傅
-</a>
+          <p className={styles.menuNote}>Adults Only｜18+　·　預約制男士按摩與私人放鬆空間</p>
         </div>
-      </div>
-
-      <div
-        style={{
-          borderTop:
-            '1px solid rgba(255,255,255,0.08)',
-          paddingTop: '40px',
-        }}
-      >
-        <p
-          style={{
-            color: 'rgba(255,255,255,0.42)',
-            lineHeight: '2.2',
-            maxWidth: '620px',
-            fontSize: '14px',
-          }}
-        >
-          PROFOUND ROOM is a private Gay SPA
-          and men’s relaxation space in
-          Kaohsiung, designed for deep rest,
-          quiet moments, and immersive
-          atmosphere.
-        </p>
-      </div>
+      </aside>
     </div>
   )
 }

@@ -88,7 +88,11 @@ export default function Header() {
         </div>
       </header>
 
-      <HamburgerMenu open={open} setOpen={setOpen} />
+      <HamburgerMenu
+        open={open}
+        setOpen={setOpen}
+        onSwitchLanguage={switchLanguage}
+      />
     </>
   )
 }

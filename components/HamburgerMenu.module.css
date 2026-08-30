@@ -1,0 +1,330 @@
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+  isolation: isolate;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.78);
+  cursor: pointer;
+}
+
+.menuPanel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 500px);
+  min-height: 100%;
+  color: #f2e1d0;
+  background:
+    linear-gradient(180deg, rgba(35, 30, 26, 0.98), rgba(16, 14, 13, 0.99)),
+    #161311;
+  border-left: 1px solid rgba(203, 183, 157, 0.24);
+  box-shadow: -20px 0 70px rgba(0, 0, 0, 0.38);
+  animation: menuIn 240ms ease-out both;
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 92px;
+  padding: max(18px, env(safe-area-inset-top)) 24px 18px;
+  border-bottom: 1px solid rgba(242, 225, 208, 0.12);
+}
+
+.menuBrand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menuBrand img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.brandCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brandCopy strong {
+  color: #e0c8ad;
+  font-family: 'Noto Serif TC', 'Songti TC', serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.brandCopy em {
+  color: rgba(242, 225, 208, 0.56);
+  font-family: Georgia, serif;
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.closeButton {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(242, 225, 208, 0.22);
+  border-radius: 50%;
+  color: #e0c8ad;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+  border-color: rgba(242, 225, 208, 0.55);
+  background: rgba(203, 183, 157, 0.1);
+  outline: none;
+}
+
+.closeButton span {
+  margin-top: -4px;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.menuScrollArea {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 24px 16px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(203, 183, 157, 0.42) transparent;
+}
+
+.menuIntro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 30px;
+}
+
+.menuKicker,
+.groupLabel {
+  color: #a9947d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.menuRule {
+  width: 42px;
+  height: 1px;
+  background: rgba(203, 183, 157, 0.36);
+}
+
+.menuNav {
+  display: grid;
+  gap: 32px;
+}
+
+.menuGroup {
+  display: grid;
+  gap: 12px;
+}
+
+.groupLabel {
+  margin: 0;
+  color: rgba(203, 183, 157, 0.68);
+}
+
+.groupLinks {
+  display: grid;
+  gap: 4px;
+}
+
+.menuLink {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 58px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  color: #f2e1d0;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.menuLink:hover,
+.menuLink:focus-visible {
+  color: #fff5eb;
+  background: rgba(203, 183, 157, 0.1);
+  outline: none;
+  transform: translateX(3px);
+}
+
+.linkLabel {
+  font-family: 'Noto Serif TC', 'Songti TC', serif;
+  font-size: clamp(20px, 5vw, 24px);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+}
+
+.linkEnglish {
+  color: rgba(242, 225, 208, 0.48);
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-align: right;
+}
+
+.linkArrow {
+  width: 22px;
+  color: rgba(203, 183, 157, 0.55);
+  font-size: 18px;
+  line-height: 1;
+  text-align: right;
+}
+
+.spaceLink {
+  min-height: 46px;
+  padding-left: 28px;
+}
+
+.spaceLink .linkLabel {
+  color: rgba(242, 225, 208, 0.78);
+  font-size: 18px;
+}
+
+.menuFooter {
+  display: grid;
+  gap: 18px;
+  padding: 20px 24px max(24px, env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(242, 225, 208, 0.12);
+  background: rgba(10, 9, 8, 0.46);
+}
+
+.menuCta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0 20px;
+  border: 1px solid rgba(203, 183, 157, 0.42);
+  border-radius: 999px;
+  color: #211b17;
+  background: #b5a28e;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.menuCta:hover,
+.menuCta:focus-visible {
+  filter: brightness(1.08);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.languageSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(242, 225, 208, 0.48);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.languageSwitch button {
+  padding: 6px 8px;
+  border: 0;
+  color: #e0c8ad;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.languageSwitch button:hover,
+.languageSwitch button:focus-visible {
+  color: #fff5eb;
+  outline: 1px solid rgba(203, 183, 157, 0.36);
+  outline-offset: 3px;
+}
+
+.menuNote {
+  margin: 0;
+  color: rgba(242, 225, 208, 0.4);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 720px) {
+  .menuPanel {
+    width: min(500px, 48vw);
+  }
+
+  .menuHeader {
+    min-height: 100px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .menuScrollArea {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .menuFooter {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menuPanel,
+  .menuLink,
+  .menuCta {
+    animation: none;
+    transition: none;
+  }
+}
