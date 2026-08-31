@@ -124,6 +124,27 @@
   margin-top: 10px;
 }
 
+.depositCard {
+  background: rgba(66, 49, 41, 0.72);
+}
+
+.depositEyebrow {
+  color: #c9ab94 !important;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+}
+
+.depositMain {
+  color: #ead8c6 !important;
+  font-size: 17px;
+}
+
+.divider {
+  height: 1px;
+  margin: 20px 0;
+  background: rgba(173, 146, 125, 0.24);
+}
+
 .booking-template {
   display: grid;
   gap: 16px;

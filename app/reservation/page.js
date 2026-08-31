@@ -96,7 +96,13 @@ export default function ReservationPage() {
             <h2 className={styles.sectionHeading} id="appointment-only-title">
               預約前請先知道
             </h2>
-            <div className={styles.infoCard}>
+            <div className={`${styles.infoCard} ${styles.depositCard}`}>
+              <p className={styles.depositEyebrow}>首次預約提醒</p>
+              <p className={styles.depositMain}>
+                尚未消費過的客人，預約需先匯訂金 NT$500。
+              </p>
+              <p>完成消費後，於結帳時折抵 NT$500。</p>
+              <div className={styles.divider} aria-hidden="true" />
               <p>本館採完全預約制，不接受現場臨時來訪。</p>
               <p>客服確認日期與時段後，才算完成預約。</p>
               <p>若需改期或取消，請提前告知，以利安排後續時段。</p>
