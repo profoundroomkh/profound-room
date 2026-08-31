@@ -1,0 +1,218 @@
+.page {
+  min-height: 100vh;
+  padding: 116px 20px 96px;
+  background: #050505;
+  color: #f2e1d0;
+}
+
+.shell {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #a98973;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+}
+
+.title {
+  margin: 0;
+  color: #ead8c6;
+  font-size: clamp(42px, 13vw, 72px);
+  font-weight: 300;
+  line-height: 1.05;
+}
+
+.lead {
+  max-width: 610px;
+  margin: 24px 0 36px;
+  color: rgba(242, 225, 208, 0.72);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.primaryCta,
+.secondaryCta {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 13px 22px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.primaryCta {
+  background: #ad927d;
+  color: #17110e;
+  box-shadow: 0 8px 24px rgba(123, 91, 69, 0.2);
+}
+
+.secondaryCta {
+  border: 1px solid rgba(173, 146, 125, 0.48);
+  color: #d7c0ac;
+}
+
+.primaryCta:hover,
+.secondaryCta:hover {
+  transform: translateY(-1px);
+}
+
+.section {
+  margin-top: 52px;
+}
+
+.sectionHeading {
+  margin: 0 0 18px;
+  color: #ead8c6;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.sectionLead {
+  margin: 0 0 22px;
+  color: rgba(242, 225, 208, 0.62);
+  line-height: 1.75;
+}
+
+.steps {
+  display: grid;
+  gap: 10px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  align-items: center;
+  min-height: 64px;
+  border-top: 1px solid rgba(173, 146, 125, 0.18);
+  padding: 13px 0;
+}
+
+.stepNumber {
+  color: #a98973;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+}
+
+.stepText {
+  color: #e6d5c5;
+  font-size: 16px;
+}
+
+.infoCard,
+.templateCard {
+  border: 1px solid rgba(173, 146, 125, 0.28);
+  border-radius: 18px;
+  background: rgba(31, 24, 21, 0.82);
+  padding: 22px;
+}
+
+.infoCard p {
+  margin: 0;
+  color: rgba(242, 225, 208, 0.76);
+  line-height: 1.85;
+}
+
+.infoCard p + p {
+  margin-top: 10px;
+}
+
+.booking-template {
+  display: grid;
+  gap: 16px;
+  border: 1px solid rgba(173, 146, 125, 0.4);
+  border-radius: 18px;
+  background: rgba(66, 49, 41, 0.55);
+  padding: 22px;
+}
+
+.booking-template__eyebrow {
+  margin: 0 0 8px;
+  color: #a98973;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.booking-template h2 {
+  margin: 0;
+  color: #ead8c6;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.booking-template__intro {
+  margin: 8px 0 0;
+  color: rgba(242, 225, 208, 0.68);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.booking-template pre {
+  overflow-x: auto;
+  margin: 0;
+  border-radius: 12px;
+  background: rgba(5, 5, 5, 0.56);
+  padding: 16px;
+  color: #e8d7c5;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.85;
+  white-space: pre-wrap;
+}
+
+.booking-template button {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(173, 146, 125, 0.6);
+  border-radius: 999px;
+  background: transparent;
+  color: #ead8c6;
+  cursor: pointer;
+  font: inherit;
+}
+
+.locationLine {
+  margin-top: 16px;
+  color: #d7c0ac;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.actions a {
+  width: 100%;
+}
+
+.footerNote {
+  margin: 38px 0 0;
+  color: rgba(242, 225, 208, 0.46);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 150px 32px 120px;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .actions a {
+    width: auto;
+  }
+}

@@ -1,0 +1,144 @@
+.page {
+  min-height: 100vh;
+  padding: 116px 20px 96px;
+  background: #050505;
+  color: #f2e1d0;
+}
+
+.shell {
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #a98973;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+}
+
+.title {
+  margin: 0;
+  color: #ead8c6;
+  font-size: clamp(42px, 13vw, 72px);
+  font-weight: 300;
+  line-height: 1.05;
+}
+
+.lead {
+  max-width: 620px;
+  margin: 24px 0 38px;
+  color: rgba(242, 225, 208, 0.72);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.faqList {
+  display: grid;
+  gap: 12px;
+}
+
+.item {
+  overflow: hidden;
+  border: 1px solid rgba(173, 146, 125, 0.28);
+  border-radius: 18px;
+  background: rgba(31, 24, 21, 0.82);
+}
+
+.item[open] {
+  border-color: rgba(173, 146, 125, 0.52);
+}
+
+.question {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 20px;
+  color: #ead8c6;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.question::-webkit-details-marker {
+  display: none;
+}
+
+.question::after {
+  flex: 0 0 auto;
+  color: #b89a83;
+  content: '+';
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.item[open] .question::after {
+  content: '−';
+}
+
+.answer {
+  margin: 0;
+  border-top: 1px solid rgba(173, 146, 125, 0.18);
+  padding: 18px 20px 22px;
+  color: rgba(242, 225, 208, 0.7);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.answer strong {
+  color: #e6d5c5;
+  font-weight: 400;
+}
+
+.ctaCard {
+  margin-top: 38px;
+  border: 1px solid rgba(173, 146, 125, 0.28);
+  border-radius: 18px;
+  background: rgba(66, 49, 41, 0.55);
+  padding: 22px;
+}
+
+.ctaCard p {
+  margin: 0 0 18px;
+  color: rgba(242, 225, 208, 0.72);
+  line-height: 1.75;
+}
+
+.cta {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #ad927d;
+  padding: 12px 22px;
+  color: #17110e;
+  text-decoration: none;
+}
+
+.secondary {
+  display: inline-block;
+  margin-top: 18px;
+  color: #c9ab94;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 150px 32px 120px;
+  }
+
+  .question {
+    padding: 20px 24px;
+    font-size: 19px;
+  }
+
+  .answer {
+    padding: 20px 24px 24px;
+  }
+}
