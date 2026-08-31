@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { therapistFilters, therapists } from '../data/therapists'
 import { trackEvent } from './analytics'
+import ScrollReveal from './ScrollReveal'
 import styles from './TherapistDirectory.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -100,7 +101,12 @@ export default function TherapistDirectory() {
   }
 
   return (
-    <section id="therapists" className={styles.section}>
+    <ScrollReveal
+      as="section"
+      id="therapists"
+      className={styles.section}
+      style={{ '--reveal-distance': '28px' }}
+    >
       <div className={styles.headingRow}>
         <div>
           <p className={styles.eyebrow}>THERAPISTS</p>
@@ -140,9 +146,11 @@ export default function TherapistDirectory() {
       </p>
 
       <div className={styles.grid}>
-        {visibleTherapists.map((therapist) => (
-          <article
+        {visibleTherapists.map((therapist, index) => (
+          <ScrollReveal
+            as="article"
             key={therapist.id}
+            delay={index * 70}
             className={`${styles.card} ${
               therapist.status === 'paused' ? styles.cardPaused : ''
             }`}
@@ -223,7 +231,7 @@ export default function TherapistDirectory() {
                 </button>
               </div>
             </div>
-          </article>
+          </ScrollReveal>
         ))}
       </div>
 
@@ -377,6 +385,6 @@ export default function TherapistDirectory() {
       <div className={notice ? styles.noticeVisible : styles.notice} role="status">
         {notice}
       </div>
-    </section>
+    </ScrollReveal>
   )
 }

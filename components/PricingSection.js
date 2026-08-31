@@ -1,4 +1,5 @@
 import TrackedLink from './TrackedLink'
+import ScrollReveal from './ScrollReveal'
 import styles from './PricingSection.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -23,7 +24,13 @@ const packages = [
 
 export default function PricingSection() {
   return (
-    <section className={styles.pricingSection} id="pricing" aria-labelledby="pricing-title">
+    <ScrollReveal
+      as="section"
+      className={styles.pricingSection}
+      id="pricing"
+      aria-labelledby="pricing-title"
+      style={{ '--reveal-distance': '26px' }}
+    >
       <div className={styles.sectionHeading}>
         <p className={styles.eyebrow}>PRICING</p>
         <h2 id="pricing-title">課程方案</h2>
@@ -33,20 +40,29 @@ export default function PricingSection() {
       </div>
 
       <div className={styles.packageGrid}>
-        {packages.map((item) => (
-          <article className={styles.packageCard} key={item.name}>
+        {packages.map((item, index) => (
+          <ScrollReveal
+            as="article"
+            className={styles.packageCard}
+            key={item.name}
+            delay={index * 65}
+          >
             <h3>{item.name}</h3>
             <p className={styles.duration}>{item.duration}</p>
             <p className={styles.price}>{item.price}</p>
-          </article>
+          </ScrollReveal>
         ))}
 
-        <article className={`${styles.packageCard} ${styles.flexibleCard}`}>
+        <ScrollReveal
+          as="article"
+          className={`${styles.packageCard} ${styles.flexibleCard}`}
+          delay={packages.length * 65}
+        >
           <h3>不指定師傅方案</h3>
           <p className={styles.flexiblePrice}>90 分鐘｜NT$1,800</p>
           <p className={styles.flexiblePrice}>120 分鐘｜NT$2,200</p>
           <p className={styles.cardNote}>已是優惠價格，不得再使用其他折扣。</p>
-        </article>
+        </ScrollReveal>
       </div>
 
       <div className={styles.serviceNote}>
@@ -118,6 +134,6 @@ export default function PricingSection() {
       >
         LINE 立即預約 <span aria-hidden="true">→</span>
       </TrackedLink>
-    </section>
+    </ScrollReveal>
   )
 }

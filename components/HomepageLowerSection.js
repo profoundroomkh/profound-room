@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import TrackedLink from './TrackedLink'
+import ScrollReveal from './ScrollReveal'
 import styles from './HomepageLowerSection.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -53,7 +54,13 @@ const LOCATION_MAP = '/images/location-guide-map.jpg'
 export default function HomepageLowerSection() {
   return (
     <div className={styles.lowerSection}>
-      <section className={styles.reservationSection} id="reservation-flow" aria-labelledby="reservation-flow-title">
+      <ScrollReveal
+        as="section"
+        className={styles.reservationSection}
+        id="reservation-flow"
+        aria-labelledby="reservation-flow-title"
+        style={{ '--reveal-distance': '24px' }}
+      >
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>RESERVATION FLOW</p>
           <h2 id="reservation-flow-title">預約流程</h2>
@@ -87,9 +94,15 @@ export default function HomepageLowerSection() {
         >
           查看完整預約說明
         </TrackedLink>
-      </section>
+      </ScrollReveal>
 
-      <section className={styles.spaceSection} id="space-preview" aria-labelledby="space-preview-title">
+      <ScrollReveal
+        as="section"
+        className={styles.spaceSection}
+        id="space-preview"
+        aria-labelledby="space-preview-title"
+        style={{ '--reveal-distance': '24px' }}
+      >
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>SPACE & LOCATION</p>
           <h2 id="space-preview-title">空間與位置</h2>
@@ -123,9 +136,9 @@ export default function HomepageLowerSection() {
             <span className={styles.arrow} aria-hidden="true">↗</span>
           </div>
         </TrackedLink>
-      </section>
+      </ScrollReveal>
 
-      <section className={styles.locationSection} id="location" aria-labelledby="location-title">
+      <ScrollReveal as="section" className={styles.locationSection} id="location" aria-labelledby="location-title">
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>LOCATION GUIDE</p>
           <h2 id="location-title">位置引導</h2>
@@ -163,9 +176,15 @@ export default function HomepageLowerSection() {
             </TrackedLink>
           </div>
         </div>
-      </section>
+      </ScrollReveal>
 
-      <section className={styles.faqSection} id="faq" aria-labelledby="faq-title">
+      <ScrollReveal
+        as="section"
+        className={styles.faqSection}
+        id="faq"
+        aria-labelledby="faq-title"
+        style={{ '--reveal-distance': '24px' }}
+      >
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>RESERVATION GUIDE</p>
           <h2 id="faq-title">常見問題</h2>
@@ -192,9 +211,15 @@ export default function HomepageLowerSection() {
         >
           查看完整 FAQ <span aria-hidden="true">→</span>
         </TrackedLink>
-      </section>
+      </ScrollReveal>
 
-      <section className={styles.journalSection} id="journal" aria-labelledby="journal-title">
+      <ScrollReveal
+        as="section"
+        className={styles.journalSection}
+        id="journal"
+        aria-labelledby="journal-title"
+        style={{ '--reveal-distance': '24px' }}
+      >
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>JOURNAL</p>
           <h2 id="journal-title">Deep Night Journal</h2>
@@ -226,9 +251,13 @@ export default function HomepageLowerSection() {
         >
           前往 Journal／旅程 <span aria-hidden="true">→</span>
         </TrackedLink>
-      </section>
+      </ScrollReveal>
 
-      <footer className={styles.footer}>
+      <ScrollReveal
+        as="footer"
+        className={styles.footer}
+        style={{ '--reveal-distance': '18px' }}
+      >
         <div className={styles.footerBrand}>
           <Image
             src="/images/profound-logo-symbol.png"
@@ -287,7 +316,7 @@ export default function HomepageLowerSection() {
         </div>
 
         <p className={styles.footerNote}>Adults Only｜18+　·　預約制男士按摩與私人放鬆空間</p>
-      </footer>
+      </ScrollReveal>
     </div>
   )
 }
