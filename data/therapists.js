@@ -37,22 +37,6 @@ export const therapists = [
     ],
   },
   {
-    id: 'leo',
-    name: 'Leo',
-    isNew: true,
-    status: 'available',
-    height: 175,
-    weight: 67,
-    age: 29,
-    role: '不分',
-    size: '16/4.5',
-    specialty: '靦腆純粹・清新男孩',
-    images: [
-      '/images/therapist-Leo-1.jpg',
-      '/images/therapist-Leo-2.jpg',
-    ],
-  },
-  {
     id: 'dylan',
     name: 'Dylan',
     isNew: true,
