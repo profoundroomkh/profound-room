@@ -792,7 +792,7 @@
   }
 
   .profileButton {
-    display: none;
+    display: block;
   }
 
   .modalBackdrop {

@@ -101,7 +101,8 @@ export default function TherapistDirectory() {
   }
 
   return (
-    <ScrollReveal
+    <>
+      <ScrollReveal
       as="section"
       id="therapists"
       className={styles.section}
@@ -234,6 +235,8 @@ export default function TherapistDirectory() {
           </ScrollReveal>
         ))}
       </div>
+
+      </ScrollReveal>
 
       {selected && (
         <div
@@ -385,6 +388,6 @@ export default function TherapistDirectory() {
       <div className={notice ? styles.noticeVisible : styles.notice} role="status">
         {notice}
       </div>
-    </ScrollReveal>
+    </>
   )
 }
