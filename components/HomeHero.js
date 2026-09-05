@@ -64,40 +64,6 @@ export default function HomeHero() {
             </div>
           </div>
 
-          <aside className={styles.supportCard} aria-label="Lucas 限時支援資訊">
-            <div className={styles.supportHeading}>
-              <p>LIMITED SUPPORT</p>
-              <span>期間限定支援</span>
-            </div>
-            <div className={styles.supportMain}>
-              <div className={styles.supportPhoto}>
-                <Image
-                  src="/images/therapist-Lucas-1.jpg"
-                  alt="Lucas 師傅"
-                  fill
-                  sizes="112px"
-                  priority
-                />
-              </div>
-              <div className={styles.supportDetails}>
-                <h2>Lucas</h2>
-                <p>8/31–9/4</p>
-                <p>10:00–24:00</p>
-                <a
-                  href={LINE_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => trackEvent('reservation_intent', {
-                    source: 'lucas_support_card',
-                    therapist: 'Lucas',
-                  })}
-                >
-                  預約 Lucas
-                </a>
-              </div>
-            </div>
-          </aside>
-
           <div className={styles.introCard}>
             <p className={styles.introLabel}>ABOUT</p>
             <h2>高雄 Gay Spa 與男士按摩空間</h2>
