@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Header from '../../components/Header'
 import BookingTemplate from '../../components/BookingTemplate'
 import TrackedLink from '../../components/TrackedLink'
@@ -91,6 +92,17 @@ export default function ReservationPage() {
           <section className={styles.section} aria-label="預約格式">
             <BookingTemplate />
           </section>
+
+          <div className={styles.policyVisual}>
+            <Image
+              src="/images/deposit-policy-guide.png"
+              alt="深寓優惠與訂金政策圖解"
+              width={1856}
+              height={2304}
+              sizes="(max-width: 720px) 100vw, 560px"
+            />
+            <p>優惠與訂金政策圖解；完整規則仍以本頁文字說明為準。</p>
+          </div>
 
           <section className={styles.section} aria-labelledby="appointment-only-title">
             <h2 className={styles.sectionHeading} id="appointment-only-title">

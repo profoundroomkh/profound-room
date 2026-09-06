@@ -124,6 +124,31 @@
   margin-top: 10px;
 }
 
+.policyVisual {
+  width: min(100%, 560px);
+  margin: 52px auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(173, 146, 125, 0.28);
+  border-radius: 18px;
+  background: rgba(15, 14, 13, 0.82);
+}
+
+.policyVisual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.policyVisual p {
+  margin: 0;
+  border-top: 1px solid rgba(173, 146, 125, 0.2);
+  padding: 12px 16px 14px;
+  color: rgba(242, 225, 208, 0.54);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
 .depositCard {
   background: rgba(66, 49, 41, 0.72);
 }

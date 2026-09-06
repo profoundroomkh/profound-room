@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import TrackedLink from './TrackedLink'
 import ScrollReveal from './ScrollReveal'
 import styles from './PricingSection.module.css'
@@ -135,6 +136,17 @@ export default function PricingSection() {
             <p>距離高雄車站 10 公里以上｜+800（客服報價）</p>
           </div>
         </details>
+      </div>
+
+      <div className={styles.policyVisual}>
+        <Image
+          src="/images/deposit-policy-guide.png"
+          alt="深寓優惠與訂金政策圖解"
+          width={1856}
+          height={2304}
+          sizes="(max-width: 700px) 100vw, 560px"
+        />
+        <p>優惠與訂金政策圖解；完整規則仍以預約頁文字說明為準。</p>
       </div>
 
       <div className={styles.policyRow}>
