@@ -105,7 +105,18 @@ export default function ReservationPage() {
               <div className={styles.divider} aria-hidden="true" />
               <p>本館採完全預約制，不接受現場臨時來訪。</p>
               <p>客服確認日期與時段後，才算完成預約。</p>
-              <p>若需改期或取消，請提前告知，以利安排後續時段。</p>
+              <div className={styles.divider} aria-hidden="true" />
+              <p className={styles.depositEyebrow}>訂金政策</p>
+              <p className={styles.depositMain}>取消、改期與 No-show 規則</p>
+              <p>
+                如需取消或改期，請儘早告知。當日於預約時間前 6 小時以上通知，訂金可保留一次，並於 30 天內改期使用；預約前 2–6 小時通知，訂金保留 50%，另 50% 可轉為改期金。
+              </p>
+              <p>
+                預約前 2 小時內取消、未通知取消，或預約時間後 15 分鐘仍未到且無法聯絡者，將視為 No-show，訂金恕不退還。若遇突發疾病、交通事故或其他重大緊急狀況，歡迎主動聯繫，深寓會視情況協助處理。
+              </p>
+              <p>
+                改期限一次，且須於指定期限內使用；曾有 No-show 紀錄者，後續預約可能需全額預付。
+              </p>
             </div>
           </section>
 

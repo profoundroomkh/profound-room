@@ -91,6 +91,24 @@ export default function PricingSection() {
         <details className={styles.infoPanel} open>
           <summary>
             <span>
+              <span className={styles.panelKicker}>DEPOSIT POLICY</span>
+              <span className={styles.panelTitle}>訂金政策</span>
+            </span>
+            <span className={styles.chevron} aria-hidden="true">⌄</span>
+          </summary>
+          <div className={styles.panelBody}>
+            <p className={styles.emphasis}>取消、改期與 No-show 規則</p>
+            <p>預約時間前 6 小時以上通知，訂金可保留一次並於 30 天內改期使用。</p>
+            <p>預約前 2–6 小時通知，訂金保留 50%，另 50% 可轉為改期金。</p>
+            <p>預約前 2 小時內取消、未通知取消，或預約時間後 15 分鐘仍未到且無法聯絡者，將視為 No-show，訂金恕不退還。</p>
+            <p>改期限一次，且須於指定期限內使用；重大緊急狀況請主動聯繫，深寓會視情況協助處理。</p>
+            <p>曾有 No-show 紀錄者，後續預約可能需全額預付。</p>
+          </div>
+        </details>
+
+        <details className={styles.infoPanel} open>
+          <summary>
+            <span>
               <span className={styles.panelKicker}>NIGHT SERVICE</span>
               <span className={styles.panelTitle}>夜間服務</span>
             </span>
