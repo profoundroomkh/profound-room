@@ -75,41 +75,6 @@ export default function PricingSection() {
         <details className={styles.infoPanel} open>
           <summary>
             <span>
-              <span className={styles.panelKicker}>ADVANCE RESERVATION</span>
-              <span className={styles.panelTitle}>優惠須知</span>
-            </span>
-            <span className={styles.chevron} aria-hidden="true">⌄</span>
-          </summary>
-          <div className={styles.panelBody}>
-            <p className={styles.emphasis}>各項優惠恕不併用，每次消費僅限擇一優惠方案適用。</p>
-            <p>不指定師傅方案已是優惠價格，不得再與提前預約優惠、壽星優惠或其他折扣併用。</p>
-            <p>提前一天完成預約，可享 NT$100 預約折抵。</p>
-            <p>當月壽星首次消費，提前預約可享 NT$200 優惠折抵；預約時請主動告知，並於到訪時出示有效證件。</p>
-            <p>加入官方 LINE，可不定期獲得專屬優惠券與限定活動優惠；優惠券使用方式與適用期間依活動公告為準。</p>
-          </div>
-        </details>
-
-        <details className={styles.infoPanel} open>
-          <summary>
-            <span>
-              <span className={styles.panelKicker}>DEPOSIT POLICY</span>
-              <span className={styles.panelTitle}>訂金政策</span>
-            </span>
-            <span className={styles.chevron} aria-hidden="true">⌄</span>
-          </summary>
-          <div className={styles.panelBody}>
-            <p className={styles.emphasis}>取消、改期與 No-show 規則</p>
-            <p>預約時間前 6 小時以上通知，訂金可保留一次並於 30 天內改期使用。</p>
-            <p>預約前 2–6 小時通知，訂金保留 50%，另 50% 可轉為改期金。</p>
-            <p>預約前 2 小時內取消、未通知取消，或預約時間後 15 分鐘仍未到且無法聯絡者，將視為 No-show，訂金恕不退還。</p>
-            <p>改期限一次，且須於指定期限內使用；重大緊急狀況請主動聯繫，深寓會視情況協助處理。</p>
-            <p>曾有 No-show 紀錄者，後續預約可能需全額預付。</p>
-          </div>
-        </details>
-
-        <details className={styles.infoPanel} open>
-          <summary>
-            <span>
               <span className={styles.panelKicker}>NIGHT SERVICE</span>
               <span className={styles.panelTitle}>夜間服務</span>
             </span>
