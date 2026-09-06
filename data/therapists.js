@@ -146,7 +146,7 @@ export const therapists = [
     height: 170,
     weight: 66,
     age: 30,
-    role: '不分',
+    role: '不分偏1',
     size: null,
     specialty: '刺青台客・健談好聊',
     images: [
@@ -183,7 +183,7 @@ export const therapists = [
     age: 30,
     role: '不分',
     size: null,
-    specialty: '舒壓放鬆・自然陪伴',
+    specialty: '熊系厚實・自然陪伴',
     images: [
       '/images/therapist-Noah.JPG',
       '/images/therapist-Noah-1.JPG',
