@@ -10,6 +10,7 @@ const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 
 export default function HomeHero() {
   const [showAgeGate, setShowAgeGate] = useState(null)
+  const [showEventImage, setShowEventImage] = useState(false)
 
   useEffect(() => {
     const confirmed = window.sessionStorage.getItem(AGE_GATE_KEY) === 'true'
@@ -17,7 +18,7 @@ export default function HomeHero() {
   }, [])
 
   useEffect(() => {
-    if (!showAgeGate) return undefined
+    if (!showAgeGate && !showEventImage) return undefined
 
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -25,7 +26,18 @@ export default function HomeHero() {
     return () => {
       document.body.style.overflow = previousOverflow
     }
-  }, [showAgeGate])
+  }, [showAgeGate, showEventImage])
+
+  useEffect(() => {
+    if (!showEventImage) return undefined
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setShowEventImage(false)
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [showEventImage])
 
   const confirmAge = () => {
     window.sessionStorage.setItem(AGE_GATE_KEY, 'true')
@@ -70,14 +82,19 @@ export default function HomeHero() {
               <span>本月限定活動</span>
             </div>
             <div className={styles.supportMain}>
-              <div className={`${styles.supportPhoto} ${styles.eventPhoto}`}>
+              <button
+                type="button"
+                className={`${styles.supportPhoto} ${styles.eventPhoto}`}
+                onClick={() => setShowEventImage(true)}
+                aria-label="放大查看中秋雙師限定活動圖"
+              >
                 <Image
                   src="/images/mid-autumn-dual-therapist-event.png"
                   alt="中秋雙師限定禮遇活動圖"
                   fill
                   sizes="112px"
                 />
-              </div>
+              </button>
               <div className={styles.supportDetails}>
                 <h2>中秋雙師</h2>
                 <p>9/7–9/30</p>
@@ -109,6 +126,37 @@ export default function HomeHero() {
         </div>
       </section>
 
+      {showEventImage && (
+        <div
+          className={styles.eventLightboxBackdrop}
+          role="presentation"
+          onClick={() => setShowEventImage(false)}
+        >
+          <div
+            className={styles.eventLightbox}
+            role="dialog"
+            aria-modal="true"
+            aria-label="中秋雙師限定活動圖"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className={styles.eventLightboxClose}
+              onClick={() => setShowEventImage(false)}
+              aria-label="關閉活動圖放大檢視"
+            >
+              關閉
+            </button>
+            <Image
+              src="/images/mid-autumn-dual-therapist-event.png"
+              alt="中秋雙師限定禮遇活動：雙師 90 分鐘 3,500 元、雙師 120 分鐘 4,300 元，活動期間 9/7 至 9/30"
+              width={1920}
+              height={1920}
+              sizes="min(92vw, 720px)"
+            />
+          </div>
+        </div>
+      )}
 
       {showAgeGate && (
         <div className={styles.ageGateBackdrop} role="presentation">
