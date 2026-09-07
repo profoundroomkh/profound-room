@@ -64,6 +64,39 @@ export default function HomeHero() {
             </div>
           </div>
 
+          <aside className={`${styles.supportCard} ${styles.eventCard}`} aria-label="中秋雙師限定活動資訊">
+            <div className={styles.supportHeading}>
+              <p>MONTHLY EVENT</p>
+              <span>本月限定活動</span>
+            </div>
+            <div className={styles.supportMain}>
+              <div className={`${styles.supportPhoto} ${styles.eventPhoto}`}>
+                <Image
+                  src="/images/mid-autumn-dual-therapist-event.png"
+                  alt="中秋雙師限定禮遇活動圖"
+                  fill
+                  sizes="112px"
+                />
+              </div>
+              <div className={styles.supportDetails}>
+                <h2>中秋雙師</h2>
+                <p>9/7–9/30</p>
+                <p>90 分 NT$3,500</p>
+                <p>120 分 NT$4,300</p>
+                <a
+                  href={LINE_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackEvent('reservation_intent', {
+                    source: 'mid_autumn_event_card',
+                  })}
+                >
+                  LINE 詢問活動
+                </a>
+              </div>
+            </div>
+          </aside>
+
           <div className={styles.introCard}>
             <p className={styles.introLabel}>ABOUT</p>
             <h2>高雄 Gay Spa 與男士按摩空間</h2>
@@ -75,6 +108,7 @@ export default function HomeHero() {
           </div>
         </div>
       </section>
+
 
       {showAgeGate && (
         <div className={styles.ageGateBackdrop} role="presentation">

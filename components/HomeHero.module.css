@@ -165,6 +165,10 @@
   filter: saturate(0.82) contrast(0.98) brightness(0.9);
 }
 
+.eventPhoto {
+  border-radius: 16px;
+}
+
 .supportDetails h2 {
   margin: 0 0 5px;
   color: #f2e1d0;
@@ -212,6 +216,7 @@
   font-size: 15px;
   line-height: 1.9;
 }
+
 
 .ageGateBackdrop {
   position: fixed;
@@ -317,6 +322,7 @@
   .introCard {
     grid-column: 2;
   }
+
 
   .supportCard {
     grid-row: 1;
