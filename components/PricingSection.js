@@ -68,7 +68,10 @@ export default function PricingSection() {
 
       <div className={styles.serviceNote}>
         <span className={styles.serviceLabel}>SERVICE INCLUDES</span>
-        <strong>指壓｜油壓｜體推｜機能保養</strong>
+        <div className={styles.serviceDetails}>
+          <p><strong>90 分鐘</strong>｜指壓・油壓・機能保養 <em>（不含體推）</em></p>
+          <p><strong>120 分鐘</strong>｜指壓・油壓・體推・機能保養</p>
+        </div>
       </div>
 
       <div className={styles.infoStack}>

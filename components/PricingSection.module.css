@@ -116,11 +116,27 @@
   text-align: center;
 }
 
-.serviceNote strong {
+.serviceDetails {
+  display: grid;
+  gap: 5px;
   color: #e0c6b0;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+.serviceDetails p {
+  margin: 0;
+}
+
+.serviceDetails strong {
+  color: #f2e1d0;
+  font-weight: 500;
+}
+
+.serviceDetails em {
+  color: #c59f84;
+  font-size: 12px;
+  font-style: normal;
 }
 
 .infoStack {
