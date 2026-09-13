@@ -28,8 +28,9 @@ export const therapists = [
     weight: 60,
     age: 23,
     role: 'Side',
-    size: '有驚喜',
+    size: null,
     specialty: '年輕薄肌・熟練手法',
+    supportPeriod: '每日 12:00–21:00（週二、週四休息）',
     images: [
       '/images/therapist-Gugu-1.jpg',
       '/images/therapist-Gugu-2.jpg',
