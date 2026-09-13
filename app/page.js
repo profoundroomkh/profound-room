@@ -5,6 +5,7 @@ import ScrollReveal from '../components/ScrollReveal'
 import TherapistDirectory from '../components/TherapistDirectory'
 import HomepageLowerSection from '../components/HomepageLowerSection'
 import PricingSection from '../components/PricingSection'
+import MonthlyNewTherapist from '../components/MonthlyNewTherapist'
 
 // Design reminder: preserve Profound Room's restrained black-and-warm-gold identity;
 // the therapist directory uses controlled motion and explicit booking states.
@@ -158,6 +159,7 @@ export default function Home() {
           </div>
         </ScrollReveal>
 
+        <MonthlyNewTherapist />
         <TherapistDirectory />
         <PricingSection />
         <HomepageLowerSection />

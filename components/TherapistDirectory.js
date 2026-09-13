@@ -218,6 +218,7 @@ export default function TherapistDirectory() {
                 <button
                   type="button"
                   className={styles.profileButton}
+                  id={therapist.id === 'bart' ? 'bart-profile-trigger' : undefined}
                   onClick={(event) => openDetails(therapist, event.currentTarget)}
                 >
                   查看資料
