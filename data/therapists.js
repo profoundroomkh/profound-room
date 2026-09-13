@@ -3,6 +3,22 @@
 
 export const therapists = [
   {
+    id: 'bart',
+    name: 'Bart／巴特',
+    isNew: true,
+    status: 'available',
+    height: 177,
+    weight: 75,
+    age: 30,
+    role: '不分',
+    size: null,
+    specialty: '低調內向・刺青反差',
+    supportPeriod: '每週六 12:00–20:00｜週日 12:00–18:00',
+    images: [
+      '/images/therapist-Bart-1.jpg',
+    ],
+  },
+  {
     id: 'gugu',
     name: 'Gugu',
     isNew: true,
