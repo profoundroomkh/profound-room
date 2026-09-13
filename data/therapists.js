@@ -16,6 +16,7 @@ export const therapists = [
     supportPeriod: '每週六 12:00–20:00｜週日 12:00–18:00',
     images: [
       '/images/therapist-Bart-1.jpg',
+      '/images/therapist-Bart-2.jpg',
     ],
   },
   {
