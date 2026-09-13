@@ -209,22 +209,6 @@ export const therapists = [
     ],
   },
   {
-    id: 'hu',
-    name: 'Hu',
-    isNew: false,
-    status: 'available',
-    height: 164,
-    weight: 50,
-    age: 26,
-    role: '不分',
-    size: '16/5',
-    specialty: '少年感・纖瘦身形',
-    images: [
-      '/images/therapist-Hu-1.JPG',
-      '/images/therapist-Hu-2.JPG',
-    ],
-  },
-  {
     id: 'raven',
     name: 'Raven',
     isNew: false,
