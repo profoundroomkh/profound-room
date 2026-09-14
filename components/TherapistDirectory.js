@@ -105,7 +105,7 @@ export default function TherapistDirectory() {
     <>
       <ScrollReveal
       as="section"
-      id="all-therapists"
+      id="therapists"
       className={styles.section}
       style={{ '--reveal-distance': '28px' }}
     >

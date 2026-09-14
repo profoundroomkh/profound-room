@@ -48,7 +48,7 @@ export default function StraightMaleTherapists() {
         <p className={styles.directoryNoteText}>
           Andy 已列入上方 15 位師傅列表，照片、完整資料與預約入口請直接查看 Andy 卡片。
         </p>
-        <a href="#all-therapists" className={styles.directoryLink}>
+        <a href="#therapists" className={styles.directoryLink}>
           查看 15 位師傅列表
         </a>
       </div>

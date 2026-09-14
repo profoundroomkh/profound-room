@@ -5,7 +5,6 @@ import ScrollReveal from '../components/ScrollReveal'
 import TherapistDirectory from '../components/TherapistDirectory'
 import HomepageLowerSection from '../components/HomepageLowerSection'
 import PricingSection from '../components/PricingSection'
-import MonthlyNewTherapist from '../components/MonthlyNewTherapist'
 import StraightMaleTherapists from '../components/StraightMaleTherapists'
 
 // Design reminder: preserve Profound Room's restrained black-and-warm-gold identity;
@@ -14,9 +13,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <MonthlyNewTherapist />
       <HomeHero />
-      <MonthlyNewTherapist />
 
       <main
         id="main"
