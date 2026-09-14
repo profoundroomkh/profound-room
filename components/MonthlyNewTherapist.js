@@ -21,7 +21,7 @@ function openTherapistSection(therapist) {
     return
   }
 
-  const sectionId = therapist.category === 'straight' ? 'straight-therapists' : 'therapists'
+  const sectionId = therapist.category === 'straight' ? 'straight-therapists' : 'all-therapists'
   document.getElementById(sectionId)?.scrollIntoView({
     block: 'start',
     behavior: 'smooth',
@@ -32,7 +32,13 @@ export default function MonthlyNewTherapist() {
   if (!featuredTherapists.length) return null
 
   return (
-    <ScrollReveal as="section" className={styles.section} style={{ '--reveal-distance': '24px' }}>
+    <ScrollReveal
+      as="section"
+      id="therapists"
+      aria-labelledby="monthly-new-therapist-title"
+      className={styles.section}
+      style={{ '--reveal-distance': '24px' }}
+    >
       <div className={styles.headingRow}>
         <div>
           <p className={styles.eyebrow}>NEW THIS MONTH</p>
