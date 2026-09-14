@@ -34,7 +34,7 @@ export default function StraightMaleTherapists() {
       <div className={styles.priceNotice} role="note" aria-label="直男師傅專用價格提醒">
         <div>
           <p className={styles.noticeKicker}>STRAIGHT MEN&apos;S PRICING</p>
-          <h3>直男師傅方案價格不同</h3>
+          <h3>直男師傅｜專屬價目</h3>
           <p className={styles.noticeText}>以下價格僅適用於直男師傅，與一般師傅方案不同，請勿混用。</p>
           <p className={styles.audience}>接待客群：男性、女性、第三性皆可</p>
         </div>
