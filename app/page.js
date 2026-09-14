@@ -15,6 +15,7 @@ export default function Home() {
     <>
       <Header />
       <HomeHero />
+      <MonthlyNewTherapist />
 
       <main
         id="main"
@@ -160,7 +161,6 @@ export default function Home() {
           </div>
         </ScrollReveal>
 
-        <MonthlyNewTherapist />
         <TherapistDirectory />
         <StraightMaleTherapists />
         <PricingSection />

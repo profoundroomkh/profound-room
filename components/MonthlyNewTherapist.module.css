@@ -1,66 +1,69 @@
 .section {
   scroll-margin-top: 88px;
-  width: min(1100px, calc(100% - 48px));
+  width: min(920px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 0 0 100px;
+  padding: 24px 0 34px;
   color: #f2e1d0;
 }
 
 .headingRow {
-  display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(260px, 1fr);
-  gap: 36px;
-  align-items: end;
-  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 12px;
 }
 
 .eyebrow,
 .kicker {
-  margin: 0 0 10px;
+  margin: 0 0 5px;
   color: #b9977d;
-  font-size: 11px;
-  letter-spacing: 0.28em;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 
 .headingRow h2 {
   margin: 0;
   color: #f2e1d0;
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: clamp(24px, 4vw, 34px);
   font-weight: 300;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
 }
 
 .intro {
-  max-width: 420px;
-  margin: 0;
+  max-width: 260px;
+  margin: 0 0 2px;
   color: #c9b8aa;
-  font-size: 15px;
-  line-height: 1.9;
-}
-
-.cardGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: right;
 }
 
 .card {
   display: grid;
-  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  grid-template-columns: 166px minmax(0, 1fr);
+  min-height: 196px;
   overflow: hidden;
-  border: 1px solid rgba(185, 151, 125, 0.34);
-  border-radius: 24px;
+  border: 1px solid rgba(185, 151, 125, 0.38);
+  border-radius: 18px;
   background: linear-gradient(135deg, rgba(20, 17, 15, 0.98), rgba(8, 8, 8, 0.98));
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+}
+
+.mediaFrame {
+  position: relative;
+  min-height: 196px;
+  overflow: hidden;
+  background: #15110f;
 }
 
 .imageButton {
-  position: relative;
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  min-height: 390px;
-  overflow: hidden;
   border: 0;
   background: #15110f;
   cursor: pointer;
@@ -68,104 +71,156 @@
 }
 
 .imageButton:focus-visible,
+.arrowButton:focus-visible,
 .profileButton:focus-visible,
 .bookingButton:focus-visible {
   outline: 2px solid #f2e1d0;
-  outline-offset: -4px;
+  outline-offset: -3px;
 }
 
 .image {
   object-fit: cover;
   object-position: center 22%;
-  transition: transform 360ms ease;
+  transition: transform 280ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .imageButton:hover .image {
-  transform: scale(1.025);
+  transform: scale(1.035);
 }
 
 .imageShade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 45%, rgba(0, 0, 0, 0.72) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.62));
+  pointer-events: none;
 }
 
 .newBadge {
   position: absolute;
-  top: 18px;
-  left: 18px;
-  padding: 6px 10px;
+  top: 12px;
+  left: 12px;
+  padding: 5px 8px;
   border: 1px solid rgba(242, 225, 208, 0.5);
   border-radius: 999px;
   background: rgba(5, 5, 5, 0.78);
   color: #f2e1d0;
-  font-size: 10px;
-  letter-spacing: 0.2em;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  pointer-events: none;
 }
 
-.imageHint {
+.arrowButton {
   position: absolute;
-  right: 18px;
-  bottom: 18px;
+  z-index: 2;
+  top: 50%;
+  display: grid;
+  width: 28px;
+  height: 42px;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid rgba(242, 225, 208, 0.5);
+  border-radius: 999px;
+  background: rgba(5, 5, 5, 0.58);
   color: #f2e1d0;
-  font-size: 12px;
-  letter-spacing: 0.08em;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  line-height: 1;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.arrowButton:hover {
+  background: rgba(185, 151, 125, 0.8);
+  color: #080706;
+}
+
+.arrowButton:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+.previousButton {
+  left: 8px;
+}
+
+.nextButton {
+  right: 8px;
 }
 
 .content {
   display: flex;
+  min-width: 0;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(28px, 5vw, 60px);
+  padding: 19px 24px 18px;
+}
+
+.kickerRow,
+.nameRow,
+.metrics {
+  display: flex;
+  align-items: center;
+}
+
+.kickerRow {
+  justify-content: space-between;
+  gap: 14px;
 }
 
 .kicker {
-  margin-bottom: 16px;
-  font-size: 10px;
+  margin-bottom: 0;
+  font-size: 8px;
+}
+
+.counter {
+  color: #9f8978;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
 }
 
 .nameRow {
-  display: flex;
-  align-items: baseline;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
+  margin-top: 6px;
+  padding-bottom: 7px;
   border-bottom: 1px solid rgba(201, 184, 170, 0.18);
-  padding-bottom: 18px;
 }
 
 .nameRow h3 {
   margin: 0;
   color: #f2e1d0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: clamp(24px, 4vw, 34px);
   font-weight: 300;
 }
 
 .nameRow span {
   color: #b9977d;
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  letter-spacing: 0.08em;
   white-space: nowrap;
 }
 
 .specialty {
-  margin: 18px 0 24px;
+  margin: 8px 0 7px;
   color: #c9b8aa;
-  font-size: 16px;
-  letter-spacing: 0.08em;
+  font-size: 14px;
+  letter-spacing: 0.06em;
 }
 
 .metrics {
-  display: flex;
   flex-wrap: wrap;
   gap: 0;
-  margin: 0 0 24px;
+  margin: 0;
   color: #f2e1d0;
-  font-size: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
 }
 
 .metrics span {
-  padding: 0 16px;
+  padding: 0 10px;
   border-left: 1px solid rgba(185, 151, 125, 0.34);
 }
 
@@ -174,61 +229,37 @@
   border-left: 0;
 }
 
-.details {
-  margin: 0;
-  border-top: 1px solid rgba(201, 184, 170, 0.18);
-}
-
-.details > div {
-  display: grid;
-  grid-template-columns: 88px 1fr;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(201, 184, 170, 0.18);
-}
-
-.details dt {
-  color: #b9977d;
+.supportPeriod {
+  margin: 7px 0 0;
+  color: #b8a594;
   font-size: 12px;
-  letter-spacing: 0.14em;
-}
-
-.details dd {
-  margin: 0;
-  color: #f2e1d0;
-  font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.45;
 }
 
 .actions {
-  position: relative;
-  z-index: 10000;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  min-width: 0;
-  gap: 12px;
-  margin-top: 28px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .profileButton,
 .bookingButton {
   display: inline-flex;
   box-sizing: border-box;
-  max-width: 100%;
-  min-height: 46px;
+  min-height: 32px;
   align-items: center;
   justify-content: center;
-  padding: 0 18px;
+  padding: 0 13px;
   border: 1px solid rgba(185, 151, 125, 0.5);
   border-radius: 999px;
   background: transparent;
   color: #f2e1d0;
   font-family: inherit;
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  letter-spacing: 0.04em;
   text-decoration: none;
-  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 
 .profileButton {
@@ -251,67 +282,91 @@
   background: #f2e1d0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 620px) {
   .section {
     width: min(100% - 32px, 560px);
-    padding-bottom: 76px;
+    padding: 18px 0 28px;
   }
 
   .headingRow {
-    display: block;
-    margin-bottom: 20px;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .intro {
-    margin-top: 12px;
-    font-size: 14px;
-  }
-
-  .cardGrid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    max-width: none;
+    text-align: left;
   }
 
   .card {
-    display: block;
-    border-radius: 20px;
+    grid-template-columns: 112px minmax(0, 1fr);
+    min-height: 182px;
+    border-radius: 16px;
   }
 
-  .imageButton {
-    min-height: 0;
-    aspect-ratio: 3 / 4;
+  .mediaFrame {
+    min-height: 182px;
   }
 
   .content {
-    padding: 26px 22px 28px;
+    padding: 15px 14px;
   }
 
   .nameRow {
     align-items: flex-start;
     flex-direction: column;
-    gap: 8px;
+    gap: 3px;
   }
 
   .nameRow h3 {
-    font-size: 36px;
+    font-size: 25px;
+  }
+
+  .nameRow span {
+    font-size: 10px;
+  }
+
+  .specialty {
+    font-size: 12px;
+    line-height: 1.45;
   }
 
   .metrics {
-    font-size: 14px;
+    font-size: 10px;
   }
 
-  .details > div {
-    grid-template-columns: 72px 1fr;
-    gap: 14px;
+  .metrics span {
+    padding: 0 6px;
+  }
+
+  .supportPeriod {
+    font-size: 10px;
   }
 
   .actions {
-    display: grid;
-    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-top: 9px;
   }
 
   .profileButton,
   .bookingButton {
-    width: 100%;
+    min-height: 29px;
+    padding: 0 9px;
+    font-size: 10px;
+  }
+
+  .arrowButton {
+    width: 25px;
+    height: 36px;
+    font-size: 24px;
+  }
+
+  .previousButton {
+    left: 5px;
+  }
+
+  .nextButton {
+    right: 5px;
   }
 }
