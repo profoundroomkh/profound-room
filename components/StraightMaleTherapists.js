@@ -1,17 +1,9 @@
 'use client'
 
-import Image from 'next/image'
-import TrackedLink from './TrackedLink'
 import ScrollReveal from './ScrollReveal'
-import { therapists } from '../data/therapists'
 import styles from './StraightMaleTherapists.module.css'
 
-const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
-
 export default function StraightMaleTherapists() {
-  const straightTherapists = therapists.filter((therapist) => therapist.category === 'straight')
-
-  if (!straightTherapists.length) return null
 
   return (
     <ScrollReveal
@@ -52,70 +44,13 @@ export default function StraightMaleTherapists() {
         </div>
       </div>
 
-      <div className={styles.cardGrid}>
-        {straightTherapists.map((therapist) => (
-          <article className={styles.card} key={therapist.id}>
-            <div className={styles.imageWrap}>
-              <Image
-                src={therapist.images[0]}
-                alt={`${therapist.name} 直男師傅`}
-                fill
-                sizes="(max-width: 700px) 100vw, 50vw"
-                className={styles.image}
-              />
-              <span className={styles.imageShade} />
-              <span className={styles.badge}>NEW</span>
-              <span className={styles.imageHint}>{therapist.images.length} 張照片</span>
-            </div>
-
-            <div className={styles.content}>
-              <p className={styles.kicker}>STRAIGHT THERAPIST</p>
-              <div className={styles.nameRow}>
-                <h3>{therapist.name}</h3>
-                <span>獨立方案</span>
-              </div>
-              <p className={styles.specialty}>{therapist.specialty}</p>
-
-              <div className={styles.metrics}>
-                <span>{therapist.height} cm</span>
-                <span>{therapist.weight} kg</span>
-                <span>{therapist.age} 歲</span>
-              </div>
-
-              <dl className={styles.details}>
-                <div>
-                  <dt>角色</dt>
-                  <dd>{therapist.role}</dd>
-                </div>
-                <div>
-                  <dt>尺寸</dt>
-                  <dd>{therapist.size || '未提供'}</dd>
-                </div>
-                <div>
-                  <dt>支援時間</dt>
-                  <dd>{therapist.supportPeriod || '請洽官方 LINE'}</dd>
-                </div>
-              </dl>
-
-              <div className={styles.actions}>
-                <TrackedLink
-                  href={LINE_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.bookingButton}
-                  eventName="reservation_intent"
-                  eventParameters={{
-                    source: 'straight_therapist_section',
-                    therapist: therapist.name,
-                    therapist_id: therapist.id,
-                  }}
-                >
-                  LINE 詢問／預約 {therapist.name}
-                </TrackedLink>
-              </div>
-            </div>
-          </article>
-        ))}
+      <div className={styles.directoryNote}>
+        <p className={styles.directoryNoteText}>
+          Andy 已列入上方 15 位師傅列表，照片、完整資料與預約入口請直接查看 Andy 卡片。
+        </p>
+        <a href="#therapists" className={styles.directoryLink}>
+          查看 15 位師傅列表
+        </a>
       </div>
     </ScrollReveal>
   )

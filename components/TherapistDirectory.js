@@ -11,7 +11,7 @@ import ScrollReveal from './ScrollReveal'
 import styles from './TherapistDirectory.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
-const regularTherapists = therapists.filter((item) => item.category !== 'straight')
+const regularTherapists = therapists
 
 function trackBooking(therapist, source = 'therapist_card') {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -84,7 +84,7 @@ export default function TherapistDirectory() {
   const handleBooking = async (therapist, source = 'therapist_card') => {
     if (therapist.status !== 'available') return
 
-    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：90 分鐘／120 分鐘`
+    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '90 分鐘 NT$2,500／120 分鐘 NT$2,900' : '90 分鐘／120 分鐘'}`
     trackBooking(therapist, source)
     window.open(LINE_URL, '_blank', 'noopener,noreferrer')
 
@@ -199,6 +199,12 @@ export default function TherapistDirectory() {
                 <span>VIEW PROFILE</span>
               </div>
               <p className={styles.specialty}>{therapist.specialty}</p>
+              {therapist.category === 'straight' && (
+                <div className={styles.specialPricing}>
+                  <span className={styles.specialLabel}>直男｜專屬價目</span>
+                  <span className={styles.specialPrice}>90 分 NT$2,500｜120 分 NT$2,900</span>
+                </div>
+              )}
               <p className={styles.metrics}>
                 <span>{therapist.height}cm</span>
                 <span>{therapist.weight}kg</span>
@@ -350,6 +356,12 @@ export default function TherapistDirectory() {
                   <div className={styles.profileDataWide}>
                     <dt>支援時間</dt>
                     <dd>{selected.supportPeriod}</dd>
+                  </div>
+                )}
+                {selected.category === 'straight' && (
+                  <div className={styles.profileDataWide}>
+                    <dt>專屬價目</dt>
+                    <dd>90 分 NT$2,500／120 分 NT$2,900</dd>
                   </div>
                 )}
               </dl>

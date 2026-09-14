@@ -301,6 +301,33 @@
   line-height: 1.6;
 }
 
+.specialPricing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: -6px 0 14px;
+  padding: 9px 11px;
+  border: 1px solid rgba(185, 151, 125, 0.24);
+  border-radius: 10px;
+  background: rgba(185, 151, 125, 0.06);
+  line-height: 1.5;
+}
+
+.specialLabel {
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.specialPrice {
+  color: #f2e1d0;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
 .metrics {
   display: flex;
   margin: 0;
@@ -354,6 +381,8 @@
 .profileButton,
 .bookingButton,
 .modalBookingButton {
+  box-sizing: border-box;
+  max-width: 100%;
   min-height: 44px;
   border-radius: 999px;
   font-family: Arial, sans-serif;
@@ -756,6 +785,17 @@
     min-height: 40px;
     margin: 8px 0 12px;
     font-size: 12px;
+  }
+
+  .specialPricing {
+    gap: 3px 8px;
+    margin: -3px 0 10px;
+    padding: 8px 9px;
+  }
+
+  .specialLabel,
+  .specialPrice {
+    font-size: 10px;
   }
 
   .metrics {
