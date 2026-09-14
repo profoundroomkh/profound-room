@@ -168,8 +168,8 @@ export const therapists = [
     size: null,
     specialty: '刺青台客・健談好聊',
     images: [
-      '/images/therapist-Zac-1.JPG',
       '/images/therapist-Zac-2.JPG',
+      '/images/therapist-Zac-1.JPG',
       '/images/therapist-Zac-3.JPG',
       '/images/therapist-Zac-4.JPG',
     ],
