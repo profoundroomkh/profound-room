@@ -21,7 +21,7 @@ export const therapists = [
   },
   {
     id: 'gugu',
-    name: 'Gugu',
+    name: 'Gugu／咕咕',
     isNew: true,
     status: 'available',
     height: 175,
@@ -38,7 +38,7 @@ export const therapists = [
   },
   {
     id: 'dylan',
-    name: 'Dylan',
+    name: 'Dylan／迪倫',
     isNew: false,
     status: 'available',
     height: 171,
@@ -55,7 +55,7 @@ export const therapists = [
   },
   {
     id: 'oni',
-    name: 'Oni',
+    name: 'Oni／歐尼',
     isNew: false,
     status: 'available',
     height: 174,
@@ -71,7 +71,7 @@ export const therapists = [
   },
   {
     id: 'alan',
-    name: 'Alan',
+    name: 'Alan／艾倫',
     isNew: false,
     status: 'available',
     height: 170,
@@ -87,7 +87,7 @@ export const therapists = [
   },
   {
     id: 'milo',
-    name: 'Milo',
+    name: 'Milo／米洛',
     isNew: false,
     status: 'available',
     height: 174,
@@ -104,7 +104,7 @@ export const therapists = [
   },
   {
     id: 'owen',
-    name: 'Owen',
+    name: 'Owen／歐文',
     isNew: false,
     status: 'available',
     height: 166,
@@ -121,7 +121,7 @@ export const therapists = [
   },
   {
     id: 'kai',
-    name: 'Kai',
+    name: 'Kai／凱',
     isNew: false,
     status: 'available',
     height: 175,
@@ -139,7 +139,7 @@ export const therapists = [
   },
   {
     id: 'odin',
-    name: 'Odin',
+    name: 'Odin／奧丁',
     isNew: false,
     status: 'available',
     height: 170,
@@ -158,7 +158,7 @@ export const therapists = [
   },
   {
     id: 'zac',
-    name: 'Zac',
+    name: 'Zac／札克',
     isNew: false,
     status: 'available',
     height: 170,
@@ -176,7 +176,7 @@ export const therapists = [
   },
   {
     id: 'vincent',
-    name: 'Vincent',
+    name: 'Vincent／文森',
     isNew: false,
     status: 'available',
     height: 175,
@@ -193,7 +193,7 @@ export const therapists = [
   },
   {
     id: 'noah',
-    name: 'Noah',
+    name: 'Noah／諾亞',
     isNew: false,
     status: 'available',
     height: 175,
@@ -210,7 +210,7 @@ export const therapists = [
   },
   {
     id: 'raven',
-    name: 'Raven',
+    name: 'Raven／雷文',
     isNew: false,
     status: 'available',
     height: 166,
@@ -228,7 +228,7 @@ export const therapists = [
   },
   {
     id: 'ansel',
-    name: 'Ansel',
+    name: 'Ansel／安索',
     isNew: false,
     status: 'paused',
     height: 165,
@@ -245,7 +245,7 @@ export const therapists = [
   },
   {
     id: 'andy',
-    name: 'Andy',
+    name: 'Andy／安迪',
     category: 'straight',
     isNew: true,
     status: 'available',
