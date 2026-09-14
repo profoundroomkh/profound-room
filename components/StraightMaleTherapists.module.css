@@ -1,0 +1,352 @@
+.section {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 0 0 100px;
+  color: #f2e1d0;
+}
+
+.headingRow {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(260px, 1fr);
+  gap: 36px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.eyebrow,
+.kicker,
+.noticeKicker {
+  margin: 0 0 10px;
+  color: #b9977d;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.headingRow h2 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.intro {
+  max-width: 420px;
+  margin: 0;
+  color: #c9b8aa;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.priceNotice {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid rgba(185, 151, 125, 0.48);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(35, 25, 20, 0.95), rgba(12, 10, 9, 0.98));
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.noticeKicker {
+  margin-bottom: 14px;
+  font-size: 10px;
+}
+
+.priceNotice h3 {
+  margin: 0;
+  color: #f2e1d0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.noticeText {
+  max-width: 340px;
+  margin: 14px 0 0;
+  color: #c9b8aa;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.priceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.priceCard {
+  display: flex;
+  min-height: 130px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid rgba(201, 184, 170, 0.2);
+  border-radius: 16px;
+  background: rgba(5, 5, 5, 0.52);
+}
+
+.priceCard span {
+  color: #b9977d;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+
+.priceCard strong {
+  margin-top: 8px;
+  color: #f2e1d0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(25px, 3vw, 38px);
+  font-weight: 300;
+}
+
+.priceCard small {
+  margin-top: 8px;
+  color: #c9b8aa;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+  overflow: hidden;
+  border: 1px solid rgba(185, 151, 125, 0.34);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(20, 17, 15, 0.98), rgba(8, 8, 8, 0.98));
+}
+
+.imageWrap {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  background: #15110f;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.imageShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 44%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+.badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 6px 10px;
+  border: 1px solid rgba(242, 225, 208, 0.5);
+  border-radius: 999px;
+  background: rgba(5, 5, 5, 0.78);
+  color: #f2e1d0;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.imageHint {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  color: #f2e1d0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(26px, 4vw, 50px);
+}
+
+.kicker {
+  margin-bottom: 16px;
+  font-size: 10px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid rgba(201, 184, 170, 0.18);
+  padding-bottom: 16px;
+}
+
+.nameRow h3 {
+  margin: 0;
+  color: #f2e1d0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 300;
+}
+
+.nameRow span {
+  color: #b9977d;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.specialty {
+  margin: 16px 0 22px;
+  color: #c9b8aa;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0 0 22px;
+  color: #f2e1d0;
+  font-size: 14px;
+}
+
+.metrics span {
+  padding: 0 14px;
+  border-left: 1px solid rgba(185, 151, 125, 0.34);
+}
+
+.metrics span:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.details {
+  margin: 0;
+  border-top: 1px solid rgba(201, 184, 170, 0.18);
+}
+
+.details > div {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(201, 184, 170, 0.18);
+}
+
+.details dt {
+  color: #b9977d;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.details dd {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.actions {
+  margin-top: 24px;
+}
+
+.bookingButton {
+  display: inline-flex;
+  min-height: 46px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid #b9977d;
+  border-radius: 999px;
+  background: #b9977d;
+  color: #080706;
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.bookingButton:hover {
+  border-color: #f2e1d0;
+  background: #f2e1d0;
+}
+
+.bookingButton:focus-visible {
+  outline: 2px solid #f2e1d0;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    width: min(100% - 32px, 560px);
+    padding-bottom: 76px;
+  }
+
+  .headingRow {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .intro {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .priceNotice {
+    display: block;
+    padding: 22px 18px;
+  }
+
+  .noticeText {
+    margin-bottom: 20px;
+  }
+
+  .priceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .priceCard {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .card {
+    display: block;
+    border-radius: 20px;
+  }
+
+  .imageWrap {
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+  }
+
+  .content {
+    padding: 26px 22px 28px;
+  }
+
+  .nameRow {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nameRow h3 {
+    font-size: 36px;
+  }
+
+  .details > div {
+    grid-template-columns: 72px 1fr;
+    gap: 14px;
+  }
+}

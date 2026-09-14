@@ -11,6 +11,7 @@ import ScrollReveal from './ScrollReveal'
 import styles from './TherapistDirectory.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
+const regularTherapists = therapists.filter((item) => item.category !== 'straight')
 
 function trackBooking(therapist, source = 'therapist_card') {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -31,14 +32,14 @@ export default function TherapistDirectory() {
   const lastTriggerRef = useRef(null)
 
   const visibleTherapists = useMemo(() => {
-    if (activeFilter === 'new') return therapists.filter((item) => item.isNew)
+    if (activeFilter === 'new') return regularTherapists.filter((item) => item.isNew)
     if (activeFilter === 'available') {
-      return therapists.filter((item) => item.status === 'available')
+      return regularTherapists.filter((item) => item.status === 'available')
     }
     if (activeFilter === 'paused') {
-      return therapists.filter((item) => item.status === 'paused')
+      return regularTherapists.filter((item) => item.status === 'paused')
     }
-    return therapists
+    return regularTherapists
   }, [activeFilter])
 
   useEffect(() => {
@@ -121,11 +122,11 @@ export default function TherapistDirectory() {
       <div className={styles.filterBar} aria-label="篩選師傅">
         {therapistFilters.map((filter) => {
           const count =
-            filter.id === 'all'
-              ? therapists.length
+              filter.id === 'all'
+              ? regularTherapists.length
               : filter.id === 'new'
-                ? therapists.filter((item) => item.isNew).length
-                : therapists.filter((item) => item.status === filter.id).length
+                ? regularTherapists.filter((item) => item.isNew).length
+                : regularTherapists.filter((item) => item.status === filter.id).length
 
           return (
             <button

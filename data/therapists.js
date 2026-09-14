@@ -243,6 +243,25 @@ export const therapists = [
       '/images/therapist-luke-3.jpg',
     ],
   },
+  {
+    id: 'andy',
+    name: 'Andy',
+    category: 'straight',
+    isNew: true,
+    status: 'available',
+    height: 174,
+    weight: 63,
+    age: 29,
+    role: '1',
+    size: null,
+    specialty: '二寶爸・直男人夫',
+    supportPeriod: '支援時間請洽官方 LINE',
+    images: [
+      '/images/therapist-Andy-1.JPG',
+      '/images/therapist-Andy-2.JPG',
+      '/images/therapist-Andy-3.JPG',
+    ],
+  },
 ]
 
 export const therapistFilters = [
