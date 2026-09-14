@@ -36,17 +36,18 @@ export default function StraightMaleTherapists() {
           <p className={styles.noticeKicker}>STRAIGHT MEN&apos;S PRICING</p>
           <h3>直男師傅方案價格不同</h3>
           <p className={styles.noticeText}>以下價格僅適用於直男師傅，與一般師傅方案不同，請勿混用。</p>
+          <p className={styles.audience}>接待客群：男性、女性、第三性皆可</p>
         </div>
         <div className={styles.priceGrid}>
           <div className={styles.priceCard}>
             <span>90 分鐘</span>
             <strong>NT$2,500</strong>
-            <small>指壓・油壓・機能保養</small>
+            <small>指壓・油壓・龍筋機能保養</small>
           </div>
           <div className={styles.priceCard}>
             <span>120 分鐘</span>
             <strong>NT$2,900</strong>
-            <small>指壓・油壓・體推・機能保養</small>
+            <small>指壓・油壓・體推・龍筋機能保養</small>
           </div>
         </div>
       </div>

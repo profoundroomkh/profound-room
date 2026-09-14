@@ -74,6 +74,14 @@
   line-height: 1.8;
 }
 
+.audience {
+  margin: 12px 0 0;
+  color: #f2e1d0;
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
 .priceGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
