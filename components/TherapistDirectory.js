@@ -8,6 +8,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { therapistFilters, therapists } from '../data/therapists'
 import { trackEvent } from './analytics'
 import ScrollReveal from './ScrollReveal'
+import MonthlyNewTherapist from './MonthlyNewTherapist'
 import styles from './TherapistDirectory.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -103,9 +104,10 @@ export default function TherapistDirectory() {
 
   return (
     <>
+      <MonthlyNewTherapist />
       <ScrollReveal
       as="section"
-      id="therapists"
+      id="all-therapists"
       className={styles.section}
       style={{ '--reveal-distance': '28px' }}
     >

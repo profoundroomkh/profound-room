@@ -64,6 +64,17 @@ export default function PricingSection() {
           <p className={styles.flexiblePrice}>120 分鐘｜NT$2,200</p>
           <p className={styles.cardNote}>已是優惠價格，不得再使用其他折扣。</p>
         </ScrollReveal>
+
+        <ScrollReveal
+          as="article"
+          className={`${styles.packageCard} ${styles.straightCard}`}
+          delay={(packages.length + 1) * 65}
+        >
+          <h3>直男師傅｜專屬價目</h3>
+          <p className={styles.flexiblePrice}>90 分鐘｜NT$2,500</p>
+          <p className={styles.flexiblePrice}>120 分鐘｜NT$2,900</p>
+          <p className={styles.cardNote}>直男師傅專屬方案，價格與一般師傅不同。</p>
+        </ScrollReveal>
       </div>
 
       <div className={styles.serviceNote}>

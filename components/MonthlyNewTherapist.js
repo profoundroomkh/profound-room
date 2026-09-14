@@ -26,7 +26,7 @@ function openTherapistSection(therapist) {
   })
 }
 
-export default function MonthlyNewTherapist() {
+export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
   const [activeIndex, setActiveIndex] = useState(0)
 
   if (!featuredTherapists.length) return null
@@ -39,7 +39,7 @@ export default function MonthlyNewTherapist() {
   return (
     <ScrollReveal
       as="section"
-      id="therapists"
+      {...(anchorId ? { id: anchorId } : {})}
       aria-labelledby="monthly-new-therapist-title"
       className={styles.section}
       style={{ '--reveal-distance': '16px' }}

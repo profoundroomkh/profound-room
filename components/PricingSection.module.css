@@ -90,6 +90,11 @@
   background: #0f0d0c;
 }
 
+.straightCard {
+  border-color: rgba(216, 184, 159, 0.46);
+  background: rgba(185, 151, 125, 0.12);
+}
+
 .flexibleCard h3 {
   font-size: 17px;
 }
