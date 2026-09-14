@@ -39,7 +39,7 @@ export const therapists = [
   {
     id: 'dylan',
     name: 'Dylan',
-    isNew: true,
+    isNew: false,
     status: 'available',
     height: 171,
     weight: 66,
@@ -56,7 +56,7 @@ export const therapists = [
   {
     id: 'oni',
     name: 'Oni',
-    isNew: true,
+    isNew: false,
     status: 'available',
     height: 174,
     weight: 72,
@@ -72,7 +72,7 @@ export const therapists = [
   {
     id: 'alan',
     name: 'Alan',
-    isNew: true,
+    isNew: false,
     status: 'available',
     height: 170,
     weight: 68,
@@ -88,7 +88,7 @@ export const therapists = [
   {
     id: 'milo',
     name: 'Milo',
-    isNew: true,
+    isNew: false,
     status: 'available',
     height: 174,
     weight: 63,

@@ -47,9 +47,9 @@ export default function MonthlyNewTherapist() {
       <div className={styles.headingRow}>
         <div>
           <p className={styles.eyebrow}>NEW THIS MONTH</p>
-          <h2 id="monthly-new-therapist-title">新師推薦</h2>
+          <h2 id="monthly-new-therapist-title">新師上陣</h2>
         </div>
-        <p className={styles.intro}>左右點選，先看看本月新加入的師傅。</p>
+        <p className={styles.intro}>先認識目前新師，了解風格、方案與支援時間。</p>
       </div>
 
       <article className={styles.card}>
