@@ -71,8 +71,20 @@ export default function PricingSection() {
           delay={(packages.length + 1) * 65}
         >
           <h3>直男師傅｜專屬價目</h3>
-          <p className={styles.flexiblePrice}>90 分鐘｜NT$2,500</p>
-          <p className={styles.flexiblePrice}>120 分鐘｜NT$2,900</p>
+          <div className={styles.straightOption}>
+            <div className={styles.straightOptionHeader}>
+              <p className={styles.straightDuration}>90 分鐘</p>
+              <p className={styles.straightPrice}>NT$2,500</p>
+            </div>
+            <p className={styles.straightServices}>指壓、油壓、龍筋機能保養</p>
+          </div>
+          <div className={styles.straightOption}>
+            <div className={styles.straightOptionHeader}>
+              <p className={styles.straightDuration}>120 分鐘</p>
+              <p className={styles.straightPrice}>NT$2,900</p>
+            </div>
+            <p className={styles.straightServices}>指壓、油壓、體推、龍筋機能保養</p>
+          </div>
           <p className={styles.cardNote}>直男師傅專屬方案，價格與一般師傅不同。</p>
         </ScrollReveal>
       </div>

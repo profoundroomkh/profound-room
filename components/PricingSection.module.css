@@ -93,6 +93,54 @@
 .straightCard {
   border-color: rgba(216, 184, 159, 0.46);
   background: rgba(185, 151, 125, 0.12);
+  justify-content: flex-start;
+}
+
+.straightOption {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(216, 184, 159, 0.22);
+  text-align: left;
+}
+
+.straightOptionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.straightDuration,
+.straightPrice,
+.straightServices {
+  margin: 0;
+}
+
+.straightDuration {
+  color: rgba(242, 225, 208, 0.8);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.straightPrice {
+  color: #d8b89f;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.straightServices {
+  margin-top: 6px;
+  color: rgba(242, 225, 208, 0.72);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.straightCard .cardNote {
+  margin-top: 14px;
+  text-align: center;
 }
 
 .flexibleCard h3 {
