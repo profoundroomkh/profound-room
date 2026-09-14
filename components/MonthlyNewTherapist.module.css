@@ -204,6 +204,8 @@
   z-index: 10000;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
   gap: 12px;
   margin-top: 28px;
 }
@@ -211,6 +213,8 @@
 .profileButton,
 .bookingButton {
   display: inline-flex;
+  box-sizing: border-box;
+  max-width: 100%;
   min-height: 46px;
   align-items: center;
   justify-content: center;
