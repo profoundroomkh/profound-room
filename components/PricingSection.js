@@ -70,22 +70,21 @@ export default function PricingSection() {
           className={`${styles.packageCard} ${styles.straightCard}`}
           delay={(packages.length + 1) * 65}
         >
-          <h3>直男師傅｜專屬價目</h3>
-          <div className={styles.straightOption}>
-            <div className={styles.straightOptionHeader}>
-              <p className={styles.straightDuration}>90 分鐘</p>
-              <p className={styles.straightPrice}>NT$2,500</p>
-            </div>
-            <p className={styles.straightServices}>指壓、油壓、龍筋機能保養</p>
-          </div>
-          <div className={styles.straightOption}>
-            <div className={styles.straightOptionHeader}>
-              <p className={styles.straightDuration}>120 分鐘</p>
-              <p className={styles.straightPrice}>NT$2,900</p>
-            </div>
-            <p className={styles.straightServices}>指壓、油壓、體推、龍筋機能保養</p>
-          </div>
-          <p className={styles.cardNote}>直男師傅專屬方案，價格與一般師傅不同。</p>
+          <h3>直男師傅｜90 分鐘</h3>
+          <p className={styles.price}>NT$2,500</p>
+          <p className={styles.straightServices}>指壓、油壓、龍筋機能保養</p>
+          <p className={styles.cardNote}>專屬方案，價格與一般師傅不同。</p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          as="article"
+          className={`${styles.packageCard} ${styles.straightCard}`}
+          delay={(packages.length + 2) * 65}
+        >
+          <h3>直男師傅｜120 分鐘</h3>
+          <p className={styles.price}>NT$2,900</p>
+          <p className={styles.straightServices}>指壓、油壓、體推、龍筋機能保養</p>
+          <p className={styles.cardNote}>專屬方案，價格與一般師傅不同。</p>
         </ScrollReveal>
       </div>
 
