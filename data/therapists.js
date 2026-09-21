@@ -173,23 +173,6 @@ export const therapists = [
     ],
   },
   {
-    id: 'vincent',
-    name: 'Vincent／文森',
-    isNew: false,
-    status: 'available',
-    height: 175,
-    weight: 65,
-    age: 32,
-    role: '不分1',
-    size: null,
-    specialty: '健談互動・輕鬆陪伴',
-    images: [
-      '/images/therapist-Vincent-1.JPG',
-      '/images/therapist-Vincent-2.JPG',
-      '/images/therapist-Vincent-3.JPG',
-    ],
-  },
-  {
     id: 'noah',
     name: 'Noah／諾亞',
     isNew: false,
