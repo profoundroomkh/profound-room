@@ -4,7 +4,7 @@
 export const therapists = [
   {
     id: 'bart',
-    name: 'Bart／巴特',
+    name: 'Alpha／阿法',
     isNew: true,
     status: 'available',
     height: 177,
