@@ -234,7 +234,7 @@ export const therapists = [
     age: 40,
     role: '不分',
     size: null,
-    specialty: '熟男魅力・成熟穩重',
+    specialty: '熟男親切・健談好聊・配合度高',
     images: [
       '/images/therapist-Hugo-1.png',
       '/images/therapist-Hugo-2.JPG',
