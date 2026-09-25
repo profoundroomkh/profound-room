@@ -225,6 +225,23 @@ export const therapists = [
     ],
   },
   {
+    id: 'hugo',
+    name: 'Hugo／雨果',
+    isNew: false,
+    status: 'available',
+    height: 175,
+    weight: 70,
+    age: 40,
+    role: '不分',
+    size: null,
+    specialty: '熟男魅力・成熟穩重',
+    images: [
+      '/images/therapist-Hugo-1.png',
+      '/images/therapist-Hugo-2.JPG',
+      '/images/therapist-Hugo-3.JPG',
+    ],
+  },
+  {
     id: 'andy',
     name: 'Andy／安迪',
     category: 'straight',
