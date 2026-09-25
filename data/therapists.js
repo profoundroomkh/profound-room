@@ -13,6 +13,7 @@ export const therapists = [
     role: '不分',
     size: null,
     specialty: '熟男親切・健談好聊・配合度高',
+    supportPeriod: '全天，現場師傅',
     images: [
       '/images/therapist-Hugo-1.png',
       '/images/therapist-Hugo-2.JPG',
