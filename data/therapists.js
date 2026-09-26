@@ -103,8 +103,7 @@ export const therapists = [
     specialty: '深度放鬆・手感細膩',
     images: [
       '/images/therapist-Odin-3.JPG',
-      '/images/therapist-Odin-4.JPG',
-      '/images/therapist-Odin-1.JPG',
+      '/images/therapist-Odin-2.JPG',
     ],
   },
   {
