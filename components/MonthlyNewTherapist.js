@@ -1,14 +1,15 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { therapists } from '../data/therapists'
+import { getDailyTherapists } from '../data/weeklySchedule'
 import TrackedLink from './TrackedLink'
 import ScrollReveal from './ScrollReveal'
+import useTaiwanDateKey from './useTaiwanDateKey'
 import styles from './MonthlyNewTherapist.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
-const featuredTherapists = therapists.filter((therapist) => therapist.isNew)
 
 function openTherapistSection(therapist) {
   const trigger = document.getElementById(`${therapist.id}-profile-trigger`)
@@ -27,6 +28,11 @@ function openTherapistSection(therapist) {
 }
 
 export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
+  const dateKey = useTaiwanDateKey()
+  const featuredTherapists = useMemo(
+    () => getDailyTherapists(therapists, dateKey).filter((therapist) => therapist.isNew),
+    [dateKey],
+  )
   const [activeIndex, setActiveIndex] = useState(0)
 
   if (!featuredTherapists.length) return null

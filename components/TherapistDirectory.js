@@ -6,14 +6,15 @@
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { therapistFilters, therapists } from '../data/therapists'
+import { getDailyTherapists } from '../data/weeklySchedule'
 import { trackEvent } from './analytics'
 import ScrollReveal from './ScrollReveal'
 import MonthlyNewTherapist from './MonthlyNewTherapist'
 import WeeklySchedule from './WeeklySchedule'
+import useTaiwanDateKey from './useTaiwanDateKey'
 import styles from './TherapistDirectory.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
-const regularTherapists = therapists
 
 function trackBooking(therapist, source = 'therapist_card') {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -26,12 +27,17 @@ function trackBooking(therapist, source = 'therapist_card') {
 }
 
 export default function TherapistDirectory() {
+  const dateKey = useTaiwanDateKey()
   const [activeFilter, setActiveFilter] = useState('all')
   const [selected, setSelected] = useState(null)
   const [currentImage, setCurrentImage] = useState(0)
   const [notice, setNotice] = useState('')
   const closeButtonRef = useRef(null)
   const lastTriggerRef = useRef(null)
+  const regularTherapists = useMemo(
+    () => getDailyTherapists(therapists, dateKey),
+    [dateKey],
+  )
 
   const visibleTherapists = useMemo(() => {
     if (activeFilter === 'new') return regularTherapists.filter((item) => item.isNew)
