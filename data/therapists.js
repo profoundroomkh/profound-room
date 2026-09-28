@@ -111,6 +111,7 @@ export const therapists = [
     name: 'Kai／凱',
     isNew: false,
     status: 'available',
+    bookingPolicy: '提前一天預約',
     height: 175,
     weight: 70,
     age: 30,

@@ -39,6 +39,11 @@ export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
 
   const therapist = featuredTherapists[activeIndex]
   const isStraight = therapist.category === 'straight'
+  const availabilityLabel = isStraight
+    ? '直男｜專屬價目'
+    : therapist.status === 'available'
+      ? '可預約'
+      : therapist.bookingPolicy || '休息中'
   const previousIndex = (activeIndex - 1 + featuredTherapists.length) % featuredTherapists.length
   const nextIndex = (activeIndex + 1) % featuredTherapists.length
 
@@ -102,7 +107,7 @@ export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
           </div>
           <div className={styles.nameRow}>
             <h3>{therapist.name}</h3>
-            <span>{isStraight ? '直男｜專屬價目' : '可預約'}</span>
+            <span>{availabilityLabel}</span>
           </div>
           <p className={styles.specialty}>{therapist.specialty}</p>
           <div className={styles.metrics}>

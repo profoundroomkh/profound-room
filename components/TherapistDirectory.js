@@ -26,6 +26,20 @@ function trackBooking(therapist, source = 'therapist_card') {
   }
 }
 
+function canBookTherapist(therapist) {
+  return therapist.status === 'available' || Boolean(therapist.bookingPolicy)
+}
+
+function getStatusLabel(therapist) {
+  if (therapist.bookingPolicy) return therapist.bookingPolicy
+  return therapist.status === 'available' ? '可預約' : '休息中'
+}
+
+function getBookingButtonLabel(therapist) {
+  if (therapist.bookingPolicy) return '提前預約'
+  return therapist.status === 'available' ? '預約此師傅' : '暫停接單'
+}
+
 export default function TherapistDirectory() {
   const dateKey = useTaiwanDateKey()
   const [activeFilter, setActiveFilter] = useState('all')
@@ -98,9 +112,9 @@ export default function TherapistDirectory() {
   }
 
   const handleBooking = async (therapist, source = 'therapist_card') => {
-    if (therapist.status !== 'available') return
+    if (!canBookTherapist(therapist)) return
 
-    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '90 分鐘 NT$2,500／120 分鐘 NT$2,900' : '90 分鐘／120 分鐘'}`
+    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n預約方式：${therapist.bookingPolicy || '可直接預約'}\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '90 分鐘 NT$2,500／120 分鐘 NT$2,900' : '90 分鐘／120 分鐘'}`
     trackBooking(therapist, source)
     window.open(LINE_URL, '_blank', 'noopener,noreferrer')
 
@@ -199,12 +213,12 @@ export default function TherapistDirectory() {
                 <span className={styles.imageShade} />
                 <span
                   className={
-                    therapist.status === 'available'
+                    canBookTherapist(therapist)
                       ? styles.statusAvailable
                       : styles.statusPaused
                   }
                 >
-                  {therapist.status === 'available' ? '可預約' : '休息中'}
+                  {getStatusLabel(therapist)}
                 </span>
                 {therapist.isNew && <span className={styles.newBadge}>NEW</span>}
                 <span className={styles.photoCount}>{therapist.images.length} 張</span>
@@ -248,13 +262,13 @@ export default function TherapistDirectory() {
                 >
                   查看資料
                 </button>
-                <button
-                  type="button"
-                  className={styles.bookingButton}
-                  disabled={therapist.status !== 'available'}
-                  onClick={() => handleBooking(therapist)}
-                >
-                  {therapist.status === 'available' ? '預約此師傅' : '暫停接單'}
+                  <button
+                    type="button"
+                    className={styles.bookingButton}
+                    disabled={!canBookTherapist(therapist)}
+                    onClick={() => handleBooking(therapist)}
+                  >
+                    {getBookingButtonLabel(therapist)}
                 </button>
               </div>
             </div>
@@ -387,29 +401,31 @@ export default function TherapistDirectory() {
               <div className={styles.modalStatus}>
                 <span
                   className={
-                    selected.status === 'available'
+                    canBookTherapist(selected)
                       ? styles.statusIndicatorAvailable
                       : styles.statusIndicatorPaused
                   }
                 />
-                {selected.status === 'available'
-                  ? '目前開放預約'
+                {selected.bookingPolicy
+                  ? `可${selected.bookingPolicy}，請先向官方 LINE 確認時段`
+                  : selected.status === 'available'
+                    ? '目前開放預約'
                   : '目前暫停接單，恢復時間請留意公告'}
               </div>
 
               <button
                 type="button"
                 className={styles.modalBookingButton}
-                disabled={selected.status !== 'available'}
+                disabled={!canBookTherapist(selected)}
                   onClick={() => handleBooking(selected, 'therapist_modal')}
               >
-                {selected.status === 'available'
+                {canBookTherapist(selected)
                   ? `複製預約文字並前往 LINE`
                   : '暫停接單'}
               </button>
-              {selected.status === 'available' && (
+              {canBookTherapist(selected) && (
                 <p className={styles.bookingHint}>
-                  將自動複製含有「{selected.name}」的預約文字，日期與時段可在 LINE 中補上。
+                  將自動複製含有「{selected.name}」的預約文字，{selected.bookingPolicy ? '請先向客服確認可預約日期，' : ''}日期與時段可在 LINE 中補上。
                 </p>
               )}
             </div>
