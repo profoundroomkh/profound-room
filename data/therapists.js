@@ -39,7 +39,7 @@ export const therapists = [
   },
   {
     id: 'gugu',
-    name: 'Gugu／咕咕',
+    name: 'Gugu／古古',
     isNew: true,
     status: 'available',
     height: 175,
