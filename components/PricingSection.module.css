@@ -256,6 +256,87 @@
   text-align: center;
 }
 
+.depositAlert {
+  position: relative;
+  margin-top: 24px;
+  padding: 19px 18px 18px 20px;
+  overflow: hidden;
+  border: 1px solid rgba(216, 184, 159, 0.7);
+  border-left: 4px solid #d8b89f;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(83, 55, 44, 0.5), rgba(24, 18, 16, 0.98) 68%);
+  box-shadow: inset 0 0 0 1px rgba(242, 225, 208, 0.06), 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.depositAlert::after {
+  position: absolute;
+  top: -42px;
+  right: -28px;
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(216, 184, 159, 0.18);
+  border-radius: 50%;
+  content: '';
+}
+
+.depositAlertHeader {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.depositAlertBadge {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #d8b89f;
+  color: #1a1411;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.depositAlertRule {
+  color: rgba(242, 225, 208, 0.62);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.depositAlertTitle {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #f2e1d0;
+  font-size: clamp(20px, 4.5vw, 29px);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+.depositAlertException {
+  position: relative;
+  z-index: 1;
+  margin: 4px 0 0;
+  color: #e4c6ae;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.depositAlertTransfer {
+  position: relative;
+  z-index: 1;
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(216, 184, 159, 0.24);
+  color: rgba(242, 225, 208, 0.78);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
 .policyBlock {
   margin-top: 26px;
   padding: 20px 18px 18px;

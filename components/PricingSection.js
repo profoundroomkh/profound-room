@@ -131,6 +131,18 @@ export default function PricingSection() {
         <p className={styles.policyEyebrow}>POLICY</p>
         <h3 id="policy-title">優惠與訂金政策</h3>
 
+        <aside className={styles.depositAlert} role="note" aria-label="首次預約訂金重要提醒">
+          <div className={styles.depositAlertHeader}>
+            <span className={styles.depositAlertBadge}>重要提醒</span>
+            <span className={styles.depositAlertRule}>首次預約適用</span>
+          </div>
+          <p className={styles.depositAlertTitle}>首次預約的客人，一律都要匯訂金</p>
+          <p className={styles.depositAlertException}>沒有例外！訂金 NT$500／每位師傅，完成消費後全額折抵。</p>
+          <p className={styles.depositAlertTransfer}>
+            匯款資訊請洽官方 LINE。
+          </p>
+        </aside>
+
         <div className={styles.policyBlock}>
           <h4>優惠須知</h4>
           <div className={styles.policyRows}>
@@ -159,7 +171,7 @@ export default function PricingSection() {
 
         <div className={styles.policyBlock}>
           <h4>訂金政策</h4>
-          <p className={styles.depositLead}>首次預約先付 NT$500，完成消費後折抵</p>
+          <p className={styles.depositLead}>首次預約每位師傅先付 NT$500，完成消費後折抵</p>
           <div className={styles.depositTimeline}>
             <div className={styles.depositStep}>
               <strong>6 小時以上</strong>
