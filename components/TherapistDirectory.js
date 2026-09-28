@@ -38,17 +38,25 @@ export default function TherapistDirectory() {
     () => getDailyTherapists(therapists, dateKey),
     [dateKey],
   )
+  const sortedTherapists = useMemo(
+    () => [...regularTherapists].sort((left, right) => {
+      const leftPriority = left.status === 'available' ? 0 : 1
+      const rightPriority = right.status === 'available' ? 0 : 1
+      return leftPriority - rightPriority
+    }),
+    [regularTherapists],
+  )
 
   const visibleTherapists = useMemo(() => {
-    if (activeFilter === 'new') return regularTherapists.filter((item) => item.isNew)
+    if (activeFilter === 'new') return sortedTherapists.filter((item) => item.isNew)
     if (activeFilter === 'available') {
-      return regularTherapists.filter((item) => item.status === 'available')
+      return sortedTherapists.filter((item) => item.status === 'available')
     }
     if (activeFilter === 'paused') {
-      return regularTherapists.filter((item) => item.status === 'paused')
+      return sortedTherapists.filter((item) => item.status === 'paused')
     }
-    return regularTherapists
-  }, [activeFilter])
+    return sortedTherapists
+  }, [activeFilter, sortedTherapists])
 
   useEffect(() => {
     if (!selected) return undefined
