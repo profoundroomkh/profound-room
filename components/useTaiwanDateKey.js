@@ -11,16 +11,27 @@ export default function useTaiwanDateKey() {
 
   useEffect(() => {
     let timer
+    const refreshDate = () => setDateKey(getTaiwanDateKey())
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') refreshDate()
+    }
 
     const scheduleRefresh = () => {
       timer = window.setTimeout(() => {
-        setDateKey(getTaiwanDateKey())
+        refreshDate()
         scheduleRefresh()
       }, getMillisecondsUntilTaiwanMidnight())
     }
 
     scheduleRefresh()
-    return () => window.clearTimeout(timer)
+    window.addEventListener('focus', refreshDate)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('focus', refreshDate)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
   }, [])
 
   return dateKey
