@@ -139,7 +139,7 @@ export default function PricingSection() {
           <p className={styles.depositAlertTitle}>首次預約的客人，一律都要匯訂金</p>
           <p className={styles.depositAlertException}>沒有例外！訂金 NT$500／每位師傅，完成消費後全額折抵。</p>
           <p className={styles.depositAlertTransfer}>
-            匯款資訊請洽官方 LINE。
+            匯款資訊請洽官方 LINE；不方便轉帳，可至超商使用中國信託無卡存款完整支付訂金。
           </p>
         </aside>
 
