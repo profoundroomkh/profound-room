@@ -1,0 +1,379 @@
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 120px;
+}
+
+.headingRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 64px;
+  align-items: end;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(185, 151, 125, 0.2);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.34em;
+}
+
+.headingRow h2 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.22;
+  letter-spacing: 0.05em;
+}
+
+.intro {
+  max-width: 430px;
+  margin: 0 0 4px;
+  color: #aa9888;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 28px 0 18px;
+}
+
+.range {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: 18px;
+}
+
+.range span {
+  margin-left: 10px;
+  color: #aa9888;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.note {
+  max-width: 450px;
+  margin: 0;
+  padding-left: 14px;
+  border-left: 1px solid #b9977d;
+  color: #aa9888;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.desktopTableWrap {
+  overflow-x: auto;
+  border: 1px solid rgba(185, 151, 125, 0.52);
+  border-radius: 18px;
+  background: rgba(12, 11, 10, 0.82);
+}
+
+.desktopTableWrap table {
+  width: 100%;
+  min-width: 940px;
+  border-collapse: collapse;
+}
+
+.desktopTableWrap th,
+.desktopTableWrap td {
+  padding: 15px 12px;
+  border-right: 1px solid rgba(185, 151, 125, 0.2);
+  border-bottom: 1px solid rgba(185, 151, 125, 0.2);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.desktopTableWrap th:last-child,
+.desktopTableWrap td:last-child {
+  border-right: 0;
+}
+
+.desktopTableWrap tbody tr:last-child th,
+.desktopTableWrap tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.desktopTableWrap thead th {
+  color: #b9977d;
+  background: rgba(185, 151, 125, 0.07);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.desktopTableWrap tbody th {
+  width: 180px;
+  color: #f2e1d0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.desktopTableWrap tbody td {
+  color: #c9b8aa;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.name {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 5px;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+}
+
+.open {
+  color: #f2e1d0;
+}
+
+.ask {
+  color: #b9977d;
+}
+
+.empty {
+  color: rgba(201, 184, 170, 0.42);
+}
+
+.mobileSchedule {
+  display: none;
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 18px;
+}
+
+.caption {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(201, 184, 170, 0.76);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.cta {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 17px;
+  border: 1px solid rgba(185, 151, 125, 0.6);
+  border-radius: 999px;
+  color: #f2e1d0;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  border-color: #b9977d;
+  background: rgba(185, 151, 125, 0.12);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 0 16px 88px;
+  }
+
+  .headingRow {
+    display: block;
+    padding-bottom: 26px;
+  }
+
+  .intro {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .metaRow {
+    display: block;
+    margin: 22px 0 16px;
+  }
+
+  .range {
+    margin-bottom: 14px;
+    font-size: 17px;
+  }
+
+  .note {
+    max-width: none;
+    font-size: 11px;
+  }
+
+  .desktopTableWrap {
+    display: none;
+  }
+
+  .mobileSchedule {
+    display: block;
+  }
+
+  .dayTabs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  .dayTab,
+  .dayTabActive {
+    min-height: 47px;
+    padding: 7px 4px;
+    border: 1px solid rgba(185, 151, 125, 0.24);
+    border-radius: 11px;
+    background: transparent;
+    color: #aa9888;
+    cursor: pointer;
+    font-family: Georgia, "Noto Serif TC", "PingFang TC", serif;
+    font-size: 12px;
+  }
+
+  .dayTab strong,
+  .dayTabActive strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #f2e1d0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .dayTabActive {
+    border-color: #b9977d;
+    background: rgba(185, 151, 125, 0.12);
+    color: #f2e1d0;
+  }
+
+  .dayTabActive strong {
+    color: #b9977d;
+  }
+
+  .dayCard {
+    overflow: hidden;
+    border: 1px solid rgba(185, 151, 125, 0.52);
+    border-radius: 16px;
+    background: rgba(12, 11, 10, 0.86);
+  }
+
+  .dayCardHeader {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 17px;
+    border-bottom: 1px solid rgba(185, 151, 125, 0.2);
+  }
+
+  .dayCardHeader h3 {
+    margin: 0;
+    color: #f2e1d0;
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  .dayCardHeader span {
+    color: #b9977d;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .mobileItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 17px;
+    border-bottom: 1px solid rgba(185, 151, 125, 0.14);
+  }
+
+  .mobileItem:last-child {
+    border-bottom: 0;
+  }
+
+  .mobileName {
+    margin: 0;
+    color: #f2e1d0;
+    font-size: 16px;
+  }
+
+  .mobileTag {
+    display: block;
+    margin-top: 4px;
+    color: #b9977d;
+    font-size: 10px;
+  }
+
+  .mobileTime {
+    margin: 0;
+    color: #c9b8aa;
+    font-size: 14px;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .mobileTime.open {
+    color: #f2e1d0;
+  }
+
+  .mobileTime.ask {
+    color: #b9977d;
+  }
+
+  .mobileHint {
+    margin: 14px 0 0;
+    color: rgba(201, 184, 170, 0.66);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .footerRow {
+    display: block;
+    margin-top: 14px;
+  }
+
+  .caption {
+    margin-bottom: 15px;
+    font-size: 11px;
+  }
+
+  .cta {
+    justify-content: center;
+    width: 100%;
+  }
+}

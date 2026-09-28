@@ -9,7 +9,7 @@ import { therapistFilters, therapists } from '../data/therapists'
 import { trackEvent } from './analytics'
 import ScrollReveal from './ScrollReveal'
 import MonthlyNewTherapist from './MonthlyNewTherapist'
-import WeeklyScheduleImage from './WeeklyScheduleImage'
+import WeeklySchedule from './WeeklySchedule'
 import styles from './TherapistDirectory.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -106,7 +106,7 @@ export default function TherapistDirectory() {
   return (
     <>
       <MonthlyNewTherapist />
-      <WeeklyScheduleImage />
+      <WeeklySchedule />
       <ScrollReveal
       as="section"
       id="all-therapists"
