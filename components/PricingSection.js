@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import TrackedLink from './TrackedLink'
 import ScrollReveal from './ScrollReveal'
 import styles from './PricingSection.module.css'
@@ -128,16 +127,61 @@ export default function PricingSection() {
         </details>
       </div>
 
-      <div className={styles.policyVisual}>
-        <Image
-          src="/images/deposit-policy-guide.png"
-          alt="深寓優惠與訂金政策圖解"
-          width={1856}
-          height={2304}
-          sizes="(max-width: 700px) 100vw, 560px"
-        />
-        <p>優惠與訂金政策圖解；完整規則仍以預約頁文字說明為準。</p>
-      </div>
+      <section className={styles.policyText} aria-labelledby="policy-title">
+        <p className={styles.policyEyebrow}>POLICY</p>
+        <h3 id="policy-title">優惠與訂金政策</h3>
+
+        <div className={styles.policyBlock}>
+          <h4>優惠須知</h4>
+          <div className={styles.policyRows}>
+            <div className={styles.policyItem}>
+              <strong>優惠不併用</strong>
+              <span>每次消費僅限擇一優惠</span>
+            </div>
+            <div className={styles.policyItem}>
+              <strong>提前一天預約</strong>
+              <span>折抵 NT$100</span>
+            </div>
+            <div className={styles.policyItem}>
+              <strong>當月壽星＋提前預約</strong>
+              <span>首次消費折抵 NT$200</span>
+            </div>
+            <div className={styles.policyItem}>
+              <strong>不指定師傅方案</strong>
+              <span>已是優惠價，不再享其他折扣</span>
+            </div>
+            <div className={styles.policyItem}>
+              <strong>加入官方 LINE</strong>
+              <span>不定時優惠券，金額不定</span>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.policyBlock}>
+          <h4>訂金政策</h4>
+          <p className={styles.depositLead}>首次預約先付 NT$500，完成消費後折抵</p>
+          <div className={styles.depositTimeline}>
+            <div className={styles.depositStep}>
+              <strong>6 小時以上</strong>
+              <span>訂金保留一次<br />30 天內改期使用</span>
+            </div>
+            <div className={styles.depositStep}>
+              <strong>2–6 小時</strong>
+              <span>訂金保留 50%<br />另 50% 轉為改期金</span>
+            </div>
+            <div className={styles.depositStep}>
+              <strong>2 小時內／No-show</strong>
+              <span>訂金恕不退還</span>
+            </div>
+          </div>
+          <ul className={styles.policyNotes}>
+            <li>改期 1 次，須於指定期限內使用</li>
+            <li>重大緊急狀況請主動聯繫</li>
+          </ul>
+        </div>
+
+        <p className={styles.policyFootnote}>詳細規則以預約頁公告為準</p>
+      </section>
 
       <div className={styles.policyRow}>
         <span>Adults Only｜18+</span>
