@@ -71,6 +71,67 @@
   line-height: 1.7;
 }
 
+.quickSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 22px 0 18px;
+}
+
+.quickLabel {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+
+.quickButtons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(125px, 1fr));
+  gap: 8px;
+  width: min(100%, 540px);
+}
+
+.quickButton,
+.quickButtonActive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 46px;
+  padding: 9px 13px;
+  border: 1px solid rgba(185, 151, 125, 0.28);
+  border-radius: 10px;
+  background: transparent;
+  color: #aa9888;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.quickButton:hover,
+.quickButton:focus-visible,
+.quickButtonActive {
+  border-color: #b9977d;
+  background: rgba(185, 151, 125, 0.12);
+  color: #f2e1d0;
+}
+
+.quickTitle {
+  color: #f2e1d0;
+  font-size: 13px;
+}
+
+.quickDate {
+  color: inherit;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
 .desktopTableWrap {
   overflow-x: auto;
   border: 1px solid rgba(185, 151, 125, 0.52);
@@ -150,6 +211,10 @@
 
 .empty {
   color: rgba(201, 184, 170, 0.42);
+}
+
+.dayColumnActive {
+  background: rgba(185, 151, 125, 0.09);
 }
 
 .mobileSchedule {
@@ -233,6 +298,36 @@
   .note {
     max-width: none;
     font-size: 11px;
+  }
+
+  .quickSwitch {
+    display: block;
+    margin: 20px 0 16px;
+  }
+
+  .quickLabel {
+    margin-bottom: 9px;
+  }
+
+  .quickButtons {
+    width: 100%;
+    gap: 7px;
+  }
+
+  .quickButton,
+  .quickButtonActive {
+    display: block;
+    min-height: 52px;
+    padding: 8px 9px;
+  }
+
+  .quickTitle,
+  .quickDate {
+    display: block;
+  }
+
+  .quickDate {
+    margin-top: 4px;
   }
 
   .desktopTableWrap {

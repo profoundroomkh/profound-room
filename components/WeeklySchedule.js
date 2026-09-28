@@ -31,6 +31,15 @@ export default function WeeklySchedule() {
     () => scheduleRows.filter((therapist) => therapist.times[activeDay] !== '—'),
     [activeDay],
   )
+  const quickDays = useMemo(() => {
+    const firstDay = todayIndex >= 0 ? todayIndex : 0
+    return [0, 1, 2]
+      .map((offset) => {
+        const index = firstDay + offset
+        return index < scheduleDays.length ? { day: scheduleDays[index], index } : null
+      })
+      .filter(Boolean)
+  }, [todayIndex])
 
   return (
     <section className={styles.section} aria-labelledby="weekly-schedule-title">
@@ -50,6 +59,26 @@ export default function WeeklySchedule() {
           公開班表只顯示師傅與服務時間，不公開客人或內部預約資料。
         </p>
       </div>
+
+      <nav className={styles.quickSwitch} aria-label="快速查看近期班表">
+        <p className={styles.quickLabel}>快速查看</p>
+        <div className={styles.quickButtons}>
+          {quickDays.map(({ day, index }, quickIndex) => (
+            <button
+              key={day.key}
+              type="button"
+              className={activeDay === index ? styles.quickButtonActive : styles.quickButton}
+              onClick={() => setActiveDay(index)}
+              aria-current={activeDay === index ? 'date' : undefined}
+            >
+              <span className={styles.quickTitle}>
+                {quickIndex === 0 ? '今天' : quickIndex === 1 ? '明天' : '後天'}
+              </span>
+              <span className={styles.quickDate}>{day.label} {day.date}</span>
+            </button>
+          ))}
+        </div>
+      </nav>
 
       <div className={styles.mobileSchedule}>
         <div className={styles.dayTabs} role="tablist" aria-label="選擇班表日期">
@@ -97,7 +126,15 @@ export default function WeeklySchedule() {
           <thead>
             <tr>
               <th scope="col">師傅</th>
-              {scheduleDays.map((day) => <th scope="col" key={day.key}>{day.label} {day.date}</th>)}
+              {scheduleDays.map((day, index) => (
+                <th
+                  scope="col"
+                  key={day.key}
+                  className={activeDay === index ? styles.dayColumnActive : undefined}
+                >
+                  {day.label} {day.date}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
@@ -108,7 +145,12 @@ export default function WeeklySchedule() {
                   {therapist.tag && <span className={styles.tag}>{therapist.tag}</span>}
                 </th>
                 {therapist.times.map((time, index) => (
-                  <td className={getTimeClass(time)} key={`${therapist.id}-${scheduleDays[index].key}`}>{time}</td>
+                  <td
+                    className={`${getTimeClass(time)} ${activeDay === index ? styles.dayColumnActive : ''}`}
+                    key={`${therapist.id}-${scheduleDays[index].key}`}
+                  >
+                    {time}
+                  </td>
                 ))}
               </tr>
             ))}
