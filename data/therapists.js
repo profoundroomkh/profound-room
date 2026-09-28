@@ -268,3 +268,22 @@ export const therapistFilters = [
   { id: 'available', label: '可預約' },
   { id: 'paused', label: '休息中' },
 ]
+
+// 依「9月派單記錄」目前排名整理；Bart 舊名與 Alpha 合併計算。
+export const septemberPerformanceRank = {
+  dylan: 1,
+  owen: 2,
+  oni: 3,
+  gugu: 4,
+  zac: 5,
+  andy: 6,
+  bart: 7,
+  kai: 8,
+  raven: 9,
+  milo: 10,
+  noah: 11,
+  ansel: 12,
+  odin: 13,
+  alan: 14,
+  hugo: 15,
+}

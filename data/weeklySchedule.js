@@ -86,10 +86,8 @@ const scheduleByDate = Object.fromEntries(
   ]),
 )
 
-// Andy 已確認額滿，除非手動調整這裡，否則維持「休息中」。
-const fixedStatusOverrides = {
-  andy: 'paused',
-}
+// 班表現在直接控制每日狀態；若當日有「全天」便顯示可預約。
+const fixedStatusOverrides = {}
 
 export function getTaiwanDateKey(date = new Date()) {
   const parts = new Intl.DateTimeFormat('en-CA', {

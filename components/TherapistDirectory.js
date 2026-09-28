@@ -5,7 +5,7 @@
 
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { therapistFilters, therapists } from '../data/therapists'
+import { septemberPerformanceRank, therapistFilters, therapists } from '../data/therapists'
 import { getDailyTherapists } from '../data/weeklySchedule'
 import { trackEvent } from './analytics'
 import ScrollReveal from './ScrollReveal'
@@ -54,9 +54,15 @@ export default function TherapistDirectory() {
   )
   const sortedTherapists = useMemo(
     () => [...regularTherapists].sort((left, right) => {
-      const leftPriority = left.status === 'available' ? 0 : 1
-      const rightPriority = right.status === 'available' ? 0 : 1
-      return leftPriority - rightPriority
+      const leftTodayPriority = left.status === 'available' ? 0 : 1
+      const rightTodayPriority = right.status === 'available' ? 0 : 1
+      if (leftTodayPriority !== rightTodayPriority) {
+        return leftTodayPriority - rightTodayPriority
+      }
+
+      const leftRank = septemberPerformanceRank[left.id] || Number.MAX_SAFE_INTEGER
+      const rightRank = septemberPerformanceRank[right.id] || Number.MAX_SAFE_INTEGER
+      return leftRank - rightRank
     }),
     [regularTherapists],
   )
