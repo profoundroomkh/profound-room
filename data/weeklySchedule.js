@@ -77,6 +77,12 @@ export const scheduleRows = [
     name: 'Alpha／阿法',
     times: ['—', '—', '—', '—', '—', '10:00–20:00', '—'],
   },
+  {
+    id: 'zac',
+    name: 'Zac／札克',
+    tag: '深夜師傅',
+    times: ['—', '18:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00'],
+  },
 ]
 
 const scheduleByDate = Object.fromEntries(
