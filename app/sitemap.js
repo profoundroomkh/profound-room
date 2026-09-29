@@ -3,6 +3,11 @@ export default function sitemap() {
 
   return [
     {
+      url: `${baseUrl}/journal/pingtung-straight-massage`,
+      lastModified: new Date(),
+    },
+
+    {
       url: `${baseUrl}/journal/kaohsiung-straight-massage`,
       lastModified: new Date(),
     },

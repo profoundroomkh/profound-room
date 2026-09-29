@@ -4,6 +4,17 @@ export default function JournalPage() {
   const posts = [
     {
       title:
+        '屏東市直男按摩怎麼找？搭火車到高雄車站的預約指南',
+
+      description:
+        '店址在高雄的深寓，也服務屏東市來客。從搭台鐵、查看師傅班表到 LINE 預約，一次整理給你。',
+
+      link:
+        '/journal/pingtung-straight-massage',
+    },
+
+    {
+      title:
         '高雄直男按摩是什麼？服務對象、方案與預約方式一次看',
 
       description:

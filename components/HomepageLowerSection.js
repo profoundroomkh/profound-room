@@ -182,6 +182,7 @@ export default function HomepageLowerSection() {
               <li>往左走建國路</li>
               <li>步行約 3 分鐘到達指定位置</li>
             </ol>
+            <p className={styles.locationPrivacy}>屏東市來客可搭台鐵到高雄車站，再步行前往深寓。</p>
             <p className={styles.locationPrivacy}>完成預約後提供詳細位置。</p>
             <TrackedLink
               className={styles.locationCta}
