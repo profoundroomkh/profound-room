@@ -117,6 +117,11 @@ export function getScheduleDayIndex(dateKey) {
   return scheduleDays.findIndex((day) => day.key === dateKey)
 }
 
+export function hasWeeklySchedule(therapistId) {
+  const schedule = scheduleRows.find((therapist) => therapist.id === therapistId)
+  return Boolean(schedule && schedule.times.some((shift) => shift !== '—'))
+}
+
 export function getDailyTherapists(therapists, dateKey) {
   const todaySchedule = scheduleByDate[dateKey]
   if (!todaySchedule) return therapists
@@ -127,6 +132,7 @@ export function getDailyTherapists(therapists, dateKey) {
 
     return {
       ...therapist,
+      hasWeeklySchedule: hasWeeklySchedule(therapist.id),
       status: fixedStatusOverrides[therapist.id] || (shift === '—' ? 'paused' : 'available'),
     }
   })

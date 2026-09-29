@@ -41,9 +41,11 @@ export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
   const isStraight = therapist.category === 'straight'
   const availabilityLabel = isStraight
     ? '直男｜專屬價目'
-    : therapist.status === 'available'
-      ? '可預約'
-      : therapist.bookingPolicy || '休息中'
+    : therapist.bookingPolicy || therapist.hasWeeklySchedule
+      ? '提前預約'
+      : therapist.status === 'available'
+        ? '可預約'
+        : '休息中'
   const previousIndex = (activeIndex - 1 + featuredTherapists.length) % featuredTherapists.length
   const nextIndex = (activeIndex + 1) % featuredTherapists.length
 
