@@ -35,7 +35,7 @@ export default function PricingSection() {
         <p className={styles.eyebrow}>PRICING</p>
         <h2 id="pricing-title">課程方案</h2>
         <p className={styles.sectionLead}>
-          高雄預約制 Gay SPA 與男士按摩方案，先看價格，再依需求選擇適合的放鬆方式。
+          高雄預約制 Gay SPA 與男士按摩方案，另提供直男按摩與直男同志按摩專屬方案；價格與一般師傅不同，預約前請先確認。
         </p>
       </div>
 
