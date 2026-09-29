@@ -3,6 +3,21 @@ export default function sitemap() {
 
   return [
     {
+      url: `${baseUrl}/journal/kaohsiung-straight-massage`,
+      lastModified: new Date(),
+    },
+
+    {
+      url: `${baseUrl}/journal/kaohsiung-straight-massage-price`,
+      lastModified: new Date(),
+    },
+
+    {
+      url: `${baseUrl}/journal/first-straight-massage-booking`,
+      lastModified: new Date(),
+    },
+
+    {
   url: `${baseUrl}/journal/how-to-choose-gay-massage-kaohsiung`,
   lastModified: new Date(),
 },

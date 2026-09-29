@@ -30,6 +30,21 @@ const faqs = [
 
 const journalItems = [
   {
+    title: '高雄直男按摩是什麼？方案與預約方式一次看',
+    description: '整理直男按摩、直男同志按摩專屬方案、師傅班表與第一次預約流程。',
+    href: '/journal/kaohsiung-straight-massage',
+  },
+  {
+    title: '高雄直男按摩價格怎麼算？',
+    description: '90 分鐘與 120 分鐘專屬方案、服務內容與訂金規則一次了解。',
+    href: '/journal/kaohsiung-straight-massage-price',
+  },
+  {
+    title: '第一次直男按摩怎麼預約？',
+    description: '從選師傅、看班表到支付每位師傅 NT$500 訂金的完整流程。',
+    href: '/journal/first-straight-massage-booking',
+  },
+  {
     title: '第一次男士 SPA，會很尷尬嗎？',
     description: '第一次接觸男士 SPA 時，真正擔心的往往是空間是否讓人安心。',
     href: '/journal/first-men-spa-experience',

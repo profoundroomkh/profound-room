@@ -3,6 +3,39 @@ import JournalCTA from '../../components/JournalCTA'
 export default function JournalPage() {
   const posts = [
     {
+      title:
+        '高雄直男按摩是什麼？服務對象、方案與預約方式一次看',
+
+      description:
+        '想了解高雄直男按摩、直男同志按摩與直男師傅方案？本文整理服務特色、價格方向、師傅班表與預約流程。',
+
+      link:
+        '/journal/kaohsiung-straight-massage',
+    },
+
+    {
+      title:
+        '高雄直男按摩價格怎麼算？90 分鐘與 120 分鐘方案整理',
+
+      description:
+        '整理高雄直男按摩價格、90 分鐘與 120 分鐘直男師傅專屬方案、服務內容與首次預約訂金規則。',
+
+      link:
+        '/journal/kaohsiung-straight-massage-price',
+    },
+
+    {
+      title:
+        '第一次直男按摩怎麼預約？訂金、時段與注意事項',
+
+      description:
+        '第一次預約直男按摩或直男同志按摩不用緊張，本文整理師傅選擇、班表確認、NT$500 訂金與 LINE 預約流程。',
+
+      link:
+        '/journal/first-straight-massage-booking',
+    },
+
+    {
   title:
     '高雄同志按摩推薦怎麼選？5個初次體驗前必看的重點',
 
