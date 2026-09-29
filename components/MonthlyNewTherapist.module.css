@@ -282,6 +282,13 @@
   background: #f2e1d0;
 }
 
+.bookingButtonDisabled {
+  border-color: rgba(185, 151, 125, 0.24);
+  background: rgba(185, 151, 125, 0.08);
+  color: rgba(242, 225, 208, 0.54);
+  cursor: not-allowed;
+}
+
 @media (max-width: 620px) {
   .section {
     width: min(100% - 32px, 560px);

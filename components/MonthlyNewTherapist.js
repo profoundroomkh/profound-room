@@ -27,6 +27,16 @@ function openTherapistSection(therapist) {
   })
 }
 
+function canBookTherapist(therapist) {
+  return therapist.status === 'available' || therapist.hasWeeklySchedule
+}
+
+function getBookingButtonLabel(therapist) {
+  if (therapist.status === 'available') return '可預約'
+  if (therapist.hasWeeklySchedule) return '提前預約'
+  return '暫停預約等週更新'
+}
+
 export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
   const dateKey = useTaiwanDateKey()
   const featuredTherapists = useMemo(
@@ -39,13 +49,7 @@ export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
 
   const therapist = featuredTherapists[activeIndex]
   const isStraight = therapist.category === 'straight'
-  const availabilityLabel = isStraight
-    ? '直男｜專屬價目'
-    : therapist.bookingPolicy || therapist.hasWeeklySchedule
-      ? '提前預約'
-      : therapist.status === 'available'
-        ? '可預約'
-        : '休息中'
+  const availabilityLabel = isStraight ? '直男｜專屬價目' : getBookingButtonLabel(therapist)
   const previousIndex = (activeIndex - 1 + featuredTherapists.length) % featuredTherapists.length
   const nextIndex = (activeIndex + 1) % featuredTherapists.length
 
@@ -122,20 +126,27 @@ export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
             <button type="button" className={styles.profileButton} onClick={() => openTherapistSection(therapist)}>
               查看資料
             </button>
-            <TrackedLink
-              href={LINE_URL}
-              target="_blank"
-              rel="noreferrer"
-              className={styles.bookingButton}
-              eventName="reservation_intent"
-              eventParameters={{
-                source: 'homepage_new_therapist',
-                therapist: therapist.name,
-                therapist_id: therapist.id,
-              }}
-            >
-              LINE 詢問／預約
-            </TrackedLink>
+            {canBookTherapist(therapist) ? (
+              <TrackedLink
+                href={LINE_URL}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.bookingButton}
+                aria-label={`${getBookingButtonLabel(therapist)}：前往 LINE 詢問`}
+                eventName="reservation_intent"
+                eventParameters={{
+                  source: 'homepage_new_therapist',
+                  therapist: therapist.name,
+                  therapist_id: therapist.id,
+                }}
+              >
+                {getBookingButtonLabel(therapist)}
+              </TrackedLink>
+            ) : (
+              <span className={`${styles.bookingButton} ${styles.bookingButtonDisabled}`}>
+                {getBookingButtonLabel(therapist)}
+              </span>
+            )}
           </div>
         </div>
       </article>

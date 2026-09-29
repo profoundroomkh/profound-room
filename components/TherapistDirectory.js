@@ -27,21 +27,21 @@ function trackBooking(therapist, source = 'therapist_card') {
 }
 
 function requiresAdvanceBooking(therapist) {
-  return Boolean(therapist.bookingPolicy || therapist.hasWeeklySchedule)
+  return therapist.status !== 'available' && Boolean(therapist.hasWeeklySchedule)
 }
 
 function canBookTherapist(therapist) {
-  return therapist.status === 'available' || requiresAdvanceBooking(therapist)
+  return therapist.status === 'available' || Boolean(therapist.hasWeeklySchedule)
 }
 
 function getStatusLabel(therapist) {
-  if (therapist.bookingPolicy) return therapist.bookingPolicy
-  return therapist.status === 'available' ? '可預約' : '休息中'
+  return getBookingButtonLabel(therapist)
 }
 
 function getBookingButtonLabel(therapist) {
-  if (requiresAdvanceBooking(therapist)) return '提前預約'
-  return therapist.status === 'available' ? '預約此師傅' : '暫停接單'
+  if (therapist.status === 'available') return '可預約'
+  if (therapist.hasWeeklySchedule) return '提前預約'
+  return '暫停預約等週更新'
 }
 
 export default function TherapistDirectory() {
@@ -416,11 +416,11 @@ export default function TherapistDirectory() {
                       : styles.statusIndicatorPaused
                   }
                 />
-                {requiresAdvanceBooking(selected)
-                  ? `可${selected.bookingPolicy || '提前預約'}，請先向官方 LINE 確認時段`
-                  : selected.status === 'available'
-                    ? '目前開放預約'
-                  : '目前暫停接單，恢復時間請留意公告'}
+                {selected.status === 'available'
+                  ? '目前可預約，請向官方 LINE 確認時段'
+                  : selected.hasWeeklySchedule
+                    ? '本週有排班，可先向官方 LINE 預約後續日期'
+                    : '本週無排班，暫停預約等週更新'}
               </div>
 
               <button
@@ -429,9 +429,7 @@ export default function TherapistDirectory() {
                 disabled={!canBookTherapist(selected)}
                   onClick={() => handleBooking(selected, 'therapist_modal')}
               >
-                {canBookTherapist(selected)
-                  ? `複製預約文字並前往 LINE`
-                  : '暫停接單'}
+                {getBookingButtonLabel(selected)}
               </button>
               {canBookTherapist(selected) && (
                 <p className={styles.bookingHint}>
