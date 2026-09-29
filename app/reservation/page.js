@@ -111,9 +111,9 @@ export default function ReservationPage() {
             <div className={`${styles.infoCard} ${styles.depositCard}`}>
               <p className={styles.depositEyebrow}>首次預約提醒</p>
               <p className={styles.depositMain}>
-                尚未消費過的客人，預約需先匯訂金 NT$500。
+                首次預約的客人一律要先匯訂金，沒有例外。
               </p>
-              <p>完成消費後，於結帳時折抵 NT$500。</p>
+              <p>訂金為 NT$500／每位師傅，完成當日消費後於結帳時全額折抵。</p>
               <div className={styles.divider} aria-hidden="true" />
               <p>本館採完全預約制，不接受現場臨時來訪。</p>
               <p>客服確認日期與時段後，才算完成預約。</p>

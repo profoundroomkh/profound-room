@@ -7,14 +7,29 @@ import styles from './HomeHero.module.css'
 
 const AGE_GATE_KEY = 'profound-age-confirmed'
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
+const EVENT_END = new Date('2026-10-01T00:00:00+08:00').getTime()
 
 export default function HomeHero() {
   const [showAgeGate, setShowAgeGate] = useState(null)
   const [showEventImage, setShowEventImage] = useState(false)
+  const [eventActive, setEventActive] = useState(false)
 
   useEffect(() => {
     const confirmed = window.sessionStorage.getItem(AGE_GATE_KEY) === 'true'
     setShowAgeGate(!confirmed)
+  }, [])
+
+  useEffect(() => {
+    const updateEventState = () => {
+      const isActive = Date.now() < EVENT_END
+      setEventActive(isActive)
+      if (!isActive) setShowEventImage(false)
+    }
+
+    updateEventState()
+    const timer = window.setTimeout(updateEventState, Math.max(1000, EVENT_END - Date.now()))
+
+    return () => window.clearTimeout(timer)
   }, [])
 
   useEffect(() => {
@@ -76,6 +91,7 @@ export default function HomeHero() {
             </div>
           </div>
 
+          {eventActive && (
           <aside className={`${styles.supportCard} ${styles.eventCard}`} aria-label="中秋雙師限定活動資訊">
             <div className={styles.supportHeading}>
               <p>MONTHLY EVENT</p>
@@ -113,6 +129,7 @@ export default function HomeHero() {
               </div>
             </div>
           </aside>
+          )}
 
           <div className={styles.introCard}>
             <p className={styles.introLabel}>ABOUT</p>

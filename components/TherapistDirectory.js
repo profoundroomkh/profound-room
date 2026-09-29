@@ -47,6 +47,7 @@ function getBookingButtonLabel(therapist) {
 export default function TherapistDirectory() {
   const dateKey = useTaiwanDateKey()
   const [activeFilter, setActiveFilter] = useState('all')
+  const [showPaused, setShowPaused] = useState(false)
   const [selected, setSelected] = useState(null)
   const [currentImage, setCurrentImage] = useState(0)
   const [notice, setNotice] = useState('')
@@ -71,7 +72,7 @@ export default function TherapistDirectory() {
     [regularTherapists],
   )
 
-  const visibleTherapists = useMemo(() => {
+  const filteredTherapists = useMemo(() => {
     if (activeFilter === 'new') return sortedTherapists.filter((item) => item.isNew)
     if (activeFilter === 'available') {
       return sortedTherapists.filter((item) => item.status === 'available')
@@ -81,6 +82,17 @@ export default function TherapistDirectory() {
     }
     return sortedTherapists
   }, [activeFilter, sortedTherapists])
+
+  const visibleTherapists = useMemo(() => {
+    return filteredTherapists
+  }, [filteredTherapists])
+
+  const visibleCount =
+    activeFilter === 'all' && !showPaused
+      ? visibleTherapists.filter((item) => item.status !== 'paused').length
+      : visibleTherapists.length
+
+  const pausedCount = sortedTherapists.filter((item) => item.status === 'paused').length
 
   useEffect(() => {
     if (!selected) return undefined
@@ -185,8 +197,21 @@ export default function TherapistDirectory() {
         })}
       </div>
 
+      {activeFilter === 'all' && pausedCount > 0 && (
+        <button
+          type="button"
+          className={styles.pausedToggle}
+          onClick={() => setShowPaused((value) => !value)}
+          aria-expanded={showPaused}
+        >
+          {showPaused ? '收起其他師傅' : `查看其他 ${pausedCount} 位師傅（提前預約／休息中）`}
+        </button>
+      )}
+
       <p className={styles.resultCount} aria-live="polite">
-        顯示 {visibleTherapists.length} 位師傅
+        {activeFilter === 'all' && !showPaused
+          ? `顯示 ${visibleCount} 位今日可預約師傅`
+          : `顯示 ${visibleCount} 位師傅`}
       </p>
 
       <div className={styles.grid}>
@@ -195,6 +220,7 @@ export default function TherapistDirectory() {
             as="article"
             key={therapist.id}
             delay={index * 70}
+            hidden={activeFilter === 'all' && !showPaused && therapist.status === 'paused'}
             className={`${styles.card} ${
               therapist.status === 'paused' ? styles.cardPaused : ''
             }`}

@@ -94,6 +94,27 @@
   color: #070707;
 }
 
+.pausedToggle {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  margin: 12px 0 18px;
+  padding: 8px 14px;
+  border: 1px solid rgba(185, 151, 125, 0.32);
+  border-radius: 999px;
+  background: rgba(185, 151, 125, 0.06);
+  color: #cbb79d;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.pausedToggle:hover {
+  border-color: rgba(185, 151, 125, 0.68);
+  background: rgba(185, 151, 125, 0.12);
+  color: #f2e1d0;
+}
+
 .filter:active,
 .filterActive:active,
 .card button:active,
@@ -156,6 +177,7 @@
 .bookingButton:focus-visible,
 .filter:focus-visible,
 .filterActive:focus-visible,
+.pausedToggle:focus-visible,
 .modal button:focus-visible {
   outline: 2px solid #d8b89f;
   outline-offset: 3px;
