@@ -133,6 +133,17 @@ export default function TherapistDirectory() {
     setSelected(therapist)
   }
 
+  useEffect(() => {
+    const handleScheduleProfileRequest = (event) => {
+      const therapistId = event.detail?.therapistId
+      const therapist = regularTherapists.find((item) => item.id === therapistId)
+      if (therapist) openDetails(therapist, null)
+    }
+
+    window.addEventListener('profound:open-profile', handleScheduleProfileRequest)
+    return () => window.removeEventListener('profound:open-profile', handleScheduleProfileRequest)
+  }, [regularTherapists])
+
   const handleBooking = async (therapist, source = 'therapist_card') => {
     if (!canBookTherapist(therapist)) return
 

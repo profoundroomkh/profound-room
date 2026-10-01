@@ -18,11 +18,9 @@ function getTimeClass(time) {
 }
 
 function openTherapistProfile(therapistId) {
-  const trigger = document.getElementById(`${therapistId}-profile-trigger`)
-  if (!trigger) return
-
-  trigger.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  window.setTimeout(() => trigger.click(), 250)
+  window.dispatchEvent(new CustomEvent('profound:open-profile', {
+    detail: { therapistId },
+  }))
 }
 
 export default function WeeklySchedule() {

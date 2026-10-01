@@ -77,6 +77,50 @@
   margin: 0 auto;
 }
 
+.carouselControls {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: 1160px;
+  margin: 18px auto 0;
+}
+
+.carouselButton {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(185, 151, 125, 0.62);
+  border-radius: 50%;
+  background: rgba(5, 5, 5, 0.72);
+  color: #f2e1d0;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.carouselButton:hover:not(:disabled),
+.carouselButton:focus-visible:not(:disabled) {
+  border-color: #d6b79d;
+  background: #b9977d;
+  color: #0b0908;
+}
+
+.carouselButton:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.carouselStatus {
+  min-width: 142px;
+  color: #c9b8aa;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
 .card {
   position: relative;
   min-width: 0;
@@ -260,6 +304,22 @@
     box-sizing: border-box;
     flex: 0 0 100%;
     scroll-snap-align: start;
+  }
+
+  .carouselControls {
+    display: flex;
+    gap: 11px;
+    margin-top: 14px;
+  }
+
+  .carouselButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carouselStatus {
+    min-width: 132px;
+    font-size: 10px;
   }
 
   .photoWrap {

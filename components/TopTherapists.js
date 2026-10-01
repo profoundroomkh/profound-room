@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useRef, useState } from 'react'
 import styles from './TopTherapists.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
@@ -45,6 +46,18 @@ function openProfile(event, therapistId) {
 }
 
 export default function TopTherapists() {
+  const cardsRef = useRef(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const scrollToCard = (index) => {
+    const cards = cardsRef.current
+    const card = cards?.children[index]
+    if (!cards || !card) return
+
+    cards.scrollTo({ left: card.offsetLeft, behavior: 'smooth' })
+    setActiveIndex(index)
+  }
+
   return (
     <section className={styles.section} id="top-three" aria-labelledby="top-three-title">
       <div className={styles.sectionHead}>
@@ -54,7 +67,7 @@ export default function TopTherapists() {
         <p className={styles.lead}>本月人氣排名，先看熱門師傅，再依班表安排你的放鬆時間。</p>
       </div>
 
-      <div className={styles.cards}>
+      <div className={styles.cards} ref={cardsRef}>
         {topTherapists.map((therapist) => (
           <article className={styles.card} key={therapist.id}>
             <div className={styles.rank}>{therapist.rank}</div>
@@ -82,6 +95,30 @@ export default function TopTherapists() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className={styles.carouselControls} aria-label="切換熱門師傅">
+        <button
+          type="button"
+          className={styles.carouselButton}
+          onClick={() => scrollToCard(Math.max(0, activeIndex - 1))}
+          disabled={activeIndex === 0}
+          aria-label="上一位熱門師傅"
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+        <span className={styles.carouselStatus}>
+          {activeIndex + 1} / {topTherapists.length}　左右滑動查看
+        </span>
+        <button
+          type="button"
+          className={styles.carouselButton}
+          onClick={() => scrollToCard(Math.min(topTherapists.length - 1, activeIndex + 1))}
+          disabled={activeIndex === topTherapists.length - 1}
+          aria-label="下一位熱門師傅"
+        >
+          <span aria-hidden="true">→</span>
+        </button>
       </div>
 
       <div className={styles.sectionFoot}>
