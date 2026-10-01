@@ -8,10 +8,11 @@ const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 
 const menuGroups = [
   {
-    label: 'EXPLORE',
+      label: 'EXPLORE',
     items: [
       { label: '首頁', english: 'Home', href: '/' },
       { label: '師傅團隊', english: 'Therapists', href: '/#therapists' },
+      { label: '每週班表', english: 'Weekly Schedule', href: '/weekly-schedule' },
       { label: '價目方案', english: 'Courses & Plans', href: '/#pricing' },
     ],
   },

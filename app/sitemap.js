@@ -61,6 +61,11 @@ export default function sitemap() {
     },
 
     {
+      url: `${baseUrl}/weekly-schedule`,
+      lastModified: new Date(),
+    },
+
+    {
       url: `${baseUrl}/space`,
       lastModified: new Date(),
     },

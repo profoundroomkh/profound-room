@@ -44,7 +44,7 @@ function getBookingButtonLabel(therapist) {
   return '暫停預約等週更新'
 }
 
-export default function TherapistDirectory() {
+export default function TherapistDirectory({ showDirectory = true }) {
   const dateKey = useTaiwanDateKey()
   const [activeFilter, setActiveFilter] = useState('all')
   const [showPaused, setShowPaused] = useState(false)
@@ -166,8 +166,8 @@ export default function TherapistDirectory() {
 
   return (
     <>
-      <MonthlyNewTherapist />
-      <ScrollReveal
+      {showDirectory && <MonthlyNewTherapist />}
+      {showDirectory && <ScrollReveal
       as="section"
       id="all-therapists"
       className={styles.section}
@@ -322,7 +322,7 @@ export default function TherapistDirectory() {
         ))}
       </div>
 
-      </ScrollReveal>
+      </ScrollReveal>}
 
       <WeeklySchedule />
 
