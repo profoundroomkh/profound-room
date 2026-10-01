@@ -13,8 +13,6 @@ export default function Home() {
   return (
     <>
       <Header />
-      <HomeHero />
-      <TopTherapists />
 
       <main
         id="main"
@@ -25,6 +23,11 @@ export default function Home() {
           fontFamily: "serif",
         }}
       >
+        <TopTherapists />
+        <TherapistDirectory />
+        <PricingSection />
+        <HomepageLowerSection />
+
         <ScrollReveal as="section" style={{ '--reveal-distance': '30px' }}>
           <div
             style={{
@@ -168,9 +171,7 @@ export default function Home() {
           </div>
         </ScrollReveal>
 
-        <TherapistDirectory />
-        <PricingSection />
-        <HomepageLowerSection />
+        <HomeHero />
       </main>
     </>
   )

@@ -156,7 +156,6 @@ export default function TherapistDirectory() {
   return (
     <>
       <MonthlyNewTherapist />
-      <WeeklySchedule />
       <ScrollReveal
       as="section"
       id="all-therapists"
@@ -313,6 +312,8 @@ export default function TherapistDirectory() {
       </div>
 
       </ScrollReveal>
+
+      <WeeklySchedule />
 
       {selected && (
         <div

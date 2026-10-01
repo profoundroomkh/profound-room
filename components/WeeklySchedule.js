@@ -17,6 +17,14 @@ function getTimeClass(time) {
   return styles.open
 }
 
+function openTherapistProfile(therapistId) {
+  const trigger = document.getElementById(`${therapistId}-profile-trigger`)
+  if (!trigger) return
+
+  trigger.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  window.setTimeout(() => trigger.click(), 250)
+}
+
 export default function WeeklySchedule() {
   const dateKey = useTaiwanDateKey()
   const todayIndex = getScheduleDayIndex(dateKey)
@@ -42,7 +50,11 @@ export default function WeeklySchedule() {
   }, [todayIndex])
 
   return (
-    <section className={styles.section} aria-labelledby="weekly-schedule-title">
+    <section
+      id="weekly-schedule"
+      className={styles.section}
+      aria-labelledby="weekly-schedule-title"
+    >
       <div className={styles.headingRow}>
         <div>
           <p className={styles.eyebrow}>WEEKLY SCHEDULE</p>
@@ -110,6 +122,14 @@ export default function WeeklySchedule() {
                   <div>
                     <p className={styles.mobileName}>{therapist.name}</p>
                     {therapist.tag && <span className={styles.mobileTag}>{therapist.tag}</span>}
+                    <button
+                      type="button"
+                      className={styles.profileLink}
+                      onClick={() => openTherapistProfile(therapist.id)}
+                      aria-label={`查看 ${therapist.name} 的照片與完整資料`}
+                    >
+                      查看照片
+                    </button>
                   </div>
                   <p className={`${styles.mobileTime} ${getTimeClass(time)}`}>{time}</p>
                 </div>
@@ -143,6 +163,14 @@ export default function WeeklySchedule() {
                 <th scope="row">
                   <span className={styles.name}>{therapist.name}</span>
                   {therapist.tag && <span className={styles.tag}>{therapist.tag}</span>}
+                  <button
+                    type="button"
+                    className={styles.profileLink}
+                    onClick={() => openTherapistProfile(therapist.id)}
+                    aria-label={`查看 ${therapist.name} 的照片與完整資料`}
+                  >
+                    查看照片
+                  </button>
                 </th>
                 {therapist.times.map((time, index) => (
                   <td
