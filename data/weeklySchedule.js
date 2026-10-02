@@ -1,3 +1,5 @@
+export const FULLY_BOOKED_LABEL = '預約滿'
+
 export const scheduleDays = [
   { key: '2026-09-28', label: '一', date: '9/28' },
   { key: '2026-09-29', label: '二', date: '9/29' },
@@ -70,7 +72,7 @@ export const scheduleRows = [
   {
     id: 'milo',
     name: 'Milo／米洛',
-    times: ['—', '—', '—', '—', '22:30–23:30', '22:30–23:30', '22:30–23:30'],
+    times: ['—', '—', '—', '—', '22:30–23:30', '22:30–23:30', FULLY_BOOKED_LABEL],
   },
   {
     id: 'bart',
@@ -139,7 +141,9 @@ export function getDailyTherapists(therapists, dateKey) {
     return {
       ...therapist,
       hasWeeklySchedule: hasWeeklySchedule(therapist.id),
-      status: fixedStatusOverrides[therapist.id] || (shift === '—' ? 'paused' : 'available'),
+      isFullyBooked: shift === FULLY_BOOKED_LABEL,
+      status: fixedStatusOverrides[therapist.id]
+        || (shift === '—' || shift === FULLY_BOOKED_LABEL ? 'paused' : 'available'),
     }
   })
 }

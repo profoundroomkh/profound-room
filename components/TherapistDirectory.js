@@ -27,11 +27,11 @@ function trackBooking(therapist, source = 'therapist_card') {
 }
 
 function requiresAdvanceBooking(therapist) {
-  return therapist.status !== 'available' && Boolean(therapist.hasWeeklySchedule)
+  return !therapist.isFullyBooked && therapist.status !== 'available' && Boolean(therapist.hasWeeklySchedule)
 }
 
 function canBookTherapist(therapist) {
-  return therapist.status === 'available' || Boolean(therapist.hasWeeklySchedule)
+  return !therapist.isFullyBooked && (therapist.status === 'available' || Boolean(therapist.hasWeeklySchedule))
 }
 
 function getStatusLabel(therapist) {
@@ -39,6 +39,7 @@ function getStatusLabel(therapist) {
 }
 
 function getBookingButtonLabel(therapist) {
+  if (therapist.isFullyBooked) return '預約已滿'
   if (therapist.status === 'available') return '可預約'
   if (therapist.hasWeeklySchedule) return '提前預約'
   return '暫停預約等週更新'
@@ -214,7 +215,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
           onClick={() => setShowPaused((value) => !value)}
           aria-expanded={showPaused}
         >
-          {showPaused ? '收起其他師傅' : `查看其他 ${pausedCount} 位師傅（提前預約／休息中）`}
+          {showPaused ? '收起其他師傅' : `查看其他 ${pausedCount} 位師傅（提前預約／預約已滿／休息中）`}
         </button>
       )}
 

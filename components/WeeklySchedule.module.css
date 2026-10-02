@@ -233,6 +233,11 @@
   color: #b9977d;
 }
 
+.full {
+  color: #d8b28f;
+  font-weight: 600;
+}
+
 .empty {
   color: rgba(201, 184, 170, 0.42);
 }

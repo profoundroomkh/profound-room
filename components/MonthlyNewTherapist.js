@@ -28,10 +28,11 @@ function openTherapistSection(therapist) {
 }
 
 function canBookTherapist(therapist) {
-  return therapist.status === 'available' || therapist.hasWeeklySchedule
+  return !therapist.isFullyBooked && (therapist.status === 'available' || therapist.hasWeeklySchedule)
 }
 
 function getBookingButtonLabel(therapist) {
+  if (therapist.isFullyBooked) return '預約已滿'
   if (therapist.status === 'available') return '可預約'
   if (therapist.hasWeeklySchedule) return '提前預約'
   return '暫停預約等週更新'

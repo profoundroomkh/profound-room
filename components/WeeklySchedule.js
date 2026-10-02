@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import {
+  FULLY_BOOKED_LABEL,
   getScheduleDayIndex,
   scheduleDays,
   scheduleRows,
@@ -12,6 +13,7 @@ import useTaiwanDateKey from './useTaiwanDateKey'
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 
 function getTimeClass(time) {
+  if (time === FULLY_BOOKED_LABEL) return styles.full
   if (time === '詢問') return styles.ask
   if (time === '—') return styles.empty
   return styles.open
@@ -135,7 +137,7 @@ export default function WeeklySchedule() {
             })}
           </div>
         </div>
-        <p className={styles.mobileHint}>未列出代表當日未排班；「詢問」請先透過官方 LINE 確認。</p>
+        <p className={styles.mobileHint}>未列出代表當日未排班；「詢問」請先透過官方 LINE 確認；「預約滿」代表當日名額已滿。</p>
       </div>
 
       <div className={styles.desktopTableWrap}>
