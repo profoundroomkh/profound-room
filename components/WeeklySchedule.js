@@ -29,6 +29,7 @@ export default function WeeklySchedule() {
   const dateKey = useTaiwanDateKey()
   const todayIndex = getScheduleDayIndex(dateKey)
   const [activeDay, setActiveDay] = useState(() => (todayIndex >= 0 ? todayIndex : 0))
+  const scheduleRange = `${scheduleDays[0].date}–${scheduleDays[scheduleDays.length - 1].date}`
 
   useEffect(() => {
     if (todayIndex >= 0) setActiveDay(todayIndex)
@@ -58,7 +59,7 @@ export default function WeeklySchedule() {
       <div className={styles.headingRow}>
         <div>
           <p className={styles.eyebrow}>WEEKLY SCHEDULE</p>
-          <h2 id="weekly-schedule-title">本週師傅班表</h2>
+          <h2 id="weekly-schedule-title">本週＋下週師傅班表</h2>
         </div>
         <p className={styles.intro}>
           先選日期查看當日班表，再透過官方 LINE 確認實際空檔與預約細節。
@@ -66,7 +67,7 @@ export default function WeeklySchedule() {
       </div>
 
       <div className={styles.metaRow}>
-        <p className={styles.range}>10/5–10/11 <span>每日 00:00 自動切換狀態</span></p>
+        <p className={styles.range}>{scheduleRange} <span>每日 00:00 自動切換狀態</span></p>
         <p className={styles.note}>
           公開班表只顯示師傅與服務時間，不公開客人或內部預約資料。
         </p>
@@ -142,7 +143,7 @@ export default function WeeklySchedule() {
 
       <div className={styles.desktopTableWrap}>
         <table>
-          <caption className={styles.srOnly}>10 月 5 日至 10 月 11 日深寓師傅週班表</caption>
+          <caption className={styles.srOnly}>{scheduleRange} 深寓師傅班表</caption>
           <thead>
             <tr>
               <th scope="col">師傅</th>
