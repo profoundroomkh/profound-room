@@ -66,7 +66,7 @@ export default function WeeklySchedule() {
       </div>
 
       <div className={styles.metaRow}>
-        <p className={styles.range}>9/28–10/4 <span>每日 00:00 自動切換狀態</span></p>
+        <p className={styles.range}>10/5–10/11 <span>每日 00:00 自動切換狀態</span></p>
         <p className={styles.note}>
           公開班表只顯示師傅與服務時間，不公開客人或內部預約資料。
         </p>
@@ -142,7 +142,7 @@ export default function WeeklySchedule() {
 
       <div className={styles.desktopTableWrap}>
         <table>
-          <caption className={styles.srOnly}>9 月 28 日至 10 月 4 日深寓師傅週班表</caption>
+          <caption className={styles.srOnly}>10 月 5 日至 10 月 11 日深寓師傅週班表</caption>
           <thead>
             <tr>
               <th scope="col">師傅</th>
