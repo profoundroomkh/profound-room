@@ -71,6 +71,189 @@
   line-height: 1.7;
 }
 
+.viewModeSwitch {
+  display: inline-flex;
+  gap: 4px;
+  margin: 22px 0 18px;
+  padding: 4px;
+  border: 1px solid rgba(185, 151, 125, 0.28);
+  border-radius: 999px;
+  background: rgba(12, 11, 10, 0.58);
+}
+
+.viewModeButton,
+.viewModeActive {
+  min-height: 38px;
+  padding: 8px 17px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #aa9888;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.viewModeButton:hover,
+.viewModeButton:focus-visible,
+.viewModeActive {
+  background: rgba(185, 151, 125, 0.17);
+  color: #f2e1d0;
+  outline: none;
+}
+
+.therapistWeekView {
+  overflow: hidden;
+  border: 1px solid rgba(185, 151, 125, 0.52);
+  border-radius: 18px;
+  background: rgba(12, 11, 10, 0.82);
+}
+
+.therapistWeekHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  gap: 32px;
+  align-items: end;
+  padding: 24px;
+  border-bottom: 1px solid rgba(185, 151, 125, 0.2);
+}
+
+.therapistWeekEyebrow {
+  margin: 0 0 9px;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+
+.therapistWeekHeader h3 {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.therapistWeekIntro {
+  max-width: 520px;
+  margin: 10px 0 0;
+  color: #aa9888;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.therapistPicker {
+  display: grid;
+  gap: 8px;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.therapistPicker select {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 34px 8px 13px;
+  border: 1px solid rgba(185, 151, 125, 0.48);
+  border-radius: 10px;
+  background: #171411;
+  color: #f2e1d0;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.therapistPicker select:focus-visible {
+  border-color: #b9977d;
+  outline: 2px solid rgba(185, 151, 125, 0.26);
+  outline-offset: 2px;
+}
+
+.therapistWeekIdentity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(185, 151, 125, 0.14);
+}
+
+.therapistWeekName {
+  margin: 0;
+  color: #f2e1d0;
+  font-size: 22px;
+}
+
+.therapistWeekTag {
+  display: inline-block;
+  margin-top: 5px;
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.therapistWeekGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  padding: 20px 24px 24px;
+}
+
+.therapistDayCard {
+  min-height: 92px;
+  padding: 14px;
+  border: 1px solid rgba(185, 151, 125, 0.24);
+  border-radius: 12px;
+  background: rgba(185, 151, 125, 0.045);
+}
+
+.therapistDayLabel,
+.therapistDayDate,
+.therapistDayTime {
+  margin: 0;
+}
+
+.therapistDayLabel {
+  color: #b9977d;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.therapistDayDate {
+  margin-top: 3px;
+  color: #aa9888;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.therapistDayTime {
+  margin-top: 18px;
+  color: #c9b8aa;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.therapistDayTime.open {
+  color: #f2e1d0;
+}
+
+.therapistDayTime.ask {
+  color: #b9977d;
+}
+
+.therapistWeekHint {
+  margin: 0;
+  padding: 0 24px 22px;
+  color: rgba(201, 184, 170, 0.66);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
 .quickSwitch {
   display: flex;
   align-items: center;
@@ -303,6 +486,72 @@
 @media (max-width: 700px) {
   .section {
     padding: 0 16px 88px;
+  }
+
+  .viewModeSwitch {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0 16px;
+  }
+
+  .viewModeButton,
+  .viewModeActive {
+    width: 100%;
+    padding: 8px 9px;
+    font-size: 12px;
+  }
+
+  .therapistWeekHeader {
+    display: block;
+    padding: 19px 17px;
+  }
+
+  .therapistWeekHeader h3 {
+    font-size: 25px;
+  }
+
+  .therapistWeekIntro {
+    margin-top: 9px;
+    font-size: 12px;
+  }
+
+  .therapistPicker {
+    margin-top: 18px;
+  }
+
+  .therapistWeekIdentity {
+    display: block;
+    padding: 17px;
+  }
+
+  .therapistWeekName {
+    font-size: 20px;
+  }
+
+  .therapistWeekIdentity .profileLink {
+    margin-top: 12px;
+  }
+
+  .therapistWeekGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 16px 17px 18px;
+  }
+
+  .therapistDayCard {
+    min-height: 84px;
+    padding: 12px;
+  }
+
+  .therapistDayTime {
+    margin-top: 14px;
+    font-size: 13px;
+  }
+
+  .therapistWeekHint {
+    padding: 0 17px 18px;
   }
 
   .headingRow {
