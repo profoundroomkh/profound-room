@@ -1,4 +1,3 @@
-import FloatingButton from '../components/FloatingButton'
 import BackgroundMusic from '../components/BackgroundMusic'
 import './globals.css'
 import Script from 'next/script'
@@ -90,7 +89,6 @@ export default function RootLayout({ children }) {
  return (
   <html lang="zh-Hant">
         <body>
-      <FloatingButton />
       <BackgroundMusic />
       <div id="google_translate_element" className="googleTranslateElement" aria-hidden="true" />
       {children}
