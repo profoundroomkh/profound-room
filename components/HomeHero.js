@@ -56,6 +56,7 @@ export default function HomeHero() {
 
   const confirmAge = () => {
     window.sessionStorage.setItem(AGE_GATE_KEY, 'true')
+    window.dispatchEvent(new CustomEvent('profound:age-confirmed'))
     trackAgeConfirmation()
     setShowAgeGate(false)
   }

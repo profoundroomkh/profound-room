@@ -5,16 +5,20 @@ import styles from './BackgroundMusic.module.css'
 
 const VIDEO_ID = '9siU9aIPMEs'
 const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
+const AGE_CONFIRMED_EVENT = 'profound:age-confirmed'
 
 export default function BackgroundMusic() {
   const iframeRef = useRef(null)
   const playerRef = useRef(null)
+  const playerReadyRef = useRef(false)
+  const soundEnabledRef = useRef(false)
   const [isReady, setIsReady] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
     let cancelled = false
+    soundEnabledRef.current = window.sessionStorage.getItem('profound-age-confirmed') === 'true'
 
     const createPlayer = () => {
       if (cancelled || !window.YT?.Player || !iframeRef.current || playerRef.current) return
@@ -23,10 +27,16 @@ export default function BackgroundMusic() {
         events: {
           onReady: (event) => {
             if (cancelled) return
-            event.target.mute()
+            playerReadyRef.current = true
             event.target.setVolume(32)
+            if (soundEnabledRef.current) {
+              event.target.unMute()
+            } else {
+              event.target.mute()
+            }
             event.target.playVideo()
             setIsReady(true)
+            setIsMuted(!soundEnabledRef.current)
             setIsPlaying(true)
           },
           onStateChange: (event) => {
@@ -56,6 +66,7 @@ export default function BackgroundMusic() {
 
     return () => {
       cancelled = true
+      playerReadyRef.current = false
       if (window.onYouTubeIframeAPIReady === createPlayer) {
         window.onYouTubeIframeAPIReady = previousReady
       }
@@ -64,11 +75,30 @@ export default function BackgroundMusic() {
     }
   }, [])
 
+  useEffect(() => {
+    const enableSound = () => {
+      soundEnabledRef.current = true
+      const player = playerRef.current
+
+      if (player && playerReadyRef.current) {
+        player.unMute()
+        player.setVolume(32)
+        player.playVideo()
+        setIsMuted(false)
+        setIsPlaying(true)
+      }
+    }
+
+    window.addEventListener(AGE_CONFIRMED_EVENT, enableSound)
+    return () => window.removeEventListener(AGE_CONFIRMED_EVENT, enableSound)
+  }, [])
+
   const handleToggle = () => {
     const player = playerRef.current
     if (!player || !isReady) return
 
     if (isMuted) {
+      soundEnabledRef.current = true
       player.unMute()
       player.setVolume(32)
       player.playVideo()
