@@ -73,7 +73,7 @@ export const scheduleRows = [
   {
     id: 'milo',
     name: 'Milo／米洛',
-    times: [FULLY_BOOKED_LABEL, '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '—', '—', '—'],
+    times: [FULLY_BOOKED_LABEL, '22:30–23:30', '22:30–23:30', '22:30–23:30', FULLY_BOOKED_LABEL, '—', '—', '—'],
   },
   {
     id: 'bart',
