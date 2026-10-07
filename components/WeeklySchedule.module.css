@@ -548,6 +548,9 @@
   .therapistDayTime {
     margin-top: 14px;
     font-size: 13px;
+    line-height: 1.5;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .therapistWeekHint {
@@ -695,6 +698,11 @@
     border-bottom: 1px solid rgba(185, 151, 125, 0.14);
   }
 
+  .mobileItem > div {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
   .mobileItem:last-child {
     border-bottom: 0;
   }
@@ -717,11 +725,15 @@
   }
 
   .mobileTime {
+    flex: 0 1 58%;
+    min-width: 0;
     margin: 0;
     color: #c9b8aa;
     font-size: 14px;
+    line-height: 1.5;
     text-align: right;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .mobileTime.open {
