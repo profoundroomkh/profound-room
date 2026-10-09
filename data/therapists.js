@@ -21,6 +21,23 @@ export const therapists = [
     ],
   },
   {
+    id: 'hale',
+    name: 'Hale／海爾',
+    isNew: true,
+    status: 'available',
+    height: 177,
+    weight: 70,
+    age: 35,
+    role: '不分',
+    size: null,
+    specialty: '刺青風格',
+    supportPeriod: '每日 11:00–23:00，休假依每週班表',
+    images: [
+      '/images/therapist-Hale-1.JPG',
+      '/images/therapist-Hale-2.JPG',
+    ],
+  },
+  {
     id: 'gugu',
     name: 'Gugu／古古',
     isNew: true,
