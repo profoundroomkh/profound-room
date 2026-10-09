@@ -122,7 +122,7 @@ export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
             <span>{therapist.weight} kg</span>
             <span>{therapist.age} 歲</span>
           </div>
-          <p className={styles.supportPeriod}>{therapist.supportPeriod || '支援時間請洽官方 LINE'}</p>
+          {therapist.supportPeriod && <p className={styles.supportPeriod}>{therapist.supportPeriod}</p>}
           <div className={styles.actions}>
             <button type="button" className={styles.profileButton} onClick={() => openTherapistSection(therapist)}>
               查看資料
