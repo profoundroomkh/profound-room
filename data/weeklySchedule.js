@@ -76,11 +76,6 @@ export const scheduleRows = [
     times: [FULLY_BOOKED_LABEL, '22:30–23:30', '22:30–23:30', FULLY_BOOKED_LABEL, FULLY_BOOKED_LABEL, '—', '—', '—'],
   },
   {
-    id: 'bart',
-    name: 'Alpha／阿法',
-    times: ['—', '—', '—', '—', '—', '—', '—', '—'],
-  },
-  {
     id: 'zac',
     name: 'Zac／札克',
     tag: '深夜師傅',

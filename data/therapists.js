@@ -21,23 +21,6 @@ export const therapists = [
     ],
   },
   {
-    id: 'bart',
-    name: 'Alpha／阿法',
-    isNew: true,
-    status: 'available',
-    height: 177,
-    weight: 75,
-    age: 30,
-    role: '不分',
-    size: null,
-    specialty: '低調內向・刺青反差',
-    supportPeriod: '每週六 12:00–20:00｜週日 12:00–18:00',
-    images: [
-      '/images/therapist-Bart-1.jpg',
-      '/images/therapist-Bart-2.jpg',
-    ],
-  },
-  {
     id: 'gugu',
     name: 'Gugu／古古',
     isNew: true,
@@ -269,7 +252,7 @@ export const therapistFilters = [
   { id: 'paused', label: '休息中' },
 ]
 
-// 依「9月派單記錄」目前排名整理；Bart 舊名與 Alpha 合併計算。
+// 依「9月派單記錄」目前排名整理。
 export const septemberPerformanceRank = {
   dylan: 1,
   owen: 2,
@@ -277,7 +260,6 @@ export const septemberPerformanceRank = {
   gugu: 4,
   zac: 5,
   andy: 6,
-  bart: 7,
   kai: 8,
   raven: 9,
   milo: 10,
