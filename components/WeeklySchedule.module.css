@@ -416,6 +416,11 @@
   color: #b9977d;
 }
 
+.pending {
+  color: #d8b28f;
+  font-weight: 600;
+}
+
 .full {
   color: #d8b28f;
   font-weight: 600;

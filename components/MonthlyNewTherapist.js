@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useMemo, useState } from 'react'
 import { therapists } from '../data/therapists'
-import { getDailyTherapists } from '../data/weeklySchedule'
+import { PENDING_UPDATE_LABEL, getDailyTherapists } from '../data/weeklySchedule'
 import TrackedLink from './TrackedLink'
 import ScrollReveal from './ScrollReveal'
 import useTaiwanDateKey from './useTaiwanDateKey'
@@ -28,10 +28,13 @@ function openTherapistSection(therapist) {
 }
 
 function canBookTherapist(therapist) {
-  return !therapist.isFullyBooked && (therapist.status === 'available' || therapist.hasWeeklySchedule)
+  return !therapist.isSchedulePending
+    && !therapist.isFullyBooked
+    && (therapist.status === 'available' || therapist.hasWeeklySchedule)
 }
 
 function getBookingButtonLabel(therapist) {
+  if (therapist.isSchedulePending) return PENDING_UPDATE_LABEL
   if (therapist.isFullyBooked) return '預約已滿'
   if (therapist.status === 'available') return '可預約'
   if (therapist.hasWeeklySchedule) return '提前預約'

@@ -6,7 +6,7 @@
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { septemberPerformanceRank, therapistFilters, therapists } from '../data/therapists'
-import { getDailyTherapists } from '../data/weeklySchedule'
+import { PENDING_UPDATE_LABEL, getDailyTherapists } from '../data/weeklySchedule'
 import { trackEvent } from './analytics'
 import ScrollReveal from './ScrollReveal'
 import MonthlyNewTherapist from './MonthlyNewTherapist'
@@ -31,7 +31,9 @@ function requiresAdvanceBooking(therapist) {
 }
 
 function canBookTherapist(therapist) {
-  return !therapist.isFullyBooked && (therapist.status === 'available' || Boolean(therapist.hasWeeklySchedule))
+  return !therapist.isSchedulePending
+    && !therapist.isFullyBooked
+    && (therapist.status === 'available' || Boolean(therapist.hasWeeklySchedule))
 }
 
 function getStatusLabel(therapist) {
@@ -39,6 +41,7 @@ function getStatusLabel(therapist) {
 }
 
 function getBookingButtonLabel(therapist) {
+  if (therapist.isSchedulePending) return PENDING_UPDATE_LABEL
   if (therapist.isFullyBooked) return '預約已滿'
   if (therapist.status === 'available') return '可預約'
   if (therapist.hasWeeklySchedule) return '提前預約'

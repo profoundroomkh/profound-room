@@ -1,22 +1,22 @@
 export const FULLY_BOOKED_LABEL = '預約滿'
+export const PENDING_UPDATE_LABEL = '待更新'
 
 export const scheduleDays = [
-  { key: '2026-10-04', label: '日', date: '10/4' },
-  { key: '2026-10-05', label: '一', date: '10/5' },
-  { key: '2026-10-06', label: '二', date: '10/6' },
-  { key: '2026-10-07', label: '三', date: '10/7' },
-  { key: '2026-10-08', label: '四', date: '10/8' },
-  { key: '2026-10-09', label: '五', date: '10/9' },
-  { key: '2026-10-10', label: '六', date: '10/10' },
   { key: '2026-10-11', label: '日', date: '10/11' },
+  { key: '2026-10-12', label: '一', date: '10/12' },
+  { key: '2026-10-13', label: '二', date: '10/13' },
+  { key: '2026-10-14', label: '三', date: '10/14' },
+  { key: '2026-10-15', label: '四', date: '10/15' },
+  { key: '2026-10-16', label: '五', date: '10/16' },
+  { key: '2026-10-17', label: '六', date: '10/17' },
+  { key: '2026-10-18', label: '日', date: '10/18' },
 ]
 
 export const scheduleRows = [
   {
-    id: 'andy',
-    name: 'Andy／安迪',
-    tag: '直男方案',
-    times: ['全天', '09:00–12:30', FULLY_BOOKED_LABEL, '09:00–12:30', '09:00–12:30', '09:00–12:30', '09:00（90分）', '09:00（90分）'],
+    id: 'hale',
+    name: 'Hale／海爾',
+    times: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00'],
   },
   {
     id: 'hugo',
@@ -25,24 +25,25 @@ export const scheduleRows = [
     times: ['全天', '全天', '全天', '全天', '全天', '全天', '全天', '全天'],
   },
   {
-    id: 'hale',
-    name: 'Hale／海爾',
-    times: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00'],
+    id: 'andy',
+    name: 'Andy／安迪',
+    tag: '直男方案',
+    times: ['09:00（90分）', '詢問', '詢問', '詢問', '詢問', '詢問', '詢問', '詢問'],
   },
   {
     id: 'alan',
     name: 'Alan／艾倫',
-    times: ['—', '16:00–18:00', '16:00–18:00', '16:00–18:00', '16:00–18:00', '—', '—', '—'],
+    times: ['—', '16:00–18:00', '16:00–18:00', '16:00–18:00', '16:00–18:00', '16:00–18:00', '—', '—'],
   },
   {
     id: 'oni',
     name: 'Oni／歐尼',
-    times: ['—', '19:30（90分）', '16:00–17:00（120分）／17:30（90分）', '16:00（90分）', '—', '—', '—', '—'],
+    times: ['—', PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL],
   },
   {
     id: 'noah',
     name: 'Noah／諾亞',
-    times: ['11:00–12:40（120分）／13:10（90分）、17:40後', '—', '11:00–22:00', '11:00–22:00', '—', '11:00–22:00', '11:00–22:00', '11:00–22:00'],
+    times: ['11:00–22:00', '11:00–22:00', '11:00–22:00', '11:00–22:00', '—', '11:00–22:00', '11:00–22:00', '11:00–22:00'],
   },
   {
     id: 'gugu',
@@ -52,7 +53,7 @@ export const scheduleRows = [
   {
     id: 'dylan',
     name: 'Dylan／迪倫',
-    times: ['12:00–19:30（120分）／20:00（90分）', '12:00（120分）／12:30（90分）、17:00–19:30（120分）／20:00（90分）', '12:00（90分）、16:00–19:30（120分）／20:00（90分）', '16:00–19:30（120分）／20:00（90分）', '12:00–17:30（120分）／18:00（90分）', '14:30–15:30（120分）／16:00（90分）', FULLY_BOOKED_LABEL, '12:00–22:00'],
+    times: ['12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00'],
   },
   {
     id: 'kai',
@@ -63,28 +64,28 @@ export const scheduleRows = [
   {
     id: 'owen',
     name: 'Owen／歐文',
-    times: ['21:00–23:30', '22:00–23:30', '19:30–23:30', '全天', '19:30–23:30', '—', '—', '—'],
+    times: ['—', '19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '全天'],
   },
   {
     id: 'odin',
     name: 'Odin／奧丁',
-    times: ['20:00 起', '20:00–21:00', '20:00–21:00', '20:00–21:00', '20:00–21:00', '全天', '全天', '16:00–21:00'],
+    times: ['16:00–21:00', '20:00 起', '20:00 起', '20:00 起', '20:00 起', '20:00 起', '全天', '16:00–21:00'],
   },
   {
     id: 'raven',
     name: 'Raven／雷文',
-    times: ['詢問', '全天', '全天', '00:00–13:30、18:00後', '全天', '全天', '全天', '全天'],
+    times: ['全天', '全天', '全天', '全天', '全天', '全天', '全天', '全天'],
   },
   {
     id: 'milo',
     name: 'Milo／米洛',
-    times: [FULLY_BOOKED_LABEL, '22:30–23:30', '22:30–23:30', FULLY_BOOKED_LABEL, FULLY_BOOKED_LABEL, '—', '—', '—'],
+    times: ['—', '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30'],
   },
   {
     id: 'zac',
     name: 'Zac／札克',
     tag: '深夜師傅',
-    times: [FULLY_BOOKED_LABEL, '15:00–17:30（120分）／18:00（90分）、22:30後', '15:00–02:00', '15:00–02:00', '18:00–02:00', '—', '—', '—'],
+    times: ['—', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00'],
   },
 ]
 
@@ -128,7 +129,7 @@ export function getScheduleDayIndex(dateKey) {
 
 export function hasWeeklySchedule(therapistId) {
   const schedule = scheduleRows.find((therapist) => therapist.id === therapistId)
-  return Boolean(schedule && schedule.times.some((shift) => shift !== '—'))
+  return Boolean(schedule && schedule.times.some((shift) => shift !== '—' && shift !== PENDING_UPDATE_LABEL))
 }
 
 export function getDailyTherapists(therapists, dateKey) {
@@ -139,12 +140,15 @@ export function getDailyTherapists(therapists, dateKey) {
     const shift = todaySchedule[therapist.id]
     if (shift === undefined) return therapist
 
+    const isSchedulePending = shift === PENDING_UPDATE_LABEL
+
     return {
       ...therapist,
-      hasWeeklySchedule: hasWeeklySchedule(therapist.id),
+      hasWeeklySchedule: isSchedulePending ? false : hasWeeklySchedule(therapist.id),
+      isSchedulePending,
       isFullyBooked: shift === FULLY_BOOKED_LABEL,
       status: fixedStatusOverrides[therapist.id]
-        || (shift === '—' || shift === FULLY_BOOKED_LABEL ? 'paused' : 'available'),
+        || (shift === '—' || shift === FULLY_BOOKED_LABEL || isSchedulePending ? 'paused' : 'available'),
     }
   })
 }
