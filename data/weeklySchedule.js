@@ -38,7 +38,7 @@ export const scheduleRows = [
   {
     id: 'oni',
     name: 'Oni／歐尼',
-    times: ['—', PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL],
+    times: ['—', '12:00–20:00', '12:00–20:00', '12:00–20:00', '12:00–20:00', '12:00–20:00', '—', '—'],
   },
   {
     id: 'noah',
