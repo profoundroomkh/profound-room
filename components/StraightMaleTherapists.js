@@ -34,22 +34,22 @@ export default function StraightMaleTherapists() {
           <div className={styles.priceCard}>
             <span>90 分鐘</span>
             <strong>NT$2,500</strong>
-            <small>指壓・油壓・龍筋機能保養</small>
+            <small>指壓・油壓・機能保養</small>
           </div>
           <div className={styles.priceCard}>
             <span>120 分鐘</span>
             <strong>NT$2,900</strong>
-            <small>指壓・油壓・體推・龍筋機能保養</small>
+            <small>指壓・油壓・體推・機能保養</small>
           </div>
         </div>
       </div>
 
       <div className={styles.directoryNote}>
         <p className={styles.directoryNoteText}>
-          Andy／安迪 已列入上方 15 位師傅列表，照片、完整資料與預約入口請直接查看 Andy／安迪 卡片。
+          Andy／安迪 已列入上方 16 位師傅列表，照片、完整資料與預約入口請直接查看 Andy／安迪 卡片。
         </p>
         <a href="#all-therapists" className={styles.directoryLink}>
-          查看 15 位師傅列表
+          查看 16 位師傅列表
         </a>
       </div>
     </ScrollReveal>

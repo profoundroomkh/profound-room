@@ -3,6 +3,23 @@
 
 export const therapists = [
   {
+    id: 'max',
+    name: 'Max／麥斯',
+    category: 'straight',
+    isNew: true,
+    status: 'paused',
+    height: 165,
+    weight: 80,
+    age: 28,
+    role: '未提供',
+    size: '未提供',
+    specialty: '健美直男・高尺度',
+    images: [
+      '/images/therapist-Max-1.JPG',
+      '/images/therapist-Max-2.JPG',
+    ],
+  },
+  {
     id: 'hale',
     name: 'Hale／海爾',
     isNew: true,
@@ -64,7 +81,7 @@ export const therapists = [
     age: 29,
     role: '1',
     size: null,
-    specialty: '二寶爸・直男人夫',
+    specialty: '二寶爸・直男人夫・機能保養升級為龍筋機能保養',
     supportPeriod: '支援時間請洽官方 LINE',
     images: [
       '/images/therapist-Andy-1.JPG',
@@ -264,6 +281,7 @@ export const therapists = [
 export const therapistFilters = [
   { id: 'all', label: '全部' },
   { id: 'new', label: '新進' },
+  { id: 'straight', label: '直男方案' },
   { id: 'available', label: '可預約' },
   { id: 'paused', label: '休息中' },
 ]

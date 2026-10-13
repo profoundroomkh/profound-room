@@ -78,6 +78,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
 
   const filteredTherapists = useMemo(() => {
     if (activeFilter === 'new') return sortedTherapists.filter((item) => item.isNew)
+    if (activeFilter === 'straight') return sortedTherapists.filter((item) => item.category === 'straight')
     if (activeFilter === 'available') {
       return sortedTherapists.filter((item) => item.status === 'available')
     }
@@ -194,6 +195,8 @@ export default function TherapistDirectory({ showDirectory = true }) {
               ? regularTherapists.length
               : filter.id === 'new'
                 ? regularTherapists.filter((item) => item.isNew).length
+                : filter.id === 'straight'
+                  ? regularTherapists.filter((item) => item.category === 'straight').length
                 : regularTherapists.filter((item) => item.status === filter.id).length
 
           return (
@@ -283,7 +286,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
               <p className={styles.specialty}>{therapist.specialty}</p>
               {therapist.category === 'straight' && (
                 <div className={styles.specialPricing}>
-                  <span className={styles.specialLabel}>直男｜專屬價目</span>
+                  <span className={styles.specialLabel}>直男專屬價目</span>
                   <span className={styles.specialPrice}>90 分 NT$2,500｜120 分 NT$2,900</span>
                 </div>
               )}

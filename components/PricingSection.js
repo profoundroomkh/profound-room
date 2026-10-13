@@ -71,7 +71,7 @@ export default function PricingSection() {
         >
           <h3>直男師傅｜90 分鐘</h3>
           <p className={styles.price}>NT$2,500</p>
-          <p className={styles.straightServices}>指壓、油壓、龍筋機能保養</p>
+          <p className={styles.straightServices}>指壓、油壓、機能保養</p>
           <p className={styles.cardNote}>專屬方案，價格與一般師傅不同。</p>
         </ScrollReveal>
 
@@ -82,7 +82,7 @@ export default function PricingSection() {
         >
           <h3>直男師傅｜120 分鐘</h3>
           <p className={styles.price}>NT$2,900</p>
-          <p className={styles.straightServices}>指壓、油壓、體推、龍筋機能保養</p>
+          <p className={styles.straightServices}>指壓、油壓、體推、機能保養</p>
           <p className={styles.cardNote}>專屬方案，價格與一般師傅不同。</p>
         </ScrollReveal>
       </div>
