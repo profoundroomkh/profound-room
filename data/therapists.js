@@ -207,6 +207,7 @@ export const therapists = [
       '/images/therapist-Owen-1.JPG',
       '/images/therapist-Owen-2.JPG',
       '/images/therapist-Owen-3.JPG',
+      '/images/therapist-Owen-4.JPG',
     ],
   },
   {
