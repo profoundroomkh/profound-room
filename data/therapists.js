@@ -45,7 +45,7 @@ export const therapists = [
     age: 40,
     role: '不分',
     size: null,
-    specialty: '熟男親切・健談好聊・配合度高',
+    specialty: '熟男魅力・親切好聊・配合度高・深度放鬆',
     supportPeriod: '全天，現場師傅',
     images: [
       '/images/therapist-Hugo-1.png',
