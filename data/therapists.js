@@ -29,7 +29,7 @@ export const therapists = [
     age: 35,
     role: '不分',
     size: null,
-    specialty: '刺青風格',
+    specialty: '刺青台客・經驗純熟',
     images: [
       '/images/therapist-Hale-1.JPG',
       '/images/therapist-Hale-2.JPG',
