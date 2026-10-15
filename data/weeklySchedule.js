@@ -14,6 +14,13 @@ export const scheduleDays = [
 
 export const scheduleRows = [
   {
+    id: 'nolan',
+    name: 'Nolan',
+    tag: '快閃師傅',
+    profileAvailable: false,
+    times: ['—', '—', '—', '—', '—', '—', '10:00–17:00', '—'],
+  },
+  {
     id: 'max',
     name: 'Max／麥斯',
     tag: '直男方案',

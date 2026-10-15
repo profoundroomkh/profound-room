@@ -130,14 +130,16 @@ export default function WeeklySchedule() {
                   <p className={styles.therapistWeekName}>{selectedTherapist.name}</p>
                   {selectedTherapist.tag && <span className={styles.therapistWeekTag}>{selectedTherapist.tag}</span>}
                 </div>
-                <button
-                  type="button"
-                  className={styles.profileLink}
-                  onClick={() => openTherapistProfile(selectedTherapist.id)}
-                  aria-label={`查看 ${selectedTherapist.name} 的照片與完整資料`}
-                >
-                  查看照片與資料
-                </button>
+                {selectedTherapist.profileAvailable !== false && (
+                  <button
+                    type="button"
+                    className={styles.profileLink}
+                    onClick={() => openTherapistProfile(selectedTherapist.id)}
+                    aria-label={`查看 ${selectedTherapist.name} 的照片與完整資料`}
+                  >
+                    查看照片與資料
+                  </button>
+                )}
               </div>
 
               <div className={styles.therapistWeekGrid}>
@@ -211,14 +213,16 @@ export default function WeeklySchedule() {
                       <div>
                         <p className={styles.mobileName}>{therapist.name}</p>
                         {therapist.tag && <span className={styles.mobileTag}>{therapist.tag}</span>}
-                        <button
-                          type="button"
-                          className={styles.profileLink}
-                          onClick={() => openTherapistProfile(therapist.id)}
-                          aria-label={`查看 ${therapist.name} 的照片與完整資料`}
-                        >
-                          查看照片
-                        </button>
+                        {therapist.profileAvailable !== false && (
+                          <button
+                            type="button"
+                            className={styles.profileLink}
+                            onClick={() => openTherapistProfile(therapist.id)}
+                            aria-label={`查看 ${therapist.name} 的照片與完整資料`}
+                          >
+                            查看照片
+                          </button>
+                        )}
                       </div>
                       <p className={`${styles.mobileTime} ${getTimeClass(time)}`}>{time}</p>
                     </div>
@@ -252,14 +256,16 @@ export default function WeeklySchedule() {
                     <th scope="row">
                       <span className={styles.name}>{therapist.name}</span>
                       {therapist.tag && <span className={styles.tag}>{therapist.tag}</span>}
-                      <button
-                        type="button"
-                        className={styles.profileLink}
-                        onClick={() => openTherapistProfile(therapist.id)}
-                        aria-label={`查看 ${therapist.name} 的照片與完整資料`}
-                      >
-                        查看照片
-                      </button>
+                      {therapist.profileAvailable !== false && (
+                        <button
+                          type="button"
+                          className={styles.profileLink}
+                          onClick={() => openTherapistProfile(therapist.id)}
+                          aria-label={`查看 ${therapist.name} 的照片與完整資料`}
+                        >
+                          查看照片
+                        </button>
+                      )}
                     </th>
                     {therapist.times.map((time, index) => (
                       <td

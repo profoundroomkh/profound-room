@@ -43,9 +43,12 @@ const flashTherapists = [
     rank: 'FLASH',
     name: 'Nolan',
     chineseName: '',
-    image: '/images/flash-therapist-Nolan-1.JPG',
+    images: [
+      '/images/flash-therapist-Nolan-1.JPG',
+      '/images/flash-therapist-Nolan-2.JPG',
+    ],
     kicker: 'FLASH THERAPIST',
-    description: <>176／78／23<br />不提供臉照・支援 10/17（六）17:00 前可預約</>,
+    description: <>176／78／23<br />不提供臉照・支援 10/17（六）10:00–17:00 可預約</>,
   },
 ]
 
@@ -100,13 +103,17 @@ export default function TopTherapists() {
         {topTherapists.map((therapist) => (
           <article className={styles.card} key={therapist.id}>
             <div className={styles.rank}>{therapist.rank}</div>
-            <div className={`${styles.photoWrap} ${styles[therapist.id]}`}>
-              <Image
-                src={therapist.image}
-                alt={`${therapist.name}／${therapist.chineseName}`}
-                fill
-                sizes="(max-width: 680px) 78vw, (max-width: 1100px) 31vw, 360px"
-              />
+            <div className={`${styles.photoWrap} ${styles[therapist.id]} ${therapist.images ? styles.photoGrid : ''}`}>
+              {(therapist.images || [therapist.image]).map((image, imageIndex) => (
+                <div className={styles.photoCell} key={image}>
+                  <Image
+                    src={image}
+                    alt={`${therapist.name}${therapist.chineseName ? `／${therapist.chineseName}` : ''} 第${imageIndex + 1}張照片`}
+                    fill
+                    sizes="(max-width: 680px) 39vw, (max-width: 1100px) 16vw, 180px"
+                  />
+                </div>
+              ))}
             </div>
             <div className={styles.cardBody}>
               <p className={styles.cardKicker}>{therapist.kicker}</p>
