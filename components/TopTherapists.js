@@ -1,12 +1,13 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import useTaiwanDateKey from './useTaiwanDateKey'
 import styles from './TopTherapists.module.css'
 
 const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 
-const topTherapists = [
+const septemberTherapists = [
   {
     id: 'dylan',
     rank: '01',
@@ -36,6 +37,18 @@ const topTherapists = [
   },
 ]
 
+const flashTherapists = [
+  {
+    id: 'nolan',
+    rank: 'FLASH',
+    name: 'Nolan',
+    chineseName: '',
+    image: '/images/flash-therapist-Nolan-1.JPG',
+    kicker: 'FLASH THERAPIST',
+    description: <>176／78／23<br />不提供臉照・支援 10/17（六）17:00 前可預約</>,
+  },
+]
+
 function openProfile(event, therapistId) {
   const trigger = document.getElementById(`${therapistId}-profile-trigger`)
   if (!trigger) return
@@ -48,6 +61,14 @@ function openProfile(event, therapistId) {
 export default function TopTherapists() {
   const cardsRef = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
+  const dateKey = useTaiwanDateKey()
+  const isFlashPeriod = dateKey === '2026-10-16' || dateKey === '2026-10-17'
+  const topTherapists = isFlashPeriod ? flashTherapists : septemberTherapists
+
+  useEffect(() => {
+    setActiveIndex(0)
+    cardsRef.current?.scrollTo({ left: 0, behavior: 'auto' })
+  }, [isFlashPeriod])
 
   const scrollToCard = (index) => {
     const cards = cardsRef.current
@@ -59,12 +80,20 @@ export default function TopTherapists() {
   }
 
   return (
-    <section className={styles.section} id="top-three" aria-labelledby="top-three-title">
+    <section
+      className={`${styles.section} ${isFlashPeriod ? styles.flashSection : ''}`}
+      id="top-three"
+      aria-labelledby="top-three-title"
+    >
       <div className={styles.sectionHead}>
-        <p className={styles.eyebrow}>SEPTEMBER HIGHLIGHTS</p>
-        <h2 id="top-three-title">9 月熱門師傅</h2>
-        <div className={styles.rule} aria-hidden="true"><span>TOP 3</span></div>
-        <p className={styles.lead}>本月人氣排名，先看熱門師傅，再依班表安排你的放鬆時間。</p>
+        <p className={styles.eyebrow}>{isFlashPeriod ? 'WEEKEND FLASH' : 'SEPTEMBER HIGHLIGHTS'}</p>
+        <h2 id="top-three-title">{isFlashPeriod ? '快閃師傅' : '9 月熱門師傅'}</h2>
+        <div className={styles.rule} aria-hidden="true"><span>{isFlashPeriod ? 'LIMITED' : 'TOP 3'}</span></div>
+        <p className={styles.lead}>
+          {isFlashPeriod
+            ? '10/16–10/17 限時登場，預約前請先確認支援時段。'
+            : '本月人氣排名，先看熱門師傅，再依班表安排你的放鬆時間。'}
+        </p>
       </div>
 
       <div className={styles.cards} ref={cardsRef}>
@@ -81,15 +110,20 @@ export default function TopTherapists() {
             </div>
             <div className={styles.cardBody}>
               <p className={styles.cardKicker}>{therapist.kicker}</p>
-              <h3>{therapist.name} <span>／{therapist.chineseName}</span></h3>
+              <h3>
+                {therapist.name}
+                {therapist.chineseName && <span>／{therapist.chineseName}</span>}
+              </h3>
               <p className={styles.description}>{therapist.description}</p>
               <div className={styles.cardActions}>
-                <a
-                  href="#therapists"
-                  onClick={(event) => openProfile(event, therapist.id)}
-                >
-                  查看資料
-                </a>
+                {!isFlashPeriod && (
+                  <a
+                    href="#therapists"
+                    onClick={(event) => openProfile(event, therapist.id)}
+                  >
+                    查看資料
+                  </a>
+                )}
                 <a href={LINE_URL} target="_blank" rel="noreferrer">LINE 詢問</a>
               </div>
             </div>
