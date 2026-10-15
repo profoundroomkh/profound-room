@@ -62,7 +62,7 @@ export default function TopTherapists() {
   const cardsRef = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const dateKey = useTaiwanDateKey()
-  const isFlashPeriod = dateKey === '2026-10-16' || dateKey === '2026-10-17'
+  const isFlashPeriod = dateKey === '2026-10-17'
   const topTherapists = isFlashPeriod ? flashTherapists : septemberTherapists
 
   useEffect(() => {
@@ -91,7 +91,7 @@ export default function TopTherapists() {
         <div className={styles.rule} aria-hidden="true"><span>{isFlashPeriod ? 'LIMITED' : 'TOP 3'}</span></div>
         <p className={styles.lead}>
           {isFlashPeriod
-            ? '10/16–10/17 限時登場，預約前請先確認支援時段。'
+            ? '10/17（六）單日限定，預約前請先確認支援時段。'
             : '本月人氣排名，先看熱門師傅，再依班表安排你的放鬆時間。'}
         </p>
       </div>
