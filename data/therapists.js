@@ -269,7 +269,7 @@ export const therapists = [
     weight: 66,
     age: 30,
     role: '不分偏1',
-    size: null,
+    size: '16/4.5',
     specialty: '刺青台客・健談好聊',
     images: [
       '/images/therapist-Zac-2.JPG',
