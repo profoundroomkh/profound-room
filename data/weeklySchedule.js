@@ -33,7 +33,7 @@ export const scheduleRows = [
     id: 'andy',
     name: 'Andy／安迪',
     tag: '直男方案',
-    times: ['詢問', '詢問', '詢問', '詢問', '詢問', '詢問', '詢問'],
+    times: ['全天', '全天', '全天', '全天', '—', '—', '—'],
   },
   {
     id: 'alan',
