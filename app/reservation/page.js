@@ -129,6 +129,10 @@ export default function ReservationPage() {
               <p>
                 改期限一次，且須於指定期限內使用；曾有 No-show 紀錄者，後續預約可能需全額預付。
               </p>
+              <div className={styles.divider} aria-hidden="true" />
+              <p className={styles.depositEyebrow}>現場取消提醒</p>
+              <p className={styles.depositMain}>師傅抵達現場後取消預約，需支付 NT$500 車馬費。</p>
+              <p>該筆車馬費將全額補貼予師傅；若師傅另有收取其他費用，請告知客服。</p>
             </div>
           </section>
 
