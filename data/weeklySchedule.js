@@ -70,7 +70,7 @@ export const scheduleRows = [
   {
     id: 'owen',
     name: 'Owen／歐文',
-    times: ['全天', PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL, PENDING_UPDATE_LABEL],
+    times: ['全天', '—', '00:00–16:00（120分）／16:30（90分）／21:00–24:00', '19:30–23:00', '19:30–23:00', '19:30–23:00', '19:30–23:00', '全天'],
   },
   {
     id: 'odin',
