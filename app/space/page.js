@@ -17,9 +17,15 @@ export default function SpacePage() {
     },
 
     {
-      title: '私人房間',
+      title: '第一工作室',
       image: '/images/private-room-2.jpg',
       href: '/space/private-room',
+    },
+
+    {
+      title: '第二工作室',
+      image: '/images/studio-second-1.jpg',
+      href: '/space/second-studio',
     },
 
     {
@@ -142,7 +148,7 @@ export default function SpacePage() {
               為預約制男士放鬆空間與 Gay SPA。
               <br /><br />
 
-              空間規劃包含私人房間、
+              空間規劃包含第一工作室、第二工作室，
               沐浴空間與獨立療程區域，
               重視隱私、舒適與沉浸式體驗。
               <br /><br />

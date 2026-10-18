@@ -33,7 +33,7 @@ export default function PrivateRoomPage() {
               marginBottom: '20px',
             }}
           >
-            PRIVATE ROOM
+            STUDIO 01
           </p>
 
           <h1
@@ -43,7 +43,7 @@ export default function PrivateRoomPage() {
               marginBottom: '40px',
             }}
           >
-            私人房間
+            第一工作室
           </h1>
 
           <p
@@ -54,8 +54,7 @@ export default function PrivateRoomPage() {
               marginBottom: '80px',
             }}
           >
-            獨立且安靜的私人空間，
-            保留充足距離與隱私感，
+            深寓第一工作室，保留獨立且安靜的空間感，
             讓每一次放鬆都能更加專注與沉浸。
           </p>
 
@@ -71,7 +70,7 @@ export default function PrivateRoomPage() {
               <img
                 key={index}
                 src={image}
-                alt={`高雄 Gay SPA 私人房間 ${index + 1}`}
+                alt={`高雄 Gay SPA 第一工作室 ${index + 1}`}
                 style={{
                   width: '100%',
                   borderRadius: '24px',
