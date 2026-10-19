@@ -4,6 +4,7 @@ const images = [
   '/images/private-room-1.jpg',
   '/images/private-room-2.jpg',
   '/images/private-room-3.jpg',
+  '/images/private-room-4.jpg',
 ]
 
 export default function PrivateRoomPage() {
