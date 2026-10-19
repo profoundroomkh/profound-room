@@ -287,20 +287,22 @@ export const therapistFilters = [
   { id: 'paused', label: '休息中' },
 ]
 
-// 依「9月派單記錄」目前排名整理。
-export const septemberPerformanceRank = {
-  dylan: 1,
-  owen: 2,
-  oni: 3,
+// 依「10月派單與帳務」目前有效師傅服務排名整理；未指定與單純租借工作室不計入。
+export const octoberPerformanceRank = {
+  zac: 1,
+  andy: 2,
+  dylan: 3,
   gugu: 4,
-  zac: 5,
-  andy: 6,
-  kai: 8,
+  owen: 5,
+  kai: 6,
+  oni: 7,
+  milo: 8,
   raven: 9,
-  milo: 10,
+  hale: 10,
   noah: 11,
-  ansel: 12,
-  odin: 13,
-  alan: 14,
-  hugo: 15,
+  hugo: 12,
+  ansel: 13,
+  max: 14,
+  alan: 15,
+  odin: 16,
 }

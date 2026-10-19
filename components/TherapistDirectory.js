@@ -5,7 +5,7 @@
 
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { septemberPerformanceRank, therapistFilters, therapists } from '../data/therapists'
+import { octoberPerformanceRank, therapistFilters, therapists } from '../data/therapists'
 import { PENDING_UPDATE_LABEL, getDailyTherapists } from '../data/weeklySchedule'
 import { trackEvent } from './analytics'
 import ScrollReveal from './ScrollReveal'
@@ -69,8 +69,8 @@ export default function TherapistDirectory({ showDirectory = true }) {
         return leftTodayPriority - rightTodayPriority
       }
 
-      const leftRank = septemberPerformanceRank[left.id] || Number.MAX_SAFE_INTEGER
-      const rightRank = septemberPerformanceRank[right.id] || Number.MAX_SAFE_INTEGER
+      const leftRank = octoberPerformanceRank[left.id] || Number.MAX_SAFE_INTEGER
+      const rightRank = octoberPerformanceRank[right.id] || Number.MAX_SAFE_INTEGER
       return leftRank - rightRank
     }),
     [regularTherapists],
