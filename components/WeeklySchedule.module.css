@@ -325,7 +325,8 @@
 .desktopTableWrap table {
   width: 100%;
   min-width: 940px;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .desktopTableWrap th,
@@ -356,7 +357,21 @@
   letter-spacing: 0.08em;
 }
 
+.desktopTableWrap thead th:first-child,
 .desktopTableWrap tbody th {
+  position: sticky;
+  left: 0;
+  background: #171411;
+  box-shadow: 5px 0 12px rgba(0, 0, 0, 0.26);
+}
+
+.desktopTableWrap thead th:first-child {
+  z-index: 4;
+  background: #211b17;
+}
+
+.desktopTableWrap tbody th {
+  z-index: 3;
   width: 180px;
   color: #f2e1d0;
   text-align: left;
