@@ -112,6 +112,9 @@ export default function TopTherapists() {
                     fill
                     sizes="(max-width: 680px) 39vw, (max-width: 1100px) 16vw, 180px"
                   />
+                  <span className={styles.photoNameLabel} aria-hidden="true">
+                    {therapist.name}{therapist.chineseName ? `／${therapist.chineseName}` : ''}
+                  </span>
                 </div>
               ))}
             </div>

@@ -264,6 +264,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
                   className={styles.mainImage}
                 />
                 <span className={styles.imageShade} />
+                <span className={styles.photoNameLabel} aria-hidden="true">{therapist.name}</span>
                 <span
                   className={
                     canBookTherapist(therapist)
@@ -366,6 +367,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
                 className={styles.modalImage}
                 priority
               />
+              <span className={styles.modalPhotoNameLabel} aria-hidden="true">{selected.name}</span>
 
               {selected.images.length > 1 && (
                 <>

@@ -230,6 +230,30 @@
   pointer-events: none;
 }
 
+.photoNameLabel,
+.modalPhotoNameLabel {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 4;
+  max-width: calc(100% - 28px);
+  padding: 6px 10px;
+  overflow: hidden;
+  border: 1px solid rgba(242, 225, 208, 0.38);
+  border-radius: 8px;
+  background: rgba(7, 7, 7, 0.72);
+  color: #f2e1d0;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
 .statusAvailable,
 .statusPaused,
 .newBadge,
@@ -512,6 +536,14 @@
 
 .modalImage {
   object-fit: contain;
+}
+
+.modalPhotoNameLabel {
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
+  padding: 8px 12px;
+  font-size: 14px;
 }
 
 .previousButton,

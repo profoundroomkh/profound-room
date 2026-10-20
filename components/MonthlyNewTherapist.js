@@ -98,6 +98,7 @@ export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
               className={styles.image}
             />
             <span className={styles.imageShade} />
+            <span className={styles.photoNameLabel} aria-hidden="true">{therapist.name}</span>
             <span className={styles.newBadge}>NEW</span>
           </button>
           <button
