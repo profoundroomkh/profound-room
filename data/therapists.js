@@ -56,7 +56,7 @@ export const therapists = [
   {
     id: 'gugu',
     name: 'Gugu／古古',
-    isNew: true,
+    isNew: false,
     status: 'available',
     height: 175,
     weight: 60,
