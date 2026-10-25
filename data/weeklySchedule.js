@@ -16,7 +16,7 @@ export const scheduleRows = [
   {
     id: 'hale',
     name: 'Hale／海爾',
-    times: ['—', '詢問', '詢問', '詢問', '詢問', '詢問', '詢問', '詢問'],
+    times: ['—', '—', '—', '—', '—', '—', '—', '詢問'],
   },
   {
     id: 'max',
