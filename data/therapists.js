@@ -1,7 +1,7 @@
 // Design reminder: preserve Profound Room's restrained black-and-warm-gold identity;
 // data states must stay explicit so visual and booking behavior never disagree.
 
-export const therapists = [
+const allTherapists = [
   {
     id: 'max',
     name: 'Max／麥斯',
@@ -263,6 +263,7 @@ export const therapists = [
   {
     id: 'zac',
     name: 'Zac／札克',
+    isPublished: false,
     isNew: false,
     status: 'paused',
     height: 170,
@@ -279,6 +280,10 @@ export const therapists = [
     ],
   },
 ]
+
+// 暫時下架的師傅保留在完整資料中，之後只需恢復 isPublished 即可重新上架。
+export const therapists = allTherapists.filter((therapist) => therapist.isPublished !== false)
+
 export const therapistFilters = [
   { id: 'all', label: '全部' },
   { id: 'new', label: '新進' },

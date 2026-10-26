@@ -12,7 +12,7 @@ export const scheduleDays = [
   { key: '2026-11-01', label: '日', date: '11/1' },
 ]
 
-export const scheduleRows = [
+const allScheduleRows = [
   {
     id: 'hale',
     name: 'Hale／海爾',
@@ -90,10 +90,14 @@ export const scheduleRows = [
   {
     id: 'zac',
     name: 'Zac／札克',
+    isPublished: false,
     tag: '深夜師傅',
     times: ['15:00–02:00', '17:30–23:30（120分）／00:00（90分）', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00', '15:00–02:00'],
   },
 ]
+
+// 暫時下架的師傅保留原班表資料，之後只需恢復 isPublished 即可重新上架。
+export const scheduleRows = allScheduleRows.filter((therapist) => therapist.isPublished !== false)
 
 const scheduleByDate = Object.fromEntries(
   scheduleDays.map((day, dayIndex) => [
