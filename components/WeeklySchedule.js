@@ -15,6 +15,7 @@ const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 
 function getTimeClass(time) {
   if (time === FULLY_BOOKED_LABEL) return styles.full
+  if (typeof time === 'string' && time.includes('已滿')) return styles.full
   if (time === PENDING_UPDATE_LABEL) return styles.pending
   if (typeof time === 'string' && time.includes('詢問')) return styles.ask
   if (time === '—') return styles.empty
