@@ -86,6 +86,13 @@
   line-height: 1.2;
 }
 
+.serviceItems {
+  margin: 10px 0 0;
+  color: #cdb19a;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 .flexibleCard {
   background: #0f0d0c;
 }
@@ -254,6 +261,32 @@
   letter-spacing: 0.08em;
   line-height: 1.3;
   text-align: center;
+}
+
+.featuredPolicy {
+  display: grid;
+  gap: 4px;
+  margin-top: 22px;
+  padding: 16px 17px;
+  border: 1px solid rgba(216, 184, 159, 0.72);
+  border-left: 4px solid #d8b89f;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(83, 55, 44, 0.62), rgba(24, 18, 16, 0.98) 72%);
+  text-align: center;
+}
+
+.featuredPolicy strong {
+  color: #f2e1d0;
+  font-size: clamp(19px, 4.5vw, 26px);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.featuredPolicy span {
+  color: #e4c6ae;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 .depositAlert {
