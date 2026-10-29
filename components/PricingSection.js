@@ -9,16 +9,19 @@ const packages = [
     name: '一般指定師傅',
     duration: '100 分鐘',
     price: 'NT$2,200',
+    service: '指壓・油壓・機能保養（不含體推）',
   },
   {
     name: '直男師傅',
     duration: '100 分鐘',
     price: 'NT$2,700',
+    service: '指壓・油壓・機能保養（不含體推）',
   },
   {
     name: '不指定師傅',
     duration: '100 分鐘',
     price: 'NT$2,000',
+    service: '指壓・油壓・機能保養（不含體推）',
   },
 ]
 
@@ -50,6 +53,7 @@ export default function PricingSection() {
             <h3>{item.name}</h3>
             <p className={styles.duration}>{item.duration}</p>
             <p className={styles.price}>{item.price}</p>
+            <p className={styles.serviceItems}>{item.service}</p>
           </ScrollReveal>
         ))}
       </div>
@@ -67,6 +71,11 @@ export default function PricingSection() {
         <p className={styles.policyEyebrow}>POLICY</p>
         <h3 id="policy-title">優惠與訂金政策</h3>
 
+        <div className={styles.featuredPolicy} role="note" aria-label="優惠僅可擇一使用">
+          <strong>優惠僅可擇一使用</strong>
+          <span>提前一天預約、壽星優惠、優惠券不得併用</span>
+        </div>
+
         <div className={styles.policyBlock}>
           <h4>優惠</h4>
           <div className={styles.policyRows}>
@@ -81,10 +90,6 @@ export default function PricingSection() {
             <div className={styles.policyItem}>
               <strong>優惠券</strong>
               <span>須提前一天預約，依券面規則</span>
-            </div>
-            <div className={styles.policyItem}>
-              <strong>優惠使用</strong>
-              <span>僅能擇一，不得併用</span>
             </div>
             <div className={styles.policyItem}>
               <strong>不指定師傅</strong>
