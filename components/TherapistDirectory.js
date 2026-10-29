@@ -152,7 +152,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
   const handleBooking = async (therapist, source = 'therapist_card') => {
     if (!canBookTherapist(therapist)) return
 
-    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n預約方式：${therapist.bookingPolicy || (therapist.hasWeeklySchedule ? '提前預約' : '可直接預約')}\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '90 分鐘 NT$2,500／120 分鐘 NT$2,900' : '90 分鐘／120 分鐘'}`
+    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n預約方式：${therapist.bookingPolicy || (therapist.hasWeeklySchedule ? '提前預約' : '可直接預約')}\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '100 分鐘 NT$2,700' : '100 分鐘'}`
     trackBooking(therapist, source)
     window.open(LINE_URL, '_blank', 'noopener,noreferrer')
 
@@ -288,7 +288,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
               {therapist.category === 'straight' && (
                 <div className={styles.specialPricing}>
                   <span className={styles.specialLabel}>直男專屬價目</span>
-                  <span className={styles.specialPrice}>90 分 NT$2,500｜120 分 NT$2,900</span>
+                  <span className={styles.specialPrice}>100 分 NT$2,700</span>
                 </div>
               )}
               <p className={styles.metrics}>
@@ -450,7 +450,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
                 {selected.category === 'straight' && (
                   <div className={styles.profileDataWide}>
                     <dt>專屬價目</dt>
-                    <dd>90 分 NT$2,500／120 分 NT$2,900</dd>
+                    <dd>100 分 NT$2,700</dd>
                   </div>
                 )}
               </dl>
