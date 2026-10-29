@@ -6,7 +6,7 @@ import { trackTemplateCopy } from './analytics'
 const template = `想預約師傅：
 希望日期：
 希望時段：
-課程：90 分鐘／120 分鐘`
+課程：100 分鐘`
 
 export default function BookingTemplate() {
   const [copied, setCopied] = useState(false)
@@ -40,4 +40,3 @@ export default function BookingTemplate() {
 }
 
 export { template }
-

@@ -6,19 +6,19 @@ const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 
 const packages = [
   {
-    name: '深層放鬆',
-    duration: '120 分鐘',
-    price: 'NT$2,400',
+    name: '一般指定師傅',
+    duration: '100 分鐘',
+    price: 'NT$2,200',
   },
   {
-    name: '沉浸舒壓',
-    duration: '90 分鐘',
+    name: '直男師傅',
+    duration: '100 分鐘',
+    price: 'NT$2,700',
+  },
+  {
+    name: '不指定師傅',
+    duration: '100 分鐘',
     price: 'NT$2,000',
-  },
-  {
-    name: '四手同步',
-    duration: '120 分鐘',
-    price: 'NT$4,600',
   },
 ]
 
@@ -35,7 +35,7 @@ export default function PricingSection() {
         <p className={styles.eyebrow}>PRICING</p>
         <h2 id="pricing-title">課程方案</h2>
         <p className={styles.sectionLead}>
-          高雄預約制 Gay SPA 與男士按摩方案，另提供直男按摩與直男同志按摩專屬方案；價格與一般師傅不同，預約前請先確認。
+          高雄預約制 Gay SPA 與男士按摩方案。100 分鐘包含指壓、油壓、機能保養（不含體推）；另提供直男按摩與直男同志按摩專屬方案。
         </p>
       </div>
 
@@ -52,84 +52,46 @@ export default function PricingSection() {
             <p className={styles.price}>{item.price}</p>
           </ScrollReveal>
         ))}
-
-        <ScrollReveal
-          as="article"
-          className={`${styles.packageCard} ${styles.flexibleCard}`}
-          delay={packages.length * 65}
-        >
-          <h3>不指定師傅方案</h3>
-          <p className={styles.flexiblePrice}>90 分鐘｜NT$1,800</p>
-          <p className={styles.flexiblePrice}>120 分鐘｜NT$2,200</p>
-          <p className={styles.cardNote}>已是優惠價格，不得再使用其他折扣。</p>
-        </ScrollReveal>
-
-        <ScrollReveal
-          as="article"
-          className={`${styles.packageCard} ${styles.straightCard}`}
-          delay={(packages.length + 1) * 65}
-        >
-          <h3>直男師傅｜90 分鐘</h3>
-          <p className={styles.price}>NT$2,500</p>
-          <p className={styles.straightServices}>指壓、油壓、機能保養</p>
-          <p className={styles.cardNote}>專屬方案，價格與一般師傅不同。</p>
-        </ScrollReveal>
-
-        <ScrollReveal
-          as="article"
-          className={`${styles.packageCard} ${styles.straightCard}`}
-          delay={(packages.length + 2) * 65}
-        >
-          <h3>直男師傅｜120 分鐘</h3>
-          <p className={styles.price}>NT$2,900</p>
-          <p className={styles.straightServices}>指壓、油壓、體推、機能保養</p>
-          <p className={styles.cardNote}>專屬方案，價格與一般師傅不同。</p>
-        </ScrollReveal>
       </div>
 
       <div className={styles.serviceNote}>
-        <span className={styles.serviceLabel}>SERVICE INCLUDES</span>
+        <span className={styles.serviceLabel}>加時服務（含體推項目）</span>
         <div className={styles.serviceDetails}>
-          <p><strong>90 分鐘</strong>｜指壓・油壓・機能保養 <em>（不含體推）</em></p>
-          <p><strong>120 分鐘</strong>｜指壓・油壓・體推・機能保養</p>
+          <p><strong>每 30 分鐘</strong>｜加收 NT$500</p>
+          <p>體推須加時 30 分鐘，預約時請主動告知，客服確認師傅是否配合。</p>
+          <p>現場加時：服務後 1 小時內，由師傅轉告客服確認可否加時。</p>
         </div>
-      </div>
-
-      <div className={styles.infoStack}>
-        <details className={styles.infoPanel} open>
-          <summary>
-            <span>
-              <span className={styles.panelKicker}>NIGHT SERVICE</span>
-              <span className={styles.panelTitle}>夜間服務</span>
-            </span>
-            <span className={styles.chevron} aria-hidden="true">⌄</span>
-          </summary>
-          <div className={styles.panelBody}>
-            <p>預約時間 22:00 後｜+300／位</p>
-            <p>預約時間 00:00 後｜+500／位</p>
-          </div>
-        </details>
-
-        <details className={styles.infoPanel} open>
-          <summary>
-            <span>
-              <span className={styles.panelKicker}>HOME SERVICE</span>
-              <span className={styles.panelTitle}>到府服務</span>
-            </span>
-            <span className={styles.chevron} aria-hidden="true">⌄</span>
-          </summary>
-          <div className={styles.panelBody}>
-            <p>到府服務依距離酌收費用。</p>
-            <p>距離高雄車站 5 公里內｜+300</p>
-            <p>距離高雄車站 5–10 公里｜+500</p>
-            <p>距離高雄車站 10 公里以上｜+800（客服報價）</p>
-          </div>
-        </details>
       </div>
 
       <section className={styles.policyText} aria-labelledby="policy-title">
         <p className={styles.policyEyebrow}>POLICY</p>
         <h3 id="policy-title">優惠與訂金政策</h3>
+
+        <div className={styles.policyBlock}>
+          <h4>優惠</h4>
+          <div className={styles.policyRows}>
+            <div className={styles.policyItem}>
+              <strong>提前一天預約</strong>
+              <span>折抵 NT$100</span>
+            </div>
+            <div className={styles.policyItem}>
+              <strong>壽星＋提前一天預約</strong>
+              <span>折抵 NT$200</span>
+            </div>
+            <div className={styles.policyItem}>
+              <strong>優惠券</strong>
+              <span>須提前一天預約，依券面規則</span>
+            </div>
+            <div className={styles.policyItem}>
+              <strong>優惠使用</strong>
+              <span>僅能擇一，不得併用</span>
+            </div>
+            <div className={styles.policyItem}>
+              <strong>不指定師傅</strong>
+              <span>不可使用任何優惠</span>
+            </div>
+          </div>
+        </div>
 
         <aside className={styles.depositAlert} role="note" aria-label="首次預約訂金重要提醒">
           <div className={styles.depositAlertHeader}>
@@ -142,32 +104,6 @@ export default function PricingSection() {
             匯款資訊請洽官方 LINE；不方便轉帳，可至超商使用中國信託無卡存款完整支付訂金。
           </p>
         </aside>
-
-        <div className={styles.policyBlock}>
-          <h4>優惠須知</h4>
-          <div className={styles.policyRows}>
-            <div className={styles.policyItem}>
-              <strong>優惠不併用</strong>
-              <span>每次消費僅限擇一優惠</span>
-            </div>
-            <div className={styles.policyItem}>
-              <strong>提前一天預約</strong>
-              <span>折抵 NT$100</span>
-            </div>
-            <div className={styles.policyItem}>
-              <strong>當月壽星＋提前預約</strong>
-              <span>首次消費折抵 NT$200</span>
-            </div>
-            <div className={styles.policyItem}>
-              <strong>不指定師傅方案</strong>
-              <span>已是優惠價，不再享其他折扣</span>
-            </div>
-            <div className={styles.policyItem}>
-              <strong>加入官方 LINE</strong>
-              <span>不定時優惠券，金額不定</span>
-            </div>
-          </div>
-        </div>
 
         <div className={styles.policyBlock}>
           <h4>訂金政策</h4>
@@ -194,6 +130,38 @@ export default function PricingSection() {
 
         <p className={styles.policyFootnote}>詳細規則以預約頁公告為準</p>
       </section>
+
+      <div className={styles.infoStack}>
+        <details className={styles.infoPanel}>
+          <summary>
+            <span>
+              <span className={styles.panelKicker}>NIGHT SERVICE</span>
+              <span className={styles.panelTitle}>夜間服務</span>
+            </span>
+            <span className={styles.chevron} aria-hidden="true">⌄</span>
+          </summary>
+          <div className={styles.panelBody}>
+            <p>預約時間 22:00 後｜+300／位</p>
+            <p>預約時間 00:00 後｜+500／位</p>
+          </div>
+        </details>
+
+        <details className={styles.infoPanel}>
+          <summary>
+            <span>
+              <span className={styles.panelKicker}>HOME SERVICE</span>
+              <span className={styles.panelTitle}>到府服務</span>
+            </span>
+            <span className={styles.chevron} aria-hidden="true">⌄</span>
+          </summary>
+          <div className={styles.panelBody}>
+            <p>到府服務依距離酌收費用。</p>
+            <p>距離高雄車站 5 公里內｜+300</p>
+            <p>距離高雄車站 5–10 公里｜+500</p>
+            <p>距離高雄車站 10 公里以上｜+800（客服報價）</p>
+          </div>
+        </details>
+      </div>
 
       <div className={styles.policyRow}>
         <span>Adults Only｜18+</span>
