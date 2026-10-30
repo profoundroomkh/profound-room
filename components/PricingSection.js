@@ -9,19 +9,19 @@ const packages = [
     name: '一般指定師傅',
     duration: '100 分鐘',
     price: 'NT$2,200',
-    service: '指壓・油壓・機能保養（不含體推）',
+    service: '基本服務項目：指壓・油壓・體推・機能保養',
   },
   {
     name: '直男師傅',
     duration: '100 分鐘',
     price: 'NT$2,700',
-    service: '指壓・油壓・機能保養（不含體推）',
+    service: '基本服務項目：指壓・油壓・體推・機能保養',
   },
   {
     name: '不指定師傅',
     duration: '100 分鐘',
     price: 'NT$2,000',
-    service: '指壓・油壓・機能保養（不含體推）',
+    service: '基本服務項目：指壓・油壓・體推・機能保養',
   },
 ]
 
@@ -38,7 +38,7 @@ export default function PricingSection() {
         <p className={styles.eyebrow}>PRICING</p>
         <h2 id="pricing-title">課程方案</h2>
         <p className={styles.sectionLead}>
-          高雄預約制 Gay SPA 與男士按摩方案。100 分鐘包含指壓、油壓、機能保養（不含體推）；另提供直男按摩與直男同志按摩專屬方案。
+          高雄預約制 Gay SPA 與男士按摩方案。100 分鐘基本服務含指壓、油壓、體推、機能保養；另提供直男按摩與直男同志按摩專屬方案。
         </p>
       </div>
 
@@ -59,10 +59,9 @@ export default function PricingSection() {
       </div>
 
       <div className={styles.serviceNote}>
-        <span className={styles.serviceLabel}>加時服務（含體推項目）</span>
+        <span className={styles.serviceLabel}>加時服務</span>
         <div className={styles.serviceDetails}>
-          <p><strong>每 30 分鐘</strong>｜加收 NT$500</p>
-          <p>體推須加時 30 分鐘，預約時請主動告知，客服確認師傅是否配合。</p>
+          <p><strong>每加時 30 分鐘</strong>｜NT$500</p>
           <p>現場加時：服務後 1 小時內，由師傅轉告客服確認可否加時。</p>
         </div>
       </div>
