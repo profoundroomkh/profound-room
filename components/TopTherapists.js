@@ -52,6 +52,21 @@ const flashTherapists = [
   },
 ]
 
+const lucianTherapists = [
+  {
+    id: 'lucian',
+    rank: 'NEW',
+    name: 'Lucian',
+    chineseName: '洛森',
+    images: [
+      '/images/therapist-Lucian-1.JPG',
+      '/images/therapist-Lucian-2.JPG',
+    ],
+    kicker: 'NEW THERAPIST',
+    description: <>168／60／30<br />不分</>,
+  },
+]
+
 function openProfile(event, therapistId) {
   const trigger = document.getElementById(`${therapistId}-profile-trigger`)
   if (!trigger) return
@@ -66,12 +81,18 @@ export default function TopTherapists() {
   const [activeIndex, setActiveIndex] = useState(0)
   const dateKey = useTaiwanDateKey()
   const isFlashPeriod = dateKey === '2026-10-16' || dateKey === '2026-10-17'
-  const topTherapists = isFlashPeriod ? flashTherapists : septemberTherapists
+  const isLucianColumn = true
+  const topTherapists = isLucianColumn
+    ? lucianTherapists
+    : isFlashPeriod
+      ? flashTherapists
+      : septemberTherapists
+  const columnMode = isLucianColumn ? 'lucian' : isFlashPeriod ? 'flash' : 'september'
 
   useEffect(() => {
     setActiveIndex(0)
     cardsRef.current?.scrollTo({ left: 0, behavior: 'auto' })
-  }, [isFlashPeriod])
+  }, [columnMode])
 
   const scrollToCard = (index) => {
     const cards = cardsRef.current
@@ -84,18 +105,24 @@ export default function TopTherapists() {
 
   return (
     <section
-      className={`${styles.section} ${isFlashPeriod ? styles.flashSection : ''}`}
+      className={`${styles.section} ${isLucianColumn ? styles.lucianSection : isFlashPeriod ? styles.flashSection : ''}`}
       id="top-three"
       aria-labelledby="top-three-title"
     >
       <div className={styles.sectionHead}>
-        <p className={styles.eyebrow}>{isFlashPeriod ? 'WEEKEND FLASH' : 'SEPTEMBER HIGHLIGHTS'}</p>
-        <h2 id="top-three-title">{isFlashPeriod ? '快閃師傅' : '9 月熱門師傅'}</h2>
-        <div className={styles.rule} aria-hidden="true"><span>{isFlashPeriod ? 'LIMITED' : 'TOP 3'}</span></div>
+        <p className={styles.eyebrow}>{isLucianColumn ? 'FIRST LOOK · NEW FACE' : isFlashPeriod ? 'WEEKEND FLASH' : 'SEPTEMBER HIGHLIGHTS'}</p>
+        <h2 id="top-three-title">
+          {isLucianColumn ? (
+            <><span className={styles.lucianTitleLine}>新師</span><span className={styles.lucianTitleAccent}>推薦</span></>
+          ) : isFlashPeriod ? '快閃師傅' : '9 月熱門師傅'}
+        </h2>
+        <div className={styles.rule} aria-hidden="true"><span>{isLucianColumn ? 'NEW FACE' : isFlashPeriod ? 'LIMITED' : 'TOP 3'}</span></div>
         <p className={styles.lead}>
-          {isFlashPeriod
-            ? '10/17（六）單日支援，週五先行曝光，預約前請先確認支援時段。'
-            : '本月人氣排名，先看熱門師傅，再依班表安排你的放鬆時間。'}
+          {isLucianColumn
+            ? '認識新加入的 Lucian／洛森，查看照片與師傅資料。'
+            : isFlashPeriod
+              ? '10/17（六）單日支援，週五先行曝光，預約前請先確認支援時段。'
+              : '本月人氣排名，先看熱門師傅，再依班表安排你的放鬆時間。'}
         </p>
       </div>
 
@@ -105,7 +132,10 @@ export default function TopTherapists() {
             <div className={styles.rank}>{therapist.rank}</div>
             <div className={`${styles.photoWrap} ${styles[therapist.id]} ${therapist.images ? styles.photoGrid : ''}`}>
               {(therapist.images || [therapist.image]).map((image, imageIndex) => (
-                <div className={styles.photoCell} key={image}>
+                <div
+                  className={`${styles.photoCell} ${isLucianColumn ? (imageIndex === 0 ? styles.lucianHeroPhoto : styles.lucianInsetPhoto) : ''}`}
+                  key={image}
+                >
                   <Image
                     src={image}
                     alt={`${therapist.name}${therapist.chineseName ? `／${therapist.chineseName}` : ''} 第${imageIndex + 1}張照片`}
@@ -126,7 +156,7 @@ export default function TopTherapists() {
               </h3>
               <p className={styles.description}>{therapist.description}</p>
               <div className={styles.cardActions}>
-                {!isFlashPeriod && (
+                {(!isFlashPeriod || isLucianColumn) && (
                   <a
                     href="#therapists"
                     onClick={(event) => openProfile(event, therapist.id)}
@@ -141,7 +171,7 @@ export default function TopTherapists() {
         ))}
       </div>
 
-      <div className={styles.carouselControls} aria-label="切換熱門師傅">
+      <div className={styles.carouselControls} aria-label="切換師傅">
         <button
           type="button"
           className={styles.carouselButton}

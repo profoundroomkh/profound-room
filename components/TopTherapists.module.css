@@ -83,6 +83,19 @@
   justify-content: center;
 }
 
+.lucianSection .cards {
+  grid-template-columns: minmax(0, 390px);
+  justify-content: center;
+}
+
+.lucianSection .carouselControls {
+  display: none;
+}
+
+.lucianSection .cardBody {
+  position: relative;
+}
+
 .carouselControls {
   display: none;
   align-items: center;
@@ -230,6 +243,10 @@
 
 .nolan img {
   object-position: 50% 38%;
+}
+
+.lucian img {
+  object-position: 50% 40%;
 }
 
 .cardBody {
@@ -403,5 +420,500 @@
 
   .sectionFoot {
     margin-top: 16px;
+  }
+}
+
+/* Preview-only Lucian feature: a cinematic, editorial first-screen spotlight. */
+.lucianSection {
+  display: grid;
+  min-height: calc(100svh - 88px);
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  column-gap: clamp(28px, 5vw, 82px);
+  row-gap: 12px;
+  padding: clamp(32px, 5vh, 58px) clamp(34px, 6.4vw, 104px) 34px;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 78% 42%, rgba(157, 91, 55, 0.25), transparent 34%),
+    radial-gradient(ellipse at 18% 68%, rgba(185, 151, 125, 0.13), transparent 31%),
+    linear-gradient(112deg, #050505 0%, #100c0a 48%, #080706 100%);
+}
+
+.lucianSection::before {
+  opacity: 0.8;
+  background:
+    linear-gradient(115deg, transparent 0 55%, rgba(242, 225, 208, 0.025) 55.1% 55.25%, transparent 55.35%),
+    radial-gradient(ellipse at 74% 42%, rgba(209, 154, 113, 0.1), transparent 42%);
+}
+
+.lucianSection::after {
+  position: absolute;
+  z-index: -1;
+  top: 47%;
+  right: -52px;
+  color: rgba(242, 225, 208, 0.035);
+  content: 'NEW FACE';
+  font-family: Arial, sans-serif;
+  font-size: clamp(72px, 12vw, 180px);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  pointer-events: none;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: center;
+  white-space: nowrap;
+}
+
+.lucianSection .sectionHead {
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  max-width: 480px;
+  margin: 0;
+  text-align: left;
+}
+
+.lucianSection .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 22px;
+  color: #d7ad87;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+}
+
+.lucianSection .eyebrow::before {
+  width: 35px;
+  height: 1px;
+  background: #c58e65;
+  content: '';
+}
+
+.lucianSection .sectionHead h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  color: #f4e8da;
+  font-size: inherit;
+  letter-spacing: 0;
+  line-height: 0.98;
+}
+
+.lucianTitleLine {
+  margin-left: 5px;
+  color: #ead9c8;
+  font-size: clamp(35px, 4.1vw, 58px);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}
+
+.lucianTitleAccent {
+  margin-top: 3px;
+  background: linear-gradient(112deg, #f2e1d0 4%, #d6a678 42%, #a96947 75%, #e7c39f 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(84px, 10vw, 148px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 0.94;
+  -webkit-background-clip: text;
+}
+
+.lucianSection .rule {
+  display: none;
+  max-width: 310px;
+  justify-content: flex-start;
+  gap: 13px;
+  margin: 27px 0 0;
+  color: #d0a17c;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+}
+
+.lucianSection .rule::before,
+.lucianSection .rule::after {
+  flex: 0 1 55px;
+  background: linear-gradient(90deg, #b98865, transparent);
+}
+
+.lucianSection .rule::after {
+  display: none;
+}
+
+.lucianSection .lead {
+  max-width: 350px;
+  margin: 19px 0 0;
+  color: rgba(242, 225, 208, 0.72);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+}
+
+.lucianSection .cards {
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  max-width: 780px;
+  grid-template-columns: minmax(0, 1fr);
+  justify-self: end;
+  margin: 0;
+}
+
+.lucianSection .card {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.lucianSection .card::after {
+  display: none;
+}
+
+.lucianSection .rank {
+  top: 8%;
+  left: 2%;
+  z-index: 5;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(235, 197, 158, 0.88);
+  background: rgba(12, 9, 7, 0.82);
+  box-shadow: 0 0 32px rgba(192, 126, 82, 0.18);
+  color: #f0d5b9;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.lucianSection .photoWrap {
+  height: clamp(420px, 62vh, 560px);
+  overflow: visible;
+  background: transparent;
+}
+
+.lucianSection .photoGrid {
+  display: block;
+}
+
+.lucianSection .lucianHeroPhoto {
+  position: absolute;
+  inset: 0 21% 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(231, 195, 159, 0.48);
+  border-radius: 48% 48% 3px 3px / 31% 31% 3px 3px;
+  background: #17110e;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.56), 0 0 75px rgba(178, 106, 67, 0.12);
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 88% 91%, 61% 100%, 0 100%);
+}
+
+.lucianSection .lucianHeroPhoto img {
+  object-fit: cover;
+  object-position: 50% 73%;
+  filter: saturate(0.88) contrast(1.08) brightness(0.86);
+}
+
+.lucianSection .lucianInsetPhoto {
+  position: absolute;
+  z-index: 4;
+  top: 11%;
+  right: 1%;
+  bottom: 10%;
+  width: 34%;
+  overflow: hidden;
+  border: 7px solid #100d0b;
+  border-radius: 48% 48% 3px 3px / 28% 28% 3px 3px;
+  background: #211914;
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(231, 195, 159, 0.62);
+  transform: rotate(3deg);
+}
+
+.lucianSection .lucianInsetPhoto img {
+  object-fit: cover;
+  object-position: 50% 45%;
+  filter: saturate(0.82) contrast(1.04) brightness(0.92);
+}
+
+.lucianSection .photoNameLabel {
+  right: 12px;
+  bottom: 13px;
+  z-index: 5;
+  border-color: rgba(242, 225, 208, 0.42);
+  background: rgba(7, 7, 7, 0.78);
+  font-size: 10px;
+}
+
+.lucianSection .cardBody {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 0.82fr);
+  align-items: end;
+  column-gap: 24px;
+  margin-top: 6px;
+  padding: 17px 4px 0;
+  border-top: 1px solid rgba(205, 157, 119, 0.34);
+}
+
+.lucianSection .cardKicker {
+  grid-column: 1 / -1;
+  margin-bottom: 7px;
+  color: #c8956d;
+  font-size: 9px;
+  letter-spacing: 0.27em;
+}
+
+.lucianSection .card h3 {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: clamp(34px, 3.7vw, 52px);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.lucianSection .card h3 span {
+  color: #d7ad87;
+  font-size: 0.48em;
+}
+
+.lucianSection .description {
+  grid-column: 1;
+  grid-row: 3;
+  min-height: auto;
+  margin: 8px 0 0;
+  color: rgba(242, 225, 208, 0.72);
+  font-size: 13px;
+}
+
+.lucianSection .cardActions {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  gap: 10px;
+}
+
+.lucianSection .cardActions a {
+  min-height: 45px;
+  border-color: rgba(213, 166, 127, 0.68);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.lucianSection .cardActions a:first-child {
+  background: linear-gradient(110deg, #e0bd9d, #b77c58);
+}
+
+.lucianSection .cardActions a:hover,
+.lucianSection .cardActions a:focus-visible {
+  transform: translateY(-2px);
+}
+
+.lucianSection .sectionFoot {
+  z-index: 1;
+  grid-column: 1;
+  grid-row: 2;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.lucianSection .sectionFoot a {
+  padding: 10px 0;
+  border-bottom-color: rgba(185, 151, 125, 0.42);
+  color: rgba(242, 225, 208, 0.68);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 900px) {
+  .lucianSection {
+    min-height: auto;
+    grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+    column-gap: 22px;
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .lucianSection .photoWrap {
+    height: clamp(390px, 56vw, 500px);
+  }
+
+  .lucianSection .cardBody {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 4px;
+  }
+
+  .lucianSection .cardActions {
+    grid-column: 1;
+    grid-row: auto;
+    max-width: 350px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 680px) {
+  .lucianSection {
+    display: block;
+    min-height: auto;
+    padding: 92px 16px 42px;
+    background:
+      radial-gradient(ellipse at 83% 43%, rgba(157, 91, 55, 0.22), transparent 38%),
+      radial-gradient(ellipse at 5% 15%, rgba(185, 151, 125, 0.12), transparent 40%),
+      linear-gradient(150deg, #050505 0%, #100c0a 52%, #070605 100%);
+  }
+
+  .lucianSection::after {
+    top: 46%;
+    right: -70px;
+    font-size: 92px;
+  }
+
+  .lucianSection .sectionHead {
+    max-width: none;
+    margin: 0 0 12px;
+    text-align: left;
+  }
+
+  .lucianSection .eyebrow {
+    gap: 9px;
+    margin-bottom: 12px;
+    font-size: 9px;
+  }
+
+  .lucianSection .eyebrow::before {
+    width: 24px;
+  }
+
+  .lucianSection .sectionHead h2 {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .lucianTitleLine {
+    margin-left: 0;
+    font-size: 30px;
+    letter-spacing: 0.12em;
+  }
+
+  .lucianTitleAccent {
+    margin-top: 0;
+    font-size: clamp(62px, 18vw, 78px);
+    letter-spacing: 0.06em;
+  }
+
+  .lucianSection .rule {
+    max-width: 220px;
+    margin: 7px 0 0;
+    font-size: 9px;
+  }
+
+  .lucianSection .lead {
+    max-width: 330px;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .lucianSection .cards {
+    display: grid;
+    width: 100%;
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lucianSection .card {
+    width: 100%;
+    flex: initial;
+  }
+
+  .lucianSection .rank {
+    top: 7%;
+    left: 3%;
+    width: 44px;
+    height: 44px;
+  }
+
+  .lucianSection .photoWrap {
+    height: clamp(290px, 82vw, 360px);
+  }
+
+  .lucianSection .lucianHeroPhoto {
+    inset: 0 19% 0 0;
+    border-radius: 45% 45% 2px 2px / 25% 25% 2px 2px;
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 84% 91%, 59% 100%, 0 100%);
+  }
+
+  .lucianSection .lucianHeroPhoto img {
+    object-position: 50% 72%;
+  }
+
+  .lucianSection .lucianInsetPhoto {
+    top: 12%;
+    right: 1%;
+    bottom: 10%;
+    width: 35%;
+    border-width: 5px;
+    transform: rotate(4deg);
+  }
+
+  .lucianSection .lucianInsetPhoto img {
+    object-position: 50% 46%;
+  }
+
+  .lucianSection .photoNameLabel {
+    right: 6px;
+    bottom: 8px;
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+
+  .lucianSection .cardBody {
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 0.9fr);
+    column-gap: 12px;
+    row-gap: 2px;
+    margin-top: 0;
+    padding: 14px 2px 0;
+  }
+
+  .lucianSection .cardKicker {
+    margin-bottom: 5px;
+    font-size: 8px;
+  }
+
+  .lucianSection .card h3 {
+    font-size: 29px;
+  }
+
+  .lucianSection .card h3 span {
+    font-size: 0.46em;
+  }
+
+  .lucianSection .description {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+
+  .lucianSection .cardActions {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    gap: 6px;
+    margin-top: 0;
+  }
+
+  .lucianSection .cardActions a {
+    min-height: 42px;
+    font-size: 10px;
+  }
+
+  .lucianSection .sectionFoot {
+    justify-content: flex-start;
+    margin-top: 12px;
   }
 }
