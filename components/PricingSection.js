@@ -38,7 +38,7 @@ export default function PricingSection() {
         <p className={styles.eyebrow}>PRICING</p>
         <h2 id="pricing-title">課程方案</h2>
         <p className={styles.sectionLead}>
-          高雄預約制 Gay SPA 與男士按摩方案。100 分鐘基本服務含指壓、油壓、體推、機能保養；另提供直男按摩與直男同志按摩專屬方案。
+          高雄預約制 Gay SPA 與男士按摩方案，另提供直男按摩與直男同志按摩專屬方案；價格與一般師傅不同，預約前請先確認。100 分鐘基本服務含指壓、油壓、體推、機能保養。
         </p>
       </div>
 
