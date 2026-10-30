@@ -15,7 +15,7 @@ export const scheduleDays = [
 const allScheduleRows = [
   {
     id: 'lucian',
-    name: 'Lucian',
+    name: 'Lucian／路西恩',
     times: ['20:30–01:00', '20:30–01:00', '20:30–01:00', '—', '—', '20:30–01:00', '20:30–01:00', '20:30–01:00'],
   },
   {

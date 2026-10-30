@@ -4,7 +4,7 @@
 const allTherapists = [
   {
     id: 'lucian',
-    name: 'Lucian',
+    name: 'Lucian／路西恩',
     isNewest: true,
     isNew: true,
     status: 'available',
