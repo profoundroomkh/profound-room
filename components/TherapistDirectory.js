@@ -63,6 +63,12 @@ export default function TherapistDirectory({ showDirectory = true }) {
   )
   const sortedTherapists = useMemo(
     () => [...regularTherapists].sort((left, right) => {
+      const leftNewestPriority = left.isNewest ? 0 : 1
+      const rightNewestPriority = right.isNewest ? 0 : 1
+      if (leftNewestPriority !== rightNewestPriority) {
+        return leftNewestPriority - rightNewestPriority
+      }
+
       const leftTodayPriority = left.status === 'available' ? 0 : 1
       const rightTodayPriority = right.status === 'available' ? 0 : 1
       if (leftTodayPriority !== rightTodayPriority) {

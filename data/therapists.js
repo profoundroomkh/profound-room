@@ -3,6 +3,22 @@
 
 const allTherapists = [
   {
+    id: 'lucian',
+    name: 'Lucian',
+    isNewest: true,
+    isNew: true,
+    status: 'available',
+    height: 168,
+    weight: 60,
+    age: 30,
+    role: '不分',
+    size: null,
+    images: [
+      '/images/therapist-Lucian-1.JPG',
+      '/images/therapist-Lucian-2.JPG',
+    ],
+  },
+  {
     id: 'max',
     name: 'Max／麥斯',
     category: 'straight',
