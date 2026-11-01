@@ -4,9 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import {
   FULLY_BOOKED_LABEL,
   PENDING_UPDATE_LABEL,
-  getScheduleDayIndex,
-  scheduleDays,
-  scheduleRows,
+  getScheduleWeek,
 } from '../data/weeklySchedule'
 import styles from './WeeklySchedule.module.css'
 import useTaiwanDateKey from './useTaiwanDateKey'
@@ -30,14 +28,19 @@ function openTherapistProfile(therapistId) {
 
 export default function WeeklySchedule() {
   const dateKey = useTaiwanDateKey()
-  const todayIndex = getScheduleDayIndex(dateKey)
+  const { days: scheduleDays, rows: allRows } = getScheduleWeek(dateKey)
+  const scheduleRows = useMemo(
+    () => allRows.filter((therapist) => therapist.isPublished !== false),
+    [allRows],
+  )
+  const todayIndex = scheduleDays.findIndex((day) => day.key === dateKey)
   const [activeDay, setActiveDay] = useState(() => (todayIndex >= 0 ? todayIndex : 0))
   const [viewMode, setViewMode] = useState('day')
   const [selectedTherapistId, setSelectedTherapistId] = useState(scheduleRows[0]?.id || '')
   const scheduleRange = `${scheduleDays[0].date}–${scheduleDays[scheduleDays.length - 1].date}`
   const selectedTherapist = useMemo(
     () => scheduleRows.find((therapist) => therapist.id === selectedTherapistId) || scheduleRows[0],
-    [selectedTherapistId],
+    [scheduleRows, selectedTherapistId],
   )
 
   useEffect(() => {
@@ -47,7 +50,7 @@ export default function WeeklySchedule() {
   const selectedDay = scheduleDays[activeDay]
   const selectedRows = useMemo(
     () => scheduleRows.filter((therapist) => therapist.times[activeDay] !== '—'),
-    [activeDay],
+    [activeDay, scheduleRows],
   )
   const quickDays = useMemo(() => {
     const firstDay = todayIndex >= 0 ? todayIndex : 0
@@ -57,7 +60,7 @@ export default function WeeklySchedule() {
         return index < scheduleDays.length ? { day: scheduleDays[index], index } : null
       })
       .filter(Boolean)
-  }, [todayIndex])
+  }, [scheduleDays, todayIndex])
 
   return (
     <section

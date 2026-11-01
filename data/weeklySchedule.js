@@ -1,7 +1,17 @@
 export const FULLY_BOOKED_LABEL = '預約滿'
 export const PENDING_UPDATE_LABEL = '待更新'
 
-export const scheduleDays = [
+const previousWeekDays = [
+  { key: '2026-10-26', label: '一', date: '10/26' },
+  { key: '2026-10-27', label: '二', date: '10/27' },
+  { key: '2026-10-28', label: '三', date: '10/28' },
+  { key: '2026-10-29', label: '四', date: '10/29' },
+  { key: '2026-10-30', label: '五', date: '10/30' },
+  { key: '2026-10-31', label: '六', date: '10/31' },
+  { key: '2026-11-01', label: '日', date: '11/1' },
+]
+
+const currentWeekDays = [
   { key: '2026-11-02', label: '一', date: '11/2' },
   { key: '2026-11-03', label: '二', date: '11/3' },
   { key: '2026-11-04', label: '三', date: '11/4' },
@@ -11,113 +21,87 @@ export const scheduleDays = [
   { key: '2026-11-08', label: '日', date: '11/8' },
 ]
 
-const allScheduleRows = [
-  {
-    id: 'hale',
-    name: 'Hale／海爾',
-    times: ['—', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
-  },
-  {
-    id: 'max',
-    name: 'Max／麥斯',
-    tag: '直男方案',
-    times: ['00:00–17:00', '00:00–17:00', '00:00–17:00', '00:00–17:00', '00:00–17:00', '00:00–17:00', '00:00–17:00'],
-  },
-  {
-    id: 'hugo',
-    name: 'Hugo／雨果',
-    tag: '現場師傅',
-    times: ['全天', '全天', '全天', '全天', '全天', '全天', '全天'],
-  },
-  {
-    id: 'andy',
-    name: 'Andy／安迪',
-    tag: '直男方案',
-    times: ['—', '—', '—', '—', '—', '—', '—'],
-  },
-  {
-    id: 'alan',
-    name: 'Alan／艾倫',
-    times: ['—', '—', '—', '16:00–20:00', '16:00–20:00', '—', '—'],
-  },
-  {
-    id: 'oni',
-    name: 'Oni／歐尼',
-    times: ['—', '—', '—', '12:00–22:00（其他時段可詢問）', '12:00–20:00（其他時段可詢問）', '—', '—'],
-  },
-  {
-    id: 'noah',
-    name: 'Noah／諾亞',
-    times: ['11:00–22:00', '11:00–22:00', '11:00–22:00', '—', '11:00–22:00', '11:00–22:00', '11:00–22:00'],
-  },
-  {
-    id: 'gugu',
-    name: 'Gugu／古古',
-    times: ['—', '—', '—', '—', '12:00–21:00', '12:00–21:00', '12:00–21:00'],
-  },
-  {
-    id: 'dylan',
-    name: 'Dylan／迪倫',
-    times: ['12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00', '12:00–22:00'],
-  },
-  {
-    id: 'kai',
-    name: 'Kai／凱',
-    tag: '提前一天預約',
-    times: ['14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '—'],
-  },
-  {
-    id: 'owen',
-    name: 'Owen／歐文',
-    times: ['19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '全天'],
-  },
-  {
-    id: 'odin',
-    name: 'Odin／奧丁',
-    times: ['20:00（僅此預約時段）', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '16:00–20:00', '16:00–20:00'],
-  },
-  {
-    id: 'raven',
-    name: 'Raven／雷文',
-    times: ['全天', '全天', '全天', '全天', '全天', '全天', '全天'],
-  },
-  {
-    id: 'milo',
-    name: 'Milo／米洛',
-    times: ['22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30'],
-  },
-  {
-    id: 'lucian',
-    name: 'Lucian／洛森',
-    profileAvailable: false,
-    times: ['20:30–01:00', '—', '—', '20:30–01:00', '20:30–01:00', '20:30–01:00', '20:30–01:00'],
-  },
-  {
-    id: 'ansel',
-    name: 'Ansel／安索',
-    times: ['—', '—', '—', '—', '—', '—', '—'],
-  },
-  {
-    id: 'zac',
-    name: 'Zac／札克',
-    isPublished: false,
-    tag: '深夜師傅',
-    times: ['—', '—', '—', '—', '—', '—', '—'],
-  },
+const therapistDetails = [
+  { id: 'hale', name: 'Hale／海爾' },
+  { id: 'max', name: 'Max／麥斯', tag: '直男方案' },
+  { id: 'hugo', name: 'Hugo／雨果', tag: '現場師傅' },
+  { id: 'andy', name: 'Andy／安迪', tag: '直男方案' },
+  { id: 'alan', name: 'Alan／艾倫' },
+  { id: 'oni', name: 'Oni／歐尼' },
+  { id: 'noah', name: 'Noah／諾亞' },
+  { id: 'gugu', name: 'Gugu／古古' },
+  { id: 'dylan', name: 'Dylan／迪倫' },
+  { id: 'kai', name: 'Kai／凱', tag: '提前一天預約' },
+  { id: 'owen', name: 'Owen／歐文' },
+  { id: 'odin', name: 'Odin／奧丁' },
+  { id: 'raven', name: 'Raven／雷文' },
+  { id: 'milo', name: 'Milo／米洛' },
+  { id: 'lucian', name: 'Lucian／洛森', profileAvailable: false },
+  { id: 'ansel', name: 'Ansel／安索' },
+  { id: 'zac', name: 'Zac／札克', isPublished: false, tag: '深夜師傅' },
 ]
 
-// 暫時下架的師傅保留原班表資料，之後只需恢復 isPublished 即可重新上架。
-export const scheduleRows = allScheduleRows.filter((therapist) => therapist.isPublished !== false)
+const previousWeekTimes = {
+  hale: ['—', '—', '—', '—', '—', '—', '詢問'],
+  max: Array(7).fill('00:00–17:00'),
+  hugo: ['全天', '全天', '—', '全天', '全天', '全天', '全天'],
+  andy: ['全天', '全天', '13:00 已滿、22:00 起', '全天', '全天', '全天', '全天'],
+  alan: ['16:00–20:00', '16:00–20:00', '14:00–16:00', '16:00–20:00', '16:00–20:00', '—', '—'],
+  oni: ['12:00–20:00', '—', '12:00–16:00', '12:00–22:00', '12:00–20:00', '—', '—'],
+  noah: ['11:00–22:00', '11:00–22:00', '11:00–22:00', '—', '11:00–22:00', '11:00–22:00', '11:00–22:00'],
+  gugu: ['12:00–21:00', '—', '12:00–21:00', '—', '—', '—', '—'],
+  dylan: ['15:00–22:00', '15:00–22:00', '15:00–22:00', '15:00–22:00（預約滿）', '12:00–18:00（預約滿）', '15:00–22:00', '15:00–22:00'],
+  kai: ['14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '—', '14:00–24:00', '—'],
+  owen: ['全天', '19:30–23:30', '全天', '19:30–23:30', '—', '—', '—'],
+  odin: ['20:00 起', '20:00 起', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '23:30 後', '19:00 起', '19:00 起'],
+  raven: Array(7).fill('全天'),
+  milo: ['22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '22:30–23:30', '—', '—'],
+  lucian: ['—', '—', '—', '—', '—', '20:30–01:00', '20:30–01:00'],
+  ansel: ['—', '—', '—', '—', '—', '22:30–02:00', '22:30–02:00'],
+  zac: ['15:00–02:00', '—', '—', '—', '—', '—', '—'],
+}
 
-const scheduleByDate = Object.fromEntries(
-  scheduleDays.map((day, dayIndex) => [
-    day.key,
-    Object.fromEntries(scheduleRows.map((therapist) => [therapist.id, therapist.times[dayIndex]])),
-  ]),
-)
+const currentWeekTimes = {
+  hale: ['—', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
+  max: Array(7).fill('00:00–17:00'),
+  hugo: Array(7).fill('全天'),
+  andy: Array(7).fill('—'),
+  alan: ['—', '—', '—', '16:00–20:00', '16:00–20:00', '—', '—'],
+  oni: ['—', '—', '—', '12:00–22:00（其他時段可詢問）', '12:00–20:00（其他時段可詢問）', '—', '—'],
+  noah: ['11:00–22:00', '11:00–22:00', '11:00–22:00', '—', '11:00–22:00', '11:00–22:00', '11:00–22:00'],
+  gugu: ['—', '—', '—', '—', '12:00–21:00', '12:00–21:00', '12:00–21:00'],
+  dylan: Array(7).fill('12:00–22:00'),
+  kai: ['14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '—'],
+  owen: ['19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '19:30–23:30', '全天'],
+  odin: ['20:00（僅此預約時段）', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '16:00–20:00', '16:00–20:00'],
+  raven: Array(7).fill('全天'),
+  milo: Array(7).fill('22:30–23:30'),
+  lucian: ['20:30–01:00', '—', '—', '20:30–01:00', '20:30–01:00', '20:30–01:00', '20:30–01:00'],
+  ansel: Array(7).fill('—'),
+  zac: Array(7).fill('—'),
+}
 
-// 班表現在直接控制每日狀態；若當日有「全天」便顯示可預約。
-const fixedStatusOverrides = {}
+function makeRows(timesByTherapist) {
+  return therapistDetails.map((therapist) => ({
+    ...therapist,
+    times: timesByTherapist[therapist.id] || Array(7).fill(PENDING_UPDATE_LABEL),
+  }))
+}
+
+const scheduleWeeks = [
+  { days: previousWeekDays, rows: makeRows(previousWeekTimes) },
+  { days: currentWeekDays, rows: makeRows(currentWeekTimes) },
+]
+
+export function getScheduleWeek(dateKey = '2026-11-01') {
+  const exactWeek = scheduleWeeks.find((week) => week.days.some((day) => day.key === dateKey))
+  if (exactWeek) return exactWeek
+  return dateKey < currentWeekDays[0].key ? scheduleWeeks[0] : scheduleWeeks[scheduleWeeks.length - 1]
+}
+
+// Static exports preserve compatibility for consumers that need a default week.
+export const scheduleDays = previousWeekDays
+export const scheduleRows = scheduleWeeks[0].rows.filter((therapist) => therapist.isPublished !== false)
 
 export function getTaiwanDateKey(date = new Date()) {
   const parts = new Intl.DateTimeFormat('en-CA', {
@@ -144,17 +128,23 @@ export function getMillisecondsUntilTaiwanMidnight(date = new Date()) {
 }
 
 export function getScheduleDayIndex(dateKey) {
-  return scheduleDays.findIndex((day) => day.key === dateKey)
+  return getScheduleWeek(dateKey).days.findIndex((day) => day.key === dateKey)
 }
 
-export function hasWeeklySchedule(therapistId) {
-  const schedule = scheduleRows.find((therapist) => therapist.id === therapistId)
+export function hasWeeklySchedule(therapistId, dateKey = '2026-11-01') {
+  const { rows } = getScheduleWeek(dateKey)
+  const schedule = rows.find((therapist) => therapist.id === therapistId)
   return Boolean(schedule && schedule.times.some((shift) => shift !== '—' && shift !== PENDING_UPDATE_LABEL))
 }
 
 export function getDailyTherapists(therapists, dateKey) {
-  const todaySchedule = scheduleByDate[dateKey]
-  if (!todaySchedule) return therapists
+  const week = getScheduleWeek(dateKey)
+  const dayIndex = week.days.findIndex((day) => day.key === dateKey)
+  if (dayIndex < 0) return therapists
+
+  const todaySchedule = Object.fromEntries(
+    week.rows.map((therapist) => [therapist.id, therapist.times[dayIndex]]),
+  )
 
   return therapists.map((therapist) => {
     const shift = todaySchedule[therapist.id]
@@ -164,11 +154,11 @@ export function getDailyTherapists(therapists, dateKey) {
 
     return {
       ...therapist,
-      hasWeeklySchedule: isSchedulePending ? false : hasWeeklySchedule(therapist.id),
+      hasWeeklySchedule: isSchedulePending ? false : hasWeeklySchedule(therapist.id, dateKey),
       isSchedulePending,
-      isFullyBooked: shift === FULLY_BOOKED_LABEL,
-      status: fixedStatusOverrides[therapist.id]
-        || (shift === '—' || shift === FULLY_BOOKED_LABEL || isSchedulePending ? 'paused' : 'available'),
+      isFullyBooked: shift === FULLY_BOOKED_LABEL
+        || (typeof shift === 'string' && shift.includes('已滿') && !shift.includes('起')),
+      status: shift === '—' || shift === FULLY_BOOKED_LABEL || isSchedulePending ? 'paused' : 'available',
     }
   })
 }
