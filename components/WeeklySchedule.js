@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import {
   FULLY_BOOKED_LABEL,
   PENDING_UPDATE_LABEL,
-  getScheduleWeek,
+  getScheduleWindow,
 } from '../data/weeklySchedule'
 import styles from './WeeklySchedule.module.css'
 import useTaiwanDateKey from './useTaiwanDateKey'
@@ -28,7 +28,8 @@ function openTherapistProfile(therapistId) {
 
 export default function WeeklySchedule() {
   const dateKey = useTaiwanDateKey()
-  const { days: scheduleDays, rows: allRows } = getScheduleWeek(dateKey)
+  const scheduleWindow = useMemo(() => getScheduleWindow(dateKey), [dateKey])
+  const { days: scheduleDays, rows: allRows } = scheduleWindow
   const scheduleRows = useMemo(
     () => allRows.filter((therapist) => therapist.isPublished !== false),
     [allRows],
@@ -45,7 +46,7 @@ export default function WeeklySchedule() {
 
   useEffect(() => {
     if (todayIndex >= 0) setActiveDay(todayIndex)
-  }, [todayIndex])
+  }, [dateKey, todayIndex])
 
   const selectedDay = scheduleDays[activeDay]
   const selectedRows = useMemo(

@@ -99,6 +99,32 @@ export function getScheduleWeek(dateKey = '2026-11-01') {
   return dateKey < currentWeekDays[0].key ? scheduleWeeks[0] : scheduleWeeks[scheduleWeeks.length - 1]
 }
 
+export function getScheduleWindow(dateKey = getTaiwanDateKey()) {
+  const start = new Date(`${dateKey}T00:00:00Z`)
+  const weekdayLabels = ['日', '一', '二', '三', '四', '五', '六']
+  const knownDays = scheduleWeeks.flatMap((week) => week.days)
+  const days = Array.from({ length: 8 }, (_, offset) => {
+    const date = new Date(start.getTime() + offset * 24 * 60 * 60 * 1000)
+    const key = date.toISOString().slice(0, 10)
+    const known = knownDays.find((day) => day.key === key)
+    return known || {
+      key,
+      label: weekdayLabels[date.getUTCDay()],
+      date: `${date.getUTCMonth() + 1}/${date.getUTCDate()}`,
+    }
+  })
+  const rows = therapistDetails.map((therapist) => ({
+    ...therapist,
+    times: days.map((day) => {
+      const week = scheduleWeeks.find((candidate) => candidate.days.some((known) => known.key === day.key))
+      if (!week) return PENDING_UPDATE_LABEL
+      const dayIndex = week.days.findIndex((known) => known.key === day.key)
+      return week.rows.find((row) => row.id === therapist.id)?.times[dayIndex] || PENDING_UPDATE_LABEL
+    }),
+  }))
+  return { days, rows }
+}
+
 // Static exports preserve compatibility for consumers that need a default week.
 export const scheduleDays = previousWeekDays
 export const scheduleRows = scheduleWeeks[0].rows.filter((therapist) => therapist.isPublished !== false)
