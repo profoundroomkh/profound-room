@@ -252,7 +252,7 @@ const allTherapists = [
     age: 30,
     role: '不分',
     size: null,
-    specialty: '熊系厚實・自然陪伴',
+    specialty: '狼系外型・厚實身形・自然陪伴',
     images: [
       '/images/therapist-Noah.JPG',
       '/images/therapist-Noah-1.JPG',
