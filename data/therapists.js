@@ -90,7 +90,7 @@ const allTherapists = [
     id: 'andy',
     name: 'Andy／安迪',
     category: 'straight',
-    isNew: true,
+    isNew: false,
     status: 'paused',
     height: 174,
     weight: 63,
