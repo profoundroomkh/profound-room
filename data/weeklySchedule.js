@@ -124,6 +124,7 @@ const currentWeekTimes = {
 const upcomingWeekTimes = {
   hale: ['—', '—', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00'],
   max: Array(7).fill('00:00–17:00'),
+  hugo: Array(7).fill('全天'),
   dylan: Array(7).fill('12:00–22:00'),
   gugu: ['—', '—', '12:00–21:00', '12:00–21:00', '12:00–21:00', '12:00–21:00', '12:00–21:00'],
   raven: Array(7).fill('全天'),
@@ -137,14 +138,17 @@ const upcomingWeekTimes = {
 
 const midNovemberTimes = {
   hale: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
+  hugo: Array(7).fill('全天'),
 }
 
 const lateNovemberTimes = {
   hale: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
+  hugo: Array(7).fill('全天'),
 }
 
 const endNovemberTimes = {
   hale: ['11:00–23:00', ...Array(6).fill(PENDING_UPDATE_LABEL)],
+  hugo: ['全天', ...Array(6).fill(PENDING_UPDATE_LABEL)],
 }
 
 function makeRows(timesByTherapist) {
