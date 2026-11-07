@@ -6,7 +6,13 @@
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { octoberPerformanceRank, therapistFilters, therapists } from '../data/therapists'
-import { PENDING_UPDATE_LABEL, getDailyTherapists } from '../data/weeklySchedule'
+import {
+  FULLY_BOOKED_LABEL,
+  PENDING_UPDATE_LABEL,
+  getDailyTherapists,
+  getScheduleWeek,
+  getScheduleWindow,
+} from '../data/weeklySchedule'
 import { trackEvent } from './analytics'
 import ScrollReveal from './ScrollReveal'
 import MonthlyNewTherapist from './MonthlyNewTherapist'
@@ -48,6 +54,15 @@ function getBookingButtonLabel(therapist) {
   return '暫停預約等週更新'
 }
 
+function getScheduleEntry(shift) {
+  if (shift === '—') return { label: '休息中', status: 'rest' }
+  if (!shift || shift === PENDING_UPDATE_LABEL) return { label: PENDING_UPDATE_LABEL, status: 'pending' }
+  if (shift === FULLY_BOOKED_LABEL || shift.includes('預約滿') || shift.includes('已滿')) {
+    return { label: shift, status: 'booked' }
+  }
+  return { label: shift, status: 'shift' }
+}
+
 export default function TherapistDirectory({ showDirectory = true }) {
   const dateKey = useTaiwanDateKey()
   const [activeFilter, setActiveFilter] = useState('all')
@@ -61,6 +76,18 @@ export default function TherapistDirectory({ showDirectory = true }) {
     () => getDailyTherapists(therapists, dateKey),
     [dateKey],
   )
+  const profileSchedule = useMemo(() => {
+    if (!selected) return null
+    const currentWeek = getScheduleWeek(dateKey)
+    const { days, rows } = currentWeek.days.some((day) => day.key === dateKey)
+      ? currentWeek
+      : getScheduleWindow(dateKey)
+    const schedule = rows.find((row) => row.id === selected.id)
+    return {
+      days,
+      times: schedule?.times || days.map(() => PENDING_UPDATE_LABEL),
+    }
+  }, [dateKey, selected])
   const sortedTherapists = useMemo(
     () => [...regularTherapists].sort((left, right) => {
       const leftNewestPriority = left.isNewest ? 0 : 1
@@ -460,6 +487,39 @@ export default function TherapistDirectory({ showDirectory = true }) {
                   </div>
                 )}
               </dl>
+
+              <section className={styles.profileSchedule} aria-labelledby="profile-schedule-title">
+                <div className={styles.profileScheduleHeading}>
+                  <div>
+                    <p className={styles.profileScheduleEyebrow}>SCHEDULE</p>
+                    <h4 id="profile-schedule-title">近期班表</h4>
+                  </div>
+                  {profileSchedule?.days.length > 0 && (
+                    <span className={styles.profileScheduleRange}>
+                      {profileSchedule.days[0].date}–{profileSchedule.days[profileSchedule.days.length - 1].date}
+                    </span>
+                  )}
+                </div>
+                <div className={styles.profileScheduleGrid}>
+                  {profileSchedule?.days.map((day, index) => {
+                    const entry = getScheduleEntry(profileSchedule.times[index])
+                    return (
+                      <div className={styles.scheduleItem} key={day.key}>
+                        <div className={styles.scheduleDate}>
+                          <span>週{day.label}</span>
+                          <time dateTime={day.key}>{day.date}</time>
+                        </div>
+                        <p className={`${styles.scheduleValue} ${styles[`scheduleValue_${entry.status}`]}`}>
+                          {entry.label}
+                        </p>
+                      </div>
+                    )
+                  })}
+                </div>
+                <p className={styles.profileScheduleNote}>
+                  班表每日 00:00 更新；「待更新」表示該日班表尚未提供。
+                </p>
+              </section>
 
               <div className={styles.modalStatus}>
                 <span
