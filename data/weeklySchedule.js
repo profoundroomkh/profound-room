@@ -31,6 +31,36 @@ const upcomingWeekDays = [
   { key: '2026-11-15', label: '日', date: '11/15' },
 ]
 
+const midNovemberDays = [
+  { key: '2026-11-16', label: '一', date: '11/16' },
+  { key: '2026-11-17', label: '二', date: '11/17' },
+  { key: '2026-11-18', label: '三', date: '11/18' },
+  { key: '2026-11-19', label: '四', date: '11/19' },
+  { key: '2026-11-20', label: '五', date: '11/20' },
+  { key: '2026-11-21', label: '六', date: '11/21' },
+  { key: '2026-11-22', label: '日', date: '11/22' },
+]
+
+const lateNovemberDays = [
+  { key: '2026-11-23', label: '一', date: '11/23' },
+  { key: '2026-11-24', label: '二', date: '11/24' },
+  { key: '2026-11-25', label: '三', date: '11/25' },
+  { key: '2026-11-26', label: '四', date: '11/26' },
+  { key: '2026-11-27', label: '五', date: '11/27' },
+  { key: '2026-11-28', label: '六', date: '11/28' },
+  { key: '2026-11-29', label: '日', date: '11/29' },
+]
+
+const endNovemberDays = [
+  { key: '2026-11-30', label: '一', date: '11/30' },
+  { key: '2026-12-01', label: '二', date: '12/1' },
+  { key: '2026-12-02', label: '三', date: '12/2' },
+  { key: '2026-12-03', label: '四', date: '12/3' },
+  { key: '2026-12-04', label: '五', date: '12/4' },
+  { key: '2026-12-05', label: '六', date: '12/5' },
+  { key: '2026-12-06', label: '日', date: '12/6' },
+]
+
 const therapistDetails = [
   { id: 'hale', name: 'Hale／海爾' },
   { id: 'max', name: 'Max／麥斯', tag: '直男方案' },
@@ -92,6 +122,7 @@ const currentWeekTimes = {
 }
 
 const upcomingWeekTimes = {
+  hale: ['—', '—', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00'],
   max: Array(7).fill('00:00–17:00'),
   dylan: Array(7).fill('12:00–22:00'),
   kai: ['14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '14:00–24:00', '—'],
@@ -99,6 +130,18 @@ const upcomingWeekTimes = {
   oni: ['12:00–22:00（其他時段可詢問）', '12:00–22:00（其他時段可詢問）', '12:00–17:00（其他時段可詢問）', '12:00–22:00（其他時段可詢問）', '12:00–22:00（其他時段可詢問）', '12:00–22:00（其他時段可詢問）', '—'],
   lucian: ['22:30 後', '20:30–01:00', '20:30–01:00', '—', '22:30 後', '20:30–01:00', '20:30–01:00'],
   owen: ['19:30–23:30', '全天', '—', '—', '—', '—', '—'],
+}
+
+const midNovemberTimes = {
+  hale: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
+}
+
+const lateNovemberTimes = {
+  hale: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
+}
+
+const endNovemberTimes = {
+  hale: ['11:00–23:00', ...Array(6).fill(PENDING_UPDATE_LABEL)],
 }
 
 function makeRows(timesByTherapist) {
@@ -112,6 +155,9 @@ const scheduleWeeks = [
   { days: previousWeekDays, rows: makeRows(previousWeekTimes) },
   { days: currentWeekDays, rows: makeRows(currentWeekTimes) },
   { days: upcomingWeekDays, rows: makeRows(upcomingWeekTimes) },
+  { days: midNovemberDays, rows: makeRows(midNovemberTimes) },
+  { days: lateNovemberDays, rows: makeRows(lateNovemberTimes) },
+  { days: endNovemberDays, rows: makeRows(endNovemberTimes) },
 ]
 
 export function getScheduleWeek(dateKey = '2026-11-01') {
