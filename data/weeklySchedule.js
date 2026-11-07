@@ -21,6 +21,16 @@ const currentWeekDays = [
   { key: '2026-11-08', label: '日', date: '11/8' },
 ]
 
+const upcomingWeekDays = [
+  { key: '2026-11-09', label: '一', date: '11/9' },
+  { key: '2026-11-10', label: '二', date: '11/10' },
+  { key: '2026-11-11', label: '三', date: '11/11' },
+  { key: '2026-11-12', label: '四', date: '11/12' },
+  { key: '2026-11-13', label: '五', date: '11/13' },
+  { key: '2026-11-14', label: '六', date: '11/14' },
+  { key: '2026-11-15', label: '日', date: '11/15' },
+]
+
 const therapistDetails = [
   { id: 'hale', name: 'Hale／海爾' },
   { id: 'max', name: 'Max／麥斯', tag: '直男方案' },
@@ -81,6 +91,10 @@ const currentWeekTimes = {
   zac: Array(7).fill('—'),
 }
 
+const upcomingWeekTimes = {
+  owen: ['19:30–23:30', '全天', '—', '—', '—', '—', '—'],
+}
+
 function makeRows(timesByTherapist) {
   return therapistDetails.map((therapist) => ({
     ...therapist,
@@ -91,6 +105,7 @@ function makeRows(timesByTherapist) {
 const scheduleWeeks = [
   { days: previousWeekDays, rows: makeRows(previousWeekTimes) },
   { days: currentWeekDays, rows: makeRows(currentWeekTimes) },
+  { days: upcomingWeekDays, rows: makeRows(upcomingWeekTimes) },
 ]
 
 export function getScheduleWeek(dateKey = '2026-11-01') {
