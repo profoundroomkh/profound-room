@@ -394,7 +394,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
             <div className={styles.modalMedia}>
               <Image
                 src={selected.images[currentImage]}
-                alt={`${selected.name} 師傅照片 ${currentImage + 1}`}
+                alt={selected.imageAlts?.[currentImage] || `${selected.name} 師傅照片 ${currentImage + 1}`}
                 fill
                 sizes="(max-width: 799px) 100vw, 55vw"
                 className={styles.modalImage}

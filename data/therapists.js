@@ -132,10 +132,16 @@ const allTherapists = [
     age: 32,
     role: '不分',
     size: '15/5',
-    specialty: '深度放鬆・手感細膩',
+    specialty: '深度放鬆・手感細膩・持有台灣運動保健協會運動按摩技術員證照',
     images: [
       '/images/therapist-Odin-3.JPG',
       '/images/therapist-Odin-2.JPG',
+      '/images/therapist-Odin-certificate.jpg',
+    ],
+    imageAlts: [
+      'Odin／奧丁師傅照片一',
+      'Odin／奧丁師傅照片二',
+      'Odin／奧丁運動按摩技術員證照',
     ],
   },
   {
