@@ -560,7 +560,7 @@
   grid-row: 1;
   width: 100%;
   max-width: 780px;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-self: end;
   margin: 0;
 }
@@ -650,9 +650,9 @@
 
 .lucianSection .cardBody {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(210px, 0.82fr);
-  align-items: end;
-  column-gap: 24px;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  row-gap: 3px;
   margin-top: 6px;
   padding: 17px 4px 0;
   border-top: 1px solid rgba(205, 157, 119, 0.34);
@@ -689,9 +689,10 @@
 }
 
 .lucianSection .cardActions {
-  grid-column: 2;
-  grid-row: 2 / span 2;
+  grid-column: 1;
+  grid-row: auto;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .lucianSection .cardActions a {
@@ -820,16 +821,20 @@
 
   .lucianSection .cards {
     display: grid;
+    gap: 8px;
+    justify-content: stretch;
     width: 100%;
     max-width: none;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     overflow: visible;
     margin: 0;
     padding: 0;
   }
 
   .lucianSection .card {
-    width: 100%;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
     flex: initial;
   }
 
@@ -841,7 +846,7 @@
   }
 
   .lucianSection .photoWrap {
-    height: clamp(290px, 82vw, 360px);
+    height: clamp(170px, 54vw, 220px);
   }
 
   .lucianSection .lucianHeroPhoto {
@@ -868,48 +873,52 @@
   }
 
   .lucianSection .photoNameLabel {
-    right: 6px;
-    bottom: 8px;
-    padding: 4px 6px;
-    font-size: 9px;
+    display: none;
   }
 
   .lucianSection .cardBody {
-    grid-template-columns: minmax(0, 1fr) minmax(140px, 0.9fr);
-    column-gap: 12px;
-    row-gap: 2px;
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+    row-gap: 3px;
     margin-top: 0;
-    padding: 14px 2px 0;
+    padding: 10px 2px 0;
   }
 
   .lucianSection .cardKicker {
-    margin-bottom: 5px;
-    font-size: 8px;
+    margin-bottom: 3px;
+    font-size: 7px;
+    letter-spacing: 0.16em;
   }
 
   .lucianSection .card h3 {
-    font-size: 29px;
+    grid-column: 1;
+    grid-row: auto;
+    font-size: clamp(17px, 4.8vw, 21px);
   }
 
   .lucianSection .card h3 span {
-    font-size: 0.46em;
+    margin-left: 3px;
+    font-size: 0.54em;
   }
 
   .lucianSection .description {
-    margin-top: 3px;
-    font-size: 11px;
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 1px;
+    font-size: 9px;
   }
 
   .lucianSection .cardActions {
-    grid-column: 2;
-    grid-row: 2 / span 2;
-    gap: 6px;
-    margin-top: 0;
+    grid-column: 1;
+    grid-row: auto;
+    gap: 5px;
+    margin-top: 4px;
   }
 
   .lucianSection .cardActions a {
-    min-height: 42px;
-    font-size: 10px;
+    min-height: 34px;
+    font-size: 8px;
+    letter-spacing: 0.02em;
   }
 
   .lucianSection .sectionFoot {
