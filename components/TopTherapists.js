@@ -68,7 +68,7 @@ const lucianTherapists = [
   {
     id: 'jeff',
     rank: 'NEW',
-    name: 'Jeff',
+    name: 'Jeph',
     chineseName: '哲夫',
     images: [
       '/images/therapist-Jeff-1.png',
@@ -131,7 +131,7 @@ export default function TopTherapists() {
         <div className={styles.rule} aria-hidden="true"><span>{isLucianColumn ? 'NEW FACE' : isFlashPeriod ? 'LIMITED' : 'TOP 3'}</span></div>
         <p className={styles.lead}>
           {isLucianColumn
-            ? '認識新加入的 Lucian／洛森與 Jeff／哲夫，查看照片與師傅資料。'
+            ? '認識新加入的 Lucian／洛森與 Jeph／哲夫，查看照片與師傅資料。'
             : isFlashPeriod
               ? '10/17（六）單日支援，週五先行曝光，預約前請先確認支援時段。'
               : '本月人氣排名，先看熱門師傅，再依班表安排你的放鬆時間。'}

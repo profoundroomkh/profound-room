@@ -62,7 +62,7 @@ const endNovemberDays = [
 ]
 
 const therapistDetails = [
-  { id: 'jeff', name: 'Jeff／哲夫' },
+  { id: 'jeff', name: 'Jeph／哲夫' },
   { id: 'hale', name: 'Hale／海爾' },
   { id: 'max', name: 'Max／麥斯', tag: '直男方案' },
   { id: 'hugo', name: 'Hugo／雨果', tag: '現場師傅' },
