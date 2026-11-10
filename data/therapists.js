@@ -10,7 +10,7 @@ const allTherapists = [
     status: 'available',
     height: 181,
     weight: 78,
-    age: 28,
+    age: 25,
     role: '不分',
     size: '16/5',
     specialty: '高肉壯・帥・服務好・深夜首選',
