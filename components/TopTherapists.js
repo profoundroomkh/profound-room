@@ -63,7 +63,7 @@ const lucianTherapists = [
       '/images/therapist-Lucian-2.JPG',
     ],
     kicker: 'NEW THERAPIST',
-    description: <>168／60／30<br />不分</>,
+    description: <>168／60／30<br />不分<br />精實體態•按摩技巧熟練</>,
   },
   {
     id: 'jeff',

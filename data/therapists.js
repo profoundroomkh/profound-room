@@ -31,6 +31,7 @@ const allTherapists = [
     age: 30,
     role: '不分',
     size: null,
+    specialty: '精實體態•按摩技巧熟練',
     images: [
       '/images/therapist-Lucian-1.JPG',
       '/images/therapist-Lucian-2.JPG',
