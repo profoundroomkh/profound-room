@@ -75,7 +75,7 @@ const lucianTherapists = [
       '/images/therapist-Jeff-2.jpg',
     ],
     kicker: 'NEW THERAPIST',
-    description: <>181／78／28<br />不分</>,
+    description: <>181／78／28<br />不分・16/5</>,
   },
 ]
 
