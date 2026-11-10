@@ -3,6 +3,24 @@
 
 const allTherapists = [
   {
+    id: 'jeff',
+    name: 'Jeff',
+    isNewest: true,
+    isNew: true,
+    status: 'available',
+    height: 181,
+    weight: 78,
+    age: 28,
+    role: '不分',
+    size: null,
+    specialty: '高肉壯・帥・服務好・深夜首選',
+    images: [
+      '/images/therapist-Jeff-1.png',
+      '/images/therapist-Jeff-2.jpg',
+      '/images/therapist-Jeff-3.jpg',
+    ],
+  },
+  {
     id: 'lucian',
     name: 'Lucian／洛森',
     isNewest: true,

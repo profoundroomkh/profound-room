@@ -62,6 +62,7 @@ const endNovemberDays = [
 ]
 
 const therapistDetails = [
+  { id: 'jeff', name: 'Jeff' },
   { id: 'hale', name: 'Hale／海爾' },
   { id: 'max', name: 'Max／麥斯', tag: '直男方案' },
   { id: 'hugo', name: 'Hugo／雨果', tag: '現場師傅' },
@@ -122,6 +123,7 @@ const currentWeekTimes = {
 }
 
 const upcomingWeekTimes = {
+  jeff: [PENDING_UPDATE_LABEL, '全天', '全天', '全天', '全天', '全天', '全天'],
   hale: ['—', '—', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00'],
   max: Array(7).fill('00:00–17:00'),
   hugo: Array(7).fill('全天'),
