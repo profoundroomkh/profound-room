@@ -245,7 +245,6 @@ export function hasWeeklySchedule(therapistId, dateKey = '2026-11-01') {
 export function getDailyTherapists(therapists, dateKey) {
   const week = getScheduleWeek(dateKey)
   const dayIndex = week.days.findIndex((day) => day.key === dateKey)
-  if (dayIndex < 0) return therapists
 
   const todaySchedule = Object.fromEntries(
     week.rows.map((therapist) => [therapist.id, therapist.times[dayIndex]]),
@@ -253,17 +252,18 @@ export function getDailyTherapists(therapists, dateKey) {
 
   return therapists.map((therapist) => {
     const shift = todaySchedule[therapist.id]
-    if (shift === undefined) return therapist
-
-    const isSchedulePending = shift === PENDING_UPDATE_LABEL
+    const isSchedulePending = shift === undefined || shift === PENDING_UPDATE_LABEL
+    const isFullyBooked = shift === FULLY_BOOKED_LABEL
+      || (typeof shift === 'string' && (shift.includes('預約滿') || shift.includes('已滿')) && !shift.includes('起'))
+    const isScheduledToday = !isSchedulePending && shift !== '—' && !isFullyBooked
 
     return {
       ...therapist,
       hasWeeklySchedule: isSchedulePending ? false : hasWeeklySchedule(therapist.id, dateKey),
       isSchedulePending,
-      isFullyBooked: shift === FULLY_BOOKED_LABEL
-        || (typeof shift === 'string' && shift.includes('已滿') && !shift.includes('起')),
-      status: shift === '—' || shift === FULLY_BOOKED_LABEL || isSchedulePending ? 'paused' : 'available',
+      isFullyBooked,
+      isScheduledToday,
+      status: therapist.bookingPaused ? 'paused' : isScheduledToday ? 'available' : 'advance',
     }
   })
 }

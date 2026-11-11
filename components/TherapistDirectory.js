@@ -33,13 +33,11 @@ function trackBooking(therapist, source = 'therapist_card') {
 }
 
 function requiresAdvanceBooking(therapist) {
-  return !therapist.isFullyBooked && therapist.status !== 'available' && Boolean(therapist.hasWeeklySchedule)
+  return !therapist.bookingPaused && !therapist.isScheduledToday
 }
 
 function canBookTherapist(therapist) {
-  return !therapist.isSchedulePending
-    && !therapist.isFullyBooked
-    && (therapist.status === 'available' || Boolean(therapist.hasWeeklySchedule))
+  return !therapist.bookingPaused
 }
 
 function getStatusLabel(therapist) {
@@ -47,11 +45,8 @@ function getStatusLabel(therapist) {
 }
 
 function getBookingButtonLabel(therapist) {
-  if (therapist.isSchedulePending) return PENDING_UPDATE_LABEL
-  if (therapist.isFullyBooked) return '預約已滿'
-  if (therapist.status === 'available') return '可預約'
-  if (therapist.hasWeeklySchedule) return '提前預約'
-  return '暫停預約等週更新'
+  if (therapist.bookingPaused) return '暫停預約'
+  return therapist.isScheduledToday ? '可預約' : '提前預約'
 }
 
 function getScheduleEntry(shift) {
@@ -66,7 +61,6 @@ function getScheduleEntry(shift) {
 export default function TherapistDirectory({ showDirectory = true }) {
   const dateKey = useTaiwanDateKey()
   const [activeFilter, setActiveFilter] = useState('all')
-  const [showPaused, setShowPaused] = useState(false)
   const [selected, setSelected] = useState(null)
   const [currentImage, setCurrentImage] = useState(0)
   const [notice, setNotice] = useState('')
@@ -115,9 +109,6 @@ export default function TherapistDirectory({ showDirectory = true }) {
     if (activeFilter === 'available') {
       return sortedTherapists.filter((item) => item.status === 'available')
     }
-    if (activeFilter === 'paused') {
-      return sortedTherapists.filter((item) => item.status === 'paused')
-    }
     return sortedTherapists
   }, [activeFilter, sortedTherapists])
 
@@ -125,12 +116,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
     return filteredTherapists
   }, [filteredTherapists])
 
-  const visibleCount =
-    activeFilter === 'all' && !showPaused
-      ? visibleTherapists.filter((item) => item.status !== 'paused').length
-      : visibleTherapists.length
-
-  const pausedCount = sortedTherapists.filter((item) => item.status === 'paused').length
+  const visibleCount = visibleTherapists.length
 
   useEffect(() => {
     if (!selected) return undefined
@@ -185,7 +171,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
   const handleBooking = async (therapist, source = 'therapist_card') => {
     if (!canBookTherapist(therapist)) return
 
-    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n預約方式：${therapist.bookingPolicy || (therapist.hasWeeklySchedule ? '提前預約' : '可直接預約')}\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '100 分鐘 NT$2,700' : '100 分鐘'}`
+    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n預約方式：${therapist.bookingPolicy || (therapist.isScheduledToday ? '可預約' : '提前預約')}\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '100 分鐘 NT$2,700' : '100 分鐘'}`
     trackBooking(therapist, source)
     window.open(LINE_URL, '_blank', 'noopener,noreferrer')
 
@@ -247,21 +233,8 @@ export default function TherapistDirectory({ showDirectory = true }) {
         })}
       </div>
 
-      {activeFilter === 'all' && pausedCount > 0 && (
-        <button
-          type="button"
-          className={styles.pausedToggle}
-          onClick={() => setShowPaused((value) => !value)}
-          aria-expanded={showPaused}
-        >
-          {showPaused ? '收起其他師傅' : `查看其他 ${pausedCount} 位師傅（提前預約／預約已滿／休息中）`}
-        </button>
-      )}
-
       <p className={styles.resultCount} aria-live="polite">
-        {activeFilter === 'all' && !showPaused
-          ? `顯示 ${visibleCount} 位今日可預約師傅`
-          : `顯示 ${visibleCount} 位師傅`}
+        顯示 {visibleCount} 位師傅
       </p>
 
       <div className={styles.grid}>
@@ -270,10 +243,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
             as="article"
             key={therapist.id}
             delay={index * 70}
-            hidden={activeFilter === 'all' && !showPaused && therapist.status === 'paused'}
-            className={`${styles.card} ${
-              therapist.status === 'paused' ? styles.cardPaused : ''
-            }`}
+            className={styles.card}
           >
             <button
               type="button"
@@ -524,16 +494,16 @@ export default function TherapistDirectory({ showDirectory = true }) {
               <div className={styles.modalStatus}>
                 <span
                   className={
-                    canBookTherapist(selected)
+                    !selected.bookingPaused && selected.isScheduledToday
                       ? styles.statusIndicatorAvailable
                       : styles.statusIndicatorPaused
                   }
                 />
-                {selected.status === 'available'
+                {selected.bookingPaused
+                  ? '已依指示暫停預約'
+                  : selected.isScheduledToday
                   ? '目前可預約，請向官方 LINE 確認時段'
-                  : selected.hasWeeklySchedule
-                    ? '本週有排班，可先向官方 LINE 預約後續日期'
-                    : '本週無排班，暫停預約等週更新'}
+                  : '今日未排班，可提前向官方 LINE 預約其他日期'}
               </div>
 
               <button

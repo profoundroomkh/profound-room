@@ -330,7 +330,6 @@ export const therapistFilters = [
   { id: 'new', label: '新進' },
   { id: 'straight', label: '直男方案' },
   { id: 'available', label: '可預約' },
-  { id: 'paused', label: '休息中' },
 ]
 
 // 依「10月派單與帳務」有效師傅服務抽成排序；四手平均分配、Hale 名稱合併，未指定與租借不計入。
