@@ -62,6 +62,7 @@ const endNovemberDays = [
 ]
 
 const therapistDetails = [
+  { id: 'manson', name: 'Manson' },
   { id: 'jeff', name: 'Jeph／哲夫' },
   { id: 'hale', name: 'Hale／海爾' },
   { id: 'max', name: 'Max／麥斯', tag: '直男方案' },
@@ -83,6 +84,7 @@ const therapistDetails = [
 ]
 
 const previousWeekTimes = {
+  manson: [...Array(6).fill(PENDING_UPDATE_LABEL), '09:00–22:00'],
   hale: ['—', '—', '—', '—', '—', '—', '—'],
   max: Array(7).fill('00:00–17:00'),
   hugo: ['全天', '全天', '—', '全天', '全天', '全天', '全天'],
@@ -103,6 +105,7 @@ const previousWeekTimes = {
 }
 
 const currentWeekTimes = {
+  manson: Array(7).fill('09:00–22:00'),
   hale: ['—', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
   max: Array(7).fill('00:00–17:00'),
   hugo: Array(7).fill('全天'),
@@ -123,6 +126,7 @@ const currentWeekTimes = {
 }
 
 const upcomingWeekTimes = {
+  manson: Array(7).fill('09:00–22:00'),
   jeff: [PENDING_UPDATE_LABEL, '全天', '全天', '全天', '全天', '全天', '全天'],
   hale: ['—', '—', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00'],
   max: Array(7).fill('00:00–17:00'),
@@ -142,16 +146,19 @@ const upcomingWeekTimes = {
 }
 
 const midNovemberTimes = {
+  manson: Array(7).fill('09:00–22:00'),
   hale: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
   hugo: Array(7).fill('全天'),
 }
 
 const lateNovemberTimes = {
+  manson: Array(7).fill('09:00–22:00'),
   hale: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
   hugo: Array(7).fill('全天'),
 }
 
 const endNovemberTimes = {
+  manson: ['09:00–22:00', ...Array(6).fill(PENDING_UPDATE_LABEL)],
   hale: ['11:00–23:00', ...Array(6).fill(PENDING_UPDATE_LABEL)],
   hugo: ['全天', ...Array(6).fill(PENDING_UPDATE_LABEL)],
 }

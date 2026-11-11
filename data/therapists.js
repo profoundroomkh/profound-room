@@ -3,6 +3,23 @@
 
 const allTherapists = [
   {
+    id: 'manson',
+    name: 'Manson',
+    isNewest: true,
+    isNew: true,
+    status: 'available',
+    height: 173,
+    weight: 67,
+    age: 30,
+    role: '不分1',
+    size: '16/5',
+    specialty: '按摩技巧熟練•反差感',
+    images: [
+      '/images/therapist-Manson-1.png',
+      '/images/therapist-Manson-2.png',
+    ],
+  },
+  {
     id: 'jeff',
     name: 'Jeph／哲夫',
     isNewest: true,
