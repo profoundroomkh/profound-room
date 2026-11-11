@@ -541,7 +541,9 @@
   position: relative;
   min-height: 620px;
   overflow: hidden;
-  background: #050505;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(185, 151, 125, 0.14), rgba(185, 151, 125, 0.035) 48%, transparent 74%),
+    linear-gradient(180deg, #10100f, #080808);
 }
 
 .modalImage {
