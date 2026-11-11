@@ -289,6 +289,7 @@ const allTherapists = [
     name: 'Ansel／安索',
     isNew: false,
     status: 'paused',
+    bookingPaused: true,
     height: 165,
     weight: 58,
     age: 30,
