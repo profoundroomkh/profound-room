@@ -111,6 +111,7 @@ const allTherapists = [
     category: 'straight',
     isNew: false,
     status: 'paused',
+    bookingPaused: true,
     height: 174,
     weight: 63,
     age: 29,
