@@ -15,8 +15,8 @@ const allTherapists = [
     size: '16/5',
     specialty: '按摩技巧熟練•反差感',
     images: [
-      '/images/therapist-Manson-1.png',
-      '/images/therapist-Manson-2.png',
+      '/images/therapist-Manson-1.webp',
+      '/images/therapist-Manson-2.webp',
     ],
   },
   {
