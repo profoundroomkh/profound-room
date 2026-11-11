@@ -254,13 +254,6 @@ export default function TherapistDirectory({ showDirectory = true }) {
               <span className={styles.media}>
                 <Image
                   src={therapist.images[0]}
-                  alt=""
-                  fill
-                  sizes="(max-width: 639px) 50vw, (max-width: 1023px) 50vw, 33vw"
-                  className={styles.backdropImage}
-                />
-                <Image
-                  src={therapist.images[0]}
                   alt={`${therapist.name} 師傅`}
                   fill
                   sizes="(max-width: 639px) 50vw, (max-width: 1023px) 50vw, 33vw"

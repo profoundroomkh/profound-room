@@ -71,7 +71,7 @@ const lucianTherapists = [
     name: 'Jeph',
     chineseName: '哲夫',
     images: [
-      '/images/therapist-Jeff-1.png',
+      '/images/therapist-Jeph-cutout.webp',
       '/images/therapist-Jeff-2.jpg',
     ],
     kicker: 'NEW THERAPIST',
@@ -145,7 +145,7 @@ export default function TopTherapists() {
             <div className={`${styles.photoWrap} ${styles[therapist.id]} ${therapist.images ? styles.photoGrid : ''}`}>
               {(therapist.images || [therapist.image]).map((image, imageIndex) => (
                 <div
-                  className={`${styles.photoCell} ${isLucianColumn ? (imageIndex === 0 ? styles.lucianHeroPhoto : styles.lucianInsetPhoto) : ''}`}
+                  className={`${styles.photoCell} ${isLucianColumn ? (imageIndex === 0 ? styles.lucianHeroPhoto : styles.lucianInsetPhoto) : ''} ${therapist.id === 'jeff' && imageIndex === 0 ? styles.jephCutoutPhoto : ''}`}
                   key={image}
                 >
                   <Image

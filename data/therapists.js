@@ -32,7 +32,7 @@ const allTherapists = [
     size: '16/5',
     specialty: '高肉壯・帥・服務好・深夜首選',
     images: [
-      '/images/therapist-Jeff-1.png',
+      '/images/therapist-Jeph-cutout.webp',
       '/images/therapist-Jeff-2.jpg',
       '/images/therapist-Jeff-3.jpg',
     ],
@@ -67,7 +67,7 @@ const allTherapists = [
     size: '未提供',
     specialty: '健美直男・高尺度',
     images: [
-      '/images/therapist-Max-1.JPG',
+      '/images/therapist-Max-cutout.webp',
       '/images/therapist-Max-2.JPG',
     ],
   },
@@ -118,7 +118,7 @@ const allTherapists = [
     specialty: '年輕薄肌・熟練手法',
     supportPeriod: '每日 12:00–21:00（週二、週四休息）',
     images: [
-      '/images/therapist-Gugu-1.jpg',
+      '/images/therapist-Gugu-cutout.webp',
       '/images/therapist-Gugu-2.jpg',
     ],
   },
@@ -137,7 +137,7 @@ const allTherapists = [
     specialty: '二寶爸・直男人夫・機能保養升級為龍筋機能保養',
     supportPeriod: '支援時間請洽官方 LINE',
     images: [
-      '/images/therapist-Andy-1.JPG',
+      '/images/therapist-Andy-cutout.webp',
       '/images/therapist-Andy-2.JPG',
       '/images/therapist-Andy-3.JPG',
     ],
@@ -171,7 +171,7 @@ const allTherapists = [
     size: '15/5',
     specialty: '深度放鬆・手感細膩・持有台灣運動保健協會運動按摩技術員證照',
     images: [
-      '/images/therapist-Odin-3.JPG',
+      '/images/therapist-Odin-cutout.webp',
       '/images/therapist-Odin-2.JPG',
       '/images/therapist-Odin-certificate.jpg',
     ],
@@ -212,7 +212,7 @@ const allTherapists = [
     size: null,
     specialty: '少年感・神秘反差',
     images: [
-      '/images/therapist-Raven-1.JPG',
+      '/images/therapist-Raven-cutout.webp',
       '/images/therapist-Raven-2.JPG',
       '/images/therapist-Raven-3.JPG',
       '/images/therapist-Raven-4.JPG',
@@ -246,7 +246,7 @@ const allTherapists = [
     size: null,
     specialty: '溫暖陪伴・奶狗',
     images: [
-      '/images/therapist-Milo-1.JPG',
+      '/images/therapist-Milo-cutout.webp',
       '/images/therapist-Milo-2.JPG',
       '/images/therapist-Milo-3.JPG',
     ],
@@ -263,7 +263,7 @@ const allTherapists = [
     size: '17/4.5',
     specialty: '薄肌・反差',
     images: [
-      '/images/therapist-Owen-1.JPG',
+      '/images/therapist-Owen-cutout.webp',
       '/images/therapist-Owen-2.JPG',
       '/images/therapist-Owen-3.JPG',
       '/images/therapist-Owen-4.JPG',
@@ -315,7 +315,7 @@ const allTherapists = [
     size: null,
     specialty: '濃眉多毛・男友陪伴',
     images: [
-      '/images/therapist-luke.jpg',
+      '/images/therapist-Ansel-cutout.webp',
       '/images/therapist-luke-2.jpg',
       '/images/therapist-luke-3.jpg',
     ],

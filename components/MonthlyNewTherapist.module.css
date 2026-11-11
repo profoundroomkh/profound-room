@@ -56,7 +56,9 @@
   position: relative;
   min-height: 196px;
   overflow: hidden;
-  background: #15110f;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(185, 151, 125, 0.14), rgba(185, 151, 125, 0.035) 48%, transparent 74%),
+    linear-gradient(180deg, #10100f, #080808);
 }
 
 .imageButton {
@@ -65,7 +67,7 @@
   display: block;
   width: 100%;
   border: 0;
-  background: #15110f;
+  background: transparent;
   cursor: pointer;
   text-align: left;
 }
@@ -79,8 +81,9 @@
 }
 
 .image {
-  object-fit: cover;
-  object-position: center 22%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: saturate(0.88) contrast(1.02) brightness(0.92);
   transition: transform 280ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
