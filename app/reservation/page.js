@@ -116,8 +116,9 @@ export default function ReservationPage() {
               <p>訂金為 NT$500／每位師傅，完成當日消費後於結帳時全額折抵。</p>
               <div className={styles.divider} aria-hidden="true" />
               <p className={styles.depositEyebrow}>付款方式</p>
-              <p>現場付款可使用現金；另提供 LINE Pay Money 轉帳及網路銀行轉帳。海外人士可使用 PayPal 付款。</p>
-              <p>首次預約訂金仍依前述規定事先支付；轉帳及 PayPal 付款資訊請洽官方 LINE。</p>
+              <p>一般付款方式僅提供：現金、LINE Pay Money 轉帳、網銀轉帳。</p>
+              <p>訂金付款方式：LINE Pay Money 轉帳、網銀轉帳、7-11 中國信託無卡存款；非本國籍人士可使用 PayPal。</p>
+              <p>首次預約訂金仍依前述規定事先支付；付款資訊請洽官方 LINE。</p>
               <div className={styles.divider} aria-hidden="true" />
               <p>本館採完全預約制，不接受現場臨時來訪。</p>
               <p>客服確認日期與時段後，才算完成預約。</p>

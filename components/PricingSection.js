@@ -110,7 +110,7 @@ export default function PricingSection() {
           <p className={styles.depositAlertTitle}>首次預約的客人，一律都要匯訂金</p>
           <p className={styles.depositAlertException}>沒有例外！訂金 NT$500／每位師傅，完成消費後全額折抵。</p>
           <p className={styles.depositAlertTransfer}>
-            付款方式：現金、LINE Pay Money 轉帳、網路銀行轉帳；海外人士可使用 PayPal。首次預約訂金與付款資訊請洽官方 LINE；不方便轉帳，可至超商使用中國信託無卡存款完整支付訂金。
+            訂金付款方式：LINE Pay Money 轉帳、網銀轉帳、7-11 中國信託無卡存款；非本國籍人士可使用 PayPal。詳細付款資訊請洽官方 LINE。
           </p>
         </aside>
 
