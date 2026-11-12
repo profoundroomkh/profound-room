@@ -23,6 +23,12 @@ const packages = [
     price: 'NT$2,000',
     service: '基本服務項目：指壓・油壓・體推・機能保養',
   },
+  {
+    name: '雙手聯彈方案',
+    duration: '100 分鐘',
+    price: 'NT$4,000',
+    service: '優惠方案不可使用其他折扣',
+  },
 ]
 
 export default function PricingSection() {
