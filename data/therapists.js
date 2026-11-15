@@ -263,8 +263,8 @@ const allTherapists = [
     size: '17/4.5',
     specialty: '薄肌・反差',
     images: [
+      '/images/therapist-Owen-1.webp',
       '/images/therapist-Owen-cutout.webp',
-      '/images/therapist-Owen-2.JPG',
       '/images/therapist-Owen-3.JPG',
       '/images/therapist-Owen-4.JPG',
     ],

@@ -22,7 +22,7 @@ const septemberTherapists = [
     rank: '02',
     name: 'Owen',
     chineseName: '歐文',
-    image: '/images/therapist-Owen-2.JPG',
+    image: '/images/therapist-Owen-1.webp',
     kicker: 'SEPTEMBER NO.2',
     description: <>9 月熱門第二名<br />新師上線・自然沉穩・放鬆感十足</>,
   },
