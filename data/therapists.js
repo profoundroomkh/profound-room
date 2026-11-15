@@ -58,7 +58,7 @@ const allTherapists = [
     id: 'max',
     name: 'Max／麥斯',
     category: 'straight',
-    isNew: true,
+    isNew: false,
     status: 'paused',
     height: 165,
     weight: 80,
@@ -90,7 +90,7 @@ const allTherapists = [
   {
     id: 'hugo',
     name: 'Hugo／雨果',
-    isNew: true,
+    isNew: false,
     status: 'available',
     height: 175,
     weight: 70,
