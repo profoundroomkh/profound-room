@@ -153,7 +153,7 @@ const midNovemberTimes = {
   hugo: Array(7).fill('全天'),
   andy: Array(7).fill(PENDING_UPDATE_LABEL),
   alan: Array(7).fill(PENDING_UPDATE_LABEL),
-  oni: Array(7).fill(PENDING_UPDATE_LABEL),
+  oni: ['12:00–22:00（其他時段可詢問）', '12:00–22:00（其他時段可詢問）', '12:00–17:00（其他時段可詢問）', '12:00–22:00（其他時段可詢問）', '12:00–20:00（其他時段可詢問）', '—', '—'],
   noah: ['11:00–22:00', '11:00–22:00', '11:00–22:00', '—', '11:00–22:00', '11:00–22:00', '11:00–22:00'],
   gugu: Array(7).fill(PENDING_UPDATE_LABEL),
   dylan: Array(7).fill('11:00–22:00'),
