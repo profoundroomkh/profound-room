@@ -1,7 +1,7 @@
 
 import Header from '../components/Header'
 import HomeHero from "../components/HomeHero"
-import TopTherapists from '../components/TopTherapists'
+import HomePromotion from '../components/HomePromotion'
 import ScrollReveal from '../components/ScrollReveal'
 import TherapistDirectory from '../components/TherapistDirectory'
 import HomepageLowerSection from '../components/HomepageLowerSection'
@@ -23,7 +23,7 @@ export default function Home() {
           fontFamily: "serif",
         }}
       >
-        <TopTherapists />
+        <HomePromotion />
         <TherapistDirectory />
         <PricingSection />
         <HomepageLowerSection />
