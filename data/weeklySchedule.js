@@ -167,7 +167,7 @@ const midNovemberTimes = {
 
 const lateNovemberTimes = {
   manson: Array(7).fill('09:00–22:00'),
-  hale: ['11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '11:00–23:00', '—', '—'],
+  hale: Array(7).fill('—'),
   hugo: Array(7).fill('全天'),
 }
 
