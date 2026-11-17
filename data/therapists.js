@@ -4,7 +4,7 @@
 const allTherapists = [
   {
     id: 'manson',
-    name: 'Manson',
+    name: 'Manson／曼森',
     isNewest: true,
     isNew: true,
     status: 'available',
