@@ -81,6 +81,7 @@ const therapistDetails = [
   { id: 'lucian', name: 'Lucian／洛森', profileAvailable: false },
   { id: 'ansel', name: 'Ansel／安索' },
   { id: 'zac', name: 'Zac／札克', isPublished: false, tag: '深夜師傅' },
+  { id: 'bart', name: 'Alpha／阿法' },
 ]
 
 const previousWeekTimes = {

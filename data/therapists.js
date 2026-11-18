@@ -321,6 +321,22 @@ const allTherapists = [
     ],
   },
   {
+    id: 'bart',
+    name: 'Alpha／阿法',
+    isNew: false,
+    status: 'available',
+    height: 177,
+    weight: 75,
+    age: 30,
+    role: '不分',
+    size: null,
+    specialty: '低調內向・刺青反差',
+    images: [
+      '/images/therapist-Bart-1.jpg',
+      '/images/therapist-Bart-2.jpg',
+    ],
+  },
+  {
     id: 'zac',
     name: 'Zac／札克',
     isPublished: false,
