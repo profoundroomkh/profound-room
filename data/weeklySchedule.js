@@ -164,18 +164,21 @@ const midNovemberTimes = {
   raven: Array(7).fill('—'),
   milo: ['—', '—', '22:30 後', '22:30 後', '22:30 後', '—', '22:30 後'],
   lucian: ['—', '—', '—', ...Array(4).fill('20:30–01:00')],
+  bart: ['—', '—', '—', '—', '—', '11:00–21:00', '11:00–21:00'],
 }
 
 const lateNovemberTimes = {
   manson: Array(7).fill('09:00–22:00'),
   hale: Array(7).fill('—'),
   hugo: Array(7).fill('全天'),
+  bart: ['—', '—', '—', '—', '—', '11:00–21:00', '11:00–21:00'],
 }
 
 const endNovemberTimes = {
   manson: ['09:00–22:00', ...Array(6).fill(PENDING_UPDATE_LABEL)],
   hale: ['11:00–23:00', ...Array(6).fill(PENDING_UPDATE_LABEL)],
   hugo: ['全天', ...Array(6).fill(PENDING_UPDATE_LABEL)],
+  bart: ['—', '—', '—', '—', '—', '11:00–21:00', '11:00–21:00'],
 }
 
 function makeRows(timesByTherapist) {
