@@ -17,18 +17,6 @@ export default function SpacePage() {
     },
 
     {
-      title: '第一工作室',
-      image: '/images/private-room-2.jpg',
-      href: '/space/private-room',
-    },
-
-    {
-      title: '第二工作室',
-      image: '/images/studio-second-1.jpg',
-      href: '/space/second-studio',
-    },
-
-    {
       title: '空間細節',
       image: '/images/gallery-4.jpg',
       href: '/space/detail',
