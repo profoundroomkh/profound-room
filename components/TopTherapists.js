@@ -75,7 +75,7 @@ const lucianTherapists = [
       '/images/therapist-Jeff-2.jpg',
     ],
     kicker: 'NEW THERAPIST',
-    description: <>181／78／25<br />不分・16/5<br />互動感極佳</>,
+    description: <>181／78／25<br />不分・16/5<br />互動感極佳・三性接待・女性亦可接待</>,
   },
 ]
 
