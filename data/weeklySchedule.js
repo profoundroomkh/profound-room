@@ -78,7 +78,7 @@ const therapistDetails = [
   { id: 'odin', name: 'Odin／奧丁' },
   { id: 'raven', name: 'Raven／雷文' },
   { id: 'milo', name: 'Milo／米洛' },
-  { id: 'lucian', name: 'Lucian／洛森', profileAvailable: false },
+  { id: 'lucian', name: 'Lucain', profileAvailable: false },
   { id: 'ansel', name: 'Ansel／安索' },
   { id: 'zac', name: 'Zac／札克', isPublished: false, tag: '深夜師傅' },
   { id: 'bart', name: 'Alpha／阿法' },
