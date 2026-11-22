@@ -168,11 +168,25 @@ const midNovemberTimes = {
 }
 
 const lateNovemberTimes = {
-  manson: Array(7).fill('09:00–22:00'),
+  manson: Array(7).fill('10:00–17:00'),
+  jeff: Array(7).fill('10:00–03:00（隔日）'),
   hale: Array(7).fill('—'),
-  hugo: Array(7).fill('全天'),
-  odin: [FULLY_BOOKED_LABEL, '—', '—', '—', '—', '—', '—'],
-  bart: ['—', '—', '—', '—', '—', '11:00–21:00', '11:00–21:00'],
+  max: Array(7).fill('00:00–17:00'),
+  hugo: Array(7).fill('10:00–02:00（隔日）'),
+  andy: Array(7).fill('可詢問'),
+  alan: Array(7).fill('可詢問'),
+  oni: Array(7).fill('—'),
+  noah: ['11:00–22:00', '11:00–22:00', '11:00–22:00', '—', '11:00–22:00', '11:00–22:00', '11:00–22:00'],
+  gugu: ['12:00–21:00', '—', '12:00–21:00', '—', '12:00–21:00', '12:00–21:00', '12:00–21:00'],
+  dylan: Array(7).fill('12:00–22:00'),
+  kai: Array(7).fill('14:00–24:00'),
+  owen: Array(7).fill('—'),
+  odin: [FULLY_BOOKED_LABEL, '20:00（僅此預約時段）', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '20:00（僅此預約時段）', '—', '16:00–20:00'],
+  raven: Array(7).fill('—'),
+  milo: Array(7).fill('—'),
+  lucian: Array(7).fill('—'),
+  ansel: ['—', '可詢問', '—', '—', '可詢問', '可詢問', '—'],
+  bart: Array(7).fill('11:00–21:00'),
 }
 
 const endNovemberTimes = {
