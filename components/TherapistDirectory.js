@@ -9,14 +9,14 @@ import { octoberPerformanceRank, therapistFilters, therapists } from '../data/th
 import {
   FULLY_BOOKED_LABEL,
   PENDING_UPDATE_LABEL,
-  getDailyTherapists,
-  getScheduleWeek,
   getScheduleWindow,
 } from '../data/weeklySchedule'
 import { trackEvent } from './analytics'
 import ScrollReveal from './ScrollReveal'
 import MonthlyNewTherapist from './MonthlyNewTherapist'
 import WeeklySchedule from './WeeklySchedule'
+import usePublicScheduleFeed from './usePublicScheduleFeed'
+import { createPublicScheduleWindow, getTherapistsWithPublicSchedule } from './publicSchedule'
 import useTaiwanDateKey from './useTaiwanDateKey'
 import styles from './TherapistDirectory.module.css'
 
@@ -46,6 +46,7 @@ function getStatusLabel(therapist) {
 
 function getBookingButtonLabel(therapist) {
   if (therapist.bookingPaused) return '暫停預約'
+  if (therapist.isSchedulePending) return '班表確認中'
   return therapist.isScheduledToday ? '可預約' : '提前預約'
 }
 
@@ -58,8 +59,10 @@ function getScheduleEntry(shift) {
   return { label: shift, status: 'shift' }
 }
 
-export default function TherapistDirectory({ showDirectory = true }) {
+export default function TherapistDirectory({ showDirectory = true, initialScheduleFeed }) {
   const dateKey = useTaiwanDateKey()
+  const scheduleFeed = usePublicScheduleFeed(dateKey, initialScheduleFeed)
+  const scheduleWindow = useMemo(() => createPublicScheduleWindow(scheduleFeed), [scheduleFeed])
   const [activeFilter, setActiveFilter] = useState('all')
   const [selected, setSelected] = useState(null)
   const [currentImage, setCurrentImage] = useState(0)
@@ -67,21 +70,21 @@ export default function TherapistDirectory({ showDirectory = true }) {
   const closeButtonRef = useRef(null)
   const lastTriggerRef = useRef(null)
   const regularTherapists = useMemo(
-    () => getDailyTherapists(therapists, dateKey),
-    [dateKey],
+    () => getTherapistsWithPublicSchedule(therapists, scheduleWindow, dateKey),
+    [dateKey, scheduleWindow],
   )
+  useEffect(() => {
+    setSelected(previous => previous ? regularTherapists.find(item => item.id === previous.id) || null : null)
+  }, [regularTherapists])
   const profileSchedule = useMemo(() => {
     if (!selected) return null
-    const currentWeek = getScheduleWeek(dateKey)
-    const { days, rows } = currentWeek.days.some((day) => day.key === dateKey)
-      ? currentWeek
-      : getScheduleWindow(dateKey)
-    const schedule = rows.find((row) => row.id === selected.id)
+    const days = scheduleWindow?.days?.length ? scheduleWindow.days : getScheduleWindow(dateKey).days
+    const schedule = scheduleWindow?.rows.find((row) => row.id === selected.id)
     return {
       days,
       times: schedule?.times || days.map(() => PENDING_UPDATE_LABEL),
     }
-  }, [dateKey, selected])
+  }, [dateKey, scheduleWindow, selected])
   const sortedTherapists = useMemo(
     () => [...regularTherapists].sort((left, right) => {
       const leftNewestPriority = left.isNewest ? 0 : 1
@@ -171,7 +174,8 @@ export default function TherapistDirectory({ showDirectory = true }) {
   const handleBooking = async (therapist, source = 'therapist_card') => {
     if (!canBookTherapist(therapist)) return
 
-    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n預約方式：${therapist.bookingPolicy || (therapist.isScheduledToday ? '可預約' : '提前預約')}\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '100 分鐘 NT$2,700' : '100 分鐘'}`
+    const bookingStatus = therapist.bookingPolicy || (therapist.isSchedulePending ? '班表確認中，請先向客服確認' : therapist.isScheduledToday ? '可預約' : '提前預約')
+    const bookingText = `您好，我想預約 ${therapist.name} 師傅。\n預約方式：${bookingStatus}\n希望日期：\n希望時段：${therapist.supportPeriod ? `（支援時間：${therapist.supportPeriod}）` : ''}\n課程：${therapist.category === 'straight' ? '100 分鐘 NT$2,700' : '100 分鐘'}`
     trackBooking(therapist, source)
     window.open(LINE_URL, '_blank', 'noopener,noreferrer')
 
@@ -190,7 +194,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
 
   return (
     <>
-      {showDirectory && <MonthlyNewTherapist />}
+      {showDirectory && <MonthlyNewTherapist scheduleWindow={scheduleWindow} dateKey={dateKey} />}
       {showDirectory && <ScrollReveal
       as="section"
       id="all-therapists"
@@ -328,7 +332,7 @@ export default function TherapistDirectory({ showDirectory = true }) {
 
       </ScrollReveal>}
 
-      <WeeklySchedule />
+      <WeeklySchedule scheduleWindow={scheduleWindow} scheduleStatus={scheduleFeed.status} />
 
       {selected && (
         <div
@@ -494,6 +498,8 @@ export default function TherapistDirectory({ showDirectory = true }) {
                 />
                 {selected.bookingPaused
                   ? '已依指示暫停預約'
+                  : selected.isSchedulePending
+                  ? '目前無法確認最新班表，請向官方 LINE 詢問'
                   : selected.isScheduledToday
                   ? '目前可預約，請向官方 LINE 確認時段'
                   : '今日未排班，可提前向官方 LINE 預約其他日期'}

@@ -26,10 +26,11 @@ function openTherapistProfile(therapistId) {
   }))
 }
 
-export default function WeeklySchedule() {
+export default function WeeklySchedule({ scheduleWindow, scheduleStatus = 'loading' }) {
   const dateKey = useTaiwanDateKey()
-  const scheduleWindow = useMemo(() => getScheduleWindow(dateKey), [dateKey])
-  const { days: scheduleDays, rows: allRows } = scheduleWindow
+  const fallbackDays = useMemo(() => getScheduleWindow(dateKey).days, [dateKey])
+  const scheduleDays = scheduleWindow?.days?.length ? scheduleWindow.days : fallbackDays
+  const allRows = scheduleStatus === 'ready' ? scheduleWindow.rows : []
   const scheduleRows = useMemo(
     () => allRows.filter((therapist) => therapist.isPublished !== false),
     [allRows],
@@ -105,7 +106,11 @@ export default function WeeklySchedule() {
         </button>
       </div>
 
-      {viewMode === 'therapist' ? (
+      {scheduleStatus !== 'ready' ? (
+        <p className={styles.note} role="status">
+          {scheduleStatus === 'loading' ? '正在載入預約系統最新班表…' : '目前無法讀取最新班表，請透過官方 LINE 確認。'}
+        </p>
+      ) : viewMode === 'therapist' ? (
         <section className={styles.therapistWeekView} aria-labelledby="therapist-week-title">
           <div className={styles.therapistWeekHeader}>
             <div>

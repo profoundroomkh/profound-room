@@ -6,10 +6,15 @@ import ScrollReveal from '../components/ScrollReveal'
 import TherapistDirectory from '../components/TherapistDirectory'
 import HomepageLowerSection from '../components/HomepageLowerSection'
 import PricingSection from '../components/PricingSection'
+import { loadBookingSchedule } from '../lib/bookingSchedule'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 // Design reminder: preserve Profound Room's restrained black-and-warm-gold identity;
 // the therapist directory uses controlled motion and explicit booking states.
-export default function Home() {
+export default async function Home() {
+  const initialScheduleFeed = await loadBookingSchedule()
   return (
     <>
       <Header />
@@ -24,7 +29,7 @@ export default function Home() {
         }}
       >
         <HomePromotion />
-        <TherapistDirectory />
+        <TherapistDirectory initialScheduleFeed={initialScheduleFeed} />
         <PricingSection />
         <HomepageLowerSection />
 

@@ -1,6 +1,10 @@
 import Header from '../../components/Header'
 import TherapistDirectory from '../../components/TherapistDirectory'
 import styles from './page.module.css'
+import { loadBookingSchedule } from '../../lib/bookingSchedule'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export const metadata = {
   title: '每週師傅班表｜深寓 PROFOUND ROOM',
@@ -10,12 +14,13 @@ export const metadata = {
   },
 }
 
-export default function WeeklySchedulePage() {
+export default async function WeeklySchedulePage() {
+  const initialScheduleFeed = await loadBookingSchedule()
   return (
     <>
       <Header />
       <main className={styles.page}>
-        <TherapistDirectory showDirectory={false} />
+        <TherapistDirectory showDirectory={false} initialScheduleFeed={initialScheduleFeed} />
       </main>
     </>
   )

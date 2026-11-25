@@ -3,9 +3,9 @@
 import Image from 'next/image'
 import { useMemo, useState } from 'react'
 import { therapists } from '../data/therapists'
-import { getDailyTherapists } from '../data/weeklySchedule'
 import TrackedLink from './TrackedLink'
 import ScrollReveal from './ScrollReveal'
+import { getTherapistsWithPublicSchedule } from './publicSchedule'
 import useTaiwanDateKey from './useTaiwanDateKey'
 import styles from './MonthlyNewTherapist.module.css'
 
@@ -33,14 +33,16 @@ function canBookTherapist(therapist) {
 
 function getBookingButtonLabel(therapist) {
   if (therapist.bookingPaused) return '暫停預約'
+  if (therapist.isSchedulePending) return '班表確認中'
   return therapist.isScheduledToday ? '可預約' : '提前預約'
 }
 
-export default function MonthlyNewTherapist({ anchorId = 'therapists' }) {
-  const dateKey = useTaiwanDateKey()
+export default function MonthlyNewTherapist({ anchorId = 'therapists', scheduleWindow, dateKey: providedDateKey }) {
+  const currentDateKey = useTaiwanDateKey()
+  const dateKey = providedDateKey || currentDateKey
   const featuredTherapists = useMemo(
-    () => getDailyTherapists(therapists, dateKey).filter((therapist) => therapist.isNew),
-    [dateKey],
+    () => getTherapistsWithPublicSchedule(therapists, scheduleWindow, dateKey).filter((therapist) => therapist.isNew),
+    [dateKey, scheduleWindow],
   )
   const [activeIndex, setActiveIndex] = useState(0)
 
