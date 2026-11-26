@@ -82,7 +82,7 @@ export default function PricingSection() {
             <span className={styles.chevron} aria-hidden="true">⌄</span>
           </summary>
           <div className={styles.panelBody}>
-            <p>預約時間 22:00 後｜+300／位</p>
+            <p>預約時間 22:30–23:59｜+300／位</p>
             <p>預約時間 00:00 後｜+500／位</p>
           </div>
         </details>

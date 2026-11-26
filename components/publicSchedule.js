@@ -1,17 +1,21 @@
 import { therapists as therapistProfiles } from '../data/therapists'
-import { FULLY_BOOKED_LABEL, PENDING_UPDATE_LABEL } from '../data/weeklySchedule'
+import { FULLY_BOOKED_LABEL, getScheduleWeek, PENDING_UPDATE_LABEL } from '../data/weeklySchedule'
 
 const profileIds = new Set(therapistProfiles.map((therapist) => therapist.id))
+const kaiBookingTag = getScheduleWeek().rows.find(({ id }) => id === 'kai')?.tag || '提前一天預約'
 
 export function createPublicScheduleWindow(feed) {
   if (feed?.status !== 'ready' || !Array.isArray(feed.days) || !Array.isArray(feed.rows)) return null
 
   return {
     days: feed.days,
-    rows: feed.rows.map((row) => ({
-      ...row,
-      profileAvailable: profileIds.has(row.id),
-    })),
+    rows: feed.rows.map((row) => {
+      return {
+        ...row,
+        tag: row.id === 'kai' ? row.tag || kaiBookingTag : row.tag,
+        profileAvailable: profileIds.has(row.id),
+      }
+    }),
   }
 }
 
