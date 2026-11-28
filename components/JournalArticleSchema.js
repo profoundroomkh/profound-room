@@ -33,7 +33,7 @@ export default function JournalArticleSchema({
             url: 'https://profoundroom.com/images/profound-logo-symbol.png',
           },
         },
-        image: 'https://profoundroom.com/images/og-image.jpg',
+        image: 'https://profoundroom.com/images/profound-logo-mark.png',
       },
       {
         '@type': 'BreadcrumbList',

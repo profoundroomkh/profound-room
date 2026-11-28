@@ -10,10 +10,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(5, 5, 5, 0.82) 0%, rgba(5, 5, 5, 0.72) 42%, rgba(5, 5, 5, 0.97) 100%),
-    url('/images/hero-1.jpg') center / cover no-repeat;
-  filter: saturate(0.72) contrast(0.96);
-  transform: scale(1.04);
+    radial-gradient(ellipse at 50% 24%, rgba(123, 87, 61, 0.2), transparent 62%),
+    linear-gradient(180deg, #0a0908 0%, #050505 82%);
 }
 
 .heroInner {

@@ -66,11 +66,6 @@ export default function sitemap() {
     },
 
     {
-      url: `${baseUrl}/space`,
-      lastModified: new Date(),
-    },
-
-    {
       url: `${baseUrl}/reservation`,
       lastModified: new Date(),
     },

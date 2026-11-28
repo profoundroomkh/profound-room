@@ -17,15 +17,6 @@ const menuGroups = [
     ],
   },
   {
-    label: 'SPACE',
-    items: [
-      { label: '空間介紹', english: 'Space', href: '/space' },
-      { label: '空間氛圍', english: 'Atmosphere', href: '/space/atmosphere' },
-      { label: '沐浴空間', english: 'Bath', href: '/space/bath' },
-      { label: '空間細節', english: 'Details', href: '/space/detail' },
-    ],
-  },
-  {
     label: 'EXPERIENCE',
     items: [
       { label: '預約方式', english: 'Reservation Guide', href: '/reservation' },

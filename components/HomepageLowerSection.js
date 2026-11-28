@@ -15,8 +15,8 @@ const faqs = [
     answer: '許多第一次接觸男士 SPA 的來訪者，也會在預約前感到緊張，但實際進入空間後通常很快就能放鬆。',
   },
   {
-    question: '工作室在哪裡？',
-    answer: '從高雄車站 1 號出口往左走建國路，步行約 3 分鐘；完成預約後將提供完整地址資訊。',
+    question: '服務地點如何安排？',
+    answer: '無固定實體店面，依客人需求提供外出到府（飯店／旅館／客住處）或臨時租借外部場地（共享空間／計時工作室）。',
   },
   {
     question: '需要提前多久預約？',
@@ -60,15 +60,6 @@ const journalItems = [
     href: '/journal/kaohsiung-gay-spa',
   },
 ]
-
-  const spaceImages = [
-  '/images/gallery-1.jpg',
-  '/images/gallery-2.jpg',
-  '/images/gallery-3.jpg',
-]
-
-const MAPS_URL = 'https://maps.app.goo.gl/nHKfNSoZax1qx7V36?g_st=ic'
-const LOCATION_MAP = '/images/location-guide-map.jpg'
 
 export default function HomepageLowerSection() {
   return (
@@ -115,85 +106,17 @@ export default function HomepageLowerSection() {
         </TrackedLink>
       </ScrollReveal>
 
-      <ScrollReveal
-        as="section"
-        className={styles.spaceSection}
-        id="space-preview"
-        aria-labelledby="space-preview-title"
-        style={{ '--reveal-distance': '24px' }}
-      >
-        <div className={styles.sectionHeading}>
-          <p className={styles.eyebrow}>SPACE & LOCATION</p>
-          <h2 id="space-preview-title">空間與位置</h2>
-        </div>
-
-        <TrackedLink
-          className={styles.spaceCard}
-          href="/space"
-          eventName="space_click"
-          eventParameters={{ source: 'homepage_space_card' }}
-        >
-          <div className={styles.spaceImages}>
-            {spaceImages.map((image, index) => (
-              <div className={styles.spaceImage} key={image}>
-                <Image
-                  src={image}
-                  alt={`高雄 Gay SPA 空間氛圍 ${index + 1}`}
-                  fill
-                  sizes="(max-width: 700px) 100vw, 33vw"
-                />
-              </div>
-            ))}
-          </div>
-          <div className={styles.spaceCopy}>
-            <div>
-              <p className={styles.cardKicker}>PROFOUND ROOM</p>
-              <h3>安靜、隱私、專業的男士放鬆空間</h3>
-              <p>高雄車站 1 號出口往左｜步行約 3 分鐘</p>
-              <p>完成預約後提供詳細位置。</p>
-            </div>
-            <span className={styles.arrow} aria-hidden="true">↗</span>
-          </div>
-        </TrackedLink>
-      </ScrollReveal>
-
       <ScrollReveal as="section" className={styles.locationSection} id="location" aria-labelledby="location-title">
         <div className={styles.sectionHeading}>
-          <p className={styles.eyebrow}>LOCATION GUIDE</p>
-          <h2 id="location-title">位置引導</h2>
-          <p className={styles.sectionLead}>完成預約後提供詳細位置，從高雄車站前往約 3 分鐘。</p>
+          <p className={styles.eyebrow}>SERVICE LOCATION</p>
+          <h2 id="location-title">服務地點安排</h2>
         </div>
 
         <div className={styles.locationCard}>
-          <div className={styles.locationMap}>
-            <Image
-              src={LOCATION_MAP}
-              alt="高雄車站 1 號出口往建國路與中山路方向的步行指引地圖"
-              fill
-              sizes="(max-width: 700px) 100vw, 680px"
-            />
-          </div>
-
           <div className={styles.locationDetails}>
-            <h3>高雄車站往建國路、中山路方向出口</h3>
-            <p className={styles.locationRoute}>往左走約 3 分鐘即可到達</p>
-            <ol className={styles.locationSteps}>
-              <li>從 1 號出口出來</li>
-              <li>往左走建國路</li>
-              <li>步行約 3 分鐘到達指定位置</li>
-            </ol>
-            <p className={styles.locationPrivacy}>屏東市來客可搭台鐵到高雄車站，再步行前往深寓。</p>
-            <p className={styles.locationPrivacy}>完成預約後提供詳細位置。</p>
-            <TrackedLink
-              className={styles.locationCta}
-              href={MAPS_URL}
-              target="_blank"
-              rel="noreferrer"
-              eventName="location_map_click"
-              eventParameters={{ source: 'homepage_location_guide' }}
-            >
-              開啟 Google Maps <span aria-hidden="true">↗</span>
-            </TrackedLink>
+            <h3>無固定實體店面</h3>
+            <p className={styles.locationRoute}>依客人需求提供外出到府（飯店／旅館／客住處）</p>
+            <p className={styles.locationPrivacy}>或臨時租借外部場地（共享空間／計時工作室）。</p>
           </div>
         </div>
       </ScrollReveal>

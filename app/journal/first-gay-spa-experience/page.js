@@ -90,9 +90,9 @@ export default function ArticlePage() {
             </p>
 
             <p style={{ marginBottom: '42px' }}>
-              多數空間會在預約完成後，
-              才提供完整位置資訊，
-              這也是為了維護來訪者的隱私。
+              不同服務的地點確認方式不盡相同；
+              深寓無固定實體店面，會依預約需求安排到府或臨時外部場地，
+              請先透過官方 LINE 確認，再依客服確認的安排進行。
             </p>
 
             <p style={{ marginBottom: '42px' }}>

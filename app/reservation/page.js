@@ -9,7 +9,7 @@ const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 export const metadata = {
   title: '預約方式｜深寓 PROFOUND ROOM｜高雄 Gay SPA',
   description:
-    '了解深寓 PROFOUND ROOM 高雄 Gay SPA 與男士按摩的預約方式、預約流程、位置說明與改期取消規則。',
+    '了解深寓 PROFOUND ROOM 高雄 Gay SPA 與男士按摩的預約方式、預約流程、服務地點安排與改期取消規則。',
   keywords: [
     '高雄 Gay SPA 預約',
     '高雄男士按摩預約',
@@ -21,7 +21,7 @@ export const metadata = {
   },
   openGraph: {
     title: '預約方式｜深寓 PROFOUND ROOM',
-    description: '高雄預約制 Gay SPA 與男士放鬆空間的預約流程與注意事項。',
+    description: '高雄預約制 Gay SPA 與男士按摩服務的預約流程、地點安排與注意事項。',
     url: 'https://profoundroom.com/reservation',
     type: 'website',
   },
@@ -31,14 +31,14 @@ const steps = [
   ['01', '加入官方 LINE'],
   ['02', '提供日期與時段'],
   ['03', '客服確認時段'],
-  ['04', '取得詳細位置'],
+  ['04', '確認服務地點'],
 ]
 
 const reservationSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: '深寓 PROFOUND ROOM 預約流程',
-  description: '高雄預約制 Gay SPA 與男士放鬆空間的預約方式。',
+  description: '高雄預約制 Gay SPA 與男士按摩服務的預約方式及地點安排。',
   step: steps.map(([name, text]) => ({
     '@type': 'HowToStep',
     name,
@@ -55,8 +55,8 @@ export default function ReservationPage() {
           <p className={styles.eyebrow}>RESERVATION GUIDE</p>
           <h1 className={styles.title}>預約方式</h1>
           <p className={styles.lead}>
-            深寓 PROFOUND ROOM 為高雄預約制 Gay SPA 與男士放鬆空間，
-            希望每一次到訪，都能保有安靜、界線感與舒適節奏。
+            深寓 PROFOUND ROOM 提供高雄預約制 Gay SPA 與男士按摩服務，
+            希望每一次預約，都能保有安靜、界線感與舒適節奏。
           </p>
 
           <div className={styles.actions}>
@@ -112,7 +112,7 @@ export default function ReservationPage() {
               <p className={styles.infoEyebrow}>付款方式</p>
               <p>一般付款方式僅提供：現金、LINE Pay Money 轉帳、網銀轉帳。</p>
               <div className={styles.divider} aria-hidden="true" />
-              <p>本館採完全預約制，不接受現場臨時來訪。</p>
+              <p>深寓採完全預約制，不接受未經確認的現場到訪；服務地點依需求事先安排。</p>
               <p>客服確認日期與時段後，才算完成預約。</p>
               <div className={styles.divider} aria-hidden="true" />
               <p className={styles.infoEyebrow}>取消與改期</p>
@@ -127,16 +127,14 @@ export default function ReservationPage() {
 
           <section className={styles.section} aria-labelledby="location-title">
             <h2 className={styles.sectionHeading} id="location-title">
-              位置與到店
+              服務地點安排
             </h2>
             <div className={styles.infoCard}>
-              <p>
-                高雄車站 1 號出口往建國路、中山路方向，往左走約 3 分鐘即可到達。
-              </p>
-              <p>完成預約後將提供詳細位置資訊。</p>
+              <p>無固定實體店面，依客人需求提供外出到府（飯店／旅館／客住處）或臨時租借外部場地（共享空間／計時工作室）。</p>
+              <p>預約時請先透過官方 LINE 客服確認服務地點、時段與相關安排。</p>
             </div>
             <p className={styles.locationLine}>
-              為保留安靜與隱私感，詳細位置會在預約確認後提供。
+              外部場地須依需求及可預約狀況協調，實際安排以客服確認為準。
             </p>
           </section>
 

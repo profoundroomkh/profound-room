@@ -7,7 +7,7 @@ const LINE_URL = 'https://line.me/R/ti/p/@637fbbyh'
 export const metadata = {
   title: '常見問題｜深寓 PROFOUND ROOM｜高雄 Gay SPA',
   description:
-    '查看深寓 PROFOUND ROOM 高雄 Gay SPA 的預約制、第一次體驗、位置、服務流程與男士按摩常見問題。',
+    '查看深寓 PROFOUND ROOM 高雄 Gay SPA 的預約制、第一次體驗、服務地點安排、服務流程與男士按摩常見問題。',
   keywords: [
     '高雄 Gay SPA FAQ',
     '高雄男士按摩常見問題',
@@ -19,7 +19,7 @@ export const metadata = {
   },
   openGraph: {
     title: '常見問題｜深寓 PROFOUND ROOM',
-    description: '高雄預約制 Gay SPA 與男士放鬆空間的常見問題。',
+    description: '高雄預約制 Gay SPA 與男士按摩服務的常見問題。',
     url: 'https://profoundroom.com/faq',
     type: 'website',
   },
@@ -32,14 +32,14 @@ const faqs = [
       '其實大部分第一次來訪的人都會緊張。PROFOUND ROOM 更重視放鬆感、隱私與舒適節奏，不需要有壓力。',
   },
   {
-    question: '工作室是完全預約制嗎？',
+    question: '服務是完全預約制嗎？',
     answer:
-      '是的，目前採完全預約制，為了維護空間品質與隱私感，不接受現場臨時來訪。',
+      '是的，深寓採完全預約制，不接受未經確認的現場到訪。深寓無固定實體店面，服務地點會依需求事先協調。',
   },
   {
-    question: '預約完成後會提供地址嗎？',
-    answer:
-      '完成預約後會提供詳細位置資訊。高雄車站 1 號出口往建國路、中山路方向，往左走約 3 分鐘即可到達。',
+  question: '服務地點如何安排？',
+  answer:
+    '深寓無固定實體店面，依客人需求提供外出到府（飯店／旅館／客住處）或臨時租借外部場地（共享空間／計時工作室）。預約時請先與官方 LINE 客服確認安排。',
   },
   {
     question: '男士 SPA 與一般按摩有什麼不同？',
@@ -57,9 +57,9 @@ const faqs = [
       '如需取消或改期，請儘早透過官方 LINE 聯繫客服；若遇突發疾病、交通事故或其他重大緊急狀況，也請主動告知，以便協助安排。',
   },
   {
-    question: '空間會有其他客人嗎？',
+    question: '服務地點會有其他使用者嗎？',
     answer:
-      'PROFOUND ROOM 為預約制空間，會盡可能保留安靜與隱私感。',
+      '深寓無固定實體店面，服務地點依預約安排而定。若使用外部場地，場地使用方式與隱私細節請在預約前向客服確認。',
   },
 ]
 
@@ -85,7 +85,7 @@ export default function FAQPage() {
           <p className={styles.eyebrow}>FAQ</p>
           <h1 className={styles.title}>常見問題</h1>
           <p className={styles.lead}>
-            關於預約制男士 SPA、第一次體驗與空間相關問題，都整理在這裡。
+            關於預約制男士 SPA、第一次體驗與服務安排的問題，都整理在這裡。
           </p>
 
           <section className={styles.faqList} aria-label="常見問題列表">
@@ -99,7 +99,7 @@ export default function FAQPage() {
 
           <section className={styles.ctaCard} aria-label="開始預約">
             <p>
-              如果還有其他問題，歡迎先透過 LINE 詢問；確認日期與時段後，再提供完整位置資訊。
+              如果還有其他問題，歡迎先透過 LINE 詢問；客服會依需求確認日期、時段與服務地點安排。
             </p>
             <TrackedLink
               className={styles.cta}

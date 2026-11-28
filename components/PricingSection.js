@@ -97,9 +97,10 @@ export default function PricingSection() {
           </summary>
           <div className={styles.panelBody}>
             <p>到府服務依距離酌收費用。</p>
-            <p>距離高雄車站 5 公里內｜+300</p>
-            <p>距離高雄車站 5–10 公里｜+500</p>
-            <p>距離高雄車站 10 公里以上｜+800（客服報價）</p>
+            <p>服務距離 5 公里內｜+300</p>
+            <p>服務距離 5–10 公里｜+500</p>
+            <p>服務距離 10 公里以上｜+800（客服報價）</p>
+            <p>距離起算點與實際費用依預約地點確認，請先洽官方 LINE。</p>
           </div>
         </details>
       </div>

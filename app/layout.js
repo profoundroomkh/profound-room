@@ -24,7 +24,7 @@ export const metadata = {
     '深寓 PROFOUND ROOM｜高雄同志按摩 Gay SPA｜直男按摩與男士放鬆空間',
 
   description:
-    'PROFOUND ROOM 深寓為高雄預約制同志按摩 Gay SPA 與男士放鬆空間，也服務屏東市來客；提供男士按摩、直男按摩與直男同志按摩專屬方案，以及精油舒壓、私人空間與沉浸式療癒體驗。',
+    'PROFOUND ROOM 深寓提供高雄預約制同志按摩 Gay SPA、男士按摩、直男按摩與直男同志按摩專屬方案，也服務屏東市來客；無固定實體店面，依需求安排到府或臨時外部場地。',
 
   keywords: [
     '高雄 Gay SPA',
@@ -70,14 +70,14 @@ robots: {
 },
   openGraph: {
     title: '高雄同志按摩 Gay SPA｜高雄直男按摩與男士按摩｜深寓 PROFOUND ROOM',
-    description: '高雄預約制同志按摩 Gay SPA、男士按摩與直男同志按摩專屬放鬆體驗，也方便屏東市客人搭台鐵前往',
+    description: '高雄預約制同志按摩 Gay SPA、男士按摩與直男同志按摩服務；無固定實體店面，依需求安排到府或外部場地。',
     url: 'https://profoundroom.com',
     siteName: 'PROFOUND ROOM 深寓',
     images: [
       {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
+        url: '/images/profound-logo-mark.png',
+        width: 720,
+        height: 911,
       },
     ],
     locale: 'zh_TW',

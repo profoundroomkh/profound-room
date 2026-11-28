@@ -70,7 +70,7 @@ export default function HomeHero() {
             <p className={styles.eyebrow}>KAOHSIUNG · MEN&apos;S SPA</p>
             <h1 id="home-hero-title">高雄 Gay SPA</h1>
             <h2>男士按摩與放鬆空間</h2>
-            <p className={styles.positioning}>預約制 · 獨立包廂 · 高雄車站附近</p>
+            <p className={styles.positioning}>無固定實體店面 · 服務地點依需求安排</p>
 
             <div className={styles.heroActions}>
               <a
@@ -134,9 +134,9 @@ export default function HomeHero() {
 
           <div className={styles.introCard}>
             <p className={styles.introLabel}>ABOUT</p>
-            <h2>高雄 Gay Spa 與男士按摩空間</h2>
+            <h2>高雄 Gay Spa 與男士按摩服務</h2>
             <p>
-              深寓提供預約制放鬆體驗、精油舒壓與私人空間服務。
+              深寓提供預約制男士按摩與精油舒壓服務，依客人需求安排服務地點。
               <br />
               安靜、隱私、專業按摩。
             </p>
