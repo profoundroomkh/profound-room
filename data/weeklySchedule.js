@@ -71,7 +71,7 @@ const therapistDetails = [
   { id: 'alan', name: 'Alan／艾倫' },
   { id: 'oni', name: 'Oni／歐尼' },
   { id: 'noah', name: 'Noah／諾亞' },
-  { id: 'gugu', name: 'Gugu／古古' },
+  { id: 'gugu', name: 'Gugu／古古', isPublished: false },
   { id: 'dylan', name: 'Dylan／迪倫' },
   { id: 'kai', name: 'Kai／凱', tag: '提前一天預約' },
   { id: 'owen', name: 'Owen／歐文' },

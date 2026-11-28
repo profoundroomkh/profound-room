@@ -108,6 +108,7 @@ const allTherapists = [
   {
     id: 'gugu',
     name: 'Gugu／古古',
+    isPublished: false,
     isNew: false,
     status: 'available',
     height: 175,
@@ -358,6 +359,9 @@ const allTherapists = [
 ]
 
 // 暫時下架的師傅保留在完整資料中，之後只需恢復 isPublished 即可重新上架。
+export const unpublishedTherapistIds = new Set(
+  allTherapists.filter((therapist) => therapist.isPublished === false).map((therapist) => therapist.id),
+)
 export const therapists = allTherapists.filter((therapist) => therapist.isPublished !== false)
 
 export const therapistFilters = [
