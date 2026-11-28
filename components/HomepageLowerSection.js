@@ -23,8 +23,8 @@ const faqs = [
     answer: '建議提前 1–3 天預約，熱門時段通常較快額滿；提前預約可享有相關折扣。',
   },
   {
-    question: '取消或改期時，訂金如何處理？',
-    answer: '預約時間前 6 小時以上通知，訂金可保留一次並於 30 天內改期；2–6 小時通知則保留 50%，另 50% 可轉為改期金。2 小時內取消、未通知或 No-show，訂金恕不退還；重大緊急狀況請主動聯繫。',
+    question: '取消或改期時需要注意什麼？',
+    answer: '如需取消或改期，請儘早透過官方 LINE 聯繫客服；若遇突發狀況，也請主動告知，以便協助安排。',
   },
 ]
 
@@ -36,12 +36,12 @@ const journalItems = [
   },
   {
     title: '高雄直男按摩價格怎麼算？',
-    description: '90 分鐘與 120 分鐘專屬方案、服務內容與訂金規則一次了解。',
+    description: '90 分鐘與 120 分鐘專屬方案、服務內容與預約方式一次了解。',
     href: '/journal/kaohsiung-straight-massage-price',
   },
   {
     title: '第一次直男按摩怎麼預約？',
-    description: '從選師傅、看班表到支付每位師傅 NT$500 訂金的完整流程。',
+    description: '從選師傅、看班表到透過 LINE 確認預約的完整流程。',
     href: '/journal/first-straight-massage-booking',
   },
   {

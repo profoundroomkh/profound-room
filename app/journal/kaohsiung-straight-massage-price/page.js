@@ -5,7 +5,7 @@ import JournalArticleSchema from '../../../components/JournalArticleSchema'
 export const metadata = {
   title: '高雄直男按摩價格怎麼算？90 分鐘與 120 分鐘方案整理｜深寓 PROFOUND ROOM',
   description:
-    '整理高雄直男按摩價格、90 分鐘與 120 分鐘直男師傅專屬方案、服務內容與首次預約訂金規則。',
+    '整理高雄直男按摩價格、90 分鐘與 120 分鐘直男師傅專屬方案、服務內容與預約方式。',
   keywords: [
     '高雄直男按摩價格',
     '直男按摩價格',
@@ -19,7 +19,7 @@ export const metadata = {
   },
   openGraph: {
     title: '高雄直男按摩價格怎麼算？90 分鐘與 120 分鐘方案整理',
-    description: '查看高雄直男按摩兩種專屬方案與首次預約訂金規則，預約前先了解服務內容。',
+    description: '查看高雄直男按摩兩種專屬方案，預約前先了解服務內容。',
     url: 'https://profoundroom.com/journal/kaohsiung-straight-massage-price',
     siteName: 'PROFOUND ROOM 深寓',
     locale: 'zh_TW',
@@ -47,7 +47,7 @@ export default function ArticlePage() {
       <Header />
       <JournalArticleSchema
         headline="高雄直男按摩價格怎麼算？90 分鐘與 120 分鐘方案整理"
-        description="整理高雄直男按摩價格、90 分鐘與 120 分鐘直男師傅專屬方案、服務內容與首次預約訂金規則。"
+        description="整理高雄直男按摩價格、90 分鐘與 120 分鐘直男師傅專屬方案、服務內容與預約方式。"
         url="https://profoundroom.com/journal/kaohsiung-straight-massage-price"
         keywords={['高雄直男按摩價格', '直男按摩價格', '直男同志按摩價格']}
       />
@@ -121,19 +121,9 @@ export default function ArticlePage() {
           ，再向官方 LINE 說明希望預約的師傅與方案。
         </p>
 
-        <h2>首次預約訂金是多少？</h2>
-        <p>
-          首次預約的客人，每位師傅都需要先支付 NT$500 訂金，沒有例外；完成當日消費後，訂金可全額折抵。
-          如果一次安排多位師傅，訂金會依每位師傅計算。匯款資訊請洽官方 LINE。
-        </p>
-        <p>
-          不方便使用銀行轉帳時，也可以至超商使用中國信託無卡存款完整支付訂金，實際操作與帳戶資訊請先向官方 LINE 詢問，
-          不要直接猜測或使用過期資訊。
-        </p>
-
         <h2>如何確認最新價格與可預約時段？</h2>
         <p>
-          官網文章用來整理方案與預約前須知，實際可預約日期、師傅班表與匯款資訊仍以官方 LINE 的最新回覆為準。
+          官網文章用來整理方案與預約前須知，實際可預約日期與師傅班表仍以官方 LINE 的最新回覆為準。
           你可以先到
           {' '}
           <a href="/#therapists" style={linkStyle}>
@@ -146,7 +136,7 @@ export default function ArticlePage() {
         <h2>結語：先看內容，再選擇適合的時間</h2>
         <p>
           高雄直男按摩價格主要分為 90 分鐘 NT$2,500 與 120 分鐘 NT$2,900 兩種直男師傅專屬方案。
-          先確認服務內容、訂金與班表，再安排最符合自己需求的時間，預約流程會更加清楚。
+          先確認服務內容與班表，再安排最符合自己需求的時間，預約流程會更加清楚。
         </p>
 
         <JournalCTA />

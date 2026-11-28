@@ -95,48 +95,32 @@ export default function ReservationPage() {
 
           <div className={styles.policyVisual}>
             <Image
-              src="/images/deposit-policy-guide.png"
-              alt="深寓優惠與訂金政策圖解"
+              src="/images/booking-benefits-guide.png"
+              alt="深寓優惠使用須知圖解"
               width={1856}
-              height={2304}
+              height={910}
               sizes="(max-width: 720px) 100vw, 560px"
             />
-            <p>優惠與訂金政策圖解；完整規則仍以本頁文字說明為準。</p>
+            <p>優惠使用須知；詳細適用方式請洽官方 LINE。</p>
           </div>
 
           <section className={styles.section} aria-labelledby="appointment-only-title">
             <h2 className={styles.sectionHeading} id="appointment-only-title">
               預約前請先知道
             </h2>
-            <div className={`${styles.infoCard} ${styles.depositCard}`}>
-              <p className={styles.depositEyebrow}>首次預約提醒</p>
-              <p className={styles.depositMain}>
-                首次預約的客人一律要先匯訂金，沒有例外。
-              </p>
-              <p>訂金為 NT$500／每位師傅，完成當日消費後於結帳時全額折抵。</p>
-              <div className={styles.divider} aria-hidden="true" />
-              <p className={styles.depositEyebrow}>付款方式</p>
+            <div className={styles.infoCard}>
+              <p className={styles.infoEyebrow}>付款方式</p>
               <p>一般付款方式僅提供：現金、LINE Pay Money 轉帳、網銀轉帳。</p>
-              <p>訂金付款方式：LINE Pay Money 轉帳、網銀轉帳、7-11 中國信託無卡存款；非本國籍人士可使用 PayPal。</p>
-              <p>首次預約訂金仍依前述規定事先支付；付款資訊請洽官方 LINE。</p>
               <div className={styles.divider} aria-hidden="true" />
               <p>本館採完全預約制，不接受現場臨時來訪。</p>
               <p>客服確認日期與時段後，才算完成預約。</p>
               <div className={styles.divider} aria-hidden="true" />
-              <p className={styles.depositEyebrow}>訂金政策</p>
-              <p className={styles.depositMain}>取消、改期與 No-show 規則</p>
-              <p>
-                如需取消或改期，請儘早告知。當日於預約時間前 6 小時以上通知，訂金可保留一次，並於 30 天內改期使用；預約前 2–6 小時通知，訂金保留 50%，另 50% 可轉為改期金。
-              </p>
-              <p>
-                預約前 2 小時內取消、未通知取消，或預約時間後 15 分鐘仍未到且無法聯絡者，將視為 No-show，訂金恕不退還。若遇突發疾病、交通事故或其他重大緊急狀況，歡迎主動聯繫，深寓會視情況協助處理。
-              </p>
-              <p>
-                改期限一次，且須於指定期限內使用；曾有 No-show 紀錄者，後續預約可能需全額預付。
-              </p>
+              <p className={styles.infoEyebrow}>取消與改期</p>
+              <p className={styles.infoHighlight}>如需取消或改期，請儘早聯繫官方 LINE 客服。</p>
+              <p>如遇突發疾病、交通事故或其他重大緊急狀況，也請主動告知客服，以便協助安排。</p>
               <div className={styles.divider} aria-hidden="true" />
-              <p className={styles.depositEyebrow}>現場取消提醒</p>
-              <p className={styles.depositMain}>師傅抵達現場後取消預約，需支付 NT$500 車馬費。</p>
+              <p className={styles.infoEyebrow}>現場取消提醒</p>
+              <p className={styles.infoHighlight}>師傅抵達現場後取消預約，需支付 NT$500 車馬費。</p>
               <p>該筆車馬費將全額補貼予師傅；若師傅另有收取其他費用，請告知客服。</p>
             </div>
           </section>

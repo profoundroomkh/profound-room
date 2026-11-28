@@ -3,14 +3,13 @@ import JournalCTA from '../../../components/JournalCTA'
 import JournalArticleSchema from '../../../components/JournalArticleSchema'
 
 export const metadata = {
-  title: '第一次直男按摩怎麼預約？訂金、時段與注意事項｜深寓 PROFOUND ROOM',
+  title: '第一次直男按摩怎麼預約？時段與注意事項｜深寓 PROFOUND ROOM',
   description:
-    '第一次預約直男按摩或直男同志按摩不用緊張，本文整理師傅選擇、班表確認、NT$500 訂金與 LINE 預約流程。',
+    '第一次預約直男按摩或直男同志按摩不用緊張，本文整理師傅選擇、班表確認與 LINE 預約流程。',
   keywords: [
     '直男按摩預約',
     '高雄直男按摩預約',
     '直男同志按摩預約',
-    '按摩訂金',
     'LINE 預約按摩',
     '高雄男士按摩預約',
   ],
@@ -18,8 +17,8 @@ export const metadata = {
     canonical: 'https://profoundroom.com/journal/first-straight-massage-booking',
   },
   openGraph: {
-    title: '第一次直男按摩怎麼預約？訂金、時段與注意事項',
-    description: '整理第一次直男按摩預約流程、師傅班表與每位師傅 NT$500 訂金規則。',
+    title: '第一次直男按摩怎麼預約？時段與注意事項',
+    description: '整理第一次直男按摩預約流程、師傅班表與 LINE 預約方式。',
     url: 'https://profoundroom.com/journal/first-straight-massage-booking',
     siteName: 'PROFOUND ROOM 深寓',
     locale: 'zh_TW',
@@ -45,8 +44,8 @@ export default function ArticlePage() {
     <>
       <Header />
       <JournalArticleSchema
-        headline="第一次直男按摩怎麼預約？訂金、時段與注意事項"
-        description="第一次預約直男按摩或直男同志按摩不用緊張，本文整理師傅選擇、班表確認、NT$500 訂金與 LINE 預約流程。"
+        headline="第一次直男按摩怎麼預約？時段與注意事項"
+        description="第一次預約直男按摩或直男同志按摩不用緊張，本文整理師傅選擇、班表確認與 LINE 預約流程。"
         url="https://profoundroom.com/journal/first-straight-massage-booking"
         keywords={['直男按摩預約', '高雄直男按摩預約', '直男同志按摩預約']}
       />
@@ -73,12 +72,12 @@ export default function ArticlePage() {
         >
           第一次直男按摩怎麼預約？
           <br />
-          訂金、時段與注意事項
+          時段與注意事項
         </h1>
         <JournalCTA />
 
         <p>
-          第一次搜尋直男按摩預約或直男同志按摩預約時，很多人會擔心不知道該提供什麼資料、要不要先付訂金，
+          第一次搜尋直男按摩預約或直男同志按摩預約時，很多人會擔心不知道該提供什麼資料，
           或是今天休息的師傅能不能預約。其實只要依照幾個步驟準備，整個流程就能很清楚。
         </p>
 
@@ -117,27 +116,15 @@ export default function ArticlePage() {
           再詢問客服。
         </p>
 
-        <h2>第三步：首次預約每位師傅都要支付 NT$500 訂金</h2>
-        <div style={stepStyle}>
-          <p style={{ margin: 0, color: '#f2e1d0' }}>
-            首次預約的客人一律需要先支付訂金，沒有例外。訂金為 NT$500／每位師傅，完成當日消費後全額折抵。
-          </p>
-        </div>
+        <h2>第三步：由官方 LINE 確認時段與位置</h2>
         <p>
-          如果一次預約兩位師傅，訂金會以每位師傅計算。匯款資訊請洽官方 LINE；不方便使用銀行轉帳，
-          可至超商使用中國信託無卡存款完整支付訂金，詳細方式與帳戶資訊請先向官方 LINE 確認。
-        </p>
-
-        <h2>第四步：由官方 LINE 確認時段與位置</h2>
-        <p>
-          預約前請以官方 LINE 的最新回覆為準，確認師傅是否能接、課程內容、訂金方式與實際時段。
+          預約前請以官方 LINE 的最新回覆為準，確認師傅是否能接、課程內容與實際時段。
           預約完成後，官方會提供後續位置與到訪資訊；深寓採預約制，不建議未經確認直接前往。
         </p>
 
         <h2>改期與取消前要注意什麼？</h2>
         <p>
-          預約時間前 6 小時以上通知，訂金可保留一次並於 30 天內改期；2–6 小時通知，訂金保留 50%，
-          另 50% 轉為改期金。2 小時內取消、未通知或 No-show，訂金恕不退還；若遇重大緊急狀況，請主動聯繫官方 LINE 說明。
+          如需取消或改期，請儘早透過官方 LINE 聯繫客服；若遇重大緊急狀況，也請主動說明，以便協助安排。
         </p>
         <p>
           完整規則可參考
@@ -151,7 +138,7 @@ export default function ArticlePage() {
         <h2>結語：把需求說清楚，就能安心開始</h2>
         <p>
           第一次直男按摩預約不需要準備複雜資料，只要先選擇想了解的師傅、提供日期與時段，
-          再依官方 LINE 指示完成每位師傅 NT$500 訂金即可。先確認、再出發，能讓客人與師傅都保有舒適的安排空間。
+          再由官方 LINE 協助確認服務與時間。先確認、再出發，能讓客人與師傅都保有舒適的安排空間。
         </p>
 
         <JournalCTA />

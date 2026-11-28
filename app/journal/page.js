@@ -29,7 +29,7 @@ export default function JournalPage() {
         '高雄直男按摩價格怎麼算？90 分鐘與 120 分鐘方案整理',
 
       description:
-        '整理高雄直男按摩價格、90 分鐘與 120 分鐘直男師傅專屬方案、服務內容與首次預約訂金規則。',
+        '整理高雄直男按摩價格、90 分鐘與 120 分鐘直男師傅專屬方案、服務內容與預約方式。',
 
       link:
         '/journal/kaohsiung-straight-massage-price',
@@ -37,10 +37,10 @@ export default function JournalPage() {
 
     {
       title:
-        '第一次直男按摩怎麼預約？訂金、時段與注意事項',
+        '第一次直男按摩怎麼預約？時段與注意事項',
 
       description:
-        '第一次預約直男按摩或直男同志按摩不用緊張，本文整理師傅選擇、班表確認、NT$500 訂金與 LINE 預約流程。',
+        '第一次預約直男按摩或直男同志按摩不用緊張，本文整理師傅選擇、班表確認與 LINE 預約流程。',
 
       link:
         '/journal/first-straight-massage-booking',

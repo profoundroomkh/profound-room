@@ -149,17 +149,13 @@
   text-align: center;
 }
 
-.depositCard {
-  background: rgba(66, 49, 41, 0.72);
-}
-
-.depositEyebrow {
+.infoEyebrow {
   color: #c9ab94 !important;
   font-size: 12px;
   letter-spacing: 0.16em;
 }
 
-.depositMain {
+.infoHighlight {
   color: #ead8c6 !important;
   font-size: 17px;
 }
